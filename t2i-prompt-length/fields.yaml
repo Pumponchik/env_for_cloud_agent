@@ -1,0 +1,137 @@
+# Field definitions for T2I prompt-length research
+# Focus: training prompt length, inference prompt length, re-prompt output length, motivations
+
+categories:
+  - name: Identity
+    fields:
+      - name: name
+        description: Canonical name of the paper, model, dataset, or practice
+        detail_level: brief
+      - name: year
+        description: Publication or release year
+        detail_level: brief
+      - name: organization
+        description: Authors' organization or company
+        detail_level: brief
+      - name: model_type
+        description: Category such as diffusion T2I model, text encoder, recaption dataset, re-prompt rewriter, long-prompt method, benchmark, or engineering practice
+        detail_level: brief
+      - name: paper_or_source
+        description: Primary paper title or official documentation source
+        detail_level: moderate
+      - name: arxiv_id
+        description: arXiv identifier if available
+        detail_level: brief
+      - name: primary_url
+        description: Primary URL (arXiv HTML/PDF, blog, GitHub, or docs)
+        detail_level: brief
+
+  - name: Text Encoder Limits
+    fields:
+      - name: text_encoder
+        description: Text encoder(s) used (CLIP, OpenCLIP, T5-XXL, Gemma, Llama, Mistral, etc.)
+        detail_level: moderate
+      - name: max_token_length_architecture
+        description: Architectural or configured maximum text token sequence length
+        detail_level: detailed
+      - name: effective_token_length
+        description: Empirically usable length if different from architectural max (e.g. CLIP ~20-30 effective vs 77 nominal)
+        detail_level: detailed
+      - name: tokenizer
+        description: Tokenizer used and any multilingual notes (e.g. CJK token inflation)
+        detail_level: moderate
+      - name: truncation_or_padding_policy
+        description: Truncation side, pad token identity, pad-to-max vs dynamic, attention masking of pads
+        detail_level: detailed
+
+  - name: Training Prompt Length
+    fields:
+      - name: train_prompt_length_tokens
+        description: Training caption/prompt length in tokens (mean/median/range if available)
+        detail_level: detailed
+      - name: train_prompt_length_words
+        description: Training caption/prompt length in words (mean/median/range if available)
+        detail_level: detailed
+      - name: train_caption_length_distribution
+        description: Distribution details (mean, median, std, min, max) and mixing strategy
+        detail_level: detailed
+      - name: train_caption_source
+        description: Source of training captions (alt-text, human, BLIP, LLaVA, GPT, Share-Captioner, etc.)
+        detail_level: moderate
+      - name: caption_length_randomization
+        description: Whether caption length is randomized or mixed short/long per image during training
+        detail_level: detailed
+      - name: recommended_train_prompt_length
+        description: Authors' recommended or chosen training prompt length and stated rationale
+        detail_level: detailed
+
+  - name: Inference Prompt Length
+    fields:
+      - name: infer_prompt_length_tokens
+        description: Inference prompt length used or supported in tokens
+        detail_level: detailed
+      - name: infer_prompt_length_words
+        description: Inference prompt length used or supported in words/characters
+        detail_level: detailed
+      - name: recommended_user_prompt_length
+        description: Authors' recommendation for user-facing or final inference prompt length
+        detail_level: detailed
+      - name: api_or_hard_limit
+        description: Documented API or product hard limit if any
+        detail_level: moderate
+
+  - name: Train-Infer Consistency
+    fields:
+      - name: train_infer_length_match
+        description: Whether training and inference prompt lengths are matched; how mismatch is handled
+        detail_level: detailed
+      - name: mismatch_effects_reported
+        description: Empirical effects of train/infer length mismatch (metrics, ablations)
+        detail_level: detailed
+      - name: short_prompt_regression
+        description: Penalty on short prompts after long-caption training, if measured
+        detail_level: detailed
+      - name: length_extrapolation_beyond_training
+        description: Performance on prompts longer than the training distribution
+        detail_level: moderate
+
+  - name: Re-prompt / Recaption
+    fields:
+      - name: uses_reprompt
+        description: Whether a re-prompt, prompt upsampler, or recaptioner is used before the diffusion model
+        detail_level: brief
+      - name: reprompt_model
+        description: Model used for rewriting/recaptioning (GPT-4, Qwen, Seed-VL, PromptEnhancer, etc.)
+        detail_level: moderate
+      - name: reprompt_output_length_train
+        description: Length of re-prompt/recaption outputs used for training (tokens/words, decode budget)
+        detail_level: detailed
+      - name: reprompt_output_length_infer
+        description: Length of re-prompt outputs at inference (tokens/words, max_new_tokens)
+        detail_level: detailed
+      - name: rewrite_is_default_on
+        description: Whether rewriting is on by default in the shipped product/API
+        detail_level: moderate
+      - name: reprompt_motivation
+        description: Stated motivation for re-prompting (match training distribution, add detail, fix failures, etc.)
+        detail_level: detailed
+
+  - name: Empirical Findings and Motivation
+    fields:
+      - name: length_ablation_results
+        description: Concrete ablation results comparing different prompt/caption lengths
+        detail_level: detailed
+      - name: quality_vs_length_findings
+        description: How quality, alignment, aesthetics, diversity trade off with length
+        detail_level: detailed
+      - name: motivation_or_rationale
+        description: Fundamental reasons authors give for choosing a particular length regime
+        detail_level: detailed
+      - name: key_quotes
+        description: Direct quotes from the paper supporting length recommendations
+        detail_level: detailed
+      - name: practical_recommendation
+        description: One-sentence practical takeaway for practitioners about train/infer/reprompt length
+        detail_level: detailed
+
+uncertain: []
