@@ -1,0 +1,16 @@
+# Runtime installs (created by scripts/cloud-agent-install.sh)
+tools/
+node_modules/
+
+# Python / OS
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Camofox local state
+.camofox/
+*.log
+
+# Editor
+.DS_Store

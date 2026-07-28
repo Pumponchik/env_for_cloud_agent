@@ -1,0 +1,17 @@
+{
+  "name": "env_for_cloud_agent",
+  "install": "./scripts/cloud-agent-install.sh",
+  "terminals": [
+    {
+      "name": "camofox",
+      "command": "cd tools/camofox-browser && npx camofox-browser",
+      "description": "Camofox anti-detection browser API on http://localhost:9377"
+    }
+  ],
+  "ports": [
+    {
+      "name": "camofox",
+      "port": 9377
+    }
+  ]
+}
