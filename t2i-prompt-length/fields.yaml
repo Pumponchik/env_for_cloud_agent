@@ -1,8 +1,8 @@
 # Field definitions for T2I prompt-length research
 # Focus: training prompt length, inference prompt length, re-prompt output length, motivations
 
-categories:
-  - name: Identity
+field_categories:
+  - category: Identity
     fields:
       - name: name
         description: Canonical name of the paper, model, dataset, or practice
@@ -26,7 +26,7 @@ categories:
         description: Primary URL (arXiv HTML/PDF, blog, GitHub, or docs)
         detail_level: brief
 
-  - name: Text Encoder Limits
+  - category: Text Encoder Limits
     fields:
       - name: text_encoder
         description: Text encoder(s) used (CLIP, OpenCLIP, T5-XXL, Gemma, Llama, Mistral, etc.)
@@ -44,7 +44,7 @@ categories:
         description: Truncation side, pad token identity, pad-to-max vs dynamic, attention masking of pads
         detail_level: detailed
 
-  - name: Training Prompt Length
+  - category: Training Prompt Length
     fields:
       - name: train_prompt_length_tokens
         description: Training caption/prompt length in tokens (mean/median/range if available)
@@ -65,7 +65,7 @@ categories:
         description: Authors' recommended or chosen training prompt length and stated rationale
         detail_level: detailed
 
-  - name: Inference Prompt Length
+  - category: Inference Prompt Length
     fields:
       - name: infer_prompt_length_tokens
         description: Inference prompt length used or supported in tokens
@@ -80,7 +80,7 @@ categories:
         description: Documented API or product hard limit if any
         detail_level: moderate
 
-  - name: Train-Infer Consistency
+  - category: Train-Infer Consistency
     fields:
       - name: train_infer_length_match
         description: Whether training and inference prompt lengths are matched; how mismatch is handled
@@ -95,7 +95,7 @@ categories:
         description: Performance on prompts longer than the training distribution
         detail_level: moderate
 
-  - name: Re-prompt / Recaption
+  - category: Re-prompt / Recaption
     fields:
       - name: uses_reprompt
         description: Whether a re-prompt, prompt upsampler, or recaptioner is used before the diffusion model
@@ -116,7 +116,7 @@ categories:
         description: Stated motivation for re-prompting (match training distribution, add detail, fix failures, etc.)
         detail_level: detailed
 
-  - name: Empirical Findings and Motivation
+  - category: Empirical Findings and Motivation
     fields:
       - name: length_ablation_results
         description: Concrete ablation results comparing different prompt/caption lengths

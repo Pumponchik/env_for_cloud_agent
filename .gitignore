@@ -14,3 +14,7 @@ venv/
 
 # Editor
 .DS_Store
+
+# Research intermediates (large)
+t2i-prompt-length/papers/
+t2i-prompt-length/paper_extracts/
