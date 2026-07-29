@@ -1,0 +1,1146 @@
+{
+  "n": 52,
+  "papers": [
+    {
+      "arxiv_id": "2607.25641v1",
+      "title": "OmniPhys: Knowledge-Graph-Driven Benchmarking and Collective Optimization for Physical Commonsense in Text-to-Image Generation",
+      "abstract": "While text-to-image models exhibit remarkable visual fidelity, they frequently violate fundamental physical commonsense. Existing benchmarks often rely on coarse-grained descriptions, failing to diagnose the mastery of specific physical principles. Moreover, the high stochasticity of generative processes causes current prompt optimization methods to suffer from gradient hallucinations, where optimizers are misled by transient visual artifacts rather than systemic flaws. To address these challenges, we introduce OmniPhys, a rigorous benchmark of 1,551 samples grounded in a Physical Knowledge Graph. By aligning PhET simulations with standard curricula, OmniPhys operationalizes a knowledge-to-scenario pipeline that performs diagnostic stress tests via a dual-path verification protocol. We further propose OmniPrompt, an iterative framework that treats physical alignment as a discrete optimization problem. For each query, OmniPrompt aggregates K stochastic images into a per-query feedback buffer. Across training, it further merges feedback from batches of B queries before each meta-policy update, filtering seed and query-local noise. Evaluations across 12 representative text-to-image models reveal universal physical bottlenecks. Results demonstrate that OmniPrompt significantly enhances physical consistency across diverse backbones, proving the transferability and efficacy of our evolved meta-policies. The code and data are available at https://github.com/zjukg/OmniPhys",
+      "published": "2026-07-28",
+      "authors": [
+        "Yajing Xu",
+        "Yarong Lan",
+        "Jiaoyan Chen",
+        "Yichi Zhang",
+        "Jeff Z. Pan",
+        "Mingchen Tu",
+        "Zhizhen Liu",
+        "Wen Zhang",
+        "Huajun Chen"
+      ],
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "query_hits": [
+        5
+      ]
+    },
+    {
+      "arxiv_id": "2607.24353v1",
+      "title": "PRISM: Prompt Refinement via Image-grounded Self-rewarding Mechanism for Text-to-Image Generation",
+      "abstract": "Text-to-image generation models can synthesize high-quality images from natural language descriptions, but their performance remains highly sensitive to prompt formulation. Existing prompt optimization methods mainly rely on text-side rewriting, prompt expansion, or external reward signals, offering limited image-grounded diagnosis and weak support for learning reusable optimisation policies. In this paper, we propose PRISM, a Prompt Refinement framework via Image-grounded Self-rewarding Mechanism. PRISM closes the prompt-image-feedback loop by interpreting generated images with structured visual diagnosis and scoring them along semantic consistency, aesthetic quality, and human preference alignment. It first initializes a unified VLM through multi-task supervised fine-tuning, and then improves the prompt policy via self-rewarding optimization with a hybrid ideal-point and Chebyshev reward. Extensive experiments show that PRISM improves holistic image quality and fine-grained semantic alignment, while providing interpretable feedback for targeted prompt refinement. The code is available at https://anonymous.4open.science/r/PRISM-FF81.",
+      "published": "2026-07-27",
+      "authors": [
+        "Guo Tang",
+        "HongJie Luo",
+        "Tianxu Wang",
+        "Ying Zhang",
+        "Hao Wang"
+      ],
+      "categories": [
+        "cs.CV"
+      ],
+      "query_hits": [
+        0,
+        5
+      ]
+    },
+    {
+      "arxiv_id": "2607.18724v1",
+      "title": "One Rewrite to Fix Them All? Type-Aware Repair Allocation for Text-to-Image Prompt Optimization",
+      "abstract": "Text-to-image (T2I) generators often fail to follow their prompts faithfully, producing wrong counts, swapped attributes, ambiguous relations, and illegible text. Prompt optimization repairs such failures by rewriting the user prompt, requiring no generator retraining, and has yielded promising results. However, existing optimizers absorb heterogeneous failures into one uniform prompt expansion, even though each calls for different repair language. We formulate semantic prompt optimization as atomic repair allocation: each failed proposition is routed to a type-conditioned repair operator before the resulting local constraints are compiled into one executable prompt. We instantiate this formulation in the training-free Type-Aware Repair Allocation (TARA) framework, which separates diagnosis, allocation, compilation, and a semantic repair gate, an accept-or-revert controller over exactly one prescribed repair that prevents semantic regressions. Extensive experiments on DSG and TIFA across four frozen generators demonstrate that TARA achieves the best semantic accuracy in all eight benchmark-generator cells, improving over VisualPrompter by 5.6 and 2.6 points on DSG and TIFA, respectively, while maintaining image quality and running fastest in our matched local setting at 16.0 seconds versus 20.0 seconds per prompt.",
+      "published": "2026-07-21",
+      "authors": [
+        "Haoyue Liu",
+        "Xiaoyu Ma",
+        "Ye Chen",
+        "Shuguang Cui",
+        "Xiaoying Tang"
+      ],
+      "categories": [
+        "cs.AI"
+      ],
+      "query_hits": [
+        0,
+        5
+      ]
+    },
+    {
+      "arxiv_id": "2606.08492v2",
+      "title": "Seeing is Believing: Aligning Prompt Rewriting with Visual Anchors for Text-to-Image Generation",
+      "abstract": "Despite the impressive capabilities of text-to-image (T2I) models, an intent-generation gap often persists due to the brevity and ambiguity of user prompts. Existing approaches primarily polish the prompt for fluency and readability. However, the enhancement process still lacks visual grounding. As a result, the rewriter may over-infer missing details, causing an intent-generation gap. To address this limitation, we propose FaithRewriter, a novel prompt-enhancement framework for T2I generation. Specifically, FaithRewriter first leverages a multimodal MLLM to generate an image from the original prompt as an intermediate visual cue. This cue is then combined with the prompt and fed into a large-scale LLM to produce visually grounded augmentations that better reflect how the intended content should appear in images. Finally, these augmentations are distilled into a small-scale LLM for efficient deployment, enhancing its ability to generate effective T2I prompts. Experiments show that FaithRewriter yields prompts that are more faithful to the user intent and more visually plausible than strong baselines, helping narrow the intent-generation gap.",
+      "published": "2026-06-07",
+      "authors": [
+        "Xuanyi Liu",
+        "Deyi Ji",
+        "Junyu Lu",
+        "Jing Wang",
+        "Lanyun Zhu",
+        "Qianxiong Xu",
+        "Xuhang Chen",
+        "Tianrun Chen",
+        "Siwei Ma"
+      ],
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "query_hits": [
+        0,
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "arxiv_id": "2606.01282v1",
+      "title": "KG-FairDiff: Knowledge Graph-Guided Prompt Refinement for Demographically Fair Text-to-Image Generation",
+      "abstract": "Text-to-Image (TTI) systems are now everyday infrastructure for journalism, education, advertising, and public communication, and the demographic and cultural stereotypes they inherit from training data (rendering women, people of colour, older adults, and non-Western cultures as under-represented or caricatured) become a population-level harm at deployment scale. Existing mitigations either require costly retraining, infeasible for the closed-source backbones that dominate consumer products, or rely on fixed demographic templates that ignore cultural context. We present KG-FairDiff, a model-agnostic, inference-time framework that formalises fairness-aware prompt refinement as a constrained optimisation problem and operationalises it as a closed-loop pipeline: a knowledge graph of ~1,200 culture- and bias-related triples retrieves structured context, an LLM rewriter proposes refinements, and a validator accepts only prompts that reduce a divergence-based fairness loss while preserving semantic fidelity to the user's original intent. We prove a finite-termination bound for the refinement loop, contribute a mathematically consistent evaluation suite linking Bias-P/Bias-W to divergence from target distributions and ENS to KL divergence, and audit eight widely-deployed backbone generators. KG-FairDiff substantially reduces gender, race, age, and intersectional disparities while preserving prompt semantics, offering a practical, deployment-ready route to more equitable generative AI.",
+      "published": "2026-05-31",
+      "authors": [
+        "Farbod Davoodi",
+        "Seyed Reza Tavakoli Shiyadeh",
+        "Pooria Safaei",
+        "Sana Harighi",
+        "Parsa Gholami",
+        "Amirali Amini",
+        "Kimia Vanaei",
+        "Emad Firoozi",
+        "Parham Abed Azad",
+        "Babak Khalaj",
+        "Siavash Ahmadi",
+        "Amir Hossein Payberah",
+        "Mohammad Hossein Rohban",
+        "Soheil Kolouri",
+        "Ali Diba"
+      ],
+      "categories": [
+        "cs.CV",
+        "cs.CY",
+        "cs.LG"
+      ],
+      "query_hits": [
+        0
+      ]
+    },
+    {
+      "arxiv_id": "2605.17969v1",
+      "title": "Generation Navigator: A State-Aware Agentic Framework for Image Generation",
+      "abstract": "Despite rapid advances in text-to-image generation, faithfully realizing user intent remains challenging, often requiring manual multi-turn trial and error. To automate this process, existing systems rely on either simple prompt rewriting or closed-loop agents driven by hand-crafted rules, rather than learning to adapt actions to the evolving generation process. In this paper, we reformulate image generation as a state-conditioned action-making problem and propose Generation Navigator, a multi-turn T2I agent that learns to dynamically steer the generation trajectory and output the next action. However, training this agent via reinforcement learning introduces a critical credit assignment challenge: naively rewarding a trajectory based solely on a single state assigns equal credit to all actions in the rollout, ignores the quality dynamics across turns, and fails to distinguish actions that improve the trajectory from those that degrade it or waste turns without progress. We resolve this with PRE-GRPO (Peak-Retention-Efficiency Group Relative Policy Optimization), a trajectory-level reinforcement learning objective that explicitly rewards discovering a high-quality image (Peak), avoiding subsequent quality degradation across turns (Retention), and minimizing unnecessary turns (Efficiency). Experiments show substantial improvements across benchmarks, reaching a WISE score of 0.90 and 79.06% reasoning accuracy on T2I-ReasonBench.",
+      "published": "2026-05-18",
+      "authors": [
+        "Jinming Liu",
+        "Ruoyu Feng",
+        "Yuqi Wang",
+        "Wenjun Zeng",
+        "Xin Jin"
+      ],
+      "categories": [
+        "cs.CV"
+      ],
+      "query_hits": [
+        1
+      ]
+    },
+    {
+      "arxiv_id": "2604.09861v1",
+      "title": "Evolutionary Token-Level Prompt Optimization for Diffusion Models",
+      "abstract": "Text-to-image diffusion models exhibit strong generative performance but remain highly sensitive to prompt formulation, often requiring extensive manual trial and error to obtain satisfactory results. This motivates the development of automated, model-agnostic prompt optimization methods that can systematically explore the conditioning space beyond conventional text rewriting. This work investigates the use of a Genetic Algorithm (GA) for prompt optimization by directly evolving the token vectors employed by CLIP-based diffusion models. The GA optimizes a fitness function that combines aesthetic quality, measured by the LAION Aesthetic Predictor V2, with prompt-image alignment, assessed via CLIPScore. Experiments on 36 prompts from the Parti Prompts (P2) dataset show that the proposed approach outperforms the baseline methods, including Promptist and random search, achieving up to a 23.93% improvement in fitness. Overall, the method is adaptable to image generation models with tokenized text encoders and provides a modular framework for future extensions, the limitations and prospects of which are discussed.",
+      "published": "2026-04-10",
+      "authors": [
+        "Dom\u00edcio Pereira Neto",
+        "Jo\u00e3o Correia",
+        "Penousal Machado"
+      ],
+      "categories": [
+        "cs.AI",
+        "cs.NE"
+      ],
+      "query_hits": [
+        0,
+        4,
+        5
+      ]
+    },
+    {
+      "arxiv_id": "2603.26328v1",
+      "title": "Verify Claimed Text-to-Image Models via Boundary-Aware Prompt Optimization",
+      "abstract": "As Text-to-Image (T2I) generation becomes widespread, third-party platforms increasingly integrate multiple model APIs for convenient image creation. However, false claims of using official models can mislead users and harm model owners' reputations, making model verification essential to confirm whether an API's underlying model matches its claim. Existing methods address this by using verification prompts generated by official model owners, but the generation relies on multiple reference models for optimization, leading to high computational cost and sensitivity to model selection. To address this problem, we propose a reference-free T2I model verification method called Boundary-aware Prompt Optimization (BPO). It directly explores the intrinsic characteristics of the target model. The key insight is that although different T2I models produce similar outputs for normal prompts, their semantic boundaries in the embedding space (transition zones between two concepts such as \"corgi\" and \"bagel\") are distinct. Prompts near these boundaries generate unstable outputs (e.g., sometimes a corgi and sometimes a bagel) on the target model but remain stable on other models. By identifying such boundary-adjacent prompts, BPO captures model-specific behaviors that serve as reliable verification cues for distinguishing T2I models. Experiments on five T2I models and four baselines demonstrate that BPO achieves superior verification accuracy.",
+      "published": "2026-03-27",
+      "authors": [
+        "Zidong Zhao",
+        "Yihao Huang",
+        "Qing Guo",
+        "Tianlin Li",
+        "Anran Li",
+        "Kailong Wang",
+        "Jin Song Dong",
+        "Geguang Pu"
+      ],
+      "categories": [
+        "cs.CV"
+      ],
+      "query_hits": [
+        0,
+        5
+      ]
+    },
+    {
+      "arxiv_id": "2602.13131v1",
+      "title": "Preference-Guided Prompt Optimization for Text-to-Image Generation",
+      "abstract": "Generative models are increasingly powerful, yet users struggle to guide them through prompts. The generative process is difficult to control and unpredictable, and user instructions may be ambiguous or under-specified. Prior prompt refinement tools heavily rely on human effort, while prompt optimization methods focus on numerical functions and are not designed for human-centered generative tasks, where feedback is better expressed as binary preferences and demands convergence within few iterations. We present APPO, a preference-guided prompt optimization algorithm. Instead of iterating prompts, users only provide binary preferential feedback. APPO adaptively balances its strategies between exploiting user feedback and exploring new directions, yielding effective and efficient optimization. We evaluate APPO on image generation, and the results show APPO enables achieving satisfactory outcomes in fewer iterations with lower cognitive load than manual prompt editing. We anticipate APPO will advance human-AI collaboration in generative tasks by leveraging user preferences to guide complex content creation.",
+      "published": "2026-02-13",
+      "authors": [
+        "Zhipeng Li",
+        "Yi-Chi Liao",
+        "Christian Holz"
+      ],
+      "categories": [
+        "cs.HC"
+      ],
+      "query_hits": [
+        0,
+        5
+      ]
+    },
+    {
+      "arxiv_id": "2511.19811v1",
+      "title": "Training-Free Generation of Diverse and High-Fidelity Images via Prompt Semantic Space Optimization",
+      "abstract": "Image diversity remains a fundamental challenge for text-to-image diffusion models. Low-diversity models tend to generate repetitive outputs, increasing sampling redundancy and hindering both creative exploration and downstream applications. A primary cause is that generation often collapses toward a strong mode in the learned distribution. Existing attempts to improve diversity, such as noise resampling, prompt rewriting, or steering-based guidance, often still collapse to dominant modes or introduce distortions that degrade image quality. In light of this, we propose Token-Prompt embedding Space Optimization (TPSO), a training-free and model-agnostic module. TPSO introduces learnable parameters to explore underrepresented regions of the token embedding space, reducing the tendency of the model to repeatedly generate samples from strong modes of the learned distribution. At the same time, the prompt-level space provides a global semantic constraint that regulates distribution shifts, preventing quality degradation while maintaining high fidelity. Extensive experiments on MS-COCO and three diffusion backbones show that TPSO significantly enhances generative diversity, improving baseline performance from 1.10 to 4.18 points, without sacrificing image quality. Code will be released upon acceptance.",
+      "published": "2025-11-25",
+      "authors": [
+        "Debin Meng",
+        "Chen Jin",
+        "Zheng Gao",
+        "Yanran Li",
+        "Ioannis Patras",
+        "Georgios Tzimiropoulos"
+      ],
+      "categories": [
+        "cs.CV",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "query_hits": [
+        0,
+        1
+      ]
+    },
+    {
+      "arxiv_id": "2511.11483v4",
+      "title": "ImAgent: A Unified Multimodal Agent Framework for Test-Time Scalable Image Generation",
+      "abstract": "Recent text-to-image (T2I) models have made remarkable progress in generating visually realistic and semantically coherent images. However, they still suffer from randomness and inconsistency with the given prompts, particularly when textual descriptions are vague or underspecified. Existing approaches, such as prompt rewriting, best-of-N sampling, and self-refinement, can mitigate these issues but usually require additional modules and operate independently, hindering test-time scaling efficiency and increasing computational overhead. In this paper, we introduce ImAgent, a training-free unified multimodal agent that integrates reasoning, generation, and self-evaluation within a single framework for efficient test-time scaling. Guided by a policy controller, multiple generation actions dynamically interact and self-organize to enhance image fidelity and semantic alignment without relying on external models. Extensive experiments on image generation and editing tasks demonstrate that ImAgent consistently improves over the backbone and even surpasses other strong baselines where the backbone model fails, highlighting the potential of unified multimodal agents for adaptive and efficient image generation under test-time scaling.",
+      "published": "2025-11-14",
+      "authors": [
+        "Kaishen Wang",
+        "Ruibo Chen",
+        "Tong Zheng",
+        "Heng Huang"
+      ],
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "query_hits": [
+        1
+      ]
+    },
+    {
+      "arxiv_id": "2510.20206v2",
+      "title": "RAPO++: Cross-Stage Prompt Optimization for Text-to-Video Generation via Data Alignment and Test-Time Scaling",
+      "abstract": "Prompt design plays a crucial role in text-to-video (T2V) generation, yet user-provided prompts are often short, unstructured, and misaligned with training data, limiting the generative potential of diffusion-based T2V models. We present \\textbf{RAPO++}, a cross-stage prompt optimization framework that unifies training-data--aligned refinement, test-time iterative scaling, and large language model (LLM) fine-tuning to substantially improve T2V generation without modifying the underlying generative backbone. In \\textbf{Stage 1}, Retrieval-Augmented Prompt Optimization (RAPO) enriches user prompts with semantically relevant modifiers retrieved from a relation graph and refactors them to match training distributions, enhancing compositionality and multi-object fidelity. \\textbf{Stage 2} introduces Sample-Specific Prompt Optimization (SSPO), a closed-loop mechanism that iteratively refines prompts using multi-source feedback -- including semantic alignment, spatial fidelity, temporal coherence, and task-specific signals such as optical flow -- yielding progressively improved video generation quality. \\textbf{Stage 3} leverages optimized prompt pairs from SSPO to fine-tune the rewriter LLM, internalizing task-specific optimization patterns and enabling efficient, high-quality prompt generation even before inference. Extensive experiments across five state-of-the-art T2V models and five benchmarks demonstrate that RAPO++ achieves significant gains in semantic alignment, compositional reasoning, temporal stability, and physical plausibility, outperforming existing methods by large margins. Our results highlight RAPO++ as a model-agnostic, cost-efficient, and scalable solution that sets a new standard for prompt optimization in T2V generation. The code is available at https://github.com/Vchitect/RAPO.",
+      "published": "2025-10-23",
+      "authors": [
+        "Bingjie Gao",
+        "Qianli Ma",
+        "Xiaoxue Wu",
+        "Shuai Yang",
+        "Guanzhou Lan",
+        "Haonan Zhao",
+        "Jiaxuan Chen",
+        "Qingyang Liu",
+        "Yu Qiao",
+        "Xinyuan Chen",
+        "Yaohui Wang",
+        "Li Niu"
+      ],
+      "categories": [
+        "cs.CV"
+      ],
+      "query_hits": [
+        4
+      ]
+    },
+    {
+      "arxiv_id": "2510.12041v2",
+      "title": "Improving Text-to-Image Generation with Input-Side Inference-Time Scaling",
+      "abstract": "Recent advances in text-to-image (T2I) generation have achieved impressive results, yet existing models often struggle with simple or underspecified prompts, leading to suboptimal image-text alignment, aesthetics, and quality. We propose a prompt rewriting framework that leverages large language models (LLMs) to refine user inputs before feeding them into T2I backbones. Our approach introduces a carefully designed reward system and an iterative direct preference optimization (DPO) training pipeline, enabling the rewriter to enhance prompts without requiring supervised fine-tuning data. We evaluate our method across diverse T2I models and benchmarks. Results show that our prompt rewriter consistently improves image-text alignment, visual quality, and aesthetics, outperforming strong baselines. Furthermore, we demonstrate strong transferability by showing that a prompt rewriter trained on one T2I backbone generalizes effectively to others without needing to be retrained. We also systematically study scalability, evaluating how performance gains scale with the capacity of the large LLM used as the rewriter. These findings highlight that prompt rewriting is an effective, scalable, and practical model-agnostic strategy for improving T2I systems. We plan to release the code and trained prompt rewriters soon.",
+      "published": "2025-10-14",
+      "authors": [
+        "Ruibo Chen",
+        "Jiacheng Pan",
+        "Heng Huang",
+        "Zhenheng Yang"
+      ],
+      "categories": [
+        "cs.CL"
+      ],
+      "query_hits": [
+        1
+      ]
+    },
+    {
+      "arxiv_id": "2510.07217v1",
+      "title": "GenPilot: A Multi-Agent System for Test-Time Prompt Optimization in Image Generation",
+      "abstract": "Text-to-image synthesis has made remarkable progress, yet accurately interpreting complex and lengthy prompts remains challenging, often resulting in semantic inconsistencies and missing details. Existing solutions, such as fine-tuning, are model-specific and require training, while prior automatic prompt optimization (APO) approaches typically lack systematic error analysis and refinement strategies, resulting in limited reliability and effectiveness. Meanwhile, test-time scaling methods operate on fixed prompts and on noise or sample numbers, limiting their interpretability and adaptability. To solve these, we introduce a flexible and efficient test-time prompt optimization strategy that operates directly on the input text. We propose a plug-and-play multi-agent system called GenPilot, integrating error analysis, clustering-based adaptive exploration, fine-grained verification, and a memory module for iterative optimization. Our approach is model-agnostic, interpretable, and well-suited for handling long and complex prompts. Simultaneously, we summarize the common patterns of errors and the refinement strategy, offering more experience and encouraging further exploration. Experiments on DPG-bench and Geneval with improvements of up to 16.9% and 5.7% demonstrate the strong capability of our methods in enhancing the text and image consistency and structural coherence of generated images, revealing the effectiveness of our test-time prompt optimization strategy. The code is available at https://github.com/27yw/GenPilot.",
+      "published": "2025-10-08",
+      "authors": [
+        "Wen Ye",
+        "Zhaocheng Liu",
+        "Yuwei Gui",
+        "Tingyu Yuan",
+        "Yunyue Su",
+        "Bowen Fang",
+        "Chaoyang Zhao",
+        "Qiang Liu",
+        "Liang Wang"
+      ],
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "query_hits": [
+        0,
+        5,
+        6
+      ]
+    },
+    {
+      "arxiv_id": "2509.21375v1",
+      "title": "Automated Prompt Generation for Creative and Counterfactual Text-to-image Synthesis",
+      "abstract": "Text-to-image generation has advanced rapidly with large-scale multimodal training, yet fine-grained controllability remains a critical challenge. Counterfactual controllability, defined as the capacity to deliberately generate images that contradict common-sense patterns, remains a major challenge but plays a crucial role in enabling creativity and exploratory applications. In this work, we address this gap with a focus on counterfactual size (e.g., generating a tiny walrus beside a giant button) and propose an automatic prompt engineering framework that adapts base prompts into revised prompts for counterfactual images. The framework comprises three components: an image evaluator that guides dataset construction by identifying successful image generations, a supervised prompt rewriter that produces revised prompts, and a DPO-trained ranker that selects the optimal revised prompt. We construct the first counterfactual size text-image dataset and enhance the image evaluator by extending Grounded SAM with refinements, achieving a 114 percent improvement over its backbone. Experiments demonstrate that our method outperforms state-of-the-art baselines and ChatGPT-4o, establishing a foundation for future research on counterfactual controllability.",
+      "published": "2025-09-23",
+      "authors": [
+        "Aleksa Jelaca",
+        "Ying Jiao",
+        "Chang Tian",
+        "Marie-Francine Moens"
+      ],
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "query_hits": [
+        0,
+        1,
+        6
+      ]
+    },
+    {
+      "arxiv_id": "2509.15962v1",
+      "title": "Structured Information for Improving Spatial Relationships in Text-to-Image Generation",
+      "abstract": "Text-to-image (T2I) generation has advanced rapidly, yet faithfully capturing spatial relationships described in natural language prompts remains a major challenge. Prior efforts have addressed this issue through prompt optimization, spatially grounded generation, and semantic refinement. This work introduces a lightweight approach that augments prompts with tuple-based structured information, using a fine-tuned language model for automatic conversion and seamless integration into T2I pipelines. Experimental results demonstrate substantial improvements in spatial accuracy, without compromising overall image quality as measured by Inception Score. Furthermore, the automatically generated tuples exhibit quality comparable to human-crafted tuples. This structured information provides a practical and portable solution to enhance spatial relationships in T2I generation, addressing a key limitation of current large-scale generative systems.",
+      "published": "2025-09-19",
+      "authors": [
+        "Sander Schildermans",
+        "Chang Tian",
+        "Ying Jiao",
+        "Marie-Francine Moens"
+      ],
+      "categories": [
+        "cs.AI"
+      ],
+      "query_hits": [
+        5
+      ]
+    },
+    {
+      "arxiv_id": "2509.12446v2",
+      "title": "PromptSculptor: Multi-Agent Based Text-to-Image Prompt Optimization",
+      "abstract": "The rapid advancement of generative AI has democratized access to powerful tools such as Text-to-Image models. However, to generate high-quality images, users must still craft detailed prompts specifying scene, style, and context-often through multiple rounds of refinement. We propose PromptSculptor, a novel multi-agent framework that automates this iterative prompt optimization process. Our system decomposes the task into four specialized agents that work collaboratively to transform a short, vague user prompt into a comprehensive, refined prompt. By leveraging Chain-of-Thought reasoning, our framework effectively infers hidden context and enriches scene and background details. To iteratively refine the prompt, a self-evaluation agent aligns the modified prompt with the original input, while a feedback-tuning agent incorporates user feedback for further refinement. Experimental results demonstrate that PromptSculptor significantly enhances output quality and reduces the number of iterations needed for user satisfaction. Moreover, its model-agnostic design allows seamless integration with various T2I models, paving the way for industrial applications.",
+      "published": "2025-09-15",
+      "authors": [
+        "Dawei Xiang",
+        "Wenyan Xu",
+        "Kexin Chu",
+        "Tianqi Ding",
+        "Zixu Shen",
+        "Yiming Zeng",
+        "Jianchang Su",
+        "Wei Zhang"
+      ],
+      "categories": [
+        "cs.MA",
+        "cs.AI"
+      ],
+      "query_hits": [
+        0,
+        5
+      ]
+    },
+    {
+      "arxiv_id": "2509.04545v5",
+      "title": "PromptEnhancer: A Simple Approach to Enhance Text-to-Image Models via Chain-of-Thought Prompt Rewriting",
+      "abstract": "Recent advancements in text-to-image (T2I) diffusion models have demonstrated remarkable capabilities in generating high-fidelity images. However, these models often struggle to faithfully render complex user prompts, particularly in aspects like attribute binding, negation, and compositional relationships. This leads to a significant mismatch between user intent and the generated output. To address this challenge, we introduce PromptEnhancer, a novel and universal prompt rewriting framework that enhances any pretrained T2I model without requiring modifications to its weights. Unlike prior methods that rely on model-specific fine-tuning or implicit reward signals like image-reward scores, our framework decouples the rewriter from the generator. We achieve this by training a Chain-of-Thought (CoT) rewriter through reinforcement learning, guided by a dedicated reward model we term the AlignEvaluator. The AlignEvaluator is trained to provide explicit and fine-grained feedback based on a systematic taxonomy of 24 key points, which are derived from a comprehensive analysis of common T2I failure modes. By optimizing the CoT rewriter to maximize the reward from our AlignEvaluator, our framework learns to generate prompts that are more precisely interpreted by T2I models. Extensive experiments on the HunyuanImage 2.1 model demonstrate that PromptEnhancer significantly improves image-text alignment across a wide range of semantic and compositional challenges. Furthermore, we introduce a new, high-quality human preference benchmark to facilitate future research in this direction.",
+      "published": "2025-09-04",
+      "authors": [
+        "Linqing Wang",
+        "Ximing Xing",
+        "Yiji Cheng",
+        "Zhiyuan Zhao",
+        "Donghao Li",
+        "Tiankai Hang",
+        "Jiale Tao",
+        "Qixun Wang",
+        "Ruihuang Li",
+        "Comi Chen",
+        "Xin Li",
+        "Mingrui Wu",
+        "Xinchi Deng",
+        "Shuyang Gu",
+        "Chunyu Wang",
+        "Qinglin Lu"
+      ],
+      "categories": [
+        "cs.CV"
+      ],
+      "query_hits": [
+        0,
+        1,
+        8
+      ]
+    },
+    {
+      "arxiv_id": "2508.11904v1",
+      "title": "SafeCtrl: Region-Based Safety Control for Text-to-Image Diffusion via Detect-Then-Suppress",
+      "abstract": "The widespread deployment of text-to-image models is challenged by their potential to generate harmful content. While existing safety methods, such as prompt rewriting or model fine-tuning, provide valuable interventions, they often introduce a trade-off between safety and fidelity. Recent localization-based approaches have shown promise, yet their reliance on explicit ``concept replacement\" can sometimes lead to semantic incongruity. To address these limitations, we explore a more flexible detect-then-suppress paradigm. We introduce SafeCtrl, a lightweight, non-intrusive plugin that first precisely localizes unsafe content. Instead of performing a hard A-to-B substitution, SafeCtrl then suppresses the harmful semantics, allowing the generative process to naturally and coherently resolve into a safe, context-aware alternative. A key aspect of our work is a novel training strategy using Direct Preference Optimization (DPO). We leverage readily available, image-level preference data to train our module, enabling it to learn nuanced suppression behaviors and perform region-guided interventions at inference without requiring costly, pixel-level annotations. Extensive experiments show that SafeCtrl significantly outperforms state-of-the-art methods in both safety efficacy and fidelity preservation. Our findings suggest that decoupled, suppression-based control is a highly effective and scalable direction for building more responsible generative models.",
+      "published": "2025-08-16",
+      "authors": [
+        "Lingyun Zhang",
+        "Yu Xie",
+        "Yanwei Fu",
+        "Ping Chen"
+      ],
+      "categories": [
+        "cs.CV"
+      ],
+      "query_hits": [
+        1
+      ]
+    },
+    {
+      "arxiv_id": "2507.20536v2",
+      "title": "T2I-Copilot: A Training-Free Multi-Agent Text-to-Image System for Enhanced Prompt Interpretation and Interactive Generation",
+      "abstract": "Text-to-Image (T2I) generative models have revolutionized content creation but remain highly sensitive to prompt phrasing, often requiring users to repeatedly refine prompts multiple times without clear feedback. While techniques such as automatic prompt engineering, controlled text embeddings, denoising, and multi-turn generation mitigate these issues, they offer limited controllability, or often necessitate additional training, restricting the generalization abilities. Thus, we introduce T2I-Copilot, a training-free multi-agent system that leverages collaboration between (Multimodal) Large Language Models to automate prompt phrasing, model selection, and iterative refinement. This approach significantly simplifies prompt engineering while enhancing generation quality and text-image alignment compared to direct generation. Specifically, T2I-Copilot consists of three agents: (1) Input Interpreter, which parses the input prompt, resolves ambiguities, and generates a standardized report; (2) Generation Engine, which selects the appropriate model from different types of T2I models and organizes visual and textual prompts to initiate generation; and (3) Quality Evaluator, which assesses aesthetic quality and text-image alignment, providing scores and feedback for potential regeneration. T2I-Copilot can operate fully autonomously while also supporting human-in-the-loop intervention for fine-grained control. On GenAI-Bench, using open-source generation models, T2I-Copilot achieves a VQA score comparable to commercial models RecraftV3 and Imagen 3, surpasses FLUX1.1-pro by 6.17% at only 16.59% of its cost, and outperforms FLUX.1-dev and SD 3.5 Large by 9.11% and 6.36%. Code will be released at: https://github.com/SHI-Labs/T2I-Copilot.",
+      "published": "2025-07-28",
+      "authors": [
+        "Chieh-Yun Chen",
+        "Min Shi",
+        "Gong Zhang",
+        "Humphrey Shi"
+      ],
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.HC"
+      ],
+      "query_hits": [
+        0,
+        6
+      ]
+    },
+    {
+      "arxiv_id": "2507.13708v2",
+      "title": "PoemTale Diffusion: Minimising Information Loss in Poem to Image Generation with Multi-Stage Prompt Refinement",
+      "abstract": "Recent advancements in text-to-image diffusion models have achieved remarkable success in generating realistic and diverse visual content. A critical factor in this process is the model's ability to accurately interpret textual prompts. However, these models often struggle with creative expressions, particularly those involving complex, abstract, or highly descriptive language. In this work, we introduce a novel training-free approach tailored to improve image generation for a unique form of creative language: poetic verse, which frequently features layered, abstract, and dual meanings. Our proposed PoemTale Diffusion approach aims to minimise the information that is lost during poetic text-to-image conversion by integrating a multi stage prompt refinement loop into Language Models to enhance the interpretability of poetic texts. To support this, we adapt existing state-of-the-art diffusion models by modifying their self-attention mechanisms with a consistent self-attention technique to generate multiple consistent images, which are then collectively used to convey the poem's meaning. Moreover, to encourage research in the field of poetry, we introduce the P4I (PoemForImage) dataset, consisting of 1111 poems sourced from multiple online and offline resources. We engaged a panel of poetry experts for qualitative assessments. The results from both human and quantitative evaluations validate the efficacy of our method and contribute a novel perspective to poem-to-image generation with enhanced information capture in the generated images.",
+      "published": "2025-07-18",
+      "authors": [
+        "Sofia Jamil",
+        "Bollampalli Areen Reddy",
+        "Raghvendra Kumar",
+        "Sriparna Saha",
+        "Koustava Goswami",
+        "K. J. Joseph"
+      ],
+      "categories": [
+        "cs.CV"
+      ],
+      "query_hits": [
+        0
+      ]
+    },
+    {
+      "arxiv_id": "2507.03275v1",
+      "title": "ConceptMix++: Leveling the Playing Field in Text-to-Image Benchmarking via Iterative Prompt Optimization",
+      "abstract": "Current text-to-image (T2I) benchmarks evaluate models on rigid prompts, potentially underestimating true generative capabilities due to prompt sensitivity and creating biases that favor certain models while disadvantaging others. We introduce ConceptMix++, a framework that disentangles prompt phrasing from visual generation capabilities by applying iterative prompt optimization. Building on ConceptMix, our approach incorporates a multimodal optimization pipeline that leverages vision-language model feedback to refine prompts systematically. Through extensive experiments across multiple diffusion models, we show that optimized prompts significantly improve compositional generation performance, revealing previously hidden model capabilities and enabling fairer comparisons across T2I models. Our analysis reveals that certain visual concepts -- such as spatial relationships and shapes -- benefit more from optimization than others, suggesting that existing benchmarks systematically underestimate model performance in these categories. Additionally, we find strong cross-model transferability of optimized prompts, indicating shared preferences for effective prompt phrasing across models. These findings demonstrate that rigid benchmarking approaches may significantly underrepresent true model capabilities, while our framework provides more accurate assessment and insights for future development.",
+      "published": "2025-07-04",
+      "authors": [
+        "Haosheng Gan",
+        "Berk Tinaz",
+        "Mohammad Shahab Sepehri",
+        "Zalan Fabian",
+        "Mahdi Soltanolkotabi"
+      ],
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "query_hits": [
+        0,
+        5
+      ]
+    },
+    {
+      "arxiv_id": "2506.23138v2",
+      "title": "VisualPrompter: Semantic-Aware Prompt Optimization with Visual Feedback for Text-to-Image Synthesis",
+      "abstract": "The notable gap between user-provided and model-preferred prompts poses a significant challenge for generating high-quality images with text-to-image models, compelling the need for prompt engineering. Current studies on prompt engineering can effectively enhance the style and aesthetics of generated images. However, they often neglect the semantic alignment between generated images and user descriptions, resulting in visually appealing but content-wise unsatisfying outputs. In this work, we propose VisualPrompter, a novel training-free prompt engineering framework that refines user inputs to model-preferred sentences. VisualPrompter utilizes an automatic self-reflection module that identifies absent concepts in the generated images, followed by a target-specific prompt optimization mechanism that revises the prompts in a fine-grained manner. By deconstructing prompts, introducing new elements at the atomic semantic level, and then reassembling them, our framework is able to maintain semantic consistency and integrity throughout the optimization process. Extensive experiments demonstrate the effectiveness of VisualPrompter, which achieves new state-of-the-art performance on multiple benchmarks for text-image alignment evaluation. Additionally, our framework features a plug-and-play design, making it highly adaptable to various generative models. Our code is available at https://github.com/teheperinko541/VisualPrompter.",
+      "published": "2025-06-29",
+      "authors": [
+        "Shiyu Wu",
+        "Mingzhen Sun",
+        "Weining Wang",
+        "Yequan Wang",
+        "Jing Liu"
+      ],
+      "categories": [
+        "cs.CV"
+      ],
+      "query_hits": [
+        0,
+        5
+      ]
+    },
+    {
+      "arxiv_id": "2506.16853v2",
+      "title": "Reward-Agnostic Prompt Optimization for Text-to-Image Diffusion Models",
+      "abstract": "We investigate a general approach for improving user prompts in text-to-image (T2I) diffusion models by finding prompts that maximize a reward function specified at test-time. Although diverse reward models are used for evaluating image generation, existing automated prompt engineering methods typically target specific reward configurations. Consequently, these specialized designs exhibit suboptimal performance when applied to new prompt engineering scenarios involving different reward models. To address this limitation, we introduce RATTPO (Reward-Agnostic Test-Time Prompt Optimization), a flexible test-time optimization method applicable across various reward scenarios without modification. RATTPO iteratively searches for optimized prompts by querying large language models (LLMs) \\textit{without} requiring reward-specific task descriptions. Instead, it uses the optimization trajectory and a novel reward-aware feedback signal (termed a \"hint\") as context. Empirical results demonstrate the versatility of RATTPO, effectively enhancing user prompts across diverse reward setups that assess various generation aspects, such as aesthetics, general human preference, or spatial relationships between objects. RATTPO surpasses other test-time search baselines in search efficiency, running 4.8 times faster than naive reward-agnostic test-time search baseline on average. Furthermore, with sufficient inference budget, it can achieve comparable performance to learning-based baselines that require reward-specific fine-tuning. The code is available at https://github.com/seminkim/RATTPO.",
+      "published": "2025-06-20",
+      "authors": [
+        "Semin Kim",
+        "Yeonwoo Cha",
+        "Jaehoon Yoo",
+        "Seunghoon Hong"
+      ],
+      "categories": [
+        "cs.LG"
+      ],
+      "query_hits": [
+        0,
+        5
+      ]
+    },
+    {
+      "arxiv_id": "2505.18979v2",
+      "title": "Dynamic Optimization and Safety Indicator Injection for Jailbreaking Text-to-Image Models with Multimodal Safety Filters",
+      "abstract": "Text-to-image (T2I) models can generate not-safe-for-work (NSFW) content, motivating multi-stage safety pipelines with both text and image filters. Newer LLM-based filters detect latent intent beyond keywords, making token-level perturbation attacks unreliable. Our evaluation further shows that existing jailbreak methods exhibit a sharp trade-off between filter evasion and semantic fidelity, while also requiring excessive queries to succeed. We introduce \\textbf{OptJail}, an automated jailbreak framework that combines dynamic prompt optimization with multimodal feedback. It consists of two key components: (i) \\textit{Dynamic Optimization}, an iterative process that leverages text-filter feedback and semantic consistency to rewrite prompts into adversarial variants; and (ii) \\textit{Adaptive Safety Indicator Injection}, which formulates the injection of benign visual cues as a reinforcement learning problem to bypass image-level filters. OptJail achieves state-of-the-art performance, increasing the ShieldLM-7B bypass rate from 8.9\\% (Sneakyprompt) to 99.0\\%, improving CLIP score from 0.2637 to 0.2762. Moreover, it generalizes to unseen filters and successfully jailbreaks DALL E 3 in our evaluation. Mechanistic analysis reveals why these defenses fail: optimized prompts are projected into the ``safe'' region of the filter's representation space yet remain nearly stationary in the generative model's semantic space, and injected safety indicators redirect image detectors' attention away from NSFW content toward benign visual cues. This study reveals systemic vulnerabilities in current multimodal defenses and motivates stronger adaptive defenses.",
+      "published": "2025-05-25",
+      "authors": [
+        "Zixuan Chen",
+        "Hao Lin",
+        "Ke Xu",
+        "Xinghao Jiang",
+        "Tanfeng Sun"
+      ],
+      "categories": [
+        "cs.LG"
+      ],
+      "query_hits": [
+        5
+      ]
+    },
+    {
+      "arxiv_id": "2505.17540v1",
+      "title": "RePrompt: Reasoning-Augmented Reprompting for Text-to-Image Generation via Reinforcement Learning",
+      "abstract": "Despite recent progress in text-to-image (T2I) generation, existing models often struggle to faithfully capture user intentions from short and under-specified prompts. While prior work has attempted to enhance prompts using large language models (LLMs), these methods frequently generate stylistic or unrealistic content due to insufficient grounding in visual semantics and real-world composition. Inspired by recent advances in reasoning for language model, we propose RePrompt, a novel reprompting framework that introduces explicit reasoning into the prompt enhancement process via reinforcement learning. Instead of relying on handcrafted rules or stylistic rewrites, our method trains a language model to generate structured, self-reflective prompts by optimizing for image-level outcomes. The tailored reward models assesse the generated images in terms of human preference, semantic alignment, and visual composition, providing indirect supervision to refine prompt generation. Our approach enables end-to-end training without human-annotated data. Experiments on GenEval and T2I-Compbench show that RePrompt significantly boosts spatial layout fidelity and compositional generalization across diverse T2I backbones, establishing new state-of-the-art results.",
+      "published": "2025-05-23",
+      "authors": [
+        "Mingrui Wu",
+        "Lu Wang",
+        "Pu Zhao",
+        "Fangkai Yang",
+        "Jianjin Zhang",
+        "Jianfeng Liu",
+        "Yuefeng Zhan",
+        "Weihao Han",
+        "Hao Sun",
+        "Jiayi Ji",
+        "Xiaoshuai Sun",
+        "Qingwei Lin",
+        "Weiwei Deng",
+        "Dongmei Zhang",
+        "Feng Sun",
+        "Qi Zhang",
+        "Rongrong Ji"
+      ],
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "query_hits": [
+        2,
+        8
+      ]
+    },
+    {
+      "arxiv_id": "2505.16763v2",
+      "title": "Self-Rewarding Large Vision-Language Models for Optimizing Prompts in Text-to-Image Generation",
+      "abstract": "Text-to-image models are powerful for producing high-quality images based on given text prompts, but crafting these prompts often requires specialized vocabulary. To address this, existing methods train rewriting models with supervision from large amounts of manually annotated data and trained aesthetic assessment models. To alleviate the dependence on data scale for model training and the biases introduced by trained models, we propose a novel prompt optimization framework, designed to rephrase a simple user prompt into a sophisticated prompt to a text-to-image model. Specifically, we employ the large vision language models (LVLMs) as the solver to rewrite the user prompt, and concurrently, employ LVLMs as a reward model to score the aesthetics and alignment of the images generated by the optimized prompt. Instead of laborious human feedback, we exploit the prior knowledge of the LVLM to provide rewards, i.e., AI feedback. Simultaneously, the solver and the reward model are unified into one model and iterated in reinforcement learning to achieve self-improvement by giving a solution and judging itself. Results on two popular datasets demonstrate that our method outperforms other strong competitors.",
+      "published": "2025-05-22",
+      "authors": [
+        "Hongji Yang",
+        "Yucheng Zhou",
+        "Wencheng Han",
+        "Jianbing Shen"
+      ],
+      "categories": [
+        "cs.CV"
+      ],
+      "query_hits": [
+        0,
+        5
+      ]
+    },
+    {
+      "arxiv_id": "2504.11739v2",
+      "title": "The Devil is in the Prompts: Retrieval-Augmented Prompt Optimization for Text-to-Video Generation",
+      "abstract": "The evolution of Text-to-video (T2V) generative models, trained on large-scale datasets, has been marked by significant progress. However, the sensitivity of T2V generative models to input prompts highlights the critical role of prompt design in influencing generative outcomes. Prior research has predominantly relied on Large Language Models (LLMs) to align user-provided prompts with the distribution of training prompts, albeit without tailored guidance encompassing prompt vocabulary and sentence structure nuances. To this end, we introduce RAPO, a novel Retrieval-Augmented Prompt Optimization framework. In order to address potential inaccuracies and ambiguous details generated by LLM-generated prompts. RAPO refines the naive prompts through dual optimization branches, selecting the superior prompt for T2V generation. The first branch augments user prompts with diverse modifiers extracted from a learned relational graph, refining them to align with the format of training prompts via a fine-tuned LLM. Conversely, the second branch rewrites the naive prompt using a pre-trained LLM following a well-defined instruction set. Extensive experiments demonstrate that RAPO can effectively enhance both the static and dynamic dimensions of generated videos, demonstrating the significance of prompt optimization for user-provided prompts.",
+      "published": "2025-04-16",
+      "authors": [
+        "Bingjie Gao",
+        "Xinyu Gao",
+        "Xiaoxue Wu",
+        "Yujie Zhou",
+        "Yu Qiao",
+        "Li Niu",
+        "Xinyuan Chen",
+        "Yaohui Wang"
+      ],
+      "categories": [
+        "cs.CV",
+        "cs.CL"
+      ],
+      "query_hits": [
+        4
+      ]
+    },
+    {
+      "arxiv_id": "2503.19937v1",
+      "title": "Reverse Prompt: Cracking the Recipe Inside Text-to-Image Generation",
+      "abstract": "Text-to-image generation has become increasingly popular, but achieving the desired images often requires extensive prompt engineering. In this paper, we explore how to decode textual prompts from reference images, a process we refer to as image reverse prompt engineering. This technique enables us to gain insights from reference images, understand the creative processes of great artists, and generate impressive new images. To address this challenge, we propose a method known as automatic reverse prompt optimization (ARPO). Specifically, our method refines an initial prompt into a high-quality prompt through an iteratively imitative gradient prompt optimization process: 1) generating a recreated image from the current prompt to instantiate its guidance capability; 2) producing textual gradients, which are candidate prompts intended to reduce the difference between the recreated image and the reference image; 3) updating the current prompt with textual gradients using a greedy search method to maximize the CLIP similarity between prompt and reference image. We compare ARPO with several baseline methods, including handcrafted techniques, gradient-based prompt tuning methods, image captioning, and data-driven selection method. Both quantitative and qualitative results demonstrate that our ARPO converges quickly to generate high-quality reverse prompts. More importantly, we can easily create novel images with diverse styles and content by directly editing these reverse prompts. Code will be made publicly available.",
+      "published": "2025-03-25",
+      "authors": [
+        "Zhiyao Ren",
+        "Yibing Zhan",
+        "Baosheng Yu",
+        "Dacheng Tao"
+      ],
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "query_hits": [
+        0,
+        5
+      ]
+    },
+    {
+      "arxiv_id": "2503.12615v2",
+      "title": "LATINO-PRO: LAtent consisTency INverse sOlver with PRompt Optimization",
+      "abstract": "Text-to-image latent diffusion models (LDMs) have recently emerged as powerful generative models with great potential for solving inverse problems in imaging. However, leveraging such models in a Plug & Play (PnP), zero-shot manner remains challenging because it requires identifying a suitable text prompt for the unknown image of interest. Also, existing text-to-image PnP approaches are highly computationally expensive. We herein address these challenges by proposing a novel PnP inference paradigm specifically designed for embedding generative models within stochastic inverse solvers, with special attention to Latent Consistency Models (LCMs), which distill LDMs into fast generators. We leverage our framework to propose LAtent consisTency INverse sOlver (LATINO), the first zero-shot PnP framework to solve inverse problems with priors encoded by LCMs. Our conditioning mechanism avoids automatic differentiation and reaches SOTA quality in as little as 8 neural function evaluations. As a result, LATINO delivers remarkably accurate solutions and is significantly more memory and computationally efficient than previous approaches. We then embed LATINO within an empirical Bayesian framework that automatically calibrates the text prompt from the observed measurements by marginal maximum likelihood estimation. Extensive experiments show that prompt self-calibration greatly improves estimation, allowing LATINO with PRompt Optimization to define new SOTAs in image reconstruction quality and computational efficiency. The code is available at https://latino-pro.github.io",
+      "published": "2025-03-16",
+      "authors": [
+        "Alessio Spagnoletti",
+        "Jean Prost",
+        "Andr\u00e9s Almansa",
+        "Nicolas Papadakis",
+        "Marcelo Pereyra"
+      ],
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "query_hits": [
+        0,
+        5
+      ]
+    },
+    {
+      "arxiv_id": "2502.19771v2",
+      "title": "The erasure of intensive livestock farming in text-to-image generative AI",
+      "abstract": "Generative AI (e.g., ChatGPT) is increasingly integrated into people's daily lives. While it is known that AI perpetuates biases against marginalized human groups, their impact on non-human animals remains understudied. We found that ChatGPT's text-to-image model (DALL-E 3) introduces a strong bias toward romanticizing livestock farming as dairy cows on pasture and pigs rooting in mud. This bias remained when we requested realistic depictions and was only mitigated when the automatic prompt revision was inhibited. Most farmed animal in industrialized countries are reared indoors with limited space per animal, which fail to resonate with societal values. Inhibiting prompt revision resulted in images that more closely reflected modern farming practices; for example, cows housed indoors accessing feed through metal headlocks, and pigs behind metal railings on concrete floors in indoor facilities. While OpenAI introduced prompt revision to mitigate bias, in the case of farmed animal production systems, it paradoxically introduces a strong bias towards unrealistic farming practices.",
+      "published": "2025-02-27",
+      "authors": [
+        "Kehan Sheng",
+        "Frank A. M. Tuyttens",
+        "Marina A. G. von Keyserlingk"
+      ],
+      "categories": [
+        "cs.CY",
+        "cs.AI"
+      ],
+      "query_hits": [
+        6
+      ]
+    },
+    {
+      "arxiv_id": "2412.13989v1",
+      "title": "What makes a good metric? Evaluating automatic metrics for text-to-image consistency",
+      "abstract": "Language models are increasingly being incorporated as components in larger AI systems for various purposes, from prompt optimization to automatic evaluation. In this work, we analyze the construct validity of four recent, commonly used methods for measuring text-to-image consistency - CLIPScore, TIFA, VPEval, and DSG - which rely on language models and/or VQA models as components. We define construct validity for text-image consistency metrics as a set of desiderata that text-image consistency metrics should have, and find that no tested metric satisfies all of them. We find that metrics lack sufficient sensitivity to language and visual properties. Next, we find that TIFA, VPEval and DSG contribute novel information above and beyond CLIPScore, but also that they correlate highly with each other. We also ablate different aspects of the text-image consistency metrics and find that not all model components are strictly necessary, also a symptom of insufficient sensitivity to visual information. Finally, we show that all three VQA-based metrics likely rely on familiar text shortcuts (such as yes-bias in QA) that call their aptitude as quantitative evaluations of model performance into question.",
+      "published": "2024-12-18",
+      "authors": [
+        "Candace Ross",
+        "Melissa Hall",
+        "Adriana Romero Soriano",
+        "Adina Williams"
+      ],
+      "categories": [
+        "cs.CL"
+      ],
+      "query_hits": [
+        5
+      ]
+    },
+    {
+      "arxiv_id": "2412.08639v1",
+      "title": "Fast Prompt Alignment for Text-to-Image Generation",
+      "abstract": "Text-to-image generation has advanced rapidly, yet aligning complex textual prompts with generated visuals remains challenging, especially with intricate object relationships and fine-grained details. This paper introduces Fast Prompt Alignment (FPA), a prompt optimization framework that leverages a one-pass approach, enhancing text-to-image alignment efficiency without the iterative overhead typical of current methods like OPT2I. FPA uses large language models (LLMs) for single-iteration prompt paraphrasing, followed by fine-tuning or in-context learning with optimized prompts to enable real-time inference, reducing computational demands while preserving alignment fidelity. Extensive evaluations on the COCO Captions and PartiPrompts datasets demonstrate that FPA achieves competitive text-image alignment scores at a fraction of the processing time, as validated through both automated metrics (TIFA, VQA) and human evaluation. A human study with expert annotators further reveals a strong correlation between human alignment judgments and automated scores, underscoring the robustness of FPA's improvements. The proposed method showcases a scalable, efficient alternative to iterative prompt optimization, enabling broader applicability in real-time, high-demand settings. The codebase is provided to facilitate further research: https://github.com/tiktok/fast_prompt_alignment",
+      "published": "2024-12-11",
+      "authors": [
+        "Khalil Mrini",
+        "Hanlin Lu",
+        "Linjie Yang",
+        "Weilin Huang",
+        "Heng Wang"
+      ],
+      "categories": [
+        "cs.CL",
+        "cs.CV"
+      ],
+      "query_hits": [
+        0,
+        5
+      ]
+    },
+    {
+      "arxiv_id": "2412.05780v3",
+      "title": "BudgetFusion: Perceptually-Guided Adaptive Diffusion Models",
+      "abstract": "Diffusion models have shown unprecedented success in the task of text-to-image generation. While these models are capable of generating high-quality and realistic images, the complexity of sequential denoising has raised societal concerns regarding high computational demands and energy consumption. In response, various efforts have been made to improve inference efficiency. However, most of the existing efforts have taken a fixed approach with neural network simplification or text prompt optimization. Are the quality improvements from all denoising computations equally perceivable to humans? We observed that images from different text prompts may require different computational efforts given the desired content. The observation motivates us to present BudgetFusion, a novel model that suggests the most perceptually efficient number of diffusion steps before a diffusion model starts to generate an image. This is achieved by predicting multi-level perceptual metrics relative to diffusion steps. With the popular Stable Diffusion as an example, we conduct both numerical analyses and user studies. Our experiments show that BudgetFusion saves up to five seconds per prompt without compromising perceptual similarity. We hope this work can initiate efforts toward answering a core question: how much do humans perceptually gain from images created by a generative model, per watt of energy?",
+      "published": "2024-12-08",
+      "authors": [
+        "Qinchan Li",
+        "Kenneth Chen",
+        "Changyue Su",
+        "Qi Sun"
+      ],
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "query_hits": [
+        5
+      ]
+    },
+    {
+      "arxiv_id": "2411.16503v2",
+      "title": "Noise Diffusion for Enhancing Semantic Faithfulness in Text-to-Image Synthesis",
+      "abstract": "Diffusion models have achieved impressive success in generating photorealistic images, but challenges remain in ensuring precise semantic alignment with input prompts. Optimizing the initial noisy latent offers a more efficient alternative to modifying model architectures or prompt engineering for improving semantic alignment. A latest approach, InitNo, refines the initial noisy latent by leveraging attention maps; however, these maps capture only limited information, and the effectiveness of InitNo is highly dependent on the initial starting point, as it tends to converge on a local optimum near this point. To this end, this paper proposes leveraging the language comprehension capabilities of large vision-language models (LVLMs) to guide the optimization of the initial noisy latent, and introduces the Noise Diffusion process, which updates the noisy latent to generate semantically faithful images while preserving distribution consistency. Furthermore, we provide a theoretical analysis of the condition under which the update improves semantic faithfulness. Experimental results demonstrate the effectiveness and adaptability of our framework, consistently enhancing semantic alignment across various diffusion models. The code is available at https://github.com/Bomingmiao/NoiseDiffusion.",
+      "published": "2024-11-25",
+      "authors": [
+        "Boming Miao",
+        "Chunxiao Li",
+        "Xiaoxiao Wang",
+        "Andi Zhang",
+        "Rui Sun",
+        "Zizhe Wang",
+        "Yao Zhu"
+      ],
+      "categories": [
+        "cs.CV"
+      ],
+      "query_hits": [
+        5
+      ]
+    },
+    {
+      "arxiv_id": "2412.14174v1",
+      "title": "Steering Large Text-to-Image Model for Abstract Art Synthesis: Preference-based Prompt Optimization and Visualization",
+      "abstract": "With the advancement of neural generative capabilities, the art community has increasingly embraced GenAI (Generative Artificial Intelligence), particularly large text-to-image models, for producing aesthetically compelling results. However, the process often lacks determinism and requires a tedious trial-and-error process as users often struggle to devise effective prompts to achieve their desired outcomes. This paper introduces a prompting-free generative approach that applies a genetic algorithm and real-time iterative human feedback to optimize prompt generation, enabling the creation of user-preferred abstract art through a customized Artist Model. The proposed two-part approach begins with constructing an Artist Model capable of deterministically generating abstract art in specific styles, e.g., Kandinsky's Bauhaus style. The second phase integrates real-time user feedback to optimize the prompt generation and obtains an Optimized Prompting Model, which adapts to user preferences and generates prompts automatically. When combined with the Artist Model, this approach allows users to create abstract art tailored to their personal preferences and artistic style.",
+      "published": "2024-11-18",
+      "authors": [
+        "Aven-Le Zhou",
+        "Wei Wu",
+        "Yu-Ao Wang",
+        "Kang Zhang"
+      ],
+      "categories": [
+        "cs.HC"
+      ],
+      "query_hits": [
+        0,
+        5
+      ]
+    },
+    {
+      "arxiv_id": "2411.08127v6",
+      "title": "TIPO: Text to Image with Text Presampling for Prompt Optimization",
+      "abstract": "TIPO (Text-to-Image Prompt Optimization) introduces an efficient approach for automatic prompt refinement in text-to-image (T2I) generation. Starting from simple user prompts, TIPO leverages a lightweight pre-trained model to expand these prompts into richer and more detailed versions. Conceptually, TIPO samples refined prompts from a targeted sub-distribution within the broader semantic space, preserving the original intent while significantly improving visual quality, coherence, and detail. Unlike resource-intensive methods based on large language models (LLMs) or reinforcement learning (RL), TIPO offers strong computational efficiency and scalability, opening new possibilities for effective automated prompt engineering in T2I tasks. Extensive experiments across multiple domains demonstrate that TIPO achieves stronger text alignment, reduced visual artifacts, and consistently higher human preference rates, while maintaining competitive aesthetic quality. These results highlight the effectiveness of distribution-aligned prompt engineering and point toward broader opportunities for scalable, automated refinement in text-to-image generation.",
+      "published": "2024-11-12",
+      "authors": [
+        "Shih-Ying Yeh",
+        "Yi Li",
+        "Sang-Hyun Park",
+        "Giyeong Oh",
+        "Xuehai Wang",
+        "Min Song",
+        "Youngjae Yu",
+        "Shang-Hong Lai"
+      ],
+      "categories": [
+        "cs.CV"
+      ],
+      "query_hits": [
+        0,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "arxiv_id": "2410.07838v3",
+      "title": "Minority-Focused Text-to-Image Generation via Prompt Optimization",
+      "abstract": "We investigate the generation of minority samples using pretrained text-to-image (T2I) latent diffusion models. Minority instances, in the context of T2I generation, can be defined as ones living on low-density regions of text-conditional data distributions. They are valuable for various applications of modern T2I generators, such as data augmentation and creative AI. Unfortunately, existing pretrained T2I diffusion models primarily focus on high-density regions, largely due to the influence of guided samplers (like CFG) that are essential for high-quality generation. To address this, we present a novel framework to counter the high-density-focus of T2I diffusion models. Specifically, we first develop an online prompt optimization framework that encourages emergence of desired properties during inference while preserving semantic contents of user-provided prompts. We subsequently tailor this generic prompt optimizer into a specialized solver that promotes generation of minority features by incorporating a carefully-crafted likelihood objective. Extensive experiments conducted across various types of T2I models demonstrate that our approach significantly enhances the capability to produce high-quality minority instances compared to existing samplers. Code is available at https://github.com/soobin-um/MinorityPrompt.",
+      "published": "2024-10-10",
+      "authors": [
+        "Soobin Um",
+        "Jong Chul Ye"
+      ],
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "query_hits": [
+        0,
+        5
+      ]
+    },
+    {
+      "arxiv_id": "2408.12910v2",
+      "title": "Taming Text-to-Image Synthesis for Novices: User-centric Prompt Generation via Multi-turn Guidance",
+      "abstract": "The emergence of text-to-image synthesis (TIS) models has significantly influenced digital image creation by producing high-quality visuals from written descriptions. Yet these models are sensitive on textual prompts, posing a challenge for novice users who may not be familiar with TIS prompt writing. Existing solutions relieve this via automatic prompt expansion or generation from a user query. However, this single-turn manner suffers from limited user-centricity in terms of result interpretability and user interactivity. Thus, we propose DialPrompt, a dialogue-based TIS prompt generation model that emphasizes user experience for novice users. DialPrompt is designed to follow a multi-turn workflow, where in each round of dialogue the model guides user to express their preferences on possible optimization dimensions before generating the final TIS prompt. To achieve this, we mined 15 essential dimensions for high-quality prompts from advanced users and curated a multi-turn dataset. Through training on this dataset, DialPrompt improves user-centricity by allowing users to perceive and control the creation process of TIS prompts. Experiments indicate that DialPrompt improves significantly in user-centricity score compared with existing approaches while maintaining a competitive quality of synthesized images. In our user evaluation, DialPrompt is highly rated by 19 human reviewers (especially novices).",
+      "published": "2024-08-23",
+      "authors": [
+        "Yilun Liu",
+        "Minggui He",
+        "Feiyu Yao",
+        "Yuhe Ji",
+        "Shimin Tao",
+        "Jingzhou Du",
+        "Duan Li",
+        "Jian Gao",
+        "Li Zhang",
+        "Hao Yang",
+        "Boxing Chen",
+        "Osamu Yoshie"
+      ],
+      "categories": [
+        "cs.AI"
+      ],
+      "query_hits": [
+        6
+      ]
+    },
+    {
+      "arxiv_id": "2407.01606v1",
+      "title": "On Discrete Prompt Optimization for Diffusion Models",
+      "abstract": "This paper introduces the first gradient-based framework for prompt optimization in text-to-image diffusion models. We formulate prompt engineering as a discrete optimization problem over the language space. Two major challenges arise in efficiently finding a solution to this problem: (1) Enormous Domain Space: Setting the domain to the entire language space poses significant difficulty to the optimization process. (2) Text Gradient: Efficiently computing the text gradient is challenging, as it requires backpropagating through the inference steps of the diffusion model and a non-differentiable embedding lookup table. Beyond the problem formulation, our main technical contributions lie in solving the above challenges. First, we design a family of dynamically generated compact subspaces comprised of only the most relevant words to user input, substantially restricting the domain space. Second, we introduce \"Shortcut Text Gradient\" -- an effective replacement for the text gradient that can be obtained with constant memory and runtime. Empirical evaluation on prompts collected from diverse sources (DiffusionDB, ChatGPT, COCO) suggests that our method can discover prompts that substantially improve (prompt enhancement) or destroy (adversarial attack) the faithfulness of images generated by the text-to-image diffusion model.",
+      "published": "2024-06-27",
+      "authors": [
+        "Ruochen Wang",
+        "Ting Liu",
+        "Cho-Jui Hsieh",
+        "Boqing Gong"
+      ],
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL",
+        "cs.CV",
+        "stat.ML"
+      ],
+      "query_hits": [
+        0,
+        2,
+        5
+      ]
+    },
+    {
+      "arxiv_id": "2406.08713v1",
+      "title": "Batch-Instructed Gradient for Prompt Evolution:Systematic Prompt Optimization for Enhanced Text-to-Image Synthesis",
+      "abstract": "Text-to-image models have shown remarkable progress in generating high-quality images from user-provided prompts. Despite this, the quality of these images varies due to the models' sensitivity to human language nuances. With advancements in large language models, there are new opportunities to enhance prompt design for image generation tasks. Existing research primarily focuses on optimizing prompts for direct interaction, while less attention is given to scenarios involving intermediary agents, like the Stable Diffusion model. This study proposes a Multi-Agent framework to optimize input prompts for text-to-image generation models. Central to this framework is a prompt generation mechanism that refines initial queries using dynamic instructions, which evolve through iterative performance feedback. High-quality prompts are then fed into a state-of-the-art text-to-image model. A professional prompts database serves as a benchmark to guide the instruction modifier towards generating high-caliber prompts. A scoring system evaluates the generated images, and an LLM generates new instructions based on calculated gradients. This iterative process is managed by the Upper Confidence Bound (UCB) algorithm and assessed using the Human Preference Score version 2 (HPS v2). Preliminary ablation studies highlight the effectiveness of various system components and suggest areas for future improvements.",
+      "published": "2024-06-13",
+      "authors": [
+        "Xinrui Yang",
+        "Zhuohan Wang",
+        "Anthony Hu"
+      ],
+      "categories": [
+        "cs.AI",
+        "cs.CV"
+      ],
+      "query_hits": [
+        0,
+        5
+      ]
+    },
+    {
+      "arxiv_id": "2404.11589v1",
+      "title": "Prompt Optimizer of Text-to-Image Diffusion Models for Abstract Concept Understanding",
+      "abstract": "The rapid evolution of text-to-image diffusion models has opened the door of generative AI, enabling the translation of textual descriptions into visually compelling images with remarkable quality. However, a persistent challenge within this domain is the optimization of prompts to effectively convey abstract concepts into concrete objects. For example, text encoders can hardly express \"peace\", while can easily illustrate olive branches and white doves. This paper introduces a novel approach named Prompt Optimizer for Abstract Concepts (POAC) specifically designed to enhance the performance of text-to-image diffusion models in interpreting and generating images from abstract concepts. We propose a Prompt Language Model (PLM), which is initialized from a pre-trained language model, and then fine-tuned with a curated dataset of abstract concept prompts. The dataset is created with GPT-4 to extend the abstract concept to a scene and concrete objects. Our framework employs a Reinforcement Learning (RL)-based optimization strategy, focusing on the alignment between the generated images by a stable diffusion model and optimized prompts. Through extensive experiments, we demonstrate that our proposed POAC significantly improves the accuracy and aesthetic quality of generated images, particularly in the description of abstract concepts and alignment with optimized prompts. We also present a comprehensive analysis of our model's performance across diffusion models under different settings, showcasing its versatility and effectiveness in enhancing abstract concept representation.",
+      "published": "2024-04-17",
+      "authors": [
+        "Zezhong Fan",
+        "Xiaohan Li",
+        "Chenhao Fang",
+        "Topojoy Biswas",
+        "Kaushiki Nag",
+        "Jianpeng Xu",
+        "Kannan Achan"
+      ],
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "query_hits": [
+        0,
+        5
+      ]
+    },
+    {
+      "arxiv_id": "2404.04095v1",
+      "title": "Dynamic Prompt Optimizing for Text-to-Image Generation",
+      "abstract": "Text-to-image generative models, specifically those based on diffusion models like Imagen and Stable Diffusion, have made substantial advancements. Recently, there has been a surge of interest in the delicate refinement of text prompts. Users assign weights or alter the injection time steps of certain words in the text prompts to improve the quality of generated images. However, the success of fine-control prompts depends on the accuracy of the text prompts and the careful selection of weights and time steps, which requires significant manual intervention. To address this, we introduce the \\textbf{P}rompt \\textbf{A}uto-\\textbf{E}diting (PAE) method. Besides refining the original prompts for image generation, we further employ an online reinforcement learning strategy to explore the weights and injection time steps of each word, leading to the dynamic fine-control prompts. The reward function during training encourages the model to consider aesthetic score, semantic consistency, and user preferences. Experimental results demonstrate that our proposed method effectively improves the original prompts, generating visually more appealing images while maintaining semantic alignment. Code is available at https://github.com/Mowenyii/PAE.",
+      "published": "2024-04-05",
+      "authors": [
+        "Wenyi Mo",
+        "Tianyu Zhang",
+        "Yalong Bai",
+        "Bing Su",
+        "Ji-Rong Wen",
+        "Qing Yang"
+      ],
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "query_hits": [
+        0,
+        5
+      ]
+    },
+    {
+      "arxiv_id": "2403.19716v1",
+      "title": "Capability-aware Prompt Reformulation Learning for Text-to-Image Generation",
+      "abstract": "Text-to-image generation systems have emerged as revolutionary tools in the realm of artistic creation, offering unprecedented ease in transforming textual prompts into visual art. However, the efficacy of these systems is intricately linked to the quality of user-provided prompts, which often poses a challenge to users unfamiliar with prompt crafting. This paper addresses this challenge by leveraging user reformulation data from interaction logs to develop an automatic prompt reformulation model. Our in-depth analysis of these logs reveals that user prompt reformulation is heavily dependent on the individual user's capability, resulting in significant variance in the quality of reformulation pairs. To effectively use this data for training, we introduce the Capability-aware Prompt Reformulation (CAPR) framework. CAPR innovatively integrates user capability into the reformulation process through two key components: the Conditional Reformulation Model (CRM) and Configurable Capability Features (CCF). CRM reformulates prompts according to a specified user capability, as represented by CCF. The CCF, in turn, offers the flexibility to tune and guide the CRM's behavior. This enables CAPR to effectively learn diverse reformulation strategies across various user capacities and to simulate high-capability user reformulation during inference. Extensive experiments on standard text-to-image generation benchmarks showcase CAPR's superior performance over existing baselines and its remarkable robustness on unseen systems. Furthermore, comprehensive analyses validate the effectiveness of different components. CAPR can facilitate user-friendly interaction with text-to-image systems and make advanced artistic creation more achievable for a broader range of users.",
+      "published": "2024-03-27",
+      "authors": [
+        "Jingtao Zhan",
+        "Qingyao Ai",
+        "Yiqun Liu",
+        "Jia Chen",
+        "Shaoping Ma"
+      ],
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.CV",
+        "cs.IR"
+      ],
+      "query_hits": [
+        6
+      ]
+    },
+    {
+      "arxiv_id": "2403.17804v1",
+      "title": "Improving Text-to-Image Consistency via Automatic Prompt Optimization",
+      "abstract": "Impressive advances in text-to-image (T2I) generative models have yielded a plethora of high performing models which are able to generate aesthetically appealing, photorealistic images. Despite the progress, these models still struggle to produce images that are consistent with the input prompt, oftentimes failing to capture object quantities, relations and attributes properly. Existing solutions to improve prompt-image consistency suffer from the following challenges: (1) they oftentimes require model fine-tuning, (2) they only focus on nearby prompt samples, and (3) they are affected by unfavorable trade-offs among image quality, representation diversity, and prompt-image consistency. In this paper, we address these challenges and introduce a T2I optimization-by-prompting framework, OPT2I, which leverages a large language model (LLM) to improve prompt-image consistency in T2I models. Our framework starts from a user prompt and iteratively generates revised prompts with the goal of maximizing a consistency score. Our extensive validation on two datasets, MSCOCO and PartiPrompts, shows that OPT2I can boost the initial consistency score by up to 24.9% in terms of DSG score while preserving the FID and increasing the recall between generated and real data. Our work paves the way toward building more reliable and robust T2I systems by harnessing the power of LLMs.",
+      "published": "2024-03-26",
+      "authors": [
+        "Oscar Ma\u00f1as",
+        "Pietro Astolfi",
+        "Melissa Hall",
+        "Candace Ross",
+        "Jack Urbanek",
+        "Adina Williams",
+        "Aishwarya Agrawal",
+        "Adriana Romero-Soriano",
+        "Michal Drozdzal"
+      ],
+      "categories": [
+        "cs.CV",
+        "cs.CL"
+      ],
+      "query_hits": [
+        0,
+        5,
+        6
+      ]
+    },
+    {
+      "arxiv_id": "2403.11273v2",
+      "title": "BrightDreamer: Generic 3D Gaussian Generative Framework for Fast Text-to-3D Synthesis",
+      "abstract": "Text-to-3D synthesis has recently seen intriguing advances by combining the text-to-image priors with 3D representation methods, e.g., 3D Gaussian Splatting (3D GS), via Score Distillation Sampling (SDS). However, a hurdle of existing methods is the low efficiency, per-prompt optimization for a single 3D object. Therefore, it is imperative for a paradigm shift from per-prompt optimization to feed-forward generation for any unseen text prompts, which yet remains challenging. An obstacle is how to directly generate a set of millions of 3D Gaussians to represent a 3D object. This paper presents BrightDreamer, an end-to-end feed-forward approach that can achieve generalizable and fast (77 ms) text-to-3D generation. Our key idea is to formulate the generation process as estimating the 3D deformation from an anchor shape with predefined positions. For this, we first propose a Text-guided Shape Deformation (TSD) network to predict the deformed shape and its new positions, used as the centers (one attribute) of 3D Gaussians. To estimate the other four attributes (i.e., scaling, rotation, opacity, and SH), we then design a novel Text-guided Triplane Generator (TTG) to generate a triplane representation for a 3D object. The center of each Gaussian enables us to transform the spatial feature into the four attributes. The generated 3D Gaussians can be finally rendered at 705 frames per second. Extensive experiments demonstrate the superiority of our method over existing methods. Also, BrightDreamer possesses a strong semantic understanding capability even for complex text prompts. The code is available in the project page.",
+      "published": "2024-03-17",
+      "authors": [
+        "Lutao Jiang",
+        "Xu Zheng",
+        "Yuanhuiyi Lyu",
+        "Jiazhou Zhou",
+        "Lin Wang"
+      ],
+      "categories": [
+        "cs.CV"
+      ],
+      "query_hits": [
+        5
+      ]
+    },
+    {
+      "arxiv_id": "2402.10882v6",
+      "title": "Universal Prompt Optimizer for Safe Text-to-Image Generation",
+      "abstract": "Text-to-Image (T2I) models have shown great performance in generating images based on textual prompts. However, these models are vulnerable to unsafe input to generate unsafe content like sexual, harassment and illegal-activity images. Existing studies based on image checker, model fine-tuning and embedding blocking are impractical in real-world applications. Hence, we propose the first universal prompt optimizer for safe T2I (POSI) generation in black-box scenario. We first construct a dataset consisting of toxic-clean prompt pairs by GPT-3.5 Turbo. To guide the optimizer to have the ability of converting toxic prompt to clean prompt while preserving semantic information, we design a novel reward function measuring toxicity and text alignment of generated images and train the optimizer through Proximal Policy Optimization. Experiments show that our approach can effectively reduce the likelihood of various T2I models in generating inappropriate images, with no significant impact on text alignment. It is also flexible to be combined with methods to achieve better performance. Our code is available at https://github.com/wu-zongyu/POSI.",
+      "published": "2024-02-16",
+      "authors": [
+        "Zongyu Wu",
+        "Hongcheng Gao",
+        "Yueze Wang",
+        "Xiang Zhang",
+        "Suhang Wang"
+      ],
+      "categories": [
+        "cs.CV",
+        "cs.CL"
+      ],
+      "query_hits": [
+        0,
+        5
+      ]
+    },
+    {
+      "arxiv_id": "2401.01128v1",
+      "title": "SSP: A Simple and Safe automatic Prompt engineering method towards realistic image synthesis on LVM",
+      "abstract": "Recently, text-to-image (T2I) synthesis has undergone significant advancements, particularly with the emergence of Large Language Models (LLM) and their enhancement in Large Vision Models (LVM), greatly enhancing the instruction-following capabilities of traditional T2I models. Nevertheless, previous methods focus on improving generation quality but introduce unsafe factors into prompts. We explore that appending specific camera descriptions to prompts can enhance safety performance. Consequently, we propose a simple and safe prompt engineering method (SSP) to improve image generation quality by providing optimal camera descriptions. Specifically, we create a dataset from multi-datasets as original prompts. To select the optimal camera, we design an optimal camera matching approach and implement a classifier for original prompts capable of automatically matching. Appending camera descriptions to original prompts generates optimized prompts for further LVM image generation. Experiments demonstrate that SSP improves semantic consistency by an average of 16% compared to others and safety metrics by 48.9%.",
+      "published": "2024-01-02",
+      "authors": [
+        "Weijin Cheng",
+        "Jianzhi Liu",
+        "Jiawen Deng",
+        "Fuji Ren"
+      ],
+      "categories": [
+        "cs.CV"
+      ],
+      "query_hits": [
+        0,
+        6
+      ]
+    },
+    {
+      "arxiv_id": "2311.06752v1",
+      "title": "BeautifulPrompt: Towards Automatic Prompt Engineering for Text-to-Image Synthesis",
+      "abstract": "Recently, diffusion-based deep generative models (e.g., Stable Diffusion) have shown impressive results in text-to-image synthesis. However, current text-to-image models often require multiple passes of prompt engineering by humans in order to produce satisfactory results for real-world applications. We propose BeautifulPrompt, a deep generative model to produce high-quality prompts from very simple raw descriptions, which enables diffusion-based models to generate more beautiful images. In our work, we first fine-tuned the BeautifulPrompt model over low-quality and high-quality collecting prompt pairs. Then, to ensure that our generated prompts can generate more beautiful images, we further propose a Reinforcement Learning with Visual AI Feedback technique to fine-tune our model to maximize the reward values of the generated prompts, where the reward values are calculated based on the PickScore and the Aesthetic Scores. Our results demonstrate that learning from visual AI feedback promises the potential to improve the quality of generated prompts and images significantly. We further showcase the integration of BeautifulPrompt to a cloud-native AI platform to provide better text-to-image generation service in the cloud.",
+      "published": "2023-11-12",
+      "authors": [
+        "Tingfeng Cao",
+        "Chengyu Wang",
+        "Bingyan Liu",
+        "Ziheng Wu",
+        "Jinhui Zhu",
+        "Jun Huang"
+      ],
+      "categories": [
+        "cs.CL"
+      ],
+      "query_hits": [
+        4,
+        6,
+        8
+      ]
+    },
+    {
+      "arxiv_id": "2310.08129v3",
+      "title": "Tailored Visions: Enhancing Text-to-Image Generation with Personalized Prompt Rewriting",
+      "abstract": "Despite significant progress in the field, it is still challenging to create personalized visual representations that align closely with the desires and preferences of individual users. This process requires users to articulate their ideas in words that are both comprehensible to the models and accurately capture their vision, posing difficulties for many users. In this paper, we tackle this challenge by leveraging historical user interactions with the system to enhance user prompts. We propose a novel approach that involves rewriting user prompts based on a newly collected large-scale text-to-image dataset with over 300k prompts from 3115 users. Our rewriting model enhances the expressiveness and alignment of user prompts with their intended visual outputs. Experimental results demonstrate the superiority of our methods over baseline approaches, as evidenced in our new offline evaluation method and online tests. Our code and dataset are available at https://github.com/zzjchen/Tailored-Visions.",
+      "published": "2023-10-12",
+      "authors": [
+        "Zijie Chen",
+        "Lichao Zhang",
+        "Fangsheng Weng",
+        "Lili Pan",
+        "Zhenzhong Lan"
+      ],
+      "categories": [
+        "cs.CV"
+      ],
+      "query_hits": [
+        0,
+        1
+      ]
+    },
+    {
+      "arxiv_id": "2306.07349v1",
+      "title": "ATT3D: Amortized Text-to-3D Object Synthesis",
+      "abstract": "Text-to-3D modelling has seen exciting progress by combining generative text-to-image models with image-to-3D methods like Neural Radiance Fields. DreamFusion recently achieved high-quality results but requires a lengthy, per-prompt optimization to create 3D objects. To address this, we amortize optimization over text prompts by training on many prompts simultaneously with a unified model, instead of separately. With this, we share computation across a prompt set, training in less time than per-prompt optimization. Our framework - Amortized text-to-3D (ATT3D) - enables knowledge-sharing between prompts to generalize to unseen setups and smooth interpolations between text for novel assets and simple animations.",
+      "published": "2023-06-06",
+      "authors": [
+        "Jonathan Lorraine",
+        "Kevin Xie",
+        "Xiaohui Zeng",
+        "Chen-Hsuan Lin",
+        "Towaki Takikawa",
+        "Nicholas Sharp",
+        "Tsung-Yi Lin",
+        "Ming-Yu Liu",
+        "Sanja Fidler",
+        "James Lucas"
+      ],
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "query_hits": [
+        5
+      ]
+    },
+    {
+      "arxiv_id": "2301.12661v1",
+      "title": "Make-An-Audio: Text-To-Audio Generation with Prompt-Enhanced Diffusion Models",
+      "abstract": "Large-scale multimodal generative modeling has created milestones in text-to-image and text-to-video generation. Its application to audio still lags behind for two main reasons: the lack of large-scale datasets with high-quality text-audio pairs, and the complexity of modeling long continuous audio data. In this work, we propose Make-An-Audio with a prompt-enhanced diffusion model that addresses these gaps by 1) introducing pseudo prompt enhancement with a distill-then-reprogram approach, it alleviates data scarcity with orders of magnitude concept compositions by using language-free audios; 2) leveraging spectrogram autoencoder to predict the self-supervised audio representation instead of waveforms. Together with robust contrastive language-audio pretraining (CLAP) representations, Make-An-Audio achieves state-of-the-art results in both objective and subjective benchmark evaluation. Moreover, we present its controllability and generalization for X-to-Audio with \"No Modality Left Behind\", for the first time unlocking the ability to generate high-definition, high-fidelity audios given a user-defined modality input. Audio samples are available at https://Text-to-Audio.github.io",
+      "published": "2023-01-30",
+      "authors": [
+        "Rongjie Huang",
+        "Jiawei Huang",
+        "Dongchao Yang",
+        "Yi Ren",
+        "Luping Liu",
+        "Mingze Li",
+        "Zhenhui Ye",
+        "Jinglin Liu",
+        "Xiang Yin",
+        "Zhou Zhao"
+      ],
+      "categories": [
+        "cs.SD",
+        "cs.LG",
+        "cs.MM",
+        "eess.AS"
+      ],
+      "query_hits": [
+        0,
+        2
+      ]
+    }
+  ]
+}

@@ -1,0 +1,562 @@
+{
+  "n": 72,
+  "papers": [
+    {
+      "arxiv_id": "2212.09611",
+      "title": "Optimizing Prompts for Text-to-Image Generation (Promptist)",
+      "published": "2022-12",
+      "must_read": true,
+      "tier": 1
+    },
+    {
+      "arxiv_id": "dalle3-better-captions",
+      "title": "Improving Image Generation with Better Captions (DALL·E 3)",
+      "published": "2023-10",
+      "must_read": true,
+      "tier": 1,
+      "url": "https://cdn.openai.com/papers/dall-e-3.pdf"
+    },
+    {
+      "arxiv_id": "2310.16656",
+      "title": "A Picture is Worth a Thousand Words: Principled Recaptioning Improves Image Generation (RECAP)",
+      "published": "2023-10",
+      "must_read": true,
+      "tier": 1
+    },
+    {
+      "arxiv_id": "2506.16679",
+      "title": "How to Train Your Text-to-Image Model: Evaluating Design Choices for Synthetic Training Captions",
+      "published": "2025-06",
+      "must_read": true,
+      "tier": 1
+    },
+    {
+      "arxiv_id": "2511.06876",
+      "title": "Generating an Image From 1,000 Words: Structured Captions (FIBO)",
+      "published": "2025-11",
+      "must_read": false,
+      "tier": 2
+    },
+    {
+      "arxiv_id": "2505.16915",
+      "title": "DetailMaster: Can Your Text-to-Image Model Handle Long Prompts?",
+      "published": "2025-05",
+      "must_read": false,
+      "tier": 2
+    },
+    {
+      "arxiv_id": "2605.10730",
+      "title": "Qwen-Image-2.0 Technical Report (Prompt Enhancer section)",
+      "published": "2026-05",
+      "must_read": true,
+      "tier": 1
+    },
+    {
+      "arxiv_id": "2503.20314",
+      "title": "Wan: Open and Advanced Large-Scale Video Generative Models (prompt extend)",
+      "published": "2025-03",
+      "must_read": true,
+      "tier": 1
+    },
+    {
+      "arxiv_id": "2506.09113",
+      "title": "Seedance 1.0 Technical Report (PE SFT+DPO)",
+      "published": "2025-06",
+      "must_read": false,
+      "tier": 2
+    },
+    {
+      "arxiv_id": "2509.20427",
+      "title": "Seedream 4.0 Technical Report (PE VLM module)",
+      "published": "2025-09",
+      "must_read": false,
+      "tier": 2
+    },
+    {
+      "arxiv_id": "2509.23951",
+      "title": "HunyuanImage 3.0 Technical Report (native CoT rewrite)",
+      "published": "2025-09",
+      "must_read": false,
+      "tier": 2
+    },
+    {
+      "arxiv_id": "2408.07009",
+      "title": "Imagen 3 Technical Report",
+      "published": "2024-08",
+      "must_read": false,
+      "tier": 2
+    },
+    {
+      "arxiv_id": "2305.13655",
+      "title": "LLM-grounded Diffusion: Enhancing Prompt Understanding via LLM Layout Planning",
+      "published": "2023-05",
+      "must_read": false,
+      "tier": 2
+    },
+    {
+      "arxiv_id": "2401.11708",
+      "title": "RPG: Mastering Text-to-Image Generation via Recaption, Plan and Generate",
+      "published": "2024-01",
+      "must_read": false,
+      "tier": 2
+    },
+    {
+      "arxiv_id": "2505.00703",
+      "title": "T2I-R1: Reinforcing Image Generation with Collaborative Semantic-level and Token-level CoT",
+      "published": "2025-05",
+      "must_read": false,
+      "tier": 2
+    },
+    {
+      "arxiv_id": "2510.00430",
+      "title": "PromptLoop: Plug-and-Play Prompt Refinement via Latent Feedback",
+      "published": "2025-10",
+      "must_read": false,
+      "tier": 2
+    },
+    {
+      "arxiv_id": "2606.00204",
+      "title": "APE: Agentic Prompt Enhancer for Image Generation and Editing",
+      "published": "2026-06",
+      "must_read": false,
+      "tier": 2
+    },
+    {
+      "arxiv_id": "2310.08541",
+      "title": "Idea2Img: Iterative Self-Refinement with GPT-4V for Image Generation",
+      "published": "2023-10",
+      "must_read": false,
+      "tier": 2
+    },
+    {
+      "arxiv_id": "2502.16923",
+      "title": "A Systematic Survey of Automatic Prompt Optimization Techniques",
+      "published": "2025-02",
+      "must_read": false,
+      "tier": 3
+    },
+    {
+      "arxiv_id": "2402.12760",
+      "title": "A User-Friendly Framework for Generating Model-Preferred Prompts (UF-FGTG)",
+      "published": "2024-02",
+      "must_read": false,
+      "tier": 2
+    },
+    {
+      "arxiv_id": "2607.25641",
+      "title": "OmniPhys: Knowledge-Graph-Driven Benchmarking and Collective Optimization for Physical Commonsense in Text-to-Image Generation",
+      "published": "2026-07-28",
+      "abstract": "While text-to-image models exhibit remarkable visual fidelity, they frequently violate fundamental physical commonsense. Existing benchmarks often rely on coarse-grained descriptions, failing to diagnose the mastery of specific physical principles. Moreover, the high stochasticity of generative processes causes current prompt optimization methods to suffer from gradient hallucinations, where optimizers are misled by transient visual artifacts rather than systemic flaws. To address these challeng",
+      "must_read": false,
+      "tier": 2
+    },
+    {
+      "arxiv_id": "2607.24353",
+      "title": "PRISM: Prompt Refinement via Image-grounded Self-rewarding Mechanism for Text-to-Image Generation",
+      "published": "2026-07-27",
+      "abstract": "Text-to-image generation models can synthesize high-quality images from natural language descriptions, but their performance remains highly sensitive to prompt formulation. Existing prompt optimization methods mainly rely on text-side rewriting, prompt expansion, or external reward signals, offering limited image-grounded diagnosis and weak support for learning reusable optimisation policies. In this paper, we propose PRISM, a Prompt Refinement framework via Image-grounded Self-rewarding Mechani",
+      "must_read": true,
+      "tier": 1
+    },
+    {
+      "arxiv_id": "2607.18724",
+      "title": "One Rewrite to Fix Them All? Type-Aware Repair Allocation for Text-to-Image Prompt Optimization",
+      "published": "2026-07-21",
+      "abstract": "Text-to-image (T2I) generators often fail to follow their prompts faithfully, producing wrong counts, swapped attributes, ambiguous relations, and illegible text. Prompt optimization repairs such failures by rewriting the user prompt, requiring no generator retraining, and has yielded promising results. However, existing optimizers absorb heterogeneous failures into one uniform prompt expansion, even though each calls for different repair language. We formulate semantic prompt optimization as at",
+      "must_read": true,
+      "tier": 1
+    },
+    {
+      "arxiv_id": "2606.08492",
+      "title": "Seeing is Believing: Aligning Prompt Rewriting with Visual Anchors for Text-to-Image Generation",
+      "published": "2026-06-07",
+      "abstract": "Despite the impressive capabilities of text-to-image (T2I) models, an intent-generation gap often persists due to the brevity and ambiguity of user prompts. Existing approaches primarily polish the prompt for fluency and readability. However, the enhancement process still lacks visual grounding. As a result, the rewriter may over-infer missing details, causing an intent-generation gap. To address this limitation, we propose FaithRewriter, a novel prompt-enhancement framework for T2I generation. ",
+      "must_read": true,
+      "tier": 1
+    },
+    {
+      "arxiv_id": "2606.01282",
+      "title": "KG-FairDiff: Knowledge Graph-Guided Prompt Refinement for Demographically Fair Text-to-Image Generation",
+      "published": "2026-05-31",
+      "abstract": "Text-to-Image (TTI) systems are now everyday infrastructure for journalism, education, advertising, and public communication, and the demographic and cultural stereotypes they inherit from training data (rendering women, people of colour, older adults, and non-Western cultures as under-represented or caricatured) become a population-level harm at deployment scale. Existing mitigations either require costly retraining, infeasible for the closed-source backbones that dominate consumer products, or",
+      "must_read": false,
+      "tier": 2
+    },
+    {
+      "arxiv_id": "2605.17969",
+      "title": "Generation Navigator: A State-Aware Agentic Framework for Image Generation",
+      "published": "2026-05-18",
+      "abstract": "Despite rapid advances in text-to-image generation, faithfully realizing user intent remains challenging, often requiring manual multi-turn trial and error. To automate this process, existing systems rely on either simple prompt rewriting or closed-loop agents driven by hand-crafted rules, rather than learning to adapt actions to the evolving generation process. In this paper, we reformulate image generation as a state-conditioned action-making problem and propose Generation Navigator, a multi-t",
+      "must_read": false,
+      "tier": 2
+    },
+    {
+      "arxiv_id": "2604.09861",
+      "title": "Evolutionary Token-Level Prompt Optimization for Diffusion Models",
+      "published": "2026-04-10",
+      "abstract": "Text-to-image diffusion models exhibit strong generative performance but remain highly sensitive to prompt formulation, often requiring extensive manual trial and error to obtain satisfactory results. This motivates the development of automated, model-agnostic prompt optimization methods that can systematically explore the conditioning space beyond conventional text rewriting. This work investigates the use of a Genetic Algorithm (GA) for prompt optimization by directly evolving the token vector",
+      "must_read": false,
+      "tier": 2
+    },
+    {
+      "arxiv_id": "2603.26328",
+      "title": "Verify Claimed Text-to-Image Models via Boundary-Aware Prompt Optimization",
+      "published": "2026-03-27",
+      "abstract": "As Text-to-Image (T2I) generation becomes widespread, third-party platforms increasingly integrate multiple model APIs for convenient image creation. However, false claims of using official models can mislead users and harm model owners' reputations, making model verification essential to confirm whether an API's underlying model matches its claim. Existing methods address this by using verification prompts generated by official model owners, but the generation relies on multiple reference model",
+      "must_read": false,
+      "tier": 2
+    },
+    {
+      "arxiv_id": "2602.13131",
+      "title": "Preference-Guided Prompt Optimization for Text-to-Image Generation",
+      "published": "2026-02-13",
+      "abstract": "Generative models are increasingly powerful, yet users struggle to guide them through prompts. The generative process is difficult to control and unpredictable, and user instructions may be ambiguous or under-specified. Prior prompt refinement tools heavily rely on human effort, while prompt optimization methods focus on numerical functions and are not designed for human-centered generative tasks, where feedback is better expressed as binary preferences and demands convergence within few iterati",
+      "must_read": false,
+      "tier": 2
+    },
+    {
+      "arxiv_id": "2511.19811",
+      "title": "Training-Free Generation of Diverse and High-Fidelity Images via Prompt Semantic Space Optimization",
+      "published": "2025-11-25",
+      "abstract": "Image diversity remains a fundamental challenge for text-to-image diffusion models. Low-diversity models tend to generate repetitive outputs, increasing sampling redundancy and hindering both creative exploration and downstream applications. A primary cause is that generation often collapses toward a strong mode in the learned distribution. Existing attempts to improve diversity, such as noise resampling, prompt rewriting, or steering-based guidance, often still collapse to dominant modes or int",
+      "must_read": false,
+      "tier": 2
+    },
+    {
+      "arxiv_id": "2511.11483",
+      "title": "ImAgent: A Unified Multimodal Agent Framework for Test-Time Scalable Image Generation",
+      "published": "2025-11-14",
+      "abstract": "Recent text-to-image (T2I) models have made remarkable progress in generating visually realistic and semantically coherent images. However, they still suffer from randomness and inconsistency with the given prompts, particularly when textual descriptions are vague or underspecified. Existing approaches, such as prompt rewriting, best-of-N sampling, and self-refinement, can mitigate these issues but usually require additional modules and operate independently, hindering test-time scaling efficien",
+      "must_read": false,
+      "tier": 2
+    },
+    {
+      "arxiv_id": "2510.20206",
+      "title": "RAPO++: Cross-Stage Prompt Optimization for Text-to-Video Generation via Data Alignment and Test-Time Scaling",
+      "published": "2025-10-23",
+      "abstract": "Prompt design plays a crucial role in text-to-video (T2V) generation, yet user-provided prompts are often short, unstructured, and misaligned with training data, limiting the generative potential of diffusion-based T2V models. We present \\textbf{RAPO++}, a cross-stage prompt optimization framework that unifies training-data--aligned refinement, test-time iterative scaling, and large language model (LLM) fine-tuning to substantially improve T2V generation without modifying the underlying generati",
+      "must_read": true,
+      "tier": 1
+    },
+    {
+      "arxiv_id": "2510.12041",
+      "title": "Improving Text-to-Image Generation with Input-Side Inference-Time Scaling",
+      "published": "2025-10-14",
+      "abstract": "Recent advances in text-to-image (T2I) generation have achieved impressive results, yet existing models often struggle with simple or underspecified prompts, leading to suboptimal image-text alignment, aesthetics, and quality. We propose a prompt rewriting framework that leverages large language models (LLMs) to refine user inputs before feeding them into T2I backbones. Our approach introduces a carefully designed reward system and an iterative direct preference optimization (DPO) training pipel",
+      "must_read": true,
+      "tier": 1
+    },
+    {
+      "arxiv_id": "2510.07217",
+      "title": "GenPilot: A Multi-Agent System for Test-Time Prompt Optimization in Image Generation",
+      "published": "2025-10-08",
+      "abstract": "Text-to-image synthesis has made remarkable progress, yet accurately interpreting complex and lengthy prompts remains challenging, often resulting in semantic inconsistencies and missing details. Existing solutions, such as fine-tuning, are model-specific and require training, while prior automatic prompt optimization (APO) approaches typically lack systematic error analysis and refinement strategies, resulting in limited reliability and effectiveness. Meanwhile, test-time scaling methods operat",
+      "must_read": false,
+      "tier": 2
+    },
+    {
+      "arxiv_id": "2509.21375",
+      "title": "Automated Prompt Generation for Creative and Counterfactual Text-to-image Synthesis",
+      "published": "2025-09-23",
+      "abstract": "Text-to-image generation has advanced rapidly with large-scale multimodal training, yet fine-grained controllability remains a critical challenge. Counterfactual controllability, defined as the capacity to deliberately generate images that contradict common-sense patterns, remains a major challenge but plays a crucial role in enabling creativity and exploratory applications. In this work, we address this gap with a focus on counterfactual size (e.g., generating a tiny walrus beside a giant butto",
+      "must_read": false,
+      "tier": 2
+    },
+    {
+      "arxiv_id": "2509.15962",
+      "title": "Structured Information for Improving Spatial Relationships in Text-to-Image Generation",
+      "published": "2025-09-19",
+      "abstract": "Text-to-image (T2I) generation has advanced rapidly, yet faithfully capturing spatial relationships described in natural language prompts remains a major challenge. Prior efforts have addressed this issue through prompt optimization, spatially grounded generation, and semantic refinement. This work introduces a lightweight approach that augments prompts with tuple-based structured information, using a fine-tuned language model for automatic conversion and seamless integration into T2I pipelines.",
+      "must_read": false,
+      "tier": 2
+    },
+    {
+      "arxiv_id": "2509.12446",
+      "title": "PromptSculptor: Multi-Agent Based Text-to-Image Prompt Optimization",
+      "published": "2025-09-15",
+      "abstract": "The rapid advancement of generative AI has democratized access to powerful tools such as Text-to-Image models. However, to generate high-quality images, users must still craft detailed prompts specifying scene, style, and context-often through multiple rounds of refinement. We propose PromptSculptor, a novel multi-agent framework that automates this iterative prompt optimization process. Our system decomposes the task into four specialized agents that work collaboratively to transform a short, v",
+      "must_read": false,
+      "tier": 2
+    },
+    {
+      "arxiv_id": "2509.04545",
+      "title": "PromptEnhancer: A Simple Approach to Enhance Text-to-Image Models via Chain-of-Thought Prompt Rewriting",
+      "published": "2025-09-04",
+      "abstract": "Recent advancements in text-to-image (T2I) diffusion models have demonstrated remarkable capabilities in generating high-fidelity images. However, these models often struggle to faithfully render complex user prompts, particularly in aspects like attribute binding, negation, and compositional relationships. This leads to a significant mismatch between user intent and the generated output. To address this challenge, we introduce PromptEnhancer, a novel and universal prompt rewriting framework tha",
+      "must_read": true,
+      "tier": 1
+    },
+    {
+      "arxiv_id": "2508.11904",
+      "title": "SafeCtrl: Region-Based Safety Control for Text-to-Image Diffusion via Detect-Then-Suppress",
+      "published": "2025-08-16",
+      "abstract": "The widespread deployment of text-to-image models is challenged by their potential to generate harmful content. While existing safety methods, such as prompt rewriting or model fine-tuning, provide valuable interventions, they often introduce a trade-off between safety and fidelity. Recent localization-based approaches have shown promise, yet their reliance on explicit ``concept replacement\" can sometimes lead to semantic incongruity. To address these limitations, we explore a more flexible dete",
+      "must_read": false,
+      "tier": 2
+    },
+    {
+      "arxiv_id": "2507.20536",
+      "title": "T2I-Copilot: A Training-Free Multi-Agent Text-to-Image System for Enhanced Prompt Interpretation and Interactive Generation",
+      "published": "2025-07-28",
+      "abstract": "Text-to-Image (T2I) generative models have revolutionized content creation but remain highly sensitive to prompt phrasing, often requiring users to repeatedly refine prompts multiple times without clear feedback. While techniques such as automatic prompt engineering, controlled text embeddings, denoising, and multi-turn generation mitigate these issues, they offer limited controllability, or often necessitate additional training, restricting the generalization abilities. Thus, we introduce T2I-C",
+      "must_read": false,
+      "tier": 2
+    },
+    {
+      "arxiv_id": "2507.13708",
+      "title": "PoemTale Diffusion: Minimising Information Loss in Poem to Image Generation with Multi-Stage Prompt Refinement",
+      "published": "2025-07-18",
+      "abstract": "Recent advancements in text-to-image diffusion models have achieved remarkable success in generating realistic and diverse visual content. A critical factor in this process is the model's ability to accurately interpret textual prompts. However, these models often struggle with creative expressions, particularly those involving complex, abstract, or highly descriptive language. In this work, we introduce a novel training-free approach tailored to improve image generation for a unique form of cre",
+      "must_read": false,
+      "tier": 2
+    },
+    {
+      "arxiv_id": "2507.03275",
+      "title": "ConceptMix++: Leveling the Playing Field in Text-to-Image Benchmarking via Iterative Prompt Optimization",
+      "published": "2025-07-04",
+      "abstract": "Current text-to-image (T2I) benchmarks evaluate models on rigid prompts, potentially underestimating true generative capabilities due to prompt sensitivity and creating biases that favor certain models while disadvantaging others. We introduce ConceptMix++, a framework that disentangles prompt phrasing from visual generation capabilities by applying iterative prompt optimization. Building on ConceptMix, our approach incorporates a multimodal optimization pipeline that leverages vision-language m",
+      "must_read": false,
+      "tier": 2
+    },
+    {
+      "arxiv_id": "2506.23138",
+      "title": "VisualPrompter: Semantic-Aware Prompt Optimization with Visual Feedback for Text-to-Image Synthesis",
+      "published": "2025-06-29",
+      "abstract": "The notable gap between user-provided and model-preferred prompts poses a significant challenge for generating high-quality images with text-to-image models, compelling the need for prompt engineering. Current studies on prompt engineering can effectively enhance the style and aesthetics of generated images. However, they often neglect the semantic alignment between generated images and user descriptions, resulting in visually appealing but content-wise unsatisfying outputs. In this work, we pro",
+      "must_read": true,
+      "tier": 1
+    },
+    {
+      "arxiv_id": "2506.16853",
+      "title": "Reward-Agnostic Prompt Optimization for Text-to-Image Diffusion Models",
+      "published": "2025-06-20",
+      "abstract": "We investigate a general approach for improving user prompts in text-to-image (T2I) diffusion models by finding prompts that maximize a reward function specified at test-time. Although diverse reward models are used for evaluating image generation, existing automated prompt engineering methods typically target specific reward configurations. Consequently, these specialized designs exhibit suboptimal performance when applied to new prompt engineering scenarios involving different reward models. T",
+      "must_read": false,
+      "tier": 2
+    },
+    {
+      "arxiv_id": "2505.18979",
+      "title": "Dynamic Optimization and Safety Indicator Injection for Jailbreaking Text-to-Image Models with Multimodal Safety Filters",
+      "published": "2025-05-25",
+      "abstract": "Text-to-image (T2I) models can generate not-safe-for-work (NSFW) content, motivating multi-stage safety pipelines with both text and image filters. Newer LLM-based filters detect latent intent beyond keywords, making token-level perturbation attacks unreliable. Our evaluation further shows that existing jailbreak methods exhibit a sharp trade-off between filter evasion and semantic fidelity, while also requiring excessive queries to succeed. We introduce \\textbf{OptJail}, an automated jailbreak ",
+      "must_read": false,
+      "tier": 2
+    },
+    {
+      "arxiv_id": "2505.17540",
+      "title": "RePrompt: Reasoning-Augmented Reprompting for Text-to-Image Generation via Reinforcement Learning",
+      "published": "2025-05-23",
+      "abstract": "Despite recent progress in text-to-image (T2I) generation, existing models often struggle to faithfully capture user intentions from short and under-specified prompts. While prior work has attempted to enhance prompts using large language models (LLMs), these methods frequently generate stylistic or unrealistic content due to insufficient grounding in visual semantics and real-world composition. Inspired by recent advances in reasoning for language model, we propose RePrompt, a novel reprompting",
+      "must_read": true,
+      "tier": 1
+    },
+    {
+      "arxiv_id": "2505.16763",
+      "title": "Self-Rewarding Large Vision-Language Models for Optimizing Prompts in Text-to-Image Generation",
+      "published": "2025-05-22",
+      "abstract": "Text-to-image models are powerful for producing high-quality images based on given text prompts, but crafting these prompts often requires specialized vocabulary. To address this, existing methods train rewriting models with supervision from large amounts of manually annotated data and trained aesthetic assessment models. To alleviate the dependence on data scale for model training and the biases introduced by trained models, we propose a novel prompt optimization framework, designed to rephrase",
+      "must_read": true,
+      "tier": 1
+    },
+    {
+      "arxiv_id": "2504.11739",
+      "title": "The Devil is in the Prompts: Retrieval-Augmented Prompt Optimization for Text-to-Video Generation",
+      "published": "2025-04-16",
+      "abstract": "The evolution of Text-to-video (T2V) generative models, trained on large-scale datasets, has been marked by significant progress. However, the sensitivity of T2V generative models to input prompts highlights the critical role of prompt design in influencing generative outcomes. Prior research has predominantly relied on Large Language Models (LLMs) to align user-provided prompts with the distribution of training prompts, albeit without tailored guidance encompassing prompt vocabulary and sentenc",
+      "must_read": true,
+      "tier": 1
+    },
+    {
+      "arxiv_id": "2503.19937",
+      "title": "Reverse Prompt: Cracking the Recipe Inside Text-to-Image Generation",
+      "published": "2025-03-25",
+      "abstract": "Text-to-image generation has become increasingly popular, but achieving the desired images often requires extensive prompt engineering. In this paper, we explore how to decode textual prompts from reference images, a process we refer to as image reverse prompt engineering. This technique enables us to gain insights from reference images, understand the creative processes of great artists, and generate impressive new images. To address this challenge, we propose a method known as automatic revers",
+      "must_read": false,
+      "tier": 2
+    },
+    {
+      "arxiv_id": "2503.12615",
+      "title": "LATINO-PRO: LAtent consisTency INverse sOlver with PRompt Optimization",
+      "published": "2025-03-16",
+      "abstract": "Text-to-image latent diffusion models (LDMs) have recently emerged as powerful generative models with great potential for solving inverse problems in imaging. However, leveraging such models in a Plug & Play (PnP), zero-shot manner remains challenging because it requires identifying a suitable text prompt for the unknown image of interest. Also, existing text-to-image PnP approaches are highly computationally expensive. We herein address these challenges by proposing a novel PnP inference paradi",
+      "must_read": false,
+      "tier": 2
+    },
+    {
+      "arxiv_id": "2502.19771",
+      "title": "The erasure of intensive livestock farming in text-to-image generative AI",
+      "published": "2025-02-27",
+      "abstract": "Generative AI (e.g., ChatGPT) is increasingly integrated into people's daily lives. While it is known that AI perpetuates biases against marginalized human groups, their impact on non-human animals remains understudied. We found that ChatGPT's text-to-image model (DALL-E 3) introduces a strong bias toward romanticizing livestock farming as dairy cows on pasture and pigs rooting in mud. This bias remained when we requested realistic depictions and was only mitigated when the automatic prompt revi",
+      "must_read": false,
+      "tier": 2
+    },
+    {
+      "arxiv_id": "2412.13989",
+      "title": "What makes a good metric? Evaluating automatic metrics for text-to-image consistency",
+      "published": "2024-12-18",
+      "abstract": "Language models are increasingly being incorporated as components in larger AI systems for various purposes, from prompt optimization to automatic evaluation. In this work, we analyze the construct validity of four recent, commonly used methods for measuring text-to-image consistency - CLIPScore, TIFA, VPEval, and DSG - which rely on language models and/or VQA models as components. We define construct validity for text-image consistency metrics as a set of desiderata that text-image consistency ",
+      "must_read": false,
+      "tier": 2
+    },
+    {
+      "arxiv_id": "2412.08639",
+      "title": "Fast Prompt Alignment for Text-to-Image Generation",
+      "published": "2024-12-11",
+      "abstract": "Text-to-image generation has advanced rapidly, yet aligning complex textual prompts with generated visuals remains challenging, especially with intricate object relationships and fine-grained details. This paper introduces Fast Prompt Alignment (FPA), a prompt optimization framework that leverages a one-pass approach, enhancing text-to-image alignment efficiency without the iterative overhead typical of current methods like OPT2I. FPA uses large language models (LLMs) for single-iteration prompt",
+      "must_read": false,
+      "tier": 2
+    },
+    {
+      "arxiv_id": "2412.05780",
+      "title": "BudgetFusion: Perceptually-Guided Adaptive Diffusion Models",
+      "published": "2024-12-08",
+      "abstract": "Diffusion models have shown unprecedented success in the task of text-to-image generation. While these models are capable of generating high-quality and realistic images, the complexity of sequential denoising has raised societal concerns regarding high computational demands and energy consumption. In response, various efforts have been made to improve inference efficiency. However, most of the existing efforts have taken a fixed approach with neural network simplification or text prompt optimiz",
+      "must_read": false,
+      "tier": 2
+    },
+    {
+      "arxiv_id": "2411.16503",
+      "title": "Noise Diffusion for Enhancing Semantic Faithfulness in Text-to-Image Synthesis",
+      "published": "2024-11-25",
+      "abstract": "Diffusion models have achieved impressive success in generating photorealistic images, but challenges remain in ensuring precise semantic alignment with input prompts. Optimizing the initial noisy latent offers a more efficient alternative to modifying model architectures or prompt engineering for improving semantic alignment. A latest approach, InitNo, refines the initial noisy latent by leveraging attention maps; however, these maps capture only limited information, and the effectiveness of In",
+      "must_read": false,
+      "tier": 2
+    },
+    {
+      "arxiv_id": "2412.14174",
+      "title": "Steering Large Text-to-Image Model for Abstract Art Synthesis: Preference-based Prompt Optimization and Visualization",
+      "published": "2024-11-18",
+      "abstract": "With the advancement of neural generative capabilities, the art community has increasingly embraced GenAI (Generative Artificial Intelligence), particularly large text-to-image models, for producing aesthetically compelling results. However, the process often lacks determinism and requires a tedious trial-and-error process as users often struggle to devise effective prompts to achieve their desired outcomes. This paper introduces a prompting-free generative approach that applies a genetic algori",
+      "must_read": false,
+      "tier": 2
+    },
+    {
+      "arxiv_id": "2411.08127",
+      "title": "TIPO: Text to Image with Text Presampling for Prompt Optimization",
+      "published": "2024-11-12",
+      "abstract": "TIPO (Text-to-Image Prompt Optimization) introduces an efficient approach for automatic prompt refinement in text-to-image (T2I) generation. Starting from simple user prompts, TIPO leverages a lightweight pre-trained model to expand these prompts into richer and more detailed versions. Conceptually, TIPO samples refined prompts from a targeted sub-distribution within the broader semantic space, preserving the original intent while significantly improving visual quality, coherence, and detail. Un",
+      "must_read": true,
+      "tier": 1
+    },
+    {
+      "arxiv_id": "2410.07838",
+      "title": "Minority-Focused Text-to-Image Generation via Prompt Optimization",
+      "published": "2024-10-10",
+      "abstract": "We investigate the generation of minority samples using pretrained text-to-image (T2I) latent diffusion models. Minority instances, in the context of T2I generation, can be defined as ones living on low-density regions of text-conditional data distributions. They are valuable for various applications of modern T2I generators, such as data augmentation and creative AI. Unfortunately, existing pretrained T2I diffusion models primarily focus on high-density regions, largely due to the influence of ",
+      "must_read": false,
+      "tier": 2
+    },
+    {
+      "arxiv_id": "2408.12910",
+      "title": "Taming Text-to-Image Synthesis for Novices: User-centric Prompt Generation via Multi-turn Guidance",
+      "published": "2024-08-23",
+      "abstract": "The emergence of text-to-image synthesis (TIS) models has significantly influenced digital image creation by producing high-quality visuals from written descriptions. Yet these models are sensitive on textual prompts, posing a challenge for novice users who may not be familiar with TIS prompt writing. Existing solutions relieve this via automatic prompt expansion or generation from a user query. However, this single-turn manner suffers from limited user-centricity in terms of result interpretabi",
+      "must_read": false,
+      "tier": 2
+    },
+    {
+      "arxiv_id": "2407.01606",
+      "title": "On Discrete Prompt Optimization for Diffusion Models",
+      "published": "2024-06-27",
+      "abstract": "This paper introduces the first gradient-based framework for prompt optimization in text-to-image diffusion models. We formulate prompt engineering as a discrete optimization problem over the language space. Two major challenges arise in efficiently finding a solution to this problem: (1) Enormous Domain Space: Setting the domain to the entire language space poses significant difficulty to the optimization process. (2) Text Gradient: Efficiently computing the text gradient is challenging, as it ",
+      "must_read": false,
+      "tier": 2
+    },
+    {
+      "arxiv_id": "2406.08713",
+      "title": "Batch-Instructed Gradient for Prompt Evolution:Systematic Prompt Optimization for Enhanced Text-to-Image Synthesis",
+      "published": "2024-06-13",
+      "abstract": "Text-to-image models have shown remarkable progress in generating high-quality images from user-provided prompts. Despite this, the quality of these images varies due to the models' sensitivity to human language nuances. With advancements in large language models, there are new opportunities to enhance prompt design for image generation tasks. Existing research primarily focuses on optimizing prompts for direct interaction, while less attention is given to scenarios involving intermediary agents",
+      "must_read": false,
+      "tier": 2
+    },
+    {
+      "arxiv_id": "2404.11589",
+      "title": "Prompt Optimizer of Text-to-Image Diffusion Models for Abstract Concept Understanding",
+      "published": "2024-04-17",
+      "abstract": "The rapid evolution of text-to-image diffusion models has opened the door of generative AI, enabling the translation of textual descriptions into visually compelling images with remarkable quality. However, a persistent challenge within this domain is the optimization of prompts to effectively convey abstract concepts into concrete objects. For example, text encoders can hardly express \"peace\", while can easily illustrate olive branches and white doves. This paper introduces a novel approach nam",
+      "must_read": false,
+      "tier": 2
+    },
+    {
+      "arxiv_id": "2404.04095",
+      "title": "Dynamic Prompt Optimizing for Text-to-Image Generation",
+      "published": "2024-04-05",
+      "abstract": "Text-to-image generative models, specifically those based on diffusion models like Imagen and Stable Diffusion, have made substantial advancements. Recently, there has been a surge of interest in the delicate refinement of text prompts. Users assign weights or alter the injection time steps of certain words in the text prompts to improve the quality of generated images. However, the success of fine-control prompts depends on the accuracy of the text prompts and the careful selection of weights a",
+      "must_read": true,
+      "tier": 1
+    },
+    {
+      "arxiv_id": "2403.19716",
+      "title": "Capability-aware Prompt Reformulation Learning for Text-to-Image Generation",
+      "published": "2024-03-27",
+      "abstract": "Text-to-image generation systems have emerged as revolutionary tools in the realm of artistic creation, offering unprecedented ease in transforming textual prompts into visual art. However, the efficacy of these systems is intricately linked to the quality of user-provided prompts, which often poses a challenge to users unfamiliar with prompt crafting. This paper addresses this challenge by leveraging user reformulation data from interaction logs to develop an automatic prompt reformulation mode",
+      "must_read": false,
+      "tier": 2
+    },
+    {
+      "arxiv_id": "2403.17804",
+      "title": "Improving Text-to-Image Consistency via Automatic Prompt Optimization",
+      "published": "2024-03-26",
+      "abstract": "Impressive advances in text-to-image (T2I) generative models have yielded a plethora of high performing models which are able to generate aesthetically appealing, photorealistic images. Despite the progress, these models still struggle to produce images that are consistent with the input prompt, oftentimes failing to capture object quantities, relations and attributes properly. Existing solutions to improve prompt-image consistency suffer from the following challenges: (1) they oftentimes requir",
+      "must_read": true,
+      "tier": 1
+    },
+    {
+      "arxiv_id": "2403.11273",
+      "title": "BrightDreamer: Generic 3D Gaussian Generative Framework for Fast Text-to-3D Synthesis",
+      "published": "2024-03-17",
+      "abstract": "Text-to-3D synthesis has recently seen intriguing advances by combining the text-to-image priors with 3D representation methods, e.g., 3D Gaussian Splatting (3D GS), via Score Distillation Sampling (SDS). However, a hurdle of existing methods is the low efficiency, per-prompt optimization for a single 3D object. Therefore, it is imperative for a paradigm shift from per-prompt optimization to feed-forward generation for any unseen text prompts, which yet remains challenging. An obstacle is how to",
+      "must_read": false,
+      "tier": 2
+    },
+    {
+      "arxiv_id": "2402.10882",
+      "title": "Universal Prompt Optimizer for Safe Text-to-Image Generation",
+      "published": "2024-02-16",
+      "abstract": "Text-to-Image (T2I) models have shown great performance in generating images based on textual prompts. However, these models are vulnerable to unsafe input to generate unsafe content like sexual, harassment and illegal-activity images. Existing studies based on image checker, model fine-tuning and embedding blocking are impractical in real-world applications. Hence, we propose the first universal prompt optimizer for safe T2I (POSI) generation in black-box scenario. We first construct a dataset ",
+      "must_read": false,
+      "tier": 2
+    },
+    {
+      "arxiv_id": "2401.01128",
+      "title": "SSP: A Simple and Safe automatic Prompt engineering method towards realistic image synthesis on LVM",
+      "published": "2024-01-02",
+      "abstract": "Recently, text-to-image (T2I) synthesis has undergone significant advancements, particularly with the emergence of Large Language Models (LLM) and their enhancement in Large Vision Models (LVM), greatly enhancing the instruction-following capabilities of traditional T2I models. Nevertheless, previous methods focus on improving generation quality but introduce unsafe factors into prompts. We explore that appending specific camera descriptions to prompts can enhance safety performance. Consequentl",
+      "must_read": false,
+      "tier": 2
+    },
+    {
+      "arxiv_id": "2311.06752",
+      "title": "BeautifulPrompt: Towards Automatic Prompt Engineering for Text-to-Image Synthesis",
+      "published": "2023-11-12",
+      "abstract": "Recently, diffusion-based deep generative models (e.g., Stable Diffusion) have shown impressive results in text-to-image synthesis. However, current text-to-image models often require multiple passes of prompt engineering by humans in order to produce satisfactory results for real-world applications. We propose BeautifulPrompt, a deep generative model to produce high-quality prompts from very simple raw descriptions, which enables diffusion-based models to generate more beautiful images. In our ",
+      "must_read": true,
+      "tier": 1
+    },
+    {
+      "arxiv_id": "2310.08129",
+      "title": "Tailored Visions: Enhancing Text-to-Image Generation with Personalized Prompt Rewriting",
+      "published": "2023-10-12",
+      "abstract": "Despite significant progress in the field, it is still challenging to create personalized visual representations that align closely with the desires and preferences of individual users. This process requires users to articulate their ideas in words that are both comprehensible to the models and accurately capture their vision, posing difficulties for many users. In this paper, we tackle this challenge by leveraging historical user interactions with the system to enhance user prompts. We propose ",
+      "must_read": false,
+      "tier": 2
+    },
+    {
+      "arxiv_id": "2306.07349",
+      "title": "ATT3D: Amortized Text-to-3D Object Synthesis",
+      "published": "2023-06-06",
+      "abstract": "Text-to-3D modelling has seen exciting progress by combining generative text-to-image models with image-to-3D methods like Neural Radiance Fields. DreamFusion recently achieved high-quality results but requires a lengthy, per-prompt optimization to create 3D objects. To address this, we amortize optimization over text prompts by training on many prompts simultaneously with a unified model, instead of separately. With this, we share computation across a prompt set, training in less time than per-",
+      "must_read": false,
+      "tier": 2
+    },
+    {
+      "arxiv_id": "2301.12661",
+      "title": "Make-An-Audio: Text-To-Audio Generation with Prompt-Enhanced Diffusion Models",
+      "published": "2023-01-30",
+      "abstract": "Large-scale multimodal generative modeling has created milestones in text-to-image and text-to-video generation. Its application to audio still lags behind for two main reasons: the lack of large-scale datasets with high-quality text-audio pairs, and the complexity of modeling long continuous audio data. In this work, we propose Make-An-Audio with a prompt-enhanced diffusion model that addresses these gaps by 1) introducing pseudo prompt enhancement with a distill-then-reprogram approach, it all",
+      "must_read": false,
+      "tier": 2
+    }
+  ]
+}
