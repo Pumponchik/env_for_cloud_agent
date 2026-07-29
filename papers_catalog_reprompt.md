@@ -144,13 +144,13 @@
 - inverse problems / EHR / Petri nets с «reprompt» в названии;
 - pure architecture papers без rewrite stage.
 
-В `corpus/arxiv_pe_strict.json` — 52 кандидата после фильтра; в итоговом чтении опираться на P1/P2 выше.
+В `research/reprompt-systems/corpus/arxiv_pe_strict.json` — 52 кандидата после фильтра; в итоговом чтении опираться на P1/P2 выше.
 
 ---
 
 ## 4. Дерево цитирований (сжатый вывод)
 
-По Semantic Scholar (частично rate-limited; см. `citation_trees/`):
+По Semantic Scholar (частично rate-limited; см. `research/reprompt-systems/citation_trees/`):
 
 | Seed | Примерно cites (S2 sample) | Роль |
 |---|---|---|
@@ -199,20 +199,18 @@
 ## 6. Артефакты этого исследования
 
 ```
-t2i-reprompt-systems/
+.                                      ← основные MD-отчёты в корне PR
+  report_reprompt_systems.md
+  papers_catalog_reprompt.md
+research/reprompt-systems/             ← технические артефакты
   outline.yaml
   fields.yaml
-  report_reprompt_systems.md          ← итоговый отчёт
-  papers_catalog_reprompt.md          ← этот файл
   corpus/
-    arxiv_pe_search.json              ← сырой arXiv (213)
-    arxiv_pe_filtered.json            ← 91
-    arxiv_pe_strict.json              ← 52
-    curated_reading_list.json         ← 72
+    arxiv_pe_filtered.json             ← 91
+    arxiv_pe_strict.json               ← 52
+    curated_reading_list.json          ← 72
   citation_trees/
-    seed_trees_batch1.json
-    seed_trees_batch2.json
-  raw_searches/
+  raw_searches/arxiv_pe_search.json    ← сырой arXiv (213)
 ```
 
-Связанный предыдущий корпус (длина captions, не PE per se): `../t2i-prompt-length/`.
+Связанный корпус по длине captions: `research/prompt-length/` + отчёты в корне.

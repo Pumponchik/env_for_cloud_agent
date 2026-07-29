@@ -1,36 +1,70 @@
-# Cloud Agent environment
+# T2I Prompt Research
 
-Environment repo for Cursor Cloud Agents with:
+Исследование длины промптов / captions и систем **re-prompt (prompt enhancement)** для text-to-image.
 
-1. **[Deep Research skills](https://github.com/Weizhena/Deep-Research-skills)** — structured research workflow (`research`, `research-deep`, `research-report`, …)
-2. **[Camofox Browser](https://github.com/jo-inc/camofox-browser)** — stealth browser API skill + runtime on port `9377`
+Основные отчёты лежат **в корне**. Технические артефакты (JSON, YAML, корпусы, citation trees) — в [`research/`](./research/).
 
-## Layout
+---
+
+## С чего начать
+
+| Приоритет | Файл | О чём |
+|-----------|------|--------|
+| **1** | [`report_reprompt_systems.md`](./report_reprompt_systems.md) | Как устроена система re-prompt: проблема, методы, почему так, как делать правильно |
+| **2** | [`papers_catalog_reprompt.md`](./papers_catalog_reprompt.md) | Каталог статей по PE с приоритетами чтения |
+| **3** | [`top_papers_prompt_length_variability.md`](./top_papers_prompt_length_variability.md) | Топ статей по длине и вариативности промпта |
+| **4** | [`relevant_papers_prompt_caption_design.md`](./relevant_papers_prompt_caption_design.md) | 64 релевантные статьи: проблема / метод / результат |
+
+---
+
+## Все отчёты в корне
+
+### Re-prompt / prompt enhancement
+- [`report_reprompt_systems.md`](./report_reprompt_systems.md) — итоговый академический разбор PE
+- [`papers_catalog_reprompt.md`](./papers_catalog_reprompt.md) — каталог и маршрут чтения
+
+### Длина промпта и captions
+- [`top_papers_prompt_length_variability.md`](./top_papers_prompt_length_variability.md) — топ по length/variability
+- [`relevant_papers_prompt_caption_design.md`](./relevant_papers_prompt_caption_design.md) — краткие P/M/R
+- [`report_around_brack_2506_16679.md`](./report_around_brack_2506_16679.md) — вокруг Brack et al. (контролируемые captions)
+- [`report_dalle3_prompt_reprompt_descendants.md`](./report_dalle3_prompt_reprompt_descendants.md) — потомки DALL·E 3 Better Captions
+- [`literature_review_modern_prompt_length.md`](./literature_review_modern_prompt_length.md) — обзор современной длины (~150)
+- [`combined_report_prompt_length_300.md`](./combined_report_prompt_length_300.md) — сводный отчёт (~300)
+- [`report_prompt_length_initial.md`](./report_prompt_length_initial.md) — первый deep-dive отчёт
+
+---
+
+## Технические артефакты
+
+```
+research/
+  prompt-length/          # корпусы, results JSON, citation trees по длине
+  reprompt-systems/       # корпусы, citation trees, outline/fields по PE
+```
+
+Подробнее: [`research/README.md`](./research/README.md).
+
+---
+
+## Короткий вывод
+
+1. **Длина:** train–infer match критичен; лучше вариативность длины на обучении или long-train + PE на инференсе.
+2. **Re-prompt:** закрывает разрыв train↔user caption distribution; цель — alignment к train caption law + faithfulness, не max verbosity и не голый aesthetic score.
+3. **Практика:** gating (когда не репромптить), оценка против original prompt, decomposed / visual-grounded rewards.
+
+---
+
+## Окружение Cloud Agent
+
+В этом же репозитории:
 
 | Path | Purpose |
 |------|---------|
-| `.cursor/skills/` | Cursor project skills (picked up by Cloud Agents) |
-| `.agents/skills/` | Same skills for Agents discovery |
-| `.claude/skills/` + `.claude/agents/` | Claude-compatible research skills + `web-search-agent` |
-| `.cursor/environment.json` | Cloud Agent install + Camofox terminal |
-| `scripts/cloud-agent-install.sh` | Idempotent bootstrap (`pyyaml`, skill sync, Camofox npm install) |
-
-## Cloud Agent usage
-
-1. Point your Cloud Agent environment at this repository (or use it as the agent workspace).
-2. On start, `install` syncs skills and installs Camofox; the `camofox` terminal starts the browser server.
-3. Invoke research with `/research <topic>` (and related skills).
-4. For hard-to-fetch pages, use the `camofox-browser` skill against `http://localhost:9377`.
-
-## Local check
+| `.cursor/skills/` | Cursor project skills |
+| `.agents/skills/` | Agents discovery |
+| `.claude/skills/` + `.claude/agents/` | Research skills + `web-search-agent` |
+| `scripts/cloud-agent-install.sh` | Bootstrap |
 
 ```bash
 ./scripts/cloud-agent-install.sh
-cd tools/camofox-browser && npx camofox-browser
-# health: curl -sS http://localhost:9377/health
 ```
-
-## Upstream sources
-
-- Deep Research: English skills from `skills/research-en` + `agents/web-search-agent.md`
-- Camofox: packaged as a Cursor skill from upstream `AGENTS.md` + npm `@askjo/camofox-browser@1.13.0`

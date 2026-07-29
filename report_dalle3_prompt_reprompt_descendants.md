@@ -1020,5 +1020,5 @@ To capture the intricate 3D spatial relationships in images, we improve both "vi
 
 ## Machine-readable
 
-- `citation_tree/dalle3_better_captions_cites_raw.json` — all 1794 S2 citations
-- `citation_tree/dalle3_prompt_reprompt_descendants.json` — top 120 scored
+- `research/prompt-length/citation_tree/dalle3_better_captions_cites_raw.json` — all 1794 S2 citations
+- `research/prompt-length/citation_tree/dalle3_prompt_reprompt_descendants.json` — top 120 scored

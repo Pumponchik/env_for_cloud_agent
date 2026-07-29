@@ -1,18 +1,20 @@
+# Research intermediates (large / local only)
+research/prompt-length/corpus/arxiv_raw.json
+research/prompt-length/paper_extracts/
+research/prompt-length/papers/
 
-.camofox/
-# Camofox local state
-.DS_Store
-# Editor
-*.log
-node_modules/
-*.pyc
-__pycache__/
-# Python / OS
-# Research intermediates (large)
-# Runtime installs (created by scripts/cloud-agent-install.sh)
+# Legacy paths (if any leftover)
 t2i-prompt-length/corpus/arxiv_raw.json
 t2i-prompt-length/paper_extracts/
 t2i-prompt-length/papers/
+
+# Camofox / runtime
+.camofox/
 tools/
 .venv/
 venv/
+node_modules/
+__pycache__/
+*.pyc
+*.log
+.DS_Store

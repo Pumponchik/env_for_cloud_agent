@@ -1691,6 +1691,6 @@ The synthetic-caption paradigm is settled as industry default; the open scientif
 
 ## Machine-readable artifacts
 
-- `citation_tree/around_2506_16679.json` — structured tree + similar-100
-- `citation_tree/2506.16679_enriched.json` — raw S2/OA/bib/author pulls
-- `citation_tree/2506.16679_tree_raw.json` — initial S2 pull
+- `research/prompt-length/citation_tree/around_2506_16679.json` — structured tree + similar-100
+- `research/prompt-length/citation_tree/2506.16679_enriched.json` — raw S2/OA/bib/author pulls
+- `research/prompt-length/citation_tree/2506.16679_tree_raw.json` — initial S2 pull

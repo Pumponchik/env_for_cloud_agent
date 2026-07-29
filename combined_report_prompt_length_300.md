@@ -5354,7 +5354,7 @@ Looking forward, progress likely comes from making this joint policy **more nati
 
 ## Related files
 
-- First deep dive: `report.md`, `results/*.json`
+- First deep dive: `report_prompt_length_initial.md`, `research/prompt-length/results/*.json`
 - Prior modern review (~150): `literature_review_modern_prompt_length.md`
 - This combined report: `combined_report_prompt_length_300.md`
-- Catalogs: `corpus/catalog_300.json`, `corpus/core_length_300.json`
+- Catalogs: `research/prompt-length/corpus/catalog_300.json`, `research/prompt-length/corpus/core_length_300.json`

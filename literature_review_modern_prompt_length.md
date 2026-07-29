@@ -3306,4 +3306,4 @@ For **Qwen-VLM / similar**: start at **`L≈512`**, train dense VLM captions (lo
 ## Related files
 
 - Earlier CLIP/T5-inclusive deep dive: `report.md`
-- Structured JSON notes: `results/*.json`
+- Structured JSON notes: `research/prompt-length/results/*.json`

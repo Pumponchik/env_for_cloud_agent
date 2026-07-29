@@ -321,7 +321,7 @@ UX-уровни как у Ideogram: **Off / Auto / On**, плюс показат
 
 ## 9. Связь с предыдущим исследованием длины промптов
 
-В `t2i-prompt-length/` уже показано:
+В отчётах по длине промпта (см. [`README.md`](./README.md)) уже показано:
 
 - train–infer length match критичен;  
 - variable length или long+PE — два рабочих режима;  
@@ -354,4 +354,4 @@ UX-уровни как у Ideogram: **Off / Auto / On**, плюс показат
 - Wan `2503.20314`, Qwen-Image-2.0 `2605.10730`, Seedance/Seedream, HunyuanImage 3, FLUX.2 docs, Ideogram Magic Prompt, Vertex Imagen rewriter  
 - GenEval 2 `2512.16853`, DetailMaster `2505.16915`, FairPro `2512.04981`
 
-Сырые корпуса и деревья: `corpus/`, `citation_trees/`.
+Сырые корпуса и деревья: `research/reprompt-systems/corpus/`, `research/reprompt-systems/citation_trees/`.
