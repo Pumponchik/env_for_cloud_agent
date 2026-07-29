@@ -10,10 +10,11 @@
 
 | Приоритет | Файл | О чём |
 |-----------|------|--------|
-| **1** | [`report_reprompt_systems.md`](./report_reprompt_systems.md) | Как устроена система re-prompt: проблема, методы, почему так, как делать правильно |
-| **2** | [`papers_catalog_reprompt.md`](./papers_catalog_reprompt.md) | Каталог статей по PE с приоритетами чтения |
-| **3** | [`top_papers_prompt_length_variability.md`](./top_papers_prompt_length_variability.md) | Топ статей по длине и вариативности промпта |
-| **4** | [`relevant_papers_prompt_caption_design.md`](./relevant_papers_prompt_caption_design.md) | 64 релевантные статьи: проблема / метод / результат |
+| **1** | [`report_reprompt_system_architecture_2026.md`](./report_reprompt_system_architecture_2026.md) | **Главный современный разбор (2025–2026):** зачем re-prompt, какая структура bridge user→model (text/JSON/latent/…), степени свободы, как строить правильно; история — отдельным разделом |
+| **2** | [`report_reprompt_systems.md`](./report_reprompt_systems.md) | Более широкий академический дайджест PE |
+| **3** | [`papers_catalog_reprompt.md`](./papers_catalog_reprompt.md) | Каталог статей по PE с приоритетами чтения |
+| **4** | [`top_papers_prompt_length_variability.md`](./top_papers_prompt_length_variability.md) | Топ статей по длине и вариативности промпта |
+| **5** | [`relevant_papers_prompt_caption_design.md`](./relevant_papers_prompt_caption_design.md) | 64 релевантные статьи: проблема / метод / результат |
 
 ---
 
