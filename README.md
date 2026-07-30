@@ -10,18 +10,19 @@
 
 | Приоритет | Файл | О чём |
 |-----------|------|--------|
-| **1** | [`fundamental_papers_reprompt_reading_list.md`](./fundamental_papers_reprompt_reading_list.md) | **Партшкола:** ~65 фундаментальных работ, пересказ «словами статей» (P/M/R), включая NVIDIA APE; история + видение отдельно |
+| **1** | [`fundamental_papers_reprompt_reading_list.md`](./fundamental_papers_reprompt_reading_list.md) | **Современное ядро 2025–26** (labs + структурные PE): gap user→generator; 23–24 только в §D «Развитие» |
 | **2** | [`report_reprompt_system_architecture_2026.md`](./report_reprompt_system_architecture_2026.md) | Архитектура bridge 2025–2026: IR, длина, gating |
 | **3** | [`report_reprompt_systems.md`](./report_reprompt_systems.md) | Более широкий академический дайджест PE |
 | **4** | [`papers_catalog_reprompt.md`](./papers_catalog_reprompt.md) | Каталог статей по PE с приоритетами чтения |
-| **4** | [`top_papers_prompt_length_variability.md`](./top_papers_prompt_length_variability.md) | Топ статей по длине и вариативности промпта |
-| **5** | [`relevant_papers_prompt_caption_design.md`](./relevant_papers_prompt_caption_design.md) | 64 релевантные статьи: проблема / метод / результат |
+| **5** | [`top_papers_prompt_length_variability.md`](./top_papers_prompt_length_variability.md) | Топ статей по длине и вариативности промпта |
+| **6** | [`relevant_papers_prompt_caption_design.md`](./relevant_papers_prompt_caption_design.md) | 64 релевантные статьи: проблема / метод / результат |
 
 ---
 
 ## Все отчёты в корне
 
 ### Re-prompt / prompt enhancement
+- [`fundamental_papers_reprompt_reading_list.md`](./fundamental_papers_reprompt_reading_list.md) — современный P0/P1 список (APE, PromptEnhancer, Seed/Wan/Cosmos/…); 23–24 в §D
 - [`report_reprompt_system_architecture_2026.md`](./report_reprompt_system_architecture_2026.md) — архитектура bridge, IR, length, gating (фокус 2025–2026)
 - [`report_reprompt_systems.md`](./report_reprompt_systems.md) — более широкий академический разбор PE
 - [`papers_catalog_reprompt.md`](./papers_catalog_reprompt.md) — каталог и маршрут чтения
