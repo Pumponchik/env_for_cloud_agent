@@ -23,7 +23,10 @@ user prompt → [re-prompter / bridge] → ??? → generator
 | 2 | **SUR-adapter** | [`2305.05189`](https://arxiv.org/abs/2305.05189) | Короткий casual prompt → adapter embeddings **без** выдачи rewritten string. |
 | 3 | **LaVi-Bridge** | [`2403.07860`](https://arxiv.org/abs/2403.07860) | Произвольный LM × vision model через adapter/LoRA; continuous bridge. |
 | 4 | **LLM4GEN** | [`2407.00737`](https://arxiv.org/abs/2407.00737) | Cross-Adapter: CLIP + LLM features fused → diffusion. |
-| 5 | **Think-Then-Generate** | [`2601.10332`](https://arxiv.org/abs/2601.10332) | Есть reasoning, но в DiT идут **embeddings** (не текстовый продукт rewrite). Ближе всего к «latent re-prompt». |
+| 5 | **Think-Then-Generate** | [`2601.10332`](https://arxiv.org/abs/2601.10332) | Reasoning есть, но в DiT идут **embeddings** (не текстовый продукт rewrite). Ближе всего к «latent re-prompt». |
+| 5b | **RISE-T2V** | [`2511.04317`](https://arxiv.org/abs/2511.04317) | Rephrasing Adapter: rephrase внутри LLM hidden states → diffusion; строка rewrite не эмитится. |
+| 5c | **DATE** | [`2510.23974`](https://arxiv.org/abs/2510.23974) | Re-optimise text embedding на каждом denoising step — iterative latent re-prompt. |
+| 5d | **UniFusion / VERIFI** | [`2510.12789`](https://arxiv.org/abs/2510.12789) | In-model rewrite → condition DiT on rewrite-token embeddings. |
 | 6 | **LI-DiT** | [`2406.11831`](https://arxiv.org/abs/2406.11831) | Naive LLM-as-encoder **ломает** alignment — обязателен до дизайна connector. |
 | 7 | **DimFusion** (в FIBO) | [`2511.06876`](https://arxiv.org/abs/2511.06876) | Длинный LLM context → компактные vectors (fusion по embedding-dim). |
 | 8 | **Semantic Routing** | [`2602.03510`](https://arxiv.org/abs/2602.03510) | Какой слой LLM отдавать в conditioner (не static single layer). |
@@ -35,7 +38,7 @@ user prompt → [re-prompter / bridge] → ??? → generator
 | 14 | **TextCraftor** | [`2403.18978`](https://arxiv.org/abs/2403.18978) | Reward-tune **text encoder** (векторный путь), U-Net frozen. |
 | 15 | **GlueGen** | [`2303.10056`](https://arxiv.org/abs/2303.10056) | Align произвольный encoder → latent space T2I (GlueNet). |
 
-**Минимум:** 1 ELLA → 2 SUR-adapter → 5 Think-Then-Generate → 6 LI-DiT → 9 PEO → 7 DimFusion.
+**Минимум:** 1 ELLA → 2 SUR-adapter → 5 Think-Then-Generate → 5b RISE-T2V → 6 LI-DiT → 9 PEO → 7 DimFusion.
 
 ---
 
