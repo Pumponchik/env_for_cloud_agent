@@ -10,22 +10,24 @@
 
 | Приоритет | Файл | О чём |
 |-----------|------|--------|
-| **1** | [`fundamental_papers_reprompt_reading_list.md`](./fundamental_papers_reprompt_reading_list.md) | **Современное ядро 2025–26** (labs + структурные PE): gap user→generator; 23–24 только в §D «Развитие» |
-| **2** | [`report_reprompt_system_architecture_2026.md`](./report_reprompt_system_architecture_2026.md) | Архитектура bridge 2025–2026: IR, длина, gating |
-| **3** | [`report_reprompt_systems.md`](./report_reprompt_systems.md) | Более широкий академический дайджест PE |
-| **4** | [`papers_catalog_reprompt.md`](./papers_catalog_reprompt.md) | Каталог статей по PE с приоритетами чтения |
-| **5** | [`top_papers_prompt_length_variability.md`](./top_papers_prompt_length_variability.md) | Топ статей по длине и вариативности промпта |
-| **6** | [`relevant_papers_prompt_caption_design.md`](./relevant_papers_prompt_caption_design.md) | 64 релевантные статьи: проблема / метод / результат |
+| **1** | [`report_bridge_methods_taxonomy.md`](./report_bridge_methods_taxonomy.md) | **Все способы bridge** user→generator: текст / embeddings / layout / schema / endogenous / action; плюсы·минусы |
+| **2** | [`fundamental_papers_reprompt_reading_list.md`](./fundamental_papers_reprompt_reading_list.md) | Современное ядро textual PE 2025–26; 23–24 в §D |
+| **3** | [`report_reprompt_system_architecture_2026.md`](./report_reprompt_system_architecture_2026.md) | Архитектура textual bridge: IR, длина, gating |
+| **4** | [`papers_catalog_bridge_methods.md`](./papers_catalog_bridge_methods.md) | Каталог статей по всем семьям bridge |
+| **5** | [`report_reprompt_systems.md`](./report_reprompt_systems.md) | Более широкий академический дайджест PE |
+| **6** | [`top_papers_prompt_length_variability.md`](./top_papers_prompt_length_variability.md) | Топ статей по длине и вариативности промпта |
 
 ---
 
 ## Все отчёты в корне
 
-### Re-prompt / prompt enhancement
-- [`fundamental_papers_reprompt_reading_list.md`](./fundamental_papers_reprompt_reading_list.md) — современный P0/P1 список (APE, PromptEnhancer, Seed/Wan/Cosmos/…); 23–24 в §D
-- [`report_reprompt_system_architecture_2026.md`](./report_reprompt_system_architecture_2026.md) — архитектура bridge, IR, length, gating (фокус 2025–2026)
+### Bridge methods (все семьи) и re-prompt
+- [`report_bridge_methods_taxonomy.md`](./report_bridge_methods_taxonomy.md) — таксономия F1–F6: текст, embeddings, layout, schema, endogenous, action + pros/cons
+- [`papers_catalog_bridge_methods.md`](./papers_catalog_bridge_methods.md) — каталог must-read по семьям bridge
+- [`fundamental_papers_reprompt_reading_list.md`](./fundamental_papers_reprompt_reading_list.md) — современный P0/P1 список textual PE; 23–24 в §D
+- [`report_reprompt_system_architecture_2026.md`](./report_reprompt_system_architecture_2026.md) — архитектура textual bridge, IR, length, gating
 - [`report_reprompt_systems.md`](./report_reprompt_systems.md) — более широкий академический разбор PE
-- [`papers_catalog_reprompt.md`](./papers_catalog_reprompt.md) — каталог и маршрут чтения
+- [`papers_catalog_reprompt.md`](./papers_catalog_reprompt.md) — каталог textual PE
 
 ### Длина промпта и captions
 - [`top_papers_prompt_length_variability.md`](./top_papers_prompt_length_variability.md) — топ по length/variability
@@ -44,6 +46,7 @@
 research/
   prompt-length/          # корпусы, results JSON, citation trees по длине
   reprompt-systems/       # корпусы, citation trees, outline/fields по PE
+  bridge-methods/         # таксономия bridge: corpus, citation trees, outline/fields
 ```
 
 Подробнее: [`research/README.md`](./research/README.md).
@@ -53,8 +56,9 @@ research/
 ## Короткий вывод
 
 1. **Длина:** train–infer match критичен; лучше вариативность длины на обучении или long-train + PE на инференсе.
-2. **Re-prompt:** закрывает разрыв train↔user caption distribution; цель — alignment к train caption law + faithfulness, не max verbosity и не голый aesthetic score.
-3. **Практика:** gating (когда не репромптить), оценка против original prompt, decomposed / visual-grounded rewards.
+2. **Bridge ≠ только текст:** F1 rewrite · F2 embeddings · F3 layout · F4 schema · F5 endogenous CoT · F6 action space — выбирать по типу gap и контролю над training.
+3. **Re-prompt (F1):** закрывает train↔user captions; нужен gating и оценка vs original; для spatial/count часто лучше F3/F6.
+4. **Практика:** назвать gap → выбрать семью → стекать дополняющие рычаги (SCoT: text CoT + boxes).
 
 ---
 

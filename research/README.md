@@ -25,3 +25,16 @@
 | `corpus/` | Отфильтрованные списки статей, curated reading list |
 | `citation_trees/` | S2 trees по seed PE-papers |
 | `raw_searches/` | Сырой arXiv dump |
+
+## `bridge-methods/`
+
+Артефакты исследования **всех** семейств user→generator bridge (не только текстовый PE).
+
+| Path | Contents |
+|------|----------|
+| `outline.yaml` / `fields.yaml` | План семейств + якорей, поля deep-research |
+| `corpus/bridge_methods_corpus.json` | Компактный корпус по F1–F6 |
+| `citation_trees/bridge_hubs.json` | Citation neighborhoods хабов + cross-family links |
+| `results/` | Зарезервировано под per-item deep JSON |
+
+Отчёт: [`../report_bridge_methods_taxonomy.md`](../report_bridge_methods_taxonomy.md) · каталог: [`../papers_catalog_bridge_methods.md`](../papers_catalog_bridge_methods.md).
