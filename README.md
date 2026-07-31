@@ -10,18 +10,20 @@
 
 | Приоритет | Файл | О чём |
 |-----------|------|--------|
-| **1** | [`report_bridge_methods_taxonomy.md`](./report_bridge_methods_taxonomy.md) | **Все способы bridge** user→generator: текст / embeddings / layout / schema / endogenous / action; плюсы·минусы |
-| **2** | [`fundamental_papers_reprompt_reading_list.md`](./fundamental_papers_reprompt_reading_list.md) | Современное ядро textual PE 2025–26; 23–24 в §D |
-| **3** | [`report_reprompt_system_architecture_2026.md`](./report_reprompt_system_architecture_2026.md) | Архитектура textual bridge: IR, длина, gating |
-| **4** | [`papers_catalog_bridge_methods.md`](./papers_catalog_bridge_methods.md) | Каталог статей по всем семьям bridge |
-| **5** | [`report_reprompt_systems.md`](./report_reprompt_systems.md) | Более широкий академический дайджест PE |
-| **6** | [`top_papers_prompt_length_variability.md`](./top_papers_prompt_length_variability.md) | Топ статей по длине и вариативности промпта |
+| **1** | [`reading_list_latent_and_bridge_channels.md`](./reading_list_latent_and_bridge_channels.md) | **Что читать:** latent transfer (агенты + T2I), потом другие каналы |
+| **2** | [`report_latent_transfer_agents_and_reprompt.md`](./report_latent_transfer_agents_and_reprompt.md) | Latent communication в MAS + стык с векторным re-prompter |
+| **3** | [`report_bridge_methods_taxonomy.md`](./report_bridge_methods_taxonomy.md) | Все способы bridge: текст / embeddings / layout / schema / endogenous / action |
+| **4** | [`fundamental_papers_reprompt_reading_list.md`](./fundamental_papers_reprompt_reading_list.md) | Современное ядро textual PE 2025–26; 23–24 в §D |
+| **5** | [`report_reprompt_system_architecture_2026.md`](./report_reprompt_system_architecture_2026.md) | Архитектура textual bridge: IR, длина, gating |
+| **6** | [`papers_catalog_bridge_methods.md`](./papers_catalog_bridge_methods.md) | Каталог статей по всем семьям bridge |
 
 ---
 
 ## Все отчёты в корне
 
 ### Bridge methods (все семьи) и re-prompt
+- [`reading_list_latent_and_bridge_channels.md`](./reading_list_latent_and_bridge_channels.md) — порядок чтения: latent first, затем другие каналы
+- [`report_latent_transfer_agents_and_reprompt.md`](./report_latent_transfer_agents_and_reprompt.md) — latent MAS + векторный re-prompter
 - [`report_bridge_methods_taxonomy.md`](./report_bridge_methods_taxonomy.md) — таксономия F1–F6: текст, embeddings, layout, schema, endogenous, action + pros/cons
 - [`papers_catalog_bridge_methods.md`](./papers_catalog_bridge_methods.md) — каталог must-read по семьям bridge
 - [`fundamental_papers_reprompt_reading_list.md`](./fundamental_papers_reprompt_reading_list.md) — современный P0/P1 список textual PE; 23–24 в §D
