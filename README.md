@@ -10,26 +10,27 @@
 
 | Приоритет | Файл | О чём |
 |-----------|------|--------|
-| **1** | [`reading_list_latent_and_bridge_channels.md`](./reading_list_latent_and_bridge_channels.md) | **Что читать:** latent transfer (агенты + T2I), потом другие каналы |
-| **2** | [`report_latent_transfer_agents_and_reprompt.md`](./report_latent_transfer_agents_and_reprompt.md) | Latent communication в MAS + стык с векторным re-prompter |
-| **3** | [`report_bridge_methods_taxonomy.md`](./report_bridge_methods_taxonomy.md) | Все способы bridge: текст / embeddings / layout / schema / endogenous / action |
-| **4** | [`fundamental_papers_reprompt_reading_list.md`](./fundamental_papers_reprompt_reading_list.md) | Современное ядро textual PE 2025–26; 23–24 в §D |
-| **5** | [`report_reprompt_system_architecture_2026.md`](./report_reprompt_system_architecture_2026.md) | Архитектура textual bridge: IR, длина, gating |
-| **6** | [`papers_catalog_bridge_methods.md`](./papers_catalog_bridge_methods.md) | Каталог статей по всем семьям bridge |
+| **1** | [`reading_list_reprompter_latent_and_alt_channels.md`](./reading_list_reprompter_latent_and_alt_channels.md) | **Re-prompter→G:** латентный/векторный канал и альтернативы (не агенты) |
+| **2** | [`report_reprompter_nontextual_channels.md`](./report_reprompter_nontextual_channels.md) | Нетекстовые каналы enrichment для T2I |
+| **3** | [`report_bridge_methods_taxonomy.md`](./report_bridge_methods_taxonomy.md) | Полная таксономия F1–F6 + pros/cons |
+| **4** | [`fundamental_papers_reprompt_reading_list.md`](./fundamental_papers_reprompt_reading_list.md) | Современное ядро textual PE 2025–26 |
+| **5** | [`report_reprompt_system_architecture_2026.md`](./report_reprompt_system_architecture_2026.md) | Архитектура textual bridge |
+| **6** | [`papers_catalog_bridge_methods.md`](./papers_catalog_bridge_methods.md) | Каталог по семьям bridge |
 
 ---
 
 ## Все отчёты в корне
 
-### Bridge methods (все семьи) и re-prompt
-- [`reading_list_latent_and_bridge_channels.md`](./reading_list_latent_and_bridge_channels.md) — порядок чтения: latent first, затем другие каналы
-- [`report_latent_transfer_agents_and_reprompt.md`](./report_latent_transfer_agents_and_reprompt.md) — latent MAS + векторный re-prompter
-- [`report_bridge_methods_taxonomy.md`](./report_bridge_methods_taxonomy.md) — таксономия F1–F6: текст, embeddings, layout, schema, endogenous, action + pros/cons
-- [`papers_catalog_bridge_methods.md`](./papers_catalog_bridge_methods.md) — каталог must-read по семьям bridge
-- [`fundamental_papers_reprompt_reading_list.md`](./fundamental_papers_reprompt_reading_list.md) — современный P0/P1 список textual PE; 23–24 в §D
-- [`report_reprompt_system_architecture_2026.md`](./report_reprompt_system_architecture_2026.md) — архитектура textual bridge, IR, length, gating
-- [`report_reprompt_systems.md`](./report_reprompt_systems.md) — более широкий академический разбор PE
+### Bridge / re-prompter channels
+- [`reading_list_reprompter_latent_and_alt_channels.md`](./reading_list_reprompter_latent_and_alt_channels.md) — **статьи: латентный re-prompter + другие каналы** (не агенты)
+- [`report_reprompter_nontextual_channels.md`](./report_reprompter_nontextual_channels.md) — нетекстовые каналы enrichment → G
+- [`report_bridge_methods_taxonomy.md`](./report_bridge_methods_taxonomy.md) — таксономия F1–F6 + pros/cons
+- [`papers_catalog_bridge_methods.md`](./papers_catalog_bridge_methods.md) — каталог по семьям
+- [`fundamental_papers_reprompt_reading_list.md`](./fundamental_papers_reprompt_reading_list.md) — textual PE ядро
+- [`report_reprompt_system_architecture_2026.md`](./report_reprompt_system_architecture_2026.md) — архитектура textual bridge
+- [`report_reprompt_systems.md`](./report_reprompt_systems.md) — широкий дайджест PE
 - [`papers_catalog_reprompt.md`](./papers_catalog_reprompt.md) — каталог textual PE
+- _(архив/смежное)_ [`reading_list_latent_and_bridge_channels.md`](./reading_list_latent_and_bridge_channels.md), [`report_latent_transfer_agents_and_reprompt.md`](./report_latent_transfer_agents_and_reprompt.md) — MAS latent (не твой основной фокус)
 
 ### Длина промпта и captions
 - [`top_papers_prompt_length_variability.md`](./top_papers_prompt_length_variability.md) — топ по length/variability
