@@ -10,19 +10,22 @@
 
 | Приоритет | Файл | О чём |
 |-----------|------|--------|
-| **1** | [`report_open_research_questions_reprompt_bridge.md`](./report_open_research_questions_reprompt_bridge.md) | **Куда копать:** открытые вопросы captions/PE/bridge + что уже закрыто |
-| **2** | [`reading_list_reprompter_latent_and_alt_channels.md`](./reading_list_reprompter_latent_and_alt_channels.md) | Re-prompter→G: латентный/векторный канал и альтернативы |
-| **3** | [`report_reprompter_nontextual_channels.md`](./report_reprompter_nontextual_channels.md) | Нетекстовые каналы enrichment для T2I |
-| **4** | [`report_bridge_methods_taxonomy.md`](./report_bridge_methods_taxonomy.md) | Таксономия F1–F6 + pros/cons |
-| **5** | [`fundamental_papers_reprompt_reading_list.md`](./fundamental_papers_reprompt_reading_list.md) | Современное ядро textual PE 2025–26 |
-| **6** | [`report_reprompt_system_architecture_2026.md`](./report_reprompt_system_architecture_2026.md) | Архитектура textual bridge |
+| **1** | [`report_open_problems_autonomous_audit.md`](./report_open_problems_autonomous_audit.md) | **Полный аудит:** T1–T12 статусы + 24 новые проблемы + ложные закрытия |
+| **2** | [`report_open_research_questions_reprompt_bridge.md`](./report_open_research_questions_reprompt_bridge.md) | Короткая карта «куда копать» |
+| **3** | [`reading_list_reprompter_latent_and_alt_channels.md`](./reading_list_reprompter_latent_and_alt_channels.md) | Re-prompter→G: латентный/векторный канал и альтернативы |
+| **4** | [`report_reprompter_nontextual_channels.md`](./report_reprompter_nontextual_channels.md) | Нетекстовые каналы enrichment для T2I |
+| **5** | [`report_bridge_methods_taxonomy.md`](./report_bridge_methods_taxonomy.md) | Таксономия F1–F6 + pros/cons |
+| **6** | [`fundamental_papers_reprompt_reading_list.md`](./fundamental_papers_reprompt_reading_list.md) | Современное ядро textual PE 2025–26 |
+| **7** | [`report_reprompt_system_architecture_2026.md`](./report_reprompt_system_architecture_2026.md) | Архитектура textual bridge |
 
 ---
 
 ## Все отчёты в корне
 
 ### Bridge / re-prompter channels
-- [`reading_list_reprompter_latent_and_alt_channels.md`](./reading_list_reprompter_latent_and_alt_channels.md) — **статьи: латентный re-prompter + другие каналы** (не агенты)
+- [`report_open_problems_autonomous_audit.md`](./report_open_problems_autonomous_audit.md) — **полный аудит открытых проблем (2026-08)**
+- [`report_open_research_questions_reprompt_bridge.md`](./report_open_research_questions_reprompt_bridge.md) — короткая research agenda
+- [`reading_list_reprompter_latent_and_alt_channels.md`](./reading_list_reprompter_latent_and_alt_channels.md) — статьи: латентный re-prompter + другие каналы
 - [`report_reprompter_nontextual_channels.md`](./report_reprompter_nontextual_channels.md) — нетекстовые каналы enrichment → G
 - [`report_bridge_methods_taxonomy.md`](./report_bridge_methods_taxonomy.md) — таксономия F1–F6 + pros/cons
 - [`papers_catalog_bridge_methods.md`](./papers_catalog_bridge_methods.md) — каталог по семьям
@@ -30,7 +33,7 @@
 - [`report_reprompt_system_architecture_2026.md`](./report_reprompt_system_architecture_2026.md) — архитектура textual bridge
 - [`report_reprompt_systems.md`](./report_reprompt_systems.md) — широкий дайджест PE
 - [`papers_catalog_reprompt.md`](./papers_catalog_reprompt.md) — каталог textual PE
-- _(архив/смежное)_ [`reading_list_latent_and_bridge_channels.md`](./reading_list_latent_and_bridge_channels.md), [`report_latent_transfer_agents_and_reprompt.md`](./report_latent_transfer_agents_and_reprompt.md) — MAS latent (не твой основной фокус)
+- _(смежное)_ [`reading_list_latent_and_bridge_channels.md`](./reading_list_latent_and_bridge_channels.md), [`report_latent_transfer_agents_and_reprompt.md`](./report_latent_transfer_agents_and_reprompt.md) — MAS latent (не основной фокус)
 
 ### Длина промпта и captions
 - [`top_papers_prompt_length_variability.md`](./top_papers_prompt_length_variability.md) — топ по length/variability
@@ -58,10 +61,10 @@ research/
 
 ## Короткий вывод
 
-1. **Длина:** train–infer match критичен; лучше вариативность длины на обучении или long-train + PE на инференсе.
-2. **Bridge ≠ только текст:** F1 rewrite · F2 embeddings · F3 layout · F4 schema · F5 endogenous CoT · F6 action space — выбирать по типу gap и контролю над training.
-3. **Re-prompt (F1):** закрывает train↔user captions; нужен gating и оценка vs original; для spatial/count часто лучше F3/F6.
-4. **Практика:** назвать gap → выбрать семью → стекать дополняющие рычаги (SCoT: text CoT + boxes).
+1. **Длина ≠ информация:** NL length saturates; масштабируется structured / image-grounded info (`2607.29679`). Рецепты train (Brack/i1/FIBO/SP) всё ещё без head-to-head.
+2. **Bridge ≠ только текст:** F1 rewrite · F2 embeddings · F3 layout · F4 schema · F5 endogenous · F6 action — bakeoff @ matched FLOPs открыт.
+3. **Re-prompt:** иногда вредит; predictive gating и oracle-gap — топ дырка; eval vs **original** prompt.
+4. **Практика:** читать аудит → выбрать пакет A–E → не делать always-on aesthetic rewriter.
 
 ---
 
