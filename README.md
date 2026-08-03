@@ -10,12 +10,12 @@
 
 | Приоритет | Файл | О чём |
 |-----------|------|--------|
-| **1** | [`reading_list_reprompter_latent_and_alt_channels.md`](./reading_list_reprompter_latent_and_alt_channels.md) | **Re-prompter→G:** латентный/векторный канал и альтернативы (не агенты) |
-| **2** | [`report_reprompter_nontextual_channels.md`](./report_reprompter_nontextual_channels.md) | Нетекстовые каналы enrichment для T2I |
-| **3** | [`report_bridge_methods_taxonomy.md`](./report_bridge_methods_taxonomy.md) | Полная таксономия F1–F6 + pros/cons |
-| **4** | [`fundamental_papers_reprompt_reading_list.md`](./fundamental_papers_reprompt_reading_list.md) | Современное ядро textual PE 2025–26 |
-| **5** | [`report_reprompt_system_architecture_2026.md`](./report_reprompt_system_architecture_2026.md) | Архитектура textual bridge |
-| **6** | [`papers_catalog_bridge_methods.md`](./papers_catalog_bridge_methods.md) | Каталог по семьям bridge |
+| **1** | [`report_open_research_questions_reprompt_bridge.md`](./report_open_research_questions_reprompt_bridge.md) | **Куда копать:** открытые вопросы captions/PE/bridge + что уже закрыто |
+| **2** | [`reading_list_reprompter_latent_and_alt_channels.md`](./reading_list_reprompter_latent_and_alt_channels.md) | Re-prompter→G: латентный/векторный канал и альтернативы |
+| **3** | [`report_reprompter_nontextual_channels.md`](./report_reprompter_nontextual_channels.md) | Нетекстовые каналы enrichment для T2I |
+| **4** | [`report_bridge_methods_taxonomy.md`](./report_bridge_methods_taxonomy.md) | Таксономия F1–F6 + pros/cons |
+| **5** | [`fundamental_papers_reprompt_reading_list.md`](./fundamental_papers_reprompt_reading_list.md) | Современное ядро textual PE 2025–26 |
+| **6** | [`report_reprompt_system_architecture_2026.md`](./report_reprompt_system_architecture_2026.md) | Архитектура textual bridge |
 
 ---
 
