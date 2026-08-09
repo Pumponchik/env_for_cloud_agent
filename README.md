@@ -10,6 +10,7 @@
 
 | Приоритет | Файл | О чём |
 |-----------|------|--------|
+| **0** | [`ideas_t2i_conditioning_stage.md`](./ideas_t2i_conditioning_stage.md) | **5 идей + выбор + план проверки** (info-matched NL↔SP и др.) |
 | **1** | [`report_open_problems_autonomous_audit.md`](./report_open_problems_autonomous_audit.md) | **Полный аудит:** T1–T12 статусы + 24 новые проблемы + ложные закрытия |
 | **2** | [`report_open_research_questions_reprompt_bridge.md`](./report_open_research_questions_reprompt_bridge.md) | Короткая карта «куда копать» |
 | **3** | [`reading_list_reprompter_latent_and_alt_channels.md`](./reading_list_reprompter_latent_and_alt_channels.md) | Re-prompter→G: латентный/векторный канал и альтернативы |
@@ -23,6 +24,7 @@
 ## Все отчёты в корне
 
 ### Bridge / re-prompter channels
+- [`ideas_t2i_conditioning_stage.md`](./ideas_t2i_conditioning_stage.md) — **идеи для статьи + план проверки лучшей**
 - [`report_open_problems_autonomous_audit.md`](./report_open_problems_autonomous_audit.md) — **полный аудит открытых проблем (2026-08)**
 - [`report_open_research_questions_reprompt_bridge.md`](./report_open_research_questions_reprompt_bridge.md) — короткая research agenda
 - [`reading_list_reprompter_latent_and_alt_channels.md`](./reading_list_reprompter_latent_and_alt_channels.md) — статьи: латентный re-prompter + другие каналы
