@@ -1,259 +1,247 @@
-# Идеи для статьи: text conditioning / PE / NL↔SP в T2I
+# Идеи для статьи: точки свободы text conditioning в T2I
 
-Документ по инструкции этапа ideas (структура 1–4 → ранжирование → план проверки лучшей).  
-Контекст: разбор Seed `2607.29679` (Context Scaling), FIBO, PromptEnhancer, SoftREPA и аудит open problems в репо.
-
----
-
-## Часть I. Пять идей
-
-### Идея 1. Info-matched NL ↔ SP: честный формат без «лишних деталей» в JSON
-
-**(1) В чём идея?**  
-Провести controlled сравнение **natural-language** и **structured prompt (JSON/schema)** при **одинаковой realized information** (matched ED/GPG и/или matched attribute set), а не при matched train budget с заведомо более плотным SP, как в Seed. Цель сетапа — ответить: выигрыш SP — это формат/организация или просто больше деталей? И какой IR лучше класть в **VLM/text conditioner** дальше (dense prose / JSON / layout-hybrid).
-
-**(2) Какая цель?**  
-Улучшить **научную валидность выбора conditioning IR** для следующего VLM-эмбеддера:  
-- отделить **structure effect** от **information effect**;  
-- дать recipe: «при равной информации что учить в text encoder / DiT»;  
-- снизить риск построить весь pipeline на JSON только потому, что в Seed SP был информативнее NL.
-
-**(3) Мотивация?**  
-В `2607.29679` Dense NL L10 имеет ED≈0.75 / GPG≈112, Structured L10 — ED≈0.83 / GPG≈210; matched NL control — matched **train**, не matched **info**. Примеры SP (schema_room, pineapple PE) показывают либо denser grounded dump, либо явное дозаполнение. Значит текущий вердикт «SP ≫ NL» confounded. Cosmology/FIBO (`2511.06876`) тоже сравнивает long structured vs **short** captions. Observation DetailMaster/LongT2I: длина ≠ alignment. Если выровнять информацию, останется чистый эффект организации — критично для дизайна VLM embedder.
-
-**(4) Почему новая?**  
-Проверено: Seed Matched NL, FIBO long-JSON vs short, Cosmos field recall — **нет** публикации с hard attribute/ED/GPG-matched NL↔SP на одном backbone + явным выводом для conditioner design. Близко: Seed (matched train), FIBO (length confound). Разница: **info-matching protocol** + downstream рекомендация под VLM embedder, не ещё один end-to-end SOTA chase.
+Переписано ясно. Сначала — **какие ручки вообще существуют**. Потом 5 идей: **две ваши** + **три заново**, за которые стоит хвататься, чтобы принести знание в мир (не ещё один rewriter).
 
 ---
 
-### Идея 2. Рецепт обучения prompter’а: zero-shot vs SFT vs cold-start vs RL vs agentic loop
+## Карта точек свободы (что можно крутить)
 
-**(1) В чём идея?**  
-На **фиксированном** diffuser + фиксированном schema/IR провести factorial: нужен ли task-specific training prompter’а вообще, и какой stage даёт ROI (SFT / cold-start / GRPO / OPSD / multi-turn loop), при **cost-normalized** сравнении (latency, $API, GPU-hours).
+Пайплайн современного стека (train on re-prompt / SP):
 
-**(2) Какая цель?**  
-Улучшить **promptability training efficiency**: когда платить за LoRA/RFT, когда хватает frozen LLM + 1–2 round judge, когда always-on PE вреден. Практический deliverable — Pareto: quality vs cost для PE stack.
+```
+картинка ──annotate──► факты
+                              │
+user user prompt ──prompter──► conditioning IR ──text encoder / VLM──► DiT ──► image
+```
 
-**(3) Мотивация?**  
-Seed показывает: SFT даёт главный structure jump; OPSD лучше GRPO; Base@8 rounds < Trained@1 shot; loop saturates к ~2–4 rounds. PromptEnhancer/APE показывают RFT/agents, но **нет** общей cost-normalized карты «учить vs крутить loop». Продукты (Ideogram Magic Prompt, Qwen PE) часто always-on без oracle. Нужна карта, а не ещё один rewriter.
+| # | Ручка | Вопрос знания |
+|---|--------|----------------|
+| A | **Сколько фактов** в conditioning | coverage / info |
+| B | **Как упакованы** факты (prose / JSON / layout) | structure ⊥ info |
+| C | **Кто пишет** IR с user prompt и как его учат | promptability recipe |
+| D | **Где теряется сигнал** (annotate → serialize → encode → attend) | bottleneck |
+| E | **Потолки по отдельности**: формат vs prompter | Diffusability × Promptability |
+| F | **Бюджет токенов/FLOPs** conditioning: на что тратить | allocation |
 
-**(4) Почему новая?**  
-Есть stage ablations внутри одной paper (Seed Table 4/5; PromptEnhancer; APE). Нет **cross-recipe bakeoff** с единым harness, eval vs **original** user prompt, и явным «do we need to train at all?» при matched inference budget. Отличие: meta-study + decision rule, не новый reward model.
-
----
-
-### Идея 3. Oracle-gap predictive PE gating
-
-**(1) В чём идея?**  
-Построить benchmark и предиктор: для каждого user prompt оценить \(\Delta = \mathrm{score}(G(\mathrm{PE}(p))) - \mathrm{score}(G(p))\) и решить **enhance / skip / cheap-rewrite** *до* генерации. Репортить gap: always-skip / always-enhance / oracle / learned gate / cost-adjusted gate.
-
-**(2) Какая цель?**  
-Улучшить **utility PE при меньшей цене и меньшем intent drift**: не всегда раздувать промпт; включать PE там, где oracle показывает выигрыш (composition/count/layout), пропускать на простых aesthetic prompts.
-
-**(3) Мотивация?**  
-Наивная длина вредит (Seed Fig.1; DetailMaster). Always-on Magic Prompt часто «льёт воду». Есть post-hoc accept/revert (TARA-класс) и toxicity gates (PromptSafe), но **нет** predictive utility gate с oracle-gap protocol. GRACE/gated refinement — про LLM prompt optimization, не T2I PE utility. Если gap большой, а learned gate его закрывает — сильный systems paper; если gap мал — тоже результат (always-on ок).
-
-**(4) Почему новая?**  
-Поиск: PromptSafe (safety), GRACE (NLP APO), product heuristics (длина &lt; N слов). В нашем аудите T3/N03 помечены OPEN: нет oracle-gap PE utility benchmark. Отличие от post-hoc repair: решение **до** generate; метрика — gap to oracle, не только absolute score.
+Старое «всегда ли PE включать» при train-on-reprompt — слабая ручка; ниже её нет.
 
 ---
 
-### Идея 4. Bridge bakeoff: text IR vs soft/latent conditioning @ matched FLOPs
+## Идея 1 (ваша). Честный NL ↔ SP при равной информации
 
-**(1) В чём идея?**  
-На **frozen** DiT сравнить каналы обогащения условия при одном latency/FLOPs budget: (a) textual rewrite/NL, (b) JSON/SP fill, (c) soft tokens / continuous PE (SoftREPA-класс), (d) опционально layout tokens. Вопрос: нужен ли читаемый текст как PE, или VLM/embedder-side continuous bridge лучше при том же compute?
+### (1) В чём идея?
+В Seed SP побеждает NL, но в SP **заведомо больше деталей** (ED/GPG выше; JSON плотнее).  
+Мы делаем сравнение, где **набор фактов одинаковый**, меняется только упаковка: prose vs schema.  
+Так отвечаем: для дальнейшего **VLM-эмбеддера** важнее структура или просто coverage.
 
-**(2) Какая цель?**  
-Улучшить **выбор канала для следующего VLM-эмбеддера**: текст-as-API vs soft conditioning. Закрыть путаницу papers, где каждый канал хвалят на своём сетапе.
+### (2) Цель
+Получить **несмещённый вердикт по формату conditioning**, который можно перенести в дизайн text encoder / VLM conditioner.  
+Не «SP круче в их paper», а «при равной информации что есть».
 
-**(3) Мотивация?**  
-Seed/FIBO тянут всё в JSON text. SoftREPA (`2503.08250`) показывает soft tokens на frozen SD без textual PE. PromptLoop/latent methods — другие оси. Для «дальнейшего VLM embedder» критично: учить модель читать JSON или учить continuous bridge от user intent? Matched-FLOPs bakeoff даёт ответ.
+### (3) Мотивация
+- Seed Matched NL = matched **train**, не matched **info** (ED NL≈0.75 vs SP L10≈0.83; GPG 112 vs 210).  
+- FIBO: long JSON vs **short** captions — тот же confound.  
+- Примеры SP (schema_room, pineapple PE) показывают denser dump / дозаполнение.  
+Если не выровнять info, весь следующий embedder могут зря заточить под JSON.
 
-**(4) Почему новая?**  
-SoftREPA, IPGO, DATE, PromptLoop существуют по отдельности; **нет** head-to-head text-PE vs soft vs schema @ matched FLOPs, eval vs original prompt, один G. Отличие: systems bakeoff + decision для conditioner design, не новый soft-token objective.
+### (4) Новизна
+Близко: Seed, FIBO, Cosmos.  
+**Нет** опубликованного hard info-match (attribute/ED gate) NL↔SP + вывода для conditioner.  
+Это не реплика Seed — это снятие их главного confound.
 
----
-
-### Идея 5. Open caption-information metrics + pre-train screening
-
-**(1) В чём идея?**  
-Сделать воспроизводимые open GPG/ED (или наследников) на 7–32B VLM без Gemini/GPT monopoly; показать, что ranking caption configs предсказывает relative train loss / gen quality; выпустить screener «стоит ли учить DiT на этом caption recipe».
-
-**(2) Какая цель?**  
-Улучшить **кост исследования caption recipes**: дешёвый filter до multi-GPU FT; общий yardstick для Ideи 1 (info-match).
-
-**(3) Мотивация?**  
-Seed показал, что GPG/ED предсказывают loss, но judges закрытые/огромные. Caption Detailness (`2505.15172`) — родственник ED. Без open metric идея 1 и recipe tournament плохо воспроизводимы. Science contribution + tool.
-
-**(4) Почему новая?**  
-GPG/ED в Seed; Detailness отдельно. Нет open calibrated release с proven rank-stability на публичных DiT и protocol для info-matching. Отличие: engineering+validation paper с release, не новая теория MI.
+**Знание в мир:** structure effect ⊥ information effect.
 
 ---
 
-## Ранжирование и выбор лучшей
+## Идея 2 (ваша). Как учить prompter: SFT / RL / loop — и надо ли учить
 
-| Rank | Идея | Novelty | Impact | Feasibility | Стратегическая ценность |
-|------|------|---------|--------|-------------|-------------------------|
-| **1** | **#1 Info-matched NL↔SP** | высокая (дыра Seed) | очень высокий | средняя (нужен FT, но LoRA/1 DiT) | напрямую ведёт к VLM embedder |
-| 2 | #3 Oracle-gap PE gating | высокая | высокий | высокая (меньше train) | systems + benchmark |
-| 3 | #4 Bridge bakeoff text/soft | высокая | высокий | средне-высокая | стык с embedder |
-| 4 | #2 Prompter training recipe | средняя | высокий | средняя | полезно, но secondary |
-| 5 | #5 Open GPG/ED | средняя | высокий как tool | высокая | лучше как **side contrib** к #1 |
+### (1) В чём идея?
+Зафиксировать diffuser + IR. Крутить только **способ получить IR из user prompt**:
 
-### Почему лучшая — Идея 1
+- frozen LLM zero-shot  
+- SFT  
+- cold-start / distillation  
+- RL (GRPO / OPSD)  
+- test-time loop (render→judge→edit)  
 
-1. **Самая острая дыра в главной paper области** (`2607.29679`): вердикт SP≫NL сейчас нельзя честно переносить на дизайн conditioner’а.  
-2. **Прямой путь к вашей следующей задаче** (VLM embedder): ответ «при равной информации нужен JSON / prose / hybrid» определяет архитектуру.  
-3. **Одна сильная статья**: protocol + ablations + recommendation; Idea 5 естественно вкладывается как metric appendix.  
-4. Идеи 2–4 лучше делать *после*: иначе непонятно, *в каком IR* учить prompter/soft bridge.  
-5. Риск compute управляем: не 15×BAGEL, а 2–3 caption arms × один open DiT (LoRA/continued FT).
+Сравнить **качество и цену** (GPU-h, latency, $). Вопрос: что покупает каждый этап.
 
-Отличие от #3/#4: те отвечают «когда PE» и «какой канал», но оба предполагают, что мы уже знаем, *что* писать в conditioning. #1 отвечает на prior вопрос.
+### (2) Цель
+Карта **ROI обучения promptability**: когда хватает большого frozen LLM, когда SFT обязателен, когда RL/loop окупаются.  
+Практический выход: минимальный достаточный рецепт под выбранный IR.
 
----
+### (3) Мотивация
+Seed Table 4/5: SFT даёт главный jump; OPSD > GRPO; Base@8 rounds < Trained@1; loop быстро saturates.  
+Но это одна lab, один schema, без единой cost-оси. PromptEnhancer/APE — другие reward’ы, другие выводы.  
+В мире train-on-reprompt prompter — часть контракта; вопрос «надо ли task-FT» остаётся открытым и дорогим.
 
-## Часть II. Лучшая идея подробно + план проверки
+### (4) Новизна
+Есть внутриpaper ablations. Нет **cost-normalized cross-recipe** карты с eval vs **original** user prompt.  
+Знание: не новый rewriter, а закон «какой post-training нужен».
 
-### Нарратив статьи
-
-**Проблема.**  
-Современный T2I упирается не только в размер DiT, но и в то, *как* текст отдаёт image-grounded информацию. Seed показал scaling law: loss следует GPG/ED, а не длине; structured prompts бьют NL. Индустрия и research начинают строить JSON prompters и SP-trained generators.
-
-**Недостаток существующих решений.**  
-Контроли «SP vs NL» смешивают формат с количеством деталей. В Seed длинный Dense NL не дотягивает по ED/GPG до L10 SP; FIBO сравнивает long JSON с short captions. Создаётся впечатление, что «структура побеждает», хотя могла победить **плотность аннотации**. Если так, следующий VLM-эмбеддер могут зря заточить под хрупкий JSON.
-
-**Идея.**  
-Построить **Info-Matched Conditioning Benchmark**: из одного image evidence собрать пакеты  
-- SP-L10,  
-- NL-matched (prose с hard check на тот же attribute/geometry set, ED/GPG в допуске),  
-- NL-verbose (вода без новых фактов),  
-- SP-sparse (те же факты, меньше полей/организации).  
-
-Обучить / адаптировать **один** diffuser на каждом arm при matched compute и сравнить train loss + gen metrics. Дополнительно: frozen backbone probe (как Fig.3) и анализ, что лучше ест **VLM text encoder** (JSON tokens vs prose).
-
-**Как станет лучше.**  
-Если при matched info SP всё ещё выигрывает — structure реален, JSON/schema оправдан для embedder.  
-Если gap схлопывается — приоритет **coverage annotation**, формат вторичен; embedder можно учить на dense NL + лёгкой разметке.  
-Любой исход publishable и снимает confound у Seed/FIBO.
-
-**Вывод статьи.**  
-«Что масштабирует text conditioning — информация, организация или оба?» с честным протоколом и рекомендацией для VLM conditioner.
+**Знание в мир:** promptability training scaling / sufficiency.
 
 ---
 
-### Минимальный экспериментальный сетап
+## Идея 3 (новая). Разделить потолки: Diffusability vs Promptability oracles
 
-**Модель (diffuser):**  
-- Основной: открытый DiT с нормальным text encoder — предпочтительно **Qwen-Image** (LoRA/continued FT DiT, text encoder frozen) *или* SD3.5/FLUX.dev если Qwen-FT недоступен по compute.  
-- Для probe без retrain: один frozen checkpoint (официальный + при возможности SP-tuned).
+### (1) В чём идея?
+Seed назвал `Quality ≈ Diffusability × Promptability`, но почти всегда двигает оба сразу.  
+Мы строим **два оракула** на одном backbone:
 
-**Данные:**  
-- 50k–200k images с богатой сценой (не только COCO short).  
-- Annotation pipeline (упрощённый Seed): VLM crop captions + SAM boxes (+ depth optional).  
-- Из L10-like record детерминированно:  
-  - **SP-full**  
-  - **NL-matched**: verbalizer + **hard filter** (attribute recall ≥ τ vs SP; reject/retry)  
-  - **NL-water**: matched entities, +50–100% tokens elaboration only  
-  - **SP-ablate**: mask photography/relations (control organization)
+| Оракул | Что подаём в DiT | Что меряем |
+|--------|------------------|------------|
+| **D-oracle** | SP/NL с **картинки** (идеальная аннотация) | потолок формата + annotation |
+| **P-oracle** | лучший IR, который можно вывести **только из user prompt** (или human-filled schema без image leak) | потолок prompter’а |
+| **Real system** | обычный prompter | где мы сейчас |
 
-**Метрики:**  
-- Train: converged flow-matching MSE @ matched token budget.  
-- Caption-side: open ED-proxy + GPG на Qwen2.5-VL-7B/32B (Idea 5 lite).  
-- Gen: GenEval / GenEval2 subset, DPG-Bench subset, TIIF-short, GSB/VLM pairwise vs original short user prompts *и* vs reference caption.  
-- Conditioner probe: DINOv3/SigLIP2/LPIPS reconstruction (Fig.3-style) на held-out.
+Gaps:  
+`D-oracle − real` = сколько теряем на promptability  
+`P-ceiling − zero-shot` = headroom обучения prompter’а  
+`D-oracle(SP) − D-oracle(NL-matched)` = чистый format gap (стык с идеей 1)
 
-**Минимальный compute target:**  
-2–4 arms × LoRA-DiT 10k–50k steps на 8–32 GPU, не full Seed 500k×512.
+### (2) Цель
+Ответить науке: **куда вкладывать следующий доллар** — в лучший annotate/format (diffusability) или в лучший user→IR (promptability).  
+Сейчас labs делают и то и то и репортят сумму.
+
+### (3) Мотивация
+Без разделения потолков нельзя интерпретировать SOTA: выиграли форматом или prompter’ом?  
+Seed держит diffuser fixed в prompter ablations, но не публикует полный oracle decomposition на gen metrics.  
+N01 в нашем аудите — OPEN.
+
+### (4) Новизна
+Словарь Seed есть; **измерительный протокол с двумя оракулами и gap-таблицами** — нет как стандарт.  
+Отличие от идеи 1: 1 крутит формат при matched info; 3 крутит **источник** IR (image vs user) и показывает headroom.
+
+**Знание в мир:** куда упирается качество — в формат или в перевод user→формат.
 
 ---
+
+## Идея 4 (новая). Где умирает сигнал: localize bottleneck в цепочке
+
+### (1) В чём идея?
+Даже если SP «лучше», непонятно **какое звено** это объясняет:
+
+```
+(1) annotate  →  (2) serialize IR  →  (3) tokenize / VLM encode  →  (4) DiT attend
+```
+
+Делаем **causal interventions** на одном датасете/модели:
+
+| Вмешательство | Если качество падает сильно → bottleneck здесь |
+|---------------|-----------------------------------------------|
+| Те же факты, хуже annotate (дроп атрибутов) | coverage |
+| Те же факты, JSON→prose / prose→JSON | serialize / structure |
+| Те же токены, shuffle JSON key order / synonym keys | encoder brittleness |
+| Заменить text encoder, DiT fixed (или наоборот) | encoder vs DiT |
+| Soft/continuous conditioning вместо discrete IR | нужен ли текст вообще |
+
+Цель — не SOTA, а **карта чувствительности** для дизайна следующего VLM embedder.
+
+### (2) Цель
+Сказать миру: «не надо оптимизировать JSON schema, если убийца — tokenizer/encoder» (или наоборот).  
+Это прямо про вашу следующую задачу (VLM embedder).
+
+### (3) Мотивация
+Split-Text Conditioning и длинные encoder’ы намекают на comprehension defect; Seed — на organization; SoftREPA — на soft tokens.  
+Все правят **разные** звенья и спорят результатами. Без localization спор вечный.  
+Идея 1 отвечает «format vs info»; идея 4 отвечает «format vs encoder vs DiT».
+
+### (4) Новизна
+Куски ablations есть везде по отдельности.  
+**Сквозной causal audit одной цепочки** с единым fact package — не видели как paper.  
+Это systems-science, не новый loss.
+
+**Знание в мир:** в каком модуле лежит text-conditioning gap.
+
+---
+
+## Идея 5 (новая). Бюджет conditioning: на что тратить токены
+
+### (1) В чём идея?
+VLM/text encoder имеет **конечный бюджет** (контекст, FLOPs, attention).  
+При фиксированном бюджете токенов/полей: что класть?
+
+- больше объектов  
+- плотнее атрибуты  
+- геометрия (bbox/depth)  
+- style/lighting  
+- relations  
+
+Seed снимал поля целиком (scene важнее depth) на BAGEL, но это не **allocation under budget** и не про VLM embedder.  
+Мы строим Pareto: quality vs token budget при разных политиках заполнения.
+
+### (2) Цель
+**Рецепт packing** для conditioner: при 256 / 512 / 1024 токенах какой content mix оптимален.  
+Это знание, которое сразу идёт в training recipe captioner’а и в schema design.
+
+### (3) Мотивация
+Train-on-reprompt мир = борьба за каждый токен conditioning, не «выключить PE».  
+GPG растёт с полезной структурой; softmax competition / length issues у encoder’ов — с мусорной плотностью.  
+Нужен закон: *marginal gain от следующего типа факта*.
+
+### (4) Новизна
+Field ablation Seed ≠ budgeted allocation.  
+Long-caption papers не решают «что выкинуть первым при лимите».  
+Отличие от идеи 1: 1 сравнивает две упаковки; 5 оптимизирует **состав** при лимите.
+
+**Знание в мир:** marginal value типов visual facts в conditioning.
+
+---
+
+## Ранжирование: за что хвататься
+
+| Rank | Идея | Ручка | Какое знание | Почему сейчас |
+|------|------|-------|--------------|---------------|
+| **1** | **#1 Info-matched NL↔SP** | B ⊥ A | structure vs coverage | блокер для VLM embedder; дыра Seed |
+| **2** | **#4 Bottleneck localization** | D | где чинить стек | после/вместе с #1; напрямую про embedder |
+| **3** | **#3 Diff × Prompt oracles** | E | куда headroom | объясняет SOTA; дёшево на fixed G |
+| **4** | **#5 Budget allocation** | F | packing recipe | естественно из #1+#4 |
+| **5** | **#2 Prompter training** | C | ROI post-training | после выбора IR |
+
+### Почему №1 всё ещё лучший старт
+Пока не ясно, нужен ли JSON при равных фактах, идеи 2/5 строят prompter и packing «в неизвестный IR», а идея 4 не знает, какой serialize baseline честный.  
+#1 — prior. #4 — следующий удар под embedder. #3 — дешёвый companion measurement.
+
+---
+
+## Часть II. План проверки лучшей (#1) — коротко и жёстко
+
+### Нарратив
+Проблема: все бегут в structured captions.  
+Недостаток: победы SP смешаны с лишней информацией.  
+Идея: выровнять факты, сравнить упаковки.  
+Польза: решить, учить ли следующий VLM на schema или на dense prose.  
+Вывод: structure real / или coverage был confound — оба исхода knowledge.
+
+### Минимальный сетап
+- **Модель:** один open DiT + его text encoder (Qwen-Image LoRA/FT или SD3.5).  
+- **Данные:** 50k–200k images → evidence bundle →  
+  - SP-full  
+  - NL-matched (hard attribute/ED gate к SP)  
+  - NL-water (те же факты, больше слов)  
+  - SP-sparse (меньше organization)  
+- **Метрики:** train MSE; gen GenEval2/DPG subset; reconstruction probe; open ED/GPG.
 
 ### Бейзлайны
+Seed-style unmatched SP vs short NL; matched-train NL без info-gate; official model short prompt.
 
-| Baseline | Реализация |
-|----------|------------|
-| Official model + short user prompt | HuggingFace pipeline as-is |
-| Official PE / prompt_extend | Qwen/Ideogram-style expand если доступен; иначе GPT/Qwen rewrite |
-| Seed-style SP train (info-unmatched) | наш SP-full arm — upper reference |
-| FIBO-like long JSON vs short NL | short web caption vs SP-full (confounded control) |
-| Matched-train NL без info gate | verbalizer без ED filter (как Seed) — показать, что info-gate меняет вывод |
-| Zero-shot LLM→SP на frozen G | Gemini/Qwen fill schema, без FT diffuser |
+### Код
+DiffSynth/FlyMyAI LoRA для DiT; свой verbalizer+filter; куски evalkit Seed для метрик; публичные GenEval/DPG.
 
----
+### Ожидание
+NL-water ≈ NL-matched; unmatched SP ≫ short NL; **fork:** SP-full vs NL-matched либо остаётся gap (structure) либо схлопывается (info confound).
 
-### Какой код
+### Sanity
+ED(NL-matched)≈ED(SP); shuffle attributes → падение; JSON без values → слабо.
 
-| Компонент | Код |
-|-----------|-----|
-| DiT train/LoRA | DiffSynth-Studio / FlyMyAI qwen-image-lora / Musubi — адаптировать под JSON captions |
-| Annotation | свой thin pipeline на Qwen2.5-VL + SAM2 (не Seed-VL internal) |
-| Info-match filter | свой: attribute extract+match (open VLM) + retry verbalizer |
-| Metrics GenEval/DPG | публичные evalkits; GSB — VLM judge prompts из Seed App.E (offline) |
-| GPG/ED-lite | частичный port из `heheyas/context-scaling` evalkit + свой open judge |
-| PE baselines | vLLM + system prompts; для SP — student prompt из их demo |
-
-Свой glue: dataset build, arm configs, logging, tables. Не писать DiT с нуля.
+### Success / fail
+- **Success:** стабильный info-match + чёткий A или B + рекомендация для embedder.  
+- **Fail/pivot:** не сводим ED в fluent NL → идём в #4 (может encoder/serialize) или #3 (oracles на SP-only).
 
 ---
 
-### Ожидаемые результаты
-
-1. **NL-water ≈ NL-matched** по loss/gen → подтверждение Seed «длина без info не помогает».  
-2. **SP-full ≫ NL-unmatched** (репликация Seed confound).  
-3. Главный fork:  
-   - **A (structure real):** SP-full ≥ NL-matched на gen composition/layout на ≥X пунктов GenEval2 GM / GSB; loss gap остаётся.  
-   - **B (info was confound):** gap SP-full vs NL-matched ≤ noise; SP-ablate ≈ NL-matched.  
-4. Для VLM embedder: если A — рекомендовать schema-aware tokenization/fields; если B — dense NL + attribute coverage objective.  
-Ожидаемый effect size при A: не Seed +16 GenEval2 GM over matched NL, а **меньший, но значимый** layout/count gain (порядка нескольких пунктов + GSB), потому что info выровнена.
-
----
-
-### Sanity checks (корректность кода)
-
-| Check | Ожидание |
-|-------|----------|
-| Tokenization SP vs NL lengths | SP не обязан быть длиннее; логировать |
-| Info-match filter | ED(NL-matched) ∈ [ED(SP)−ε, ED(SP)+ε]; fail rate логировать |
-| NL-water | ED flat vs NL-matched, tokens ↑ |
-| Overfit one batch | loss падает на train batch для всех arms |
-| Frozen probe identity | один seed, один image: metrics воспроизводимы |
-| Shuffle attributes in NL-matched | gen/layout должны упасть → сигнал реально используется |
-| Empty caption / CFG dropout | деградация как в baseline recipe |
-| JSON syntax-only (ключи без values) | почти как weak caption → не «магия скобок» |
-
----
-
-### Критерии успеха / неуспеха
-
-**Развивать дальше (success), если:**  
-- Info-match protocol стабилен (rank-stable ED across 2 judges);  
-- Получен **чёткий** A или B с воспроизводимым gap;  
-- Есть actionable recommendation для VLM embedder;  
-- Side: open metric скрипт работает на 1k images.
-
-**Пивот / отказ от идеи как main paper, если:**  
-- Не удаётся свести ED NL к SP без разрушения fluent NL (verbalizer collapse) → тогда идея 5+annotation становится блокером, main переключается на Idea 3 (gating) или 4 (soft bridge);  
-- Все arms в noise при доступном compute (LoRA слишком слаб) → нужен heavier FT или другой backbone; если и heavy FT даёт null без interpretability — идея слабая как empirical claim;  
-- Обнаружится, что кто-то уже выложил info-matched SP↔NL с тем же выводом до submission — сохранить как replication+embedder angle или сузить на conditioner probing.
-
-**Частичный успех (всё ещё paper):**  
-Protocol + negative result «при matched info structure не помогает на open DiT X» — сильный corrective к Seed.
-
----
-
-## Следующий шаг после успеха Ideи 1
-
-1. Зафиксировать IR-победителя → Ideя 4 (soft vs text) на этом IR.  
-2. Ideя 2 — training recipe prompter’а уже под выбранный IR.  
-3. Ideя 3 — gating поверх лучшего PE.  
-4. Ideя 5 — выпустить метрики вместе с Ideей 1.
-
----
-
-## Краткие ссылки
-
-- Seed / Context Scaling: arXiv `2607.29679`, https://heheyas.github.io/context-scaling/  
-- FIBO: `2511.06876`  
-- SoftREPA: `2503.08250`  
-- PromptEnhancer: `2509.04545` / CVPR 2026  
-- Caption Detailness: `2505.15172`  
-- Аудит open problems: `report_open_problems_autonomous_audit.md`
+## Что сознательно выкинули
+- Always-on PE gating как main — слабо при train-on-reprompt.  
+- Размытые «bakeoff всех каналов» без causal вопроса — низкий knowledge density.  
+- Open GPG/ED как отдельная идея — лучше **tool внутри #1/#3**, не отдельная ставка.
