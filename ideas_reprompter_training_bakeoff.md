@@ -163,4 +163,4 @@ Target бывает разный:
 
 **(4) Новизна.** Есть ablations стадий внутри работ; нет стандартного open bakeoff «SFT vs DPO vs GRPO vs OPSD vs agentic» на одном IR/diffuser с двойной осью стоимости. Ближе всего Seed Tables 4–5 и разрозненные PE-papers выше — их и сводим на общий стенд.
 
-Связанные файлы: [`ideas_t2i_conditioning_narrative.md`](./ideas_t2i_conditioning_narrative.md) (идея 5), [`training_bytedance_context_scaling.md`](./training_bytedance_context_scaling.md), [`fundamental_papers_reprompt_reading_list.md`](./fundamental_papers_reprompt_reading_list.md).
+Связанные файлы: [`ideas_t2i_conditioning_narrative.md`](./ideas_t2i_conditioning_narrative.md) (идея 5), [`training_bytedance_context_scaling.md`](./training_bytedance_context_scaling.md), [`fundamental_papers_reprompt_reading_list.md`](./fundamental_papers_reprompt_reading_list.md), [`literature_notes_user_survey.md`](./literature_notes_user_survey.md).
