@@ -69,6 +69,8 @@ Target бывает разный:
 **Риски:** latency ×N, насыщение на 2–3 раундах, стоимость verifier на каждый запрос; без сильного base policy цикл «крутит воду».
 
 Якоря:
+- [VisualPrompter](https://arxiv.org/abs/2506.23138) (`2506.23138`) — training-free: атомы Entity/Attribute/Relation → вопросы → VLM по картинке → цикл правок  
+- [TARA](https://arxiv.org/abs/2607.18724) (`2607.18724`) — type-aware repair; близкий цикл с более сильной схемой вопросов  
 - [RPG](https://arxiv.org/abs/2401.11708) (`2401.11708`) — Recaption–Plan–Generate  
 - [APE](https://arxiv.org/abs/2606.00204) — MAPE как agentic decomposition + post-train  
 - [T2I-Copilot](https://arxiv.org/abs/2507.20536) (`2507.20536`) — training-free multi-agent  
@@ -81,10 +83,12 @@ Target бывает разный:
 | Подход | Суть | Якорь |
 |--------|------|--------|
 | Endogenous / native CoT | «Rewrite» внутри генератора, не внешний PE | [T2I-R1](https://arxiv.org/abs/2505.00703), HunyuanImage 3 |
-| Retrieval + test-time | RAPO-стиль, не классический SFT/RL rewriter | [RAPO](https://arxiv.org/abs/2504.11739) / [RAPO++](https://arxiv.org/abs/2510.20206) |
-| Always-on product PE | Закрытые API rewrite без открытого протокола обучения | DALL·E 3, Imagen enhancePrompt, Qwen prompt_extend |
+| Thinking → embeddings | Думает/переписывает, в DiT идут эмбеддинги | [Think-Then-Generate](https://arxiv.org/abs/2601.10332) |
+| VLM как единый encoder | Не external re-prompter; смена conditioning path | [UniFusion](https://arxiv.org/abs/2510.12789) |
+| Retrieval + test-time | RAPO-стиль | [RAPO](https://arxiv.org/abs/2504.11739) / [RAPO++](https://arxiv.org/abs/2510.20206) |
+| Always-on product PE | Закрытые API rewrite | DALL·E 3, Imagen enhancePrompt, Qwen prompt_extend |
 
-Для bakeoff держим **external rewriter + frozen (уже FT) diffuser**, иначе смешаем с end-to-end generator RL.
+Для bakeoff держим **external rewriter + frozen (уже FT) diffuser**, иначе смешаем с end-to-end generator RL. Подробный разбор вашего обзора: [`literature_notes_user_survey.md`](./literature_notes_user_survey.md).
 
 ---
 
