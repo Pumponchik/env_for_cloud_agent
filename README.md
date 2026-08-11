@@ -11,6 +11,7 @@
 | Приоритет | Файл | О чём |
 |-----------|------|--------|
 | **0** | [`fundamental_questions_text_conditioning.md`](./fundamental_questions_text_conditioning.md) | **Фундаментальные вопросы** (пересмотр): критика старого списка + 6 фальсифицируемых Q |
+| **0★** | [`mechanism_stack_structured_reprompt.md`](./mechanism_stack_structured_reprompt.md) | **Стек механизмов** «почему structure re-prompt лучше»: L0–L7, hierarchical shuffle, лестница экспериментов |
 | **0a** | [`ideas_t2i_conditioning_stage.md`](./ideas_t2i_conditioning_stage.md) | **5 идей** связной прозой (info-matched NL↔SP и др.) |
 | **0b** | [`ideas_t2i_conditioning_narrative.md`](./ideas_t2i_conditioning_narrative.md) | **Шаблон (1)–(4), ранжирование, нарратив статьи + план проверки** |
 | **0c** | [`training_bytedance_context_scaling.md`](./training_bytedance_context_scaling.md) | **Как учили в Seed/ByteDance Context Scaling** (annotation, diffuser, prompter) |
