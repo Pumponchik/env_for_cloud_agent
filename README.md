@@ -12,6 +12,7 @@
 |-----------|------|--------|
 | **0** | [`fundamental_questions_text_conditioning.md`](./fundamental_questions_text_conditioning.md) | **Фундаментальные вопросы** (пересмотр): критика старого списка + 6 фальсифицируемых Q |
 | **0★** | [`mechanism_stack_structured_reprompt.md`](./mechanism_stack_structured_reprompt.md) | **Стек механизмов** «почему structure re-prompt лучше»: L0–L7, hierarchical shuffle, лестница экспериментов |
+| **0★★** | [`open_questions_v2_and_latent_dualtrain.md`](./open_questions_v2_and_latent_dualtrain.md) | **Открытые вопросы v2 (Q7–Q18)** + разбор идеи «латент вместо переписанного текста» с совместным обучением (E1–E7, вердикт) |
 | **0a** | [`ideas_t2i_conditioning_stage.md`](./ideas_t2i_conditioning_stage.md) | **5 идей** связной прозой (info-matched NL↔SP и др.) |
 | **0b** | [`ideas_t2i_conditioning_narrative.md`](./ideas_t2i_conditioning_narrative.md) | **Шаблон (1)–(4), ранжирование, нарратив статьи + план проверки** |
 | **0c** | [`training_bytedance_context_scaling.md`](./training_bytedance_context_scaling.md) | **Как учили в Seed/ByteDance Context Scaling** (annotation, diffuser, prompter) |
@@ -38,6 +39,7 @@
 - [`ideas_reprompter_training_bakeoff.md`](./ideas_reprompter_training_bakeoff.md) — сравнение SFT / RL / agents для re-prompter
 - [`literature_notes_user_survey.md`](./literature_notes_user_survey.md) — рабочий обзор статей (ваш проход)
 - [`mechanism_stack_structured_reprompt.md`](./mechanism_stack_structured_reprompt.md) — стек механизмов структурного re-prompt (L0–L7) + контроли и лестница экспериментов
+- [`open_questions_v2_and_latent_dualtrain.md`](./open_questions_v2_and_latent_dualtrain.md) — открытые вопросы Q7–Q18 + латентный канал с совместным обучением (программа E1–E7, шорт-лист)
 - [`report_open_problems_autonomous_audit.md`](./report_open_problems_autonomous_audit.md) — **полный аудит открытых проблем (2026-08)**
 - [`report_open_research_questions_reprompt_bridge.md`](./report_open_research_questions_reprompt_bridge.md) — короткая research agenda
 - [`reading_list_reprompter_latent_and_alt_channels.md`](./reading_list_reprompter_latent_and_alt_channels.md) — статьи: латентный re-prompter + другие каналы
