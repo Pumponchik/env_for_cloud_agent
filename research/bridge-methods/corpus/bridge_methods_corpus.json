@@ -1,0 +1,476 @@
+{
+  "topic": "user-to-generator bridge methods",
+  "created": "2026-07-31",
+  "families": {
+    "F1_textual_rewrite": {
+      "wire": "natural language prose",
+      "anchors": [
+        "2509.04545",
+        "2606.00204",
+        "2505.17540",
+        "2510.12041",
+        "2503.20314",
+        "2605.10730"
+      ],
+      "papers": [
+        {
+          "id": "2212.09611",
+          "title": "Promptist",
+          "year": 2022
+        },
+        {
+          "id": "2311.06752",
+          "title": "BeautifulPrompt",
+          "year": 2023
+        },
+        {
+          "id": "2403.17804",
+          "title": "OPT2I",
+          "year": 2024
+        },
+        {
+          "id": "2509.04545",
+          "title": "PromptEnhancer",
+          "year": 2025
+        },
+        {
+          "id": "2510.12041",
+          "title": "Input-Side Scaling",
+          "year": 2025
+        },
+        {
+          "id": "2505.17540",
+          "title": "RePrompt",
+          "year": 2025
+        },
+        {
+          "id": "2606.00204",
+          "title": "APE NVIDIA",
+          "year": 2026
+        },
+        {
+          "id": "2606.08492",
+          "title": "FaithRewriter",
+          "year": 2026
+        },
+        {
+          "id": "2607.18724",
+          "title": "TARA",
+          "year": 2026
+        },
+        {
+          "id": "2506.23138",
+          "title": "VisualPrompter",
+          "year": 2025
+        }
+      ]
+    },
+    "F2_embedding_soft_prompt": {
+      "wire": "continuous embeddings / soft tokens / projected hard prompts",
+      "anchors": [
+        "2403.05135",
+        "2302.03668",
+        "2407.01606",
+        "2305.05189"
+      ],
+      "papers": [
+        {
+          "id": "2403.05135",
+          "title": "ELLA",
+          "year": 2024
+        },
+        {
+          "id": "2305.05189",
+          "title": "SUR-adapter",
+          "year": 2023
+        },
+        {
+          "id": "2407.00737",
+          "title": "LLM4GEN",
+          "year": 2024
+        },
+        {
+          "id": "2403.07860",
+          "title": "LaVi-Bridge",
+          "year": 2024
+        },
+        {
+          "id": "2303.10056",
+          "title": "GlueGen",
+          "year": 2023
+        },
+        {
+          "id": "2406.11831",
+          "title": "LI-DiT",
+          "year": 2024
+        },
+        {
+          "id": "2511.06876",
+          "title": "FIBO DimFusion",
+          "year": 2025
+        },
+        {
+          "id": "2602.03510",
+          "title": "Semantic Routing",
+          "year": 2026
+        },
+        {
+          "id": "2302.03668",
+          "title": "PEZ",
+          "year": 2023
+        },
+        {
+          "id": "2407.01606",
+          "title": "DPO-Diff",
+          "year": 2024
+        },
+        {
+          "id": "2208.01618",
+          "title": "Textual Inversion",
+          "year": 2022
+        },
+        {
+          "id": "2305.15391",
+          "title": "NeTI",
+          "year": 2023
+        },
+        {
+          "id": "2308.06721",
+          "title": "IP-Adapter",
+          "year": 2023
+        },
+        {
+          "id": "2204.06125",
+          "title": "unCLIP DALLE2",
+          "year": 2022
+        },
+        {
+          "id": "2504.06256",
+          "title": "MetaQueries",
+          "year": 2025
+        },
+        {
+          "id": "2305.17216",
+          "title": "GILL",
+          "year": 2023
+        },
+        {
+          "id": "2510.02599",
+          "title": "PEO",
+          "year": 2025
+        },
+        {
+          "id": "2503.21812",
+          "title": "IPGO",
+          "year": 2025
+        }
+      ]
+    },
+    "F3_layout_plan": {
+      "wire": "boxes / regions / masks / scene graphs / draft / code",
+      "anchors": [
+        "2305.13655",
+        "2401.11708",
+        "2301.07093"
+      ],
+      "papers": [
+        {
+          "id": "2301.07093",
+          "title": "GLIGEN",
+          "year": 2023
+        },
+        {
+          "id": "2305.13655",
+          "title": "LMD",
+          "year": 2023
+        },
+        {
+          "id": "2401.11708",
+          "title": "RPG",
+          "year": 2024
+        },
+        {
+          "id": "2307.10816",
+          "title": "BoxDiff",
+          "year": 2023
+        },
+        {
+          "id": "2305.15393",
+          "title": "LayoutGPT",
+          "year": 2023
+        },
+        {
+          "id": "2311.17002",
+          "title": "Ranni",
+          "year": 2023
+        },
+        {
+          "id": "2405.08246",
+          "title": "BlobGEN",
+          "year": 2024
+        },
+        {
+          "id": "2503.10639",
+          "title": "GoT",
+          "year": 2025
+        },
+        {
+          "id": "2512.05112",
+          "title": "DraCo",
+          "year": 2025
+        },
+        {
+          "id": "2512.11464",
+          "title": "MetaCanvas",
+          "year": 2025
+        },
+        {
+          "id": "2602.11980",
+          "title": "SCoT",
+          "year": 2026
+        },
+        {
+          "id": "2607.16409",
+          "title": "ATLAS",
+          "year": 2026
+        },
+        {
+          "id": "2603.08652",
+          "title": "CoCo",
+          "year": 2026
+        },
+        {
+          "id": "2510.24133",
+          "title": "ReFocus",
+          "year": 2025
+        },
+        {
+          "id": "2403.13589",
+          "title": "ReGround",
+          "year": 2024
+        },
+        {
+          "id": "2404.01197",
+          "title": "SPRIGHT",
+          "year": 2024
+        },
+        {
+          "id": "2406.10210",
+          "title": "Make It Count",
+          "year": 2024
+        }
+      ]
+    },
+    "F4_schema_json": {
+      "wire": "typed JSON / structured template / numeric params",
+      "anchors": [
+        "2511.06876",
+        "2602.20672",
+        "2507.05300"
+      ],
+      "papers": [
+        {
+          "id": "2511.06876",
+          "title": "FIBO",
+          "year": 2025
+        },
+        {
+          "id": "2602.20672",
+          "title": "BBQ-to-Image",
+          "year": 2026
+        },
+        {
+          "id": "2507.05300",
+          "title": "Structured Captions 19M",
+          "year": 2025
+        },
+        {
+          "id": "2304.06720",
+          "title": "Rich Text",
+          "year": 2023
+        },
+        {
+          "id": "ideogram4",
+          "title": "Ideogram 4 JSON",
+          "year": 2026,
+          "arxiv": null
+        }
+      ]
+    },
+    "F5_endogenous_cot": {
+      "wire": "internal CoT / self-aligned descriptors inside generator",
+      "anchors": [
+        "2505.00703",
+        "2601.20305",
+        "2509.23951"
+      ],
+      "papers": [
+        {
+          "id": "2505.00703",
+          "title": "T2I-R1",
+          "year": 2025
+        },
+        {
+          "id": "2601.20305",
+          "title": "SEER",
+          "year": 2026
+        },
+        {
+          "id": "2509.23951",
+          "title": "HunyuanImage 3",
+          "year": 2025
+        },
+        {
+          "id": "2511.22699",
+          "title": "Z-Image PE-aware SFT",
+          "year": 2025
+        },
+        {
+          "id": "2510.05593",
+          "title": "ShortCoTI",
+          "year": 2025
+        },
+        {
+          "id": "2603.02712",
+          "title": "CoR-Painter",
+          "year": 2026
+        },
+        {
+          "id": "2601.10332",
+          "title": "Think-Then-Generate",
+          "year": 2026
+        }
+      ]
+    },
+    "F6_nontext_action": {
+      "wire": "attention maps / token weights / timesteps / latents / noise / mixed actions",
+      "anchors": [
+        "2301.13826",
+        "2404.04095",
+        "2510.00430",
+        "2603.00483"
+      ],
+      "papers": [
+        {
+          "id": "2301.13826",
+          "title": "Attend-and-Excite",
+          "year": 2023
+        },
+        {
+          "id": "2208.01626",
+          "title": "Prompt-to-Prompt",
+          "year": 2022
+        },
+        {
+          "id": "2306.08877",
+          "title": "SynGen",
+          "year": 2023
+        },
+        {
+          "id": "2311.16117",
+          "title": "Predicated Diffusion",
+          "year": 2023
+        },
+        {
+          "id": "2404.04095",
+          "title": "PAE",
+          "year": 2024
+        },
+        {
+          "id": "2510.00430",
+          "title": "PromptLoop",
+          "year": 2025
+        },
+        {
+          "id": "2603.00483",
+          "title": "RAISE",
+          "year": 2026
+        },
+        {
+          "id": "2406.04312",
+          "title": "ReNO",
+          "year": 2024
+        },
+        {
+          "id": "2512.07702",
+          "title": "NPC Negative Prompting",
+          "year": 2025
+        },
+        {
+          "id": "2505.21488",
+          "title": "Be Decisive",
+          "year": 2025
+        }
+      ]
+    }
+  },
+  "key_empirical_findings": [
+    {
+      "claim": "LMD layouts score ~99% while rendered images score 76-86% — planner ok, renderer bottleneck",
+      "source": "2305.13655"
+    },
+    {
+      "claim": "SCoT ablation: Text CoT captures most reasoning gain; boxes capture most GenEval compositional gain — complementary not substitutable",
+      "source": "2602.11980"
+    },
+    {
+      "claim": "LI-DiT: naive LLM-as-encoder degrades prompt following due to NTP vs discriminative features + positional bias",
+      "source": "2406.11831"
+    },
+    {
+      "claim": "Structured Captions: shuffled same content loses vs ordered structure — structure itself is active ingredient",
+      "source": "2507.05300"
+    },
+    {
+      "claim": "ShortCoTI: CoT expansion can inject contradicting details; 54% shorter maintains quality",
+      "source": "2510.05593"
+    },
+    {
+      "claim": "ReGround: spatial grounding can dominate and suppress textual grounding in GLIGEN architecture",
+      "source": "2403.13589"
+    },
+    {
+      "claim": "GenEval 2: rewriting decreases human alignment on 4/6 models",
+      "source": "2512.16853"
+    },
+    {
+      "claim": "SEER: endogenous loop with only 300 proxy samples",
+      "source": "2601.20305"
+    },
+    {
+      "claim": "RAISE: mixed actions (rewrite/resample/edit) + checklist; 30-40% fewer samples, 80% fewer VLM calls",
+      "source": "2603.00483"
+    }
+  ],
+  "surveys": [
+    {
+      "id": "2403.04279",
+      "title": "Controllable Generation with T2I Diffusion Models Survey"
+    },
+    {
+      "id": "2502.16923",
+      "title": "Automatic Prompt Optimization Survey"
+    },
+    {
+      "id": "2502.11560",
+      "title": "APO Optimization Perspective"
+    },
+    {
+      "id": "2606.08231",
+      "title": "Test-Time Scaling Multimodal Survey"
+    },
+    {
+      "id": "2503.12605",
+      "title": "Multimodal CoT Survey"
+    },
+    {
+      "id": "2505.02567",
+      "title": "Unified Multimodal Models Survey"
+    },
+    {
+      "id": "2508.10316",
+      "title": "RL with Visual Generative Models Survey"
+    }
+  ],
+  "gap": "No dedicated survey of user→T2I bridge methods spanning textual PE + embeddings + layout + schema + endogenous"
+}

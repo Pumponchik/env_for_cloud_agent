@@ -1,0 +1,162 @@
+[
+  {
+    "key": "promptist",
+    "title": null,
+    "year": null,
+    "citationCount": null,
+    "n_cites_fetched": null,
+    "n_refs_fetched": null,
+    "error": "not found",
+    "arxiv": "2212.09611"
+  },
+  {
+    "key": "beautifulprompt",
+    "title": null,
+    "year": null,
+    "citationCount": null,
+    "n_cites_fetched": null,
+    "n_refs_fetched": null,
+    "error": "not found",
+    "arxiv": "2311.06752"
+  },
+  {
+    "key": "opt2i",
+    "title": "Improving Text-to-Image Consistency via Automatic Prompt Optimization",
+    "year": 2024,
+    "citationCount": 90,
+    "n_cites_fetched": 80,
+    "n_refs_fetched": 46,
+    "error": null,
+    "arxiv": "2403.17804"
+  },
+  {
+    "key": "tipo",
+    "title": "TIPO: Text to Image with Text Presampling for Prompt Optimization",
+    "year": 2024,
+    "citationCount": 5,
+    "n_cites_fetched": 5,
+    "n_refs_fetched": 80,
+    "error": null,
+    "arxiv": "2411.08127"
+  },
+  {
+    "key": "reprompt",
+    "title": "RePrompt: Reasoning-Augmented Reprompting for Text-to-Image Generation via Reinforcement Learning",
+    "year": 2025,
+    "citationCount": 17,
+    "n_cites_fetched": 17,
+    "n_refs_fetched": 62,
+    "error": null,
+    "arxiv": "2505.17540"
+  },
+  {
+    "key": "promptenhancer",
+    "title": "PromptEnhancer: A Simple Approach to Enhance Text-to-Image Models via Chain-of-Thought Prompt Rewriting",
+    "year": 2025,
+    "citationCount": 32,
+    "n_cites_fetched": 32,
+    "n_refs_fetched": 38,
+    "error": null,
+    "arxiv": "2509.04545"
+  },
+  {
+    "key": "input_side_scaling",
+    "title": null,
+    "year": null,
+    "citationCount": null,
+    "n_cites_fetched": null,
+    "n_refs_fetched": null,
+    "error": "not found",
+    "arxiv": "2510.12041"
+  },
+  {
+    "key": "rapo",
+    "title": "The Devil is in the Prompts: Retrieval-Augmented Prompt Optimization for Text-To-Video Generation",
+    "year": 2025,
+    "citationCount": 16,
+    "n_cites_fetched": 16,
+    "n_refs_fetched": 52,
+    "error": null,
+    "arxiv": "2504.11739"
+  },
+  {
+    "key": "faithrewriter",
+    "title": null,
+    "year": null,
+    "citationCount": null,
+    "n_cites_fetched": null,
+    "n_refs_fetched": null,
+    "error": "not found",
+    "arxiv": "2606.08492"
+  },
+  {
+    "key": "visualprompter",
+    "title": "VisualPrompter: Semantic-Aware Prompt Optimization with Visual Feedback for Text-to-Image Synthesis",
+    "year": 2025,
+    "citationCount": 3,
+    "n_cites_fetched": 3,
+    "n_refs_fetched": 49,
+    "error": null,
+    "arxiv": "2506.23138"
+  },
+  {
+    "key": "brack",
+    "title": null,
+    "year": null,
+    "citationCount": null,
+    "n_cites_fetched": null,
+    "n_refs_fetched": null,
+    "error": "not found",
+    "arxiv": "2506.16679"
+  },
+  {
+    "key": "prompt_expansion",
+    "title": "Prompt Expansion for Adaptive Text-to-Image Generation",
+    "year": 2023,
+    "citationCount": 34,
+    "n_cites_fetched": 34,
+    "n_refs_fetched": 26,
+    "error": null,
+    "arxiv": "2312.16720"
+  },
+  {
+    "key": "ape_agentic",
+    "title": "APE: Agentic Prompt Enhancer for Image Generation and Editing",
+    "year": 2026,
+    "citationCount": 0,
+    "n_cites_fetched": 0,
+    "n_refs_fetched": 50,
+    "error": null,
+    "arxiv": "2606.00204"
+  },
+  {
+    "key": "tara",
+    "title": "One Rewrite to Fix Them All? Type-Aware Repair Allocation for Text-to-Image Prompt Optimization",
+    "year": 2026,
+    "citationCount": 0,
+    "n_cites_fetched": 0,
+    "n_refs_fetched": 42,
+    "error": null,
+    "arxiv": "2607.18724"
+  },
+  {
+    "key": "rapopp",
+    "title": null,
+    "year": null,
+    "citationCount": null,
+    "n_cites_fetched": null,
+    "n_refs_fetched": null,
+    "error": "not found",
+    "arxiv": "2510.20206"
+  },
+  {
+    "key": "pae",
+    "title": null,
+    "year": null,
+    "citationCount": null,
+    "n_cites_fetched": null,
+    "n_refs_fetched": null,
+    "error": "not found",
+    "arxiv": "2404.04095"
+  }
+]
