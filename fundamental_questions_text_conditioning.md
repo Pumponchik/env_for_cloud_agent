@@ -2,7 +2,7 @@
 
 Разбор старого списка «10 тем» более сильной моделью (критика) и замена на 6 фальсифицируемых вопросов.
 
-Связанные заметки: [`ideas_t2i_conditioning_stage.md`](./ideas_t2i_conditioning_stage.md) (инженерные идеи), [`training_bytedance_context_scaling.md`](./training_bytedance_context_scaling.md) (Seed).
+Связанные заметки: [`ideas_t2i_conditioning_stage.md`](./ideas_t2i_conditioning_stage.md) (инженерные идеи), [`training_bytedance_context_scaling.md`](./training_bytedance_context_scaling.md) (Seed), [`mechanism_stack_structured_reprompt.md`](./mechanism_stack_structured_reprompt.md) (разбор Q2/Q4 на слои механизмов).
 
 ---
 

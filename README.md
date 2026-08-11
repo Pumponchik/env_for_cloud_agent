@@ -16,6 +16,7 @@
 | **0c** | [`training_bytedance_context_scaling.md`](./training_bytedance_context_scaling.md) | **Как учили в Seed/ByteDance Context Scaling** (annotation, diffuser, prompter) |
 | **0d** | [`ideas_reprompter_training_bakeoff.md`](./ideas_reprompter_training_bakeoff.md) | **Bakeoff обучения re-prompter: SFT / RL / agents** + якоря статей |
 | **0e** | [`literature_notes_user_survey.md`](./literature_notes_user_survey.md) | **Ваш обзор статей** (длина/captions, re-prompt, что не про то) + стыковка с идеями |
+| **0f** | [`mechanism_stack_structured_reprompt.md`](./mechanism_stack_structured_reprompt.md) | **Почему структурный re-prompt работает:** стек L0–L7, иерархические shuffle-контроли, лестница S1–S6 |
 | **1** | [`report_open_problems_autonomous_audit.md`](./report_open_problems_autonomous_audit.md) | **Полный аудит:** T1–T12 статусы + 24 новые проблемы + ложные закрытия |
 | **2** | [`report_open_research_questions_reprompt_bridge.md`](./report_open_research_questions_reprompt_bridge.md) | Короткая карта «куда копать» |
 | **3** | [`reading_list_reprompter_latent_and_alt_channels.md`](./reading_list_reprompter_latent_and_alt_channels.md) | Re-prompter→G: латентный/векторный канал и альтернативы |
@@ -35,6 +36,7 @@
 - [`training_bytedance_context_scaling.md`](./training_bytedance_context_scaling.md) — как учили в ByteDance Context Scaling
 - [`ideas_reprompter_training_bakeoff.md`](./ideas_reprompter_training_bakeoff.md) — сравнение SFT / RL / agents для re-prompter
 - [`literature_notes_user_survey.md`](./literature_notes_user_survey.md) — рабочий обзор статей (ваш проход)
+- [`mechanism_stack_structured_reprompt.md`](./mechanism_stack_structured_reprompt.md) — стек механизмов структурного re-prompt (L0–L7) + контроли и лестница экспериментов
 - [`report_open_problems_autonomous_audit.md`](./report_open_problems_autonomous_audit.md) — **полный аудит открытых проблем (2026-08)**
 - [`report_open_research_questions_reprompt_bridge.md`](./report_open_research_questions_reprompt_bridge.md) — короткая research agenda
 - [`reading_list_reprompter_latent_and_alt_channels.md`](./reading_list_reprompter_latent_and_alt_channels.md) — статьи: латентный re-prompter + другие каналы
