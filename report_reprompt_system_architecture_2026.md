@@ -3,7 +3,7 @@
 **Date:** 2026-07-29  
 **Scope:** Modern (mostly 2025–2026) academic answer to: *why a re-prompter is needed*, *what structure should sit between the user and the generator*, *what degrees of freedom exist*, and *how to do it correctly*.  
 **Companion (earlier, broader digest):** [`report_reprompt_systems.md`](./report_reprompt_systems.md)  
-**Paper catalog:** [`papers_catalog_reprompt.md`](./papers_catalog_reprompt.md)
+**Paper catalog:** см. связанные отчёты в этом репозитории.
 
 > **Method note.** Built from fresh arXiv sweeps (2024–2026), citation ancestry/descendants of current PE hubs, lab tech reports (Qwen-Image-2.0, Wan, Seedream/Seedance, HunyuanImage 3.0, FLUX.2, Ideogram 4), and three parallel literature agents.  
 > `www.derevutstat.ru` did not resolve; search used arXiv / Semantic Scholar / OpenReview / ACL / primary lab docs.  

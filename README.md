@@ -29,6 +29,7 @@
 ## Все отчёты в корне
 
 ### Bridge / re-prompter channels
+- [`fundamental_questions_text_conditioning.md`](./fundamental_questions_text_conditioning.md) — фундаментальные вопросы (пересмотр после критики)
 - [`ideas_t2i_conditioning_stage.md`](./ideas_t2i_conditioning_stage.md) — идеи связной прозой
 - [`ideas_t2i_conditioning_narrative.md`](./ideas_t2i_conditioning_narrative.md) — шаблон (1)–(4), выбор лучшей, нарратив + план проверки
 - [`training_bytedance_context_scaling.md`](./training_bytedance_context_scaling.md) — как учили в ByteDance Context Scaling
@@ -39,21 +40,16 @@
 - [`reading_list_reprompter_latent_and_alt_channels.md`](./reading_list_reprompter_latent_and_alt_channels.md) — статьи: латентный re-prompter + другие каналы
 - [`report_reprompter_nontextual_channels.md`](./report_reprompter_nontextual_channels.md) — нетекстовые каналы enrichment → G
 - [`report_bridge_methods_taxonomy.md`](./report_bridge_methods_taxonomy.md) — таксономия F1–F6 + pros/cons
-- [`papers_catalog_bridge_methods.md`](./papers_catalog_bridge_methods.md) — каталог по семьям
 - [`fundamental_papers_reprompt_reading_list.md`](./fundamental_papers_reprompt_reading_list.md) — textual PE ядро
 - [`report_reprompt_system_architecture_2026.md`](./report_reprompt_system_architecture_2026.md) — архитектура textual bridge
 - [`report_reprompt_systems.md`](./report_reprompt_systems.md) — широкий дайджест PE
-- [`papers_catalog_reprompt.md`](./papers_catalog_reprompt.md) — каталог textual PE
 - _(смежное)_ [`reading_list_latent_and_bridge_channels.md`](./reading_list_latent_and_bridge_channels.md), [`report_latent_transfer_agents_and_reprompt.md`](./report_latent_transfer_agents_and_reprompt.md) — MAS latent (не основной фокус)
 
 ### Длина промпта и captions
-- [`top_papers_prompt_length_variability.md`](./top_papers_prompt_length_variability.md) — топ по length/variability
 - [`relevant_papers_prompt_caption_design.md`](./relevant_papers_prompt_caption_design.md) — краткие P/M/R
 - [`report_around_brack_2506_16679.md`](./report_around_brack_2506_16679.md) — вокруг Brack et al. (контролируемые captions)
 - [`report_dalle3_prompt_reprompt_descendants.md`](./report_dalle3_prompt_reprompt_descendants.md) — потомки DALL·E 3 Better Captions
-- [`literature_review_modern_prompt_length.md`](./literature_review_modern_prompt_length.md) — обзор современной длины (~150)
 - [`combined_report_prompt_length_300.md`](./combined_report_prompt_length_300.md) — сводный отчёт (~300)
-- [`report_prompt_length_initial.md`](./report_prompt_length_initial.md) — первый deep-dive отчёт
 
 ---
 

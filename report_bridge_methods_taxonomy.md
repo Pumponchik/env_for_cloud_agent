@@ -383,6 +383,5 @@ prose → linguistic structure → **boxes+captions** → region partitions → 
 - Корпус: [`research/bridge-methods/corpus/bridge_methods_corpus.json`](./research/bridge-methods/corpus/bridge_methods_corpus.json)  
 - Citation trees: [`research/bridge-methods/citation_trees/bridge_hubs.json`](./research/bridge-methods/citation_trees/bridge_hubs.json)  
 - Outline/fields: [`research/bridge-methods/outline.yaml`](./research/bridge-methods/outline.yaml), [`fields.yaml`](./research/bridge-methods/fields.yaml)  
-- Каталог чтения: [`papers_catalog_bridge_methods.md`](./papers_catalog_bridge_methods.md)
 
 Связанные предыдущие отчёты по textual PE остаются валидны как углубление **F1**; этот документ — карта **всех** семейств bridge.

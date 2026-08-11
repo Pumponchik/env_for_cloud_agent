@@ -126,7 +126,7 @@ items:
 # --- Items supplemented after web/citation pass (2026-07-29) ---
 supplementary_items_note: >
   After parallel web-search agents and arXiv/S2 passes, the active reading set
-  expanded beyond the initial outline. See papers_catalog_reprompt.md and
+  expanded beyond the initial outline. See report_reprompt_systems.md and
   corpus/curated_reading_list.json. Major additions: VisualPrompter, TARA, PRISM,
   OPT2I, Idea2Img, PromptLoop, APE-agentic, FIBO, LMD/RPG, T2I-R1, Parrot,
   VPO, Prompt Expansion (Google), GenEval2, FairPro, Qwen-Image-2.0 PE,

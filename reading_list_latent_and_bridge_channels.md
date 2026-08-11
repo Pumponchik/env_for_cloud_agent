@@ -119,5 +119,4 @@
 ## Полные отчёты в репо
 
 - Таксономия всех bridge: [`report_bridge_methods_taxonomy.md`](./report_bridge_methods_taxonomy.md)  
-- Каталог: [`papers_catalog_bridge_methods.md`](./papers_catalog_bridge_methods.md)  
 - Textual PE ядро: [`fundamental_papers_reprompt_reading_list.md`](./fundamental_papers_reprompt_reading_list.md)

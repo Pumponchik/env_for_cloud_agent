@@ -37,4 +37,4 @@
 | `citation_trees/bridge_hubs.json` | Citation neighborhoods хабов + cross-family links |
 | `results/` | Зарезервировано под per-item deep JSON |
 
-Отчёт: [`../report_bridge_methods_taxonomy.md`](../report_bridge_methods_taxonomy.md) · каталог: [`../papers_catalog_bridge_methods.md`](../papers_catalog_bridge_methods.md).
+Отчёт: [`../report_bridge_methods_taxonomy.md`](../report_bridge_methods_taxonomy.md).
