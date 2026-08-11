@@ -14,6 +14,7 @@
 | **0★** | [`mechanism_stack_structured_reprompt.md`](./mechanism_stack_structured_reprompt.md) | **Стек механизмов** «почему structure re-prompt лучше»: L0–L7, hierarchical shuffle, лестница экспериментов |
 | **0★★** | [`open_questions_v2_and_latent_dualtrain.md`](./open_questions_v2_and_latent_dualtrain.md) | **Новые вопросы Q7–Q18** + разбор идеи «user→латенты без текста, joint train» |
 | **0★★** | [`open_questions_v2_and_latent_dualtrain.md`](./open_questions_v2_and_latent_dualtrain.md) | **Открытые вопросы v2 (Q7–Q18)** + разбор идеи «латент вместо переписанного текста» с совместным обучением (E1–E7, вердикт) |
+| **0★★★** | [`verify_external_llm_necessity.md`](./verify_external_llm_necessity.md) | **Нужен ли внешний LLM:** H_A/H_B/H_C/H_D/H_E, программа E0–E7 на двух оракулах, дерево решений |
 | **0a** | [`ideas_t2i_conditioning_stage.md`](./ideas_t2i_conditioning_stage.md) | **5 идей** связной прозой (info-matched NL↔SP и др.) |
 | **0b** | [`ideas_t2i_conditioning_narrative.md`](./ideas_t2i_conditioning_narrative.md) | **Шаблон (1)–(4), ранжирование, нарратив статьи + план проверки** |
 | **0c** | [`training_bytedance_context_scaling.md`](./training_bytedance_context_scaling.md) | **Как учили в Seed/ByteDance Context Scaling** (annotation, diffuser, prompter) |
@@ -41,6 +42,7 @@
 - [`literature_notes_user_survey.md`](./literature_notes_user_survey.md) — рабочий обзор статей (ваш проход)
 - [`mechanism_stack_structured_reprompt.md`](./mechanism_stack_structured_reprompt.md) — стек механизмов структурного re-prompt (L0–L7) + контроли и лестница экспериментов
 - [`open_questions_v2_and_latent_dualtrain.md`](./open_questions_v2_and_latent_dualtrain.md) — открытые вопросы Q7–Q18 + латентный канал с совместным обучением (программа E1–E7, шорт-лист)
+- [`verify_external_llm_necessity.md`](./verify_external_llm_necessity.md) — проверка тезиса «нужен внешний LLM»: разложение promptability на формат / знание / поиск, тестовый набор языкового прайора, дерево решений
 - [`report_open_problems_autonomous_audit.md`](./report_open_problems_autonomous_audit.md) — **полный аудит открытых проблем (2026-08)**
 - [`report_open_research_questions_reprompt_bridge.md`](./report_open_research_questions_reprompt_bridge.md) — короткая research agenda
 - [`reading_list_reprompter_latent_and_alt_channels.md`](./reading_list_reprompter_latent_and_alt_channels.md) — статьи: латентный re-prompter + другие каналы

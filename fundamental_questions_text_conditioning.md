@@ -135,6 +135,6 @@
 | Q5 | Idea 2: causal audit pipeline |
 | Q1 (реализация фактов) | Idea 3: dual oracles |
 | Q2, Q4 | Idea 1 + order/shuffle controls из Structured Captions |
-| Q3 | Новый угол: implicature vs dataset prior (Alchemist-adjacent) |
+| Q3 | Новый угол: implicature vs dataset prior (Alchemist-adjacent); развёрнуто в [`verify_external_llm_necessity.md`](./verify_external_llm_necessity.md) как E4 + класс C1 |
 
 Стартовая точка по-прежнему Idea 1 (info-matched), но теперь с явными probe-метриками извлекаемости, а не только ED/GPG.
