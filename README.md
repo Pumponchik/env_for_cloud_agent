@@ -17,7 +17,8 @@
 | **0a** | [`ideas_t2i_conditioning_stage.md`](./ideas_t2i_conditioning_stage.md) | **5 идей** связной прозой (info-matched NL↔SP и др.) |
 | **0b** | [`ideas_t2i_conditioning_narrative.md`](./ideas_t2i_conditioning_narrative.md) | **Шаблон (1)–(4), ранжирование, нарратив статьи + план проверки** |
 | **0c** | [`training_bytedance_context_scaling.md`](./training_bytedance_context_scaling.md) | **Как учили в Seed/ByteDance Context Scaling** (annotation, diffuser, prompter) |
-| **0d** | [`ideas_reprompter_training_bakeoff.md`](./ideas_reprompter_training_bakeoff.md) | **Bakeoff обучения re-prompter: SFT / RL / agents** + якоря статей |
+| **0d** | [`take_should_we_train_reprompter.md`](./take_should_we_train_reprompter.md) | **Надо ли учить репромптер** и какие направления обучения (SFT / RL / агенты / поглотить в G) |
+| **0d′** | [`ideas_reprompter_training_bakeoff.md`](./ideas_reprompter_training_bakeoff.md) | **Bakeoff обучения re-prompter: SFT / RL / agents** + якоря статей |
 | **0e** | [`literature_notes_user_survey.md`](./literature_notes_user_survey.md) | **Ваш обзор статей** (длина/captions, re-prompt, что не про то) + стыковка с идеями |
 | **0f** | [`mechanism_stack_structured_reprompt.md`](./mechanism_stack_structured_reprompt.md) | **Почему структурный re-prompt работает:** стек L0–L7, иерархические shuffle-контроли, лестница S1–S6 |
 | **1** | [`report_open_problems_autonomous_audit.md`](./report_open_problems_autonomous_audit.md) | **Полный аудит:** T1–T12 статусы + 24 новые проблемы + ложные закрытия |
@@ -37,6 +38,7 @@
 - [`ideas_t2i_conditioning_stage.md`](./ideas_t2i_conditioning_stage.md) — идеи связной прозой
 - [`ideas_t2i_conditioning_narrative.md`](./ideas_t2i_conditioning_narrative.md) — шаблон (1)–(4), выбор лучшей, нарратив + план проверки
 - [`training_bytedance_context_scaling.md`](./training_bytedance_context_scaling.md) — как учили в ByteDance Context Scaling
+- [`take_should_we_train_reprompter.md`](./take_should_we_train_reprompter.md) — надо ли учить репромптер; направления сигнала (SFT / cold-start / RL / агенты / сдвиг G)
 - [`ideas_reprompter_training_bakeoff.md`](./ideas_reprompter_training_bakeoff.md) — сравнение SFT / RL / agents для re-prompter
 - [`literature_notes_user_survey.md`](./literature_notes_user_survey.md) — рабочий обзор статей (ваш проход)
 - [`mechanism_stack_structured_reprompt.md`](./mechanism_stack_structured_reprompt.md) — стек механизмов структурного re-prompt (L0–L7) + контроли и лестница экспериментов
