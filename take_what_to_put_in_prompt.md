@@ -87,3 +87,5 @@
 Для **нашего стенда**: cookbook закрыт не будет, пока нет packing под лимит (идея 4) и info-matched NL↔SP (идея 1). Без них «сцена важнее relations» остаётся фактом одной лаборатории на полном JSON и MSE.
 
 Два якоря: Seed C.4 + Figure 3 (`2607.29679`); Structured Captions shuffle (`2507.05300`). Рядом, но про другое: `2211.15462` (nouns/artists/lighting vs descriptors) и PromptEnhancer (`2509.04545`) как карта failure modes, не как меню полей.
+
+Жёсткий вопрос «можно ли сказать A лучше B» и протокол измерения: [`take_specify_a_vs_b.md`](./take_specify_a_vs_b.md).

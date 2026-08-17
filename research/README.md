@@ -26,6 +26,10 @@
 | `citation_trees/` | S2 trees по seed PE-papers |
 | `raw_searches/` | Сырой arXiv dump |
 
+## `specify-a-vs-b/`
+
+Поиск «указывать тип факта A лучше B»: keyword arXiv + citation trees. Отчёт: [`../take_specify_a_vs_b.md`](../take_specify_a_vs_b.md).
+
 ## `bridge-methods/`
 
 Артефакты исследования **всех** семейств user→generator bridge (не только текстовый PE).
