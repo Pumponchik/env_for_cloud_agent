@@ -26,6 +26,10 @@
 | `citation_trees/` | S2 trees по seed PE-papers |
 | `raw_searches/` | Сырой arXiv dump |
 
+## `reprompt-format/`
+
+Поиск форматов re-prompt (JSON / шаблон / проза / регионы). Отчёт: [`../take_reprompt_format.md`](../take_reprompt_format.md).
+
 ## `sp-length/`
 
 Поиск длины структурного промпта: arXiv sweep + ключевые статьи. Отчёт: [`../take_sp_length.md`](../take_sp_length.md).

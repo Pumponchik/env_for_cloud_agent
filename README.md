@@ -22,6 +22,7 @@
 | **0d″** | [`take_what_to_put_in_prompt.md`](./take_what_to_put_in_prompt.md) | **Что писать в промпте:** типы фактов, позиции, что не писать |
 | **0d‴** | [`take_specify_a_vs_b.md`](./take_specify_a_vs_b.md) | **Указывать A лучше B?** поиск + как мерить (packing) |
 | **0d⁴** | [`take_sp_length.md`](./take_sp_length.md) | **Длина SP:** что известно про NL, применимо ли к SP, открытые дыры |
+| **0d⁵** | [`take_reprompt_format.md`](./take_reprompt_format.md) | **Формат re-prompt:** проза / шаблон / JSON / регионы / что придумать |
 | **0e** | [`literature_notes_user_survey.md`](./literature_notes_user_survey.md) | **Ваш обзор статей** (длина/captions, re-prompt, что не про то) + стыковка с идеями |
 | **0f** | [`mechanism_stack_structured_reprompt.md`](./mechanism_stack_structured_reprompt.md) | **Почему структурный re-prompt работает:** стек L0–L7, иерархические shuffle-контроли, лестница S1–S6 |
 | **1** | [`report_open_problems_autonomous_audit.md`](./report_open_problems_autonomous_audit.md) | **Полный аудит:** T1–T12 статусы + 24 новые проблемы + ложные закрытия |
@@ -45,6 +46,8 @@
 - [`ideas_reprompter_training_bakeoff.md`](./ideas_reprompter_training_bakeoff.md) — сравнение SFT / RL / agents для re-prompter
 - [`take_what_to_put_in_prompt.md`](./take_what_to_put_in_prompt.md) — какие поля и позиции дают выигрыш, чего не писать
 - [`take_specify_a_vs_b.md`](./take_specify_a_vs_b.md) — можно ли сказать «указывать это лучше, чем то»: поиск по деревьям + протокол измерения
+- [`take_sp_length.md`](./take_sp_length.md) — длина структурного промпта: что известно про NL, почему нельзя переносить напрямую, открытые дыры
+- [`take_reprompt_format.md`](./take_reprompt_format.md) — формат записи re-prompt: какие оболочки пробовали, что работает, что изобрести
 - [`literature_notes_user_survey.md`](./literature_notes_user_survey.md) — рабочий обзор статей (ваш проход)
 - [`mechanism_stack_structured_reprompt.md`](./mechanism_stack_structured_reprompt.md) — стек механизмов структурного re-prompt (L0–L7) + контроли и лестница экспериментов
 - [`open_questions_v2_and_latent_dualtrain.md`](./open_questions_v2_and_latent_dualtrain.md) — открытые вопросы Q7–Q18 + латентный канал с совместным обучением (программа E1–E7, шорт-лист)
