@@ -26,6 +26,10 @@
 | `citation_trees/` | S2 trees по seed PE-papers |
 | `raw_searches/` | Сырой arXiv dump |
 
+## `prompt-compression/`
+
+Сжатие канала LLM→LLM (текст, gist, KV). Отчёт: [`../take_prompt_compression.md`](../take_prompt_compression.md).
+
 ## `reprompt-format/`
 
 Поиск форматов re-prompt (JSON / шаблон / проза / регионы). Отчёт: [`../take_reprompt_format.md`](../take_reprompt_format.md).
