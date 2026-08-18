@@ -21,6 +21,7 @@
 | **0d′** | [`ideas_reprompter_training_bakeoff.md`](./ideas_reprompter_training_bakeoff.md) | **Bakeoff обучения re-prompter: SFT / RL / agents** + якоря статей |
 | **0d″** | [`take_what_to_put_in_prompt.md`](./take_what_to_put_in_prompt.md) | **Что писать в промпте:** типы фактов, позиции, что не писать |
 | **0d‴** | [`take_specify_a_vs_b.md`](./take_specify_a_vs_b.md) | **Указывать A лучше B?** поиск + как мерить (packing) |
+| **0d⁴** | [`take_sp_length.md`](./take_sp_length.md) | **Длина SP:** что известно про NL, применимо ли к SP, открытые дыры |
 | **0e** | [`literature_notes_user_survey.md`](./literature_notes_user_survey.md) | **Ваш обзор статей** (длина/captions, re-prompt, что не про то) + стыковка с идеями |
 | **0f** | [`mechanism_stack_structured_reprompt.md`](./mechanism_stack_structured_reprompt.md) | **Почему структурный re-prompt работает:** стек L0–L7, иерархические shuffle-контроли, лестница S1–S6 |
 | **1** | [`report_open_problems_autonomous_audit.md`](./report_open_problems_autonomous_audit.md) | **Полный аудит:** T1–T12 статусы + 24 новые проблемы + ложные закрытия |

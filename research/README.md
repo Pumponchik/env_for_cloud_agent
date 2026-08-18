@@ -26,6 +26,10 @@
 | `citation_trees/` | S2 trees по seed PE-papers |
 | `raw_searches/` | Сырой arXiv dump |
 
+## `sp-length/`
+
+Поиск длины структурного промпта: arXiv sweep + ключевые статьи. Отчёт: [`../take_sp_length.md`](../take_sp_length.md).
+
 ## `specify-a-vs-b/`
 
 Поиск «указывать тип факта A лучше B»: keyword arXiv + citation trees. Отчёт: [`../take_specify_a_vs_b.md`](../take_specify_a_vs_b.md).

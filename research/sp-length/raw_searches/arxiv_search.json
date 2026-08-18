@@ -1,0 +1,113 @@
+[
+  {
+    "query": "ti:\"structured prompt\" AND abs:\"length\"",
+    "papers": [
+      {
+        "title": "Structured Prompting: Scaling In-Context Learning to 1,000 Examples",
+        "id": null,
+        "year": "2022",
+        "abstract": "Large language models have exhibited intriguing in-context learning capability, achieving promising zero- and few-shot performance without updating the parameters. However, conventional in-context learning is usually restricted by length constraints, rendering it ineffective to absorb supervision fr"
+      },
+      {
+        "title": "Structured Prompt Optimization for Few-Shot Text Classification via Semantic Alignment in Latent Space",
+        "id": null,
+        "year": "2026",
+        "abstract": "This study addresses the issues of semantic entanglement, unclear label structure, and insufficient feature representation in few-shot text classification, and proposes an optimization framework based on structured prompts to enhance semantic understanding and task adaptation under low-resource cond"
+      },
+      {
+        "title": "SPADE: Structured Prompting Augmentation for Dialogue Enhancement in Machine-Generated Text Detection",
+        "id": null,
+        "year": "2025",
+        "abstract": "The increasing capability of large language models (LLMs) to generate synthetic content has heightened concerns about their misuse, driving the development of Machine-Generated Text (MGT) detection models. However, these detectors face significant challenges due to the lack of high-quality synthetic"
+      }
+    ]
+  },
+  {
+    "query": "ti:\"JSON caption\" AND abs:\"diffusion\"",
+    "papers": []
+  },
+  {
+    "query": "ti:\"prompt length\" AND abs:\"text-to-image\"",
+    "papers": []
+  },
+  {
+    "query": "ti:\"long prompt\" AND abs:\"diffusion\"",
+    "papers": [
+      {
+        "title": "DetailMaster: Can Your Text-to-Image Model Handle Long Prompts?",
+        "id": null,
+        "year": "2025",
+        "abstract": "While recent Text-to-Image (T2I) models show impressive capabilities in synthesizing images from brief descriptions, they struggle with the long, detailed prompts required for professional applications. We present DetailMaster, a comprehensive benchmark for evaluating T2I capabilities on long prompt"
+      }
+    ]
+  },
+  {
+    "query": "ti:\"caption length\" AND abs:\"text-to-image\"",
+    "papers": []
+  },
+  {
+    "query": "ti:\"DetailMaster\"",
+    "papers": [
+      {
+        "title": "DetailMaster: Can Your Text-to-Image Model Handle Long Prompts?",
+        "id": null,
+        "year": "2025",
+        "abstract": "While recent Text-to-Image (T2I) models show impressive capabilities in synthesizing images from brief descriptions, they struggle with the long, detailed prompts required for professional applications. We present DetailMaster, a comprehensive benchmark for evaluating T2I capabilities on long prompt"
+      }
+    ]
+  },
+  {
+    "query": "ti:\"LongT2I\"",
+    "papers": []
+  },
+  {
+    "query": "ti:\"long caption\" AND abs:\"text-to-image\"",
+    "papers": []
+  },
+  {
+    "query": "ti:\"FIBO\" AND abs:\"caption\"",
+    "papers": []
+  },
+  {
+    "query": "ti:\"structured caption\" AND abs:\"length\"",
+    "papers": [
+      {
+        "title": "Generating an Image From 1,000 Words: Enhancing Text-to-Image With Structured Captions",
+        "id": null,
+        "year": "2025",
+        "abstract": "Text-to-image models have rapidly evolved from casual creative tools to professional-grade systems, achieving unprecedented levels of image quality and realism. Yet, most models are trained to map short prompts into detailed images, creating a gap between sparse textual input and rich visual outputs"
+      }
+    ]
+  },
+  {
+    "query": "ti:\"token budget\" AND abs:\"diffusion\"",
+    "papers": []
+  },
+  {
+    "query": "abs:\"structured prompt\" AND abs:\"length\" AND abs:\"text-to-image\"",
+    "papers": [
+      {
+        "title": "Prompting for products: Investigating design space exploration strategies for text-to-image generative models",
+        "id": null,
+        "year": "2024",
+        "abstract": "Text-to-image models are enabling efficient design space exploration, rapidly generating images from text prompts. However, many generative AI tools are imperfect for product design applications as they are not built for the goals and requirements of product design. The unclear link between text inp"
+      }
+    ]
+  },
+  {
+    "query": "abs:\"JSON\" AND abs:\"caption length\" AND abs:\"diffusion\"",
+    "papers": []
+  },
+  {
+    "query": "abs:\"prompt depth\" AND abs:\"text-to-image\"",
+    "papers": []
+  },
+  {
+    "query": "abs:\"SP length\" AND abs:\"text-to-image\"",
+    "papers": []
+  },
+  {
+    "query": "abs:\"information density\" AND abs:\"caption\" AND abs:\"diffusion\"",
+    "papers": []
+  }
+]
