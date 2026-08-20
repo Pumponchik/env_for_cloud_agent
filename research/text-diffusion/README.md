@@ -5,8 +5,9 @@
 | Path | Contents |
 |------|----------|
 | `outline.yaml` / `fields.yaml` | План объектов и поля deep-research |
-| `results/` | Структурированные JSON по объектам (deep phase) |
-| `corpus/` | Компактный каталог ключевых работ |
+| `corpus/key_papers.json` | Компактный каталог ключевых arXiv |
+| `results/` | 18 JSON по объектам (`validate_json` 100%) |
+| `generate_report.py` / `report.md` | Сборка сводного отчёта из JSON |
 | `raw_searches/` | Сырые поисковые дампы |
 
 Читаемые отчёты в корне репозитория:
