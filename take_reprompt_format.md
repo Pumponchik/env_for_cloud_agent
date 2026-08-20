@@ -1,6 +1,6 @@
 # Формат re-prompt: что пробовали, что работает, что придумать
 
-Вопрос не «учить ли репромптер» ([`take_should_we_train_reprompter.md`](./take_should_we_train_reprompter.md)) и не «какие поля писать» ([`take_what_to_put_in_prompt.md`](./take_what_to_put_in_prompt.md)). Здесь только **как записать** уже выбранные факты: проза, шаблон, JSON, граф, регионы, латенты.
+Вопрос не «учить ли репромптер» ([`take_should_we_train_reprompter.md`](./take_should_we_train_reprompter.md)) и не «какие поля писать» ([`take_what_to_put_in_prompt.md`](./take_what_to_put_in_prompt.md)). Здесь только **как записать** уже выбранные факты: проза, шаблон, JSON, граф, регионы, латенты. Полный каталог осей артефакта: [`take_reprompt_output_dofs.md`](./take_reprompt_output_dofs.md).
 
 Артефакты поиска: [`research/reprompt-format/`](./research/reprompt-format/).
 

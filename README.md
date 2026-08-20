@@ -23,6 +23,7 @@
 | **0d‴** | [`take_specify_a_vs_b.md`](./take_specify_a_vs_b.md) | **Указывать A лучше B?** поиск + как мерить (packing) |
 | **0d⁴** | [`take_sp_length.md`](./take_sp_length.md) | **Длина SP:** что известно про NL, применимо ли к SP, открытые дыры |
 | **0d⁵** | [`take_reprompt_format.md`](./take_reprompt_format.md) | **Формат re-prompt:** проза / шаблон / JSON / регионы / что придумать |
+| **0d⁵′** | [`take_reprompt_output_dofs.md`](./take_reprompt_output_dofs.md) | **Степени свободы выхода re-prompt:** что варьировать в артефакте (SOTA vs open) |
 | **0d⁶** | [`take_prompt_compression.md`](./take_prompt_compression.md) | **Сжатие канала:** LLM→LLM (текст / gist / KV / packing) |
 | **0e** | [`literature_notes_user_survey.md`](./literature_notes_user_survey.md) | **Ваш обзор статей** (длина/captions, re-prompt, что не про то) + стыковка с идеями |
 | **0f** | [`mechanism_stack_structured_reprompt.md`](./mechanism_stack_structured_reprompt.md) | **Почему структурный re-prompt работает:** стек L0–L7, иерархические shuffle-контроли, лестница S1–S6 |
