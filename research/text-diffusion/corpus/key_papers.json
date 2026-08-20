@@ -1,0 +1,138 @@
+{
+  "topic": "text-diffusion",
+  "as_of": "2026-08-20",
+  "papers": [
+    {
+      "name": "D3PM",
+      "arxiv": "2107.03006",
+      "year": 2021,
+      "role": "discrete diffusion foundations"
+    },
+    {
+      "name": "Diffusion-LM",
+      "arxiv": "2205.14217",
+      "year": 2022,
+      "role": "continuous embedding controllable LM"
+    },
+    {
+      "name": "SEDD",
+      "arxiv": "2310.16834",
+      "year": 2023,
+      "role": "score entropy discrete diffusion"
+    },
+    {
+      "name": "MDLM",
+      "arxiv": "2406.07524",
+      "year": 2024,
+      "role": "simple masked diffusion LMs"
+    },
+    {
+      "name": "MD4",
+      "arxiv": "2406.04329",
+      "year": 2024,
+      "role": "simplified masked diffusion ELBO"
+    },
+    {
+      "name": "Scaling MDM",
+      "arxiv": "2410.18514",
+      "year": 2024,
+      "role": "scale masked diffusion on text"
+    },
+    {
+      "name": "DiffuLLaMA",
+      "arxiv": "2410.17891",
+      "year": 2025,
+      "role": "AR adaptation to diffusion"
+    },
+    {
+      "name": "LLaDA",
+      "arxiv": "2502.09992",
+      "year": 2025,
+      "role": "8B from-scratch diffusion LLM"
+    },
+    {
+      "name": "BD3-LM",
+      "arxiv": "2503.09573",
+      "year": 2025,
+      "role": "block diffusion hybrid"
+    },
+    {
+      "name": "LLaDA-V",
+      "arxiv": "2505.16933",
+      "year": 2025,
+      "role": "diffusion VLM"
+    },
+    {
+      "name": "Fast-dLLM",
+      "arxiv": "2505.22618",
+      "year": 2025,
+      "role": "confidence parallel unmasking"
+    },
+    {
+      "name": "Discrete Diffusion Survey",
+      "arxiv": "2506.13759",
+      "year": 2025,
+      "role": "dLLM/dMLLM survey"
+    },
+    {
+      "name": "Mercury",
+      "arxiv": "2506.17298",
+      "year": 2025,
+      "role": "industrial diffusion LLM"
+    },
+    {
+      "name": "CFG masked theory",
+      "arxiv": "2507.08965",
+      "year": 2025,
+      "role": "CFG schedule theory"
+    },
+    {
+      "name": "DLM Survey",
+      "arxiv": "2508.10875",
+      "year": 2025,
+      "role": "diffusion LM survey"
+    },
+    {
+      "name": "Dream 7B",
+      "arxiv": "2508.15487",
+      "year": 2025,
+      "role": "AR-adapted diffusion LLM"
+    },
+    {
+      "name": "STaRR remasking",
+      "arxiv": "2601.04205",
+      "year": 2026,
+      "role": "responsive remasking"
+    },
+    {
+      "name": "dLLM framework",
+      "arxiv": "2602.22661",
+      "year": 2026,
+      "role": "unified train/infer tooling"
+    },
+    {
+      "name": "Few-step traj distill",
+      "arxiv": "2602.12262",
+      "year": 2026,
+      "role": "few-step self-distillation"
+    },
+    {
+      "name": "Learned unmasking",
+      "arxiv": "2512.09106",
+      "year": 2025,
+      "role": "unmasking policies"
+    },
+    {
+      "name": "Remask re-eval",
+      "arxiv": "2606.12232",
+      "year": 2026,
+      "role": "confidence remasking critique"
+    },
+    {
+      "name": "CFG commitment",
+      "arxiv": "2608.08082",
+      "year": 2026,
+      "role": "when CFG becomes unnecessary"
+    }
+  ]
+}
