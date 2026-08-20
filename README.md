@@ -50,6 +50,7 @@
 - [`take_specify_a_vs_b.md`](./take_specify_a_vs_b.md) — можно ли сказать «указывать это лучше, чем то»: поиск по деревьям + протокол измерения
 - [`take_sp_length.md`](./take_sp_length.md) — длина структурного промпта: что известно про NL, почему нельзя переносить напрямую, открытые дыры
 - [`take_reprompt_format.md`](./take_reprompt_format.md) — формат записи re-prompt: какие оболочки пробовали, что работает, что изобрести
+- [`take_reprompt_output_dofs.md`](./take_reprompt_output_dofs.md) — степени свободы на выходе репромптера: settled vs open
 - [`take_prompt_compression.md`](./take_prompt_compression.md) — сжатие промпта как codec между двумя LLM
 - [`literature_notes_user_survey.md`](./literature_notes_user_survey.md) — рабочий обзор статей (ваш проход)
 - [`mechanism_stack_structured_reprompt.md`](./mechanism_stack_structured_reprompt.md) — стек механизмов структурного re-prompt (L0–L7) + контроли и лестница экспериментов
