@@ -1,153 +1,346 @@
-# Степени свободы на выходе репромптера
+# Степени свободы на выходе репромптера: что варьировать и что уже ясно
 
 Связано с [`take_reprompt_format.md`](./take_reprompt_format.md), [`take_sp_length.md`](./take_sp_length.md), [`take_prompt_compression.md`](./take_prompt_compression.md).
 
-**Фиксируем пайплайн:** user → re-prompter → **артефакт** → text encoder → diffuser.  
-Здесь только то, что можно варьировать в **артефакте** (сериализация / протокол / организация записи). Не: как учить re-prompter, какие факты выбирать, soft-tokens / KV (отдельные оси).
+## Зачем этот список
 
-**Правило эксперимента:** сначала канонический proposition graph (одни факты), потом детерминированные сериализации. Без этого измеряете coverage, а не формат.
+Рассматривается только интерфейс между репромптером и генератором:
 
----
+> пользовательский запрос → LLM-репромптер → **выходной артефакт** → text encoder → diffusion/DiT.
 
-## Что уже ясно (локальный SOTA)
+Выходной артефакт может быть обычным предложением, JSON-строкой, набором кортежей, списком объектов с ID, пакетом из positive/negative prompt или региональных описаний. Нас интересует не то, какие новые детали придумал репромптер, а то, **как один и тот же набор фактов записан и передан генератору**. Soft tokens, KV-cache и непосредственно оптимизируемые embeddings находятся вне этого обсуждения: это уже не дискретный текстовый артефакт.
 
-| Степень свободы | Вердикт | Где |
-|-----------------|---------|-----|
-| **Диалект = train** | Пиши так, как ел генератор. Plain на Ideogram не работает; Cosmos/FIBO/Seed schema-native | Ideogram 4 docs; Cosmos 3; FIBO; Seed |
-| **Организация > shuffle** при matched facts | Фиксированный порядок блоков сильнее случайного | Structured Captions `2507.05300` |
-| **Порядок ключей** на schema-native | Load-bearing, если на нём учили | Ideogram (CaptionVerifier); Seed канон |
-| **Thinking не в encoder** | CoT — для rewriter; в diffuser только payload | Seed снимает thinking; PromptEnhancer выход = NL |
-| **Verbose NL без новых фактов** | Saturation; length ≠ information | Seed Figure 3 / GPG–ED |
-| **Схема как чеклист recall** | Structure поднимает покрытие полей, не «магия `{`» | Cosmos: free-form точный, но дырявый |
-| **Адресуемые слоты** | Поле/ключ → edit locality | FIBO TaBR; Seed field edits |
-| **Geometry / regions** | Работают, когда есть controller или train на числах | LMD, LayoutGPT, RPG, BBQ, Ideogram bbox |
-| **JSON ≠ доказанный лучший синтаксис** | Нет info-matched bakeoff JSON vs YAML vs tuple vs markdown | Общий gap |
+Под «качеством» полезно разделять как минимум четыре результата:
 
----
+1. Семантическую точность: присутствуют ли нужные объекты, атрибуты и отношения.
+2. Пространственную и параметрическую точность: расположение, размеры, текст, цвета.
+3. Визуальное качество: реализм, связность, отсутствие артефактов.
+4. Управляемость: меняется ли только отредактированное поле и насколько повторяем результат.
 
-## Финальный список степеней свободы
+Главный методологический принцип для всех опытов ниже: сначала задать каноническое представление сцены — список атомарных фактов, объектов, отношений и, где нужно, геометрии, — а затем детерминированно сериализовать его разными способами. Иначе «формат» неизбежно смешивается с полнотой содержания.
 
-Для каждой: **ось**, **статус** (`settled` / `open` / `boundary`), **что делать**.
+Корректный общий вывод из литературы на август 2026 года звучит так:
 
-### 1. Carrier (оболочка сериализации) — **open ★★★★★**
-
-**Ось:** prose | fixed blocks | JSON | YAML | XML | markdown | tuples/listese | CSV | CSS-layout | S-expr | edge-list.
-
-**Статус:** open. Structured wins как *организация*, не как *синтаксис*. Seed/FIBO/Ideogram не изолировали `{` от content.
-
-**Что делать:** E1 info-matched carrier bakeoff на frozen encoder + E2 train-matched. Гипотеза: YAML/tuple дешевле JSON по токенам при том же AST.
-
-### 2. Raw string vs parsed channels — **open ★★★★★**
-
-**Ось:** encoder видит только текст | парсер поднимает entities/relations/regions в typed conditioning.
-
-**Статус:** open и фундаментально. Без этого «structured prompting» неоднозначен.
-
-**Что делать:** один и тот же артефакт: (a) raw string, (b) parse → sidecar channels. Если (a)≈(b) — структура = паттерн токенов; если (b)>> — нужен compiler, не «красивый JSON».
-
-### 3. Schema topology — **частично settled**
-
-| Подось | Статус | Комментарий |
-|--------|--------|-------------|
-| Nested vs flat | open | Seed/FIBO nested работают; depth не сравнили |
-| Entity-centric vs property-centric | **open ★★★★** | Локальность атрибутов ↔ binding |
-| Separate relation layer | directionally yes | Seed relations; tuple paper append |
-| Explicit entity IDs | directionally yes | Seed/Ideogram; не изолировано |
-| Map vs array of entities | open | порядок vs identity |
-| Dedicated text/obj types | locally settled | Ideogram `obj`/`text` |
-| Summary + detail | locally common | Ideogram `high_level_description`; CLIP early bias |
-
-### 4. Sparse vs dense instance + absence — **open ★★★★**
-
-**Ось:** emit all keys (FIBO-style) | filled-only | omit vs `null` vs `""` vs `unknown`.
-
-**Статус:** open, high leverage. Пустые поля жрут бюджет и могут случайно кондиционировать.
-
-**Что делать:** matched facts, варьировать только empty overhead + truncation survival.
-
-### 5. Ordering / position — **частично settled**
-
-| Подось | Статус |
-|--------|--------|
-| Fixed vs shuffle top-level | **settled** (Structured Captions; Ideogram) |
-| Optimal fixed order (subject-first vs style-first…) | **open** — сравнили fixed vs random, не все перестановки |
-| Summary first / last / both | **open** — CLIP early bias намекает на first |
-| Entity order (salience, L→R, depth) | open |
-| Truncation-aware order (core-first) | **open ★★★** practically |
-
-### 6. Binding / reference protocol — **open ★★★★**
-
-**Ось:** pronouns | repeated nouns | IDs | JSON pointers; attribute as adj vs slot; ownership as nest vs edge.
-
-**Статус:** проблема известна (CompBench), лучший *формат* решения — нет. Anaphora почти наверняка вредна; ID+slots — гипотеза №1.
-
-**Что делать:** crossed-color / ownership / part-whole scenes (E4), fixed seed, edit one slot.
-
-### 7. Relation encoding — **open ★★★**
-
-**Ось:** prose clause | binary tuple | entity-local link | separate edge list | n-ary event | both directions.
-
-**Статус:** tuple append помогает SDXL (`2509.15962`), но дублирует info; нет bakeoff представлений.
-
-### 8. Geometry dialect — **локально settled, универсально open**
-
-**Ось:** qualitative prep | bbox (`xywh` / corners / CSS) | scale 0–1 / 0–1000 | grid | depth | occlusion graph.
-
-**Статус:** Ideogram 0–1000 + key order — локальный контракт; BBQ numeric после train; LMD/LayoutGPT — controller. Универсальный диалект — нет.
-
-### 9. Linguistic freedoms inside values — **open ★★★**
-
-**Ось:** synonymy | articles | tense | voice | imperative vs declarative | controlled vocab | color names vs hex/RGB.
-
-**Статус:** канон (enum/hex) снижает энтропию; frozen encoder может не знать канон. Ideogram/BBQ: hex/RGB локально.
-
-**Граница:** убрать вольности = format; *какие* факты писать = content.
-
-### 10. Density / compression / budget — **частично settled**
-
-| Подось | Статус |
-|--------|--------|
-| Verbosity without new facts | **settled harmful** (Seed) |
-| Token budget / packing | open ([`take_sp_length`](./take_sp_length.md)) |
-| Key overhead (header+rows vs repeat keys) | **open ★★★** |
-| BabelTele-like opaque compact | **open ★★** — LLM ok, T2I encoder неизвестно |
-| Stopword pruning / telegraphic | open |
-
-### 11. Multi-channel protocol — **частично settled**
-
-| Подось | Статус |
-|--------|--------|
-| Positive / negative split | channel exists; best use model-specific |
-| Global + regional subprompts | RPG/LMD — с controller |
-| Attention weights `(word:1.2)` | только если front-end парсит |
-| **Encoder-specific payloads** (CLIP short + T5 long) | **open ★★★★** на SD3/Flux-стеках |
-| Thinking / chat residue in payload | almost certainly bad; rarely quantified |
-
-### 12. Reliability hygiene — **engineering settled, science thin**
-
-Validation strictness, unknown-key policy, duplicate keys, escape of literal text-in-image, no greetings around payload. Ideogram CaptionVerifier = практический SOTA гигиены; научных абляций мало.
-
-### 13. Content (не формат — держать отдельно)
-
-Число фактов, field coverage L5–L10, hallucination policy, aesthetic filler, world-knowledge expand. Seed GPG/ED — про это. **Не мешать с carrier bakeoff.**
+> Каноническое, информационно полное представление, совпадающее с форматом, на котором обучался генератор, обычно полезно. Но нет чистого доказательства, что JSON как поверхностный синтаксис универсально лучше естественного языка при одинаковых фактах, порядке, длине и способе доставки.
 
 ---
 
-## Shortlist: куда бить исследованием
+## Основные степени свободы
 
-1. **Info-matched carrier bakeoff** (JSON / YAML / markdown / tuple / blocks / prose)  
-2. **Raw string vs parsed channels**  
-3. **Entity-local IDs + binding layout**  
-4. **Sparse filled-only + absence encoding**  
-5. **Ordering under position bias + truncation**  
-6. **Relation representation bakeoff**  
-7. **Multi-encoder payload split**  
-8. **Compact/model-native serialization** (осторожно: encoder ≠ LLM)
+### 1. Носитель и поверхностный синтаксис: prose, JSON, YAML, tuples, Markdown
 
-Последовательность: frozen E1 → train-matched E2 → cross-dialect matrix → binding/edit-locality → budget curves.
+Эта степень свободы определяет, какими символами оформлен один и тот же смысл. Например, сцену можно записать предложением, плоским списком тегов, JSON-объектом, YAML-блоком или кортежами вида `(object_1, left_of, object_2)`. Даже если человек считает записи эквивалентными, tokenizer создаёт разные последовательности, а encoder видит разные позиции, пунктуацию и ключи.
+
+**Что говорит литература.** Современные сильные системы действительно сходятся к структурированным строкам. [Seed, arXiv:2607.29679](https://arxiv.org/abs/2607.29679) использует typed JSON с глобальными, объектными, геометрическими и реляционными полями. [FIBO](https://arxiv.org/abs/2511.06876) обучен на длинных JSON-caption примерно по тысяче слов. [Cosmos 3](https://arxiv.org/abs/2606.02800) применяет schema-constrained JSON для изображения и видео. [Ideogram 4](https://github.com/ideogram-oss/ideogram4/blob/main/docs/prompting.md) также обучен на JSON-caption и требует конкретную схему для наиболее точного управления.
+
+Это сильное свидетельство в пользу **train–inference match**: если генератор видел канонический JSON на обучении, тот же JSON на инференсе является разумным выбором. Но это не доказывает внутреннее превосходство фигурных скобок. Seed прямо отмечает, что его сравнение смешивает организацию и более богатое содержание, а не изолирует JSON-синтаксис. FIBO сравнивает длинные структурированные caption с короткими caption; вместе меняются формат, длина и количество фактов. Cosmos показывает рост полноты аннотаций, но богатая схема заставляет captioner перечислять больше сведений. В Ideogram строгий JSON — часть собственного обучающего контракта модели, поэтому результат не переносится автоматически на FLUX, SDXL или другой encoder.
+
+Наиболее чистая смежная работа — [Structured Captions, arXiv:2507.05300](https://arxiv.org/abs/2507.05300). Там одни и те же четыре предложения — subject, setting, aesthetics, camera — либо имеют постоянный порядок, либо случайно перемешиваются. Канонический вариант лучше, но это эксперимент о стабильной структуре и порядке, а не о JSON против prose.
+
+**Что остаётся неясным.** Не установлено, выигрывает ли JSON при абсолютно одинаковых фактах, одинаковом порядке смысловых блоков и сопоставимой длине. Возможно, пользу дают названия полей; возможно, регулярный порядок; возможно, более полное заполнение; возможно, просто совпадение с обучающим распределением.
+
+**Предлагаемый эксперимент.** Взять 300 канонических описаний сцен и создать пять lossless-сериализаций: связный prose, нумерованный Markdown, JSON, YAML и compact tuples. Сохранить одинаковые атомарные факты и порядок блоков. Измерять фактическое число токенов каждого encoder, а не символы. Для каждого генератора использовать не менее восьми seeds и отдельно оценивать semantic accuracy, binding, OCR, spatial accuracy и человеческое предпочтение. Результат нужно сообщать по моделям: реакция frozen-модели на незнакомый формат измеряет совместимость, а не универсальное качество синтаксиса.
 
 ---
 
-## Тейк
+### 2. Структура как текст против структуры, реально разобранной на каналы
 
-Степеней свободы на выходе репромптера много больше, чем «JSON или проза». Уже ясно: **совпади с train**, **не shuffle**, **не корми thinking**, **не лей воду**, **слоты помогают правке**. Не ясно и важнее всего: **какой carrier при тех же фактах**, **нужен ли парсер или хватит токенов**, **как кодировать binding/relations/absence**, **как резать бюджет**. Это и есть программа по формату артефакта — отдельно от обучения rewriter и от выбора фактов.
+JSON может быть просто строкой, которую tokenizer читает вместе со скобками и ключами. Но тот же JSON может быть разобран parser-ом: `bbox` превратится в координаты, `negative` — в отдельную CFG-ветвь, а объектные описания — в региональные conditioning channels. Это две принципиально разные системы, хотя артефакты выглядят одинаково.
+
+В Seed, FIBO и Cosmos структурированная запись в основном служит текстовым условием, на котором модель специально обучена. В open-source pipeline Ideogram JSON сначала проверяется, а затем сериализованная строка передаётся Qwen3-VL text encoder. Названия полей и числа поэтому входят в текстовый сигнал, хотя генератор обучен интерпретировать их как структурированную грамматику.
+
+Другой класс работ использует артефакт как исполняемый план. [LayoutGPT](https://arxiv.org/abs/2305.15393) заставляет LLM выводить CSS-подобные координаты, которые затем разбираются системой layout generation. [LMD](https://arxiv.org/abs/2305.13655) выдаёт captioned bounding boxes, background prompt и optional negative prompt; отдельный controller использует boxes при генерации. [RPG](https://arxiv.org/abs/2401.11708) назначает разные subprompts регионам и запускает regional diffusion. Здесь результат нельзя приписывать тому, что CSS или список boxes оказался «понятнее text encoder»: downstream-компонент реально превращает поля в другие сигналы.
+
+Промежуточный важный пример — [BBQ-to-Image](https://arxiv.org/abs/2602.20672). Модель обучается понимать числовые bounding boxes и RGB внутри structured text без отдельного grounding-модуля. Это показывает, что текстовый интерфейс способен выучить параметрический язык. Но он всё равно должен быть частью обучающего распределения.
+
+**Критический вопрос.** Многие заявления о пользе «structured prompts» сравнивают обычный prompt с целой системой, где structured artifact дополнительно активирует layout controller, regional attention или отдельную guidance-ветвь. Это доказательство пользы канала, но не поверхностного формата.
+
+**Предлагаемый эксперимент.** Использовать одну каноническую scene specification и сравнить:
+
+1. Полностью flattened string.
+2. Tagged string с теми же фактами.
+3. Ту же строку плюс parser, но без специальной маршрутизации.
+4. Parser с реальной маршрутизацией boxes или региональных строк.
+
+Если вариант 2 лучше варианта 1, это эффект текстовой организации. Если основной скачок появляется только между вариантами 3 и 4, причина — архитектурная семантика каналов. При строгом pipeline с единственным text encoder варианты 3–4 вообще недоступны; тогда любые поля остаются только токенами.
+
+---
+
+### 3. Топология схемы: как объекты, атрибуты и связи организованы логически
+
+После выбора JSON остаётся множество несовпадающих схем. Можно хранить атрибуты рядом с объектом, группировать все цвета в одном блоке, использовать уникальные IDs и отдельный relation layer или вкладывать отношения внутрь каждого объекта. Можно иметь один `global_style`, а можно повторять style на каждом элементе.
+
+Системы используют разные решения. Seed имеет три уровня: global scene, per-element entries и cross-element relationships по ID. Ideogram хранит массив элементов типов `obj` и `text`, у каждого возможны собственные `bbox` и palette. FIBO использует объектные записи с `location`, `shape_and_color` и текстовым полем `relationship`. Cosmos разделяет subjects, background, lighting, aesthetics, cinematography и временные поля. Все эти схемы работоспособны, но они не сравнивались при одинаковой информации.
+
+Entity-centric топология теоретически упрощает binding: цвет и одежда находятся в записи того объекта, которому принадлежат. Отдельный relation layer позволяет ссылаться на одни и те же объекты из нескольких отношений. Field-centric схема экономит повторение, но требует сопоставить параллельные списки. Глубокая вложенность делает область действия явной для человека, но добавляет токены и увеличивает расстояния между связанными значениями.
+
+**Что действительно известно.** Литература поддерживает идею явных объектов и отношений, но почти не изолирует конкретную топологию. Успех Seed не показывает, что его трёхуровневая схема лучше схемы Ideogram. Успех FIBO не доказывает, что `relationship` внутри объекта лучше отдельного массива triples.
+
+**Предлагаемый эксперимент.** Скомпилировать один scene graph в четыре топологии:
+
+- entity-centric: каждый объект содержит все свои атрибуты;
+- field-centric: отдельные списки объектов, цветов, позиций и действий;
+- graph-centric: объекты по ID плюс отдельные attribute/relation triples;
+- hybrid: краткое global summary, entity records и relation layer.
+
+Следует сохранять одни и те же IDs, факты и порядок появления объектов. Для оценки особенно нужны сцены с тремя-пятью похожими объектами, повторяющимися атрибутами и несколькими отношениями. Помимо итогового alignment нужно измерять ошибки типа swap, leakage и пропуск объекта. Пока такого сравнения нет, выбор топологии остаётся инженерной гипотезой, а не установленным SOTA.
+
+---
+
+### 4. Полная или разреженная схема и способ кодировать отсутствие
+
+Две внешне похожие схемы могут по-разному представлять неизвестное или неприменимое значение. Варианты включают отсутствие ключа, `null`, пустую строку, пустой массив, специальные значения `"unknown"` и `"not_applicable"` или всегда заполненное поле.
+
+FIBO близок к always-full контракту: верхнеуровневые поля обязательны, а многие объектные поля обязательны синтаксически, но допускают `null`. Ideogram использует более sparse-подход: `style_description`, `bbox` и palettes можно опустить. Оба решения логичны. Полная схема даёт каждому типу информации постоянную позицию и помогает валидации. Разреженная схема экономит токены и не заставляет encoder обрабатывать десятки пустых слотов.
+
+Однако обязательное поле имеет риск: токены `null`, `unknown` или пустой ключ могут приобрести нежелательное визуальное значение. Ещё хуже, если система заменяет отсутствие правдоподобной догадкой; но это уже вопрос содержания, а не формата. С точки зрения артефакта важно различить «пользователь не задал цвет», «цвет не применим» и «цвет должен быть неопределённым».
+
+**Что говорит литература.** Чистого сравнения omission против `null` против empty string для T2I нет. FIBO и Ideogram демонстрируют, что обе политики могут работать в нативно обученных моделях, но их результаты нельзя сравнивать между собой из-за различий во всём generator stack.
+
+**Предлагаемый эксперимент.** Для одного schema-native генератора взять сцены, где половина полей намеренно не специфицирована. Сериализовать отсутствие пятью способами: omit, `null`, `""`, `"unknown"` и explicit boolean `specified:false`. Измерять:
+
+- частоту самопроизвольного появления конкретного атрибута;
+- влияние пустых полей на остальные объекты;
+- число токенов;
+- устойчивость при добавлении одного значения;
+- процент invalid artifacts и parser warnings.
+
+Полезен и второй тест: сравнить always-full и sparse при одинаковом числе содержательных фактов, добавив к sparse нейтральный padding вне смысловых полей. Это отделит эффект пустых слотов от простой длины.
+
+---
+
+### 5. Порядок, позиция, summary placement и усечение
+
+Transformer не обязан быть инвариантным к перестановке смысловых блоков. Порядок влияет на absolute/rotary positions, расстояние между объектом и атрибутом, а при ограниченном context window — на то, какие факты вообще будут усечены.
+
+Здесь есть сравнительно чистое свидетельство. В [Structured Captions](https://arxiv.org/abs/2507.05300) модели обучались либо на постоянном порядке `subject → setting → aesthetic → camera`, либо на случайной перестановке тех же предложений. Для PixArt-Σ canonical captions дали VQA-LLaVA 0.8630 против 0.8563; для Stable Diffusion 2 — 0.8280 против 0.8120. Эффект не огромен, но устойчив и получен без изменения смысловых предложений. При этом эксперимент сравнивает стабильный и высокоэнтропийный порядок во время fine-tuning, а не две фиксированные альтернативы вроде `objects-first` против `summary-first`.
+
+Официальная документация Ideogram 4 прямо требует определённого key order: например, `background` до `elements`, а внутри объекта `type`, optional `bbox`, `desc`, optional palette. Это сильное практическое указание для конкретного checkpoint, но опубликованной полной абляции всех перестановок нет.
+
+Работа о [positional bias в multimodal embedding models](https://arxiv.org/abs/2511.11216) показывает преимущество ранних позиций у CLIP-подобных text encoders. Это важная подсказка, но основная задача там — retrieval, а не end-to-end generation. Кроме того, современные LLM/VLM encoders с длинным контекстом могут иметь другой профиль.
+
+**Открытые вопросы.** Нужен ли global summary в начале как semantic anchor или он дублирует сведения и конкурирует с объектами? Следует ли сначала перечислять главные объекты или геометрию? Полезно ли располагать relation layer сразу после объектов или в конце? Насколько строгий key order важен сам по себе, а насколько просто отражает training distribution?
+
+**Предлагаемый эксперимент.** Использовать Latin-square перестановки одних и тех же блоков: summary, global style, background, objects, relations, geometry. Отдельно варьировать summary first/last/absent, порядок объектов и расстояние между ID и его атрибутами. Затем искусственно ограничивать context до нескольких длин, чтобы получить кривые graceful degradation. Необходимо логировать фактические усечённые tokens: сравнение полных строк не объяснит результат, если encoder видел только их префикс.
+
+---
+
+### 6. Протокол binding и ссылок на объекты
+
+Binding отвечает на вопрос: как артефакт сообщает, что «красный» относится к чашке, а «синий» — к вазе. Возможны простая синтаксическая близость, отдельная object record, повтор имени, уникальный ID или тройка `(object_id, attribute, value)`.
+
+Проблема хорошо известна. T2I-модели путают атрибуты, переносят цвет на соседний объект и иногда меняют атрибуты местами. Работы вроде SynGen используют syntactic parse и корректируют attention maps, но это изменение inference-механизма и потому выходит за пределы чистого output artifact.
+
+Репромптеры дают косвенные свидетельства. [PromptEnhancer](https://arxiv.org/abs/2509.04545), [VisualPrompter](https://arxiv.org/abs/2506.23138) и [TARA](https://arxiv.org/abs/2607.18724) улучшают alignment, в том числе attribute binding. TARA особенно явно использует разные языковые repair operators для count, attribute, relation и rendered text. Но эти методы одновременно меняют формулировки, добавляют явность, повторяют факты и иногда используют feedback от уже сгенерированного изображения. Они не отвечают на узкий вопрос, лучше ли ID-ссылка синтаксической близости при одинаковом содержании.
+
+[Structured Information for Spatial Relationships, arXiv:2509.15962](https://arxiv.org/html/2509.15962) добавляет к исходному prompt объектные кортежи `(color, shape)` и relation triples `(subjectID, relation, objectID)`, улучшая результаты SDXL на простых сценах с двумя цветными фигурами. Но structured tuples дописываются после исходного prose, то есть факты повторяются и строка становится длиннее. Кроме того, оценка ограничена синтетическими двухобъектными сценами и VLM-judge.
+
+**Предлагаемый эксперимент.** Создать сцены с двумя-четырьмя объектами одного класса: две чашки, три собаки, несколько надписей. Переставлять цвета, материалы и действия. Сравнить:
+
+1. Только adjective–noun adjacency.
+2. Повтор полных noun phrases в каждой фразе.
+3. Object records без IDs.
+4. Object records с уникальными IDs.
+5. Отдельные attribute triples по ID.
+
+Все варианты должны содержать одинаковые факты по одному разу; дополнительное повторение следует тестировать отдельным фактором. Основные метрики — swap rate, attribute leakage, omission и точность сохранения при редактировании одного объекта.
+
+---
+
+### 7. Представление отношений и пространственной геометрии
+
+Отношение можно выразить словами — «A слева от B» — или формальной тройкой. Геометрию можно задать качественной зоной, grid cell, точкой, bbox, polygon или координатами `x,y,w,h`. Даже для bbox есть несовместимые диалекты: `xywh` против `ymin,xmin,ymax,xmax`, pixels против нормализованного диапазона и разные точки начала координат.
+
+Есть несколько сильных, но неодинаковых линий evidence:
+
+- Ideogram 4 использует `[y_min, x_min, y_max, x_max]` в диапазоне 0–1000.
+- BBQ обучен прямому управлению numeric bounding boxes и RGB внутри text conditioning без специального grounding-модуля.
+- Seed сравнивает full boxes с coarse grids 3×3, 5×5 и 9×9 в контролируемом training sweep.
+- Spatial tuple paper добавляет relation tuples к prose.
+- LayoutGPT, LMD и RPG передают layout в реально исполняемые региональные механизмы.
+
+Всё это показывает, что явная геометрия полезна, когда интерфейс умеет её читать. Но «bbox лучше слов» часто является нечестным сравнением: bbox содержит больше информации, чем отношение `left_of`. Аналогично региональный controller даёт дополнительный механизм, а не только другую сериализацию.
+
+**Что не ясно.** Не определён лучший текстовый geometry dialect. Не известно, легче ли encoder выучивает normalised integers, decimals, grid labels или словесные зоны. Нет достаточного сравнения отдельного relation layer с отношениями, вложенными в object records. Также почти не исследовано, как кодировать overlapping, containment, depth и несимметричные действия.
+
+**Предлагаемый эксперимент.** Разделить задачу на две части.
+
+Для отношений использовать одинаковые бинарные факты и сравнить prose, tuples, adjacency lists и relation objects по ID.
+
+Для геометрии взять канонические boxes и lossless перекодировать их как `xywh`, `xyxy`, integers 0–1000, decimals 0–1 и named grid cells подходящей точности. Qualitative relations следует оценивать отдельно, потому что они теряют информацию. Метрики должны включать detector-based IoU, правильность порядка объектов, small-box performance, overlap cases и human judgment. Нельзя смешивать relation accuracy с общей эстетической оценкой.
+
+---
+
+### 8. Лингвистическая свобода внутри значений полей
+
+JSON фиксирует ключи, но часто оставляет значения обычным языком. Один репромптер напишет `"scarlet"`, другой `"deep red"`, третий `"#C8102E"`. Камеру можно описать как `"telephoto"`, `"85 mm"` или `"compressed perspective"`. Для action возможны предложение, infinitive phrase или enum.
+
+В нативных системах уже видна специализация микродиалектов. Ideogram требует uppercase `#RRGGBB` для palettes и различает literal rendered `text` от его визуального `desc`. BBQ показывает, что RGB triplets можно сделать параметрическим языком модели. FIBO, напротив, оставляет многие значения свободным prose и приводит примеры categorial camera/style descriptors.
+
+Но строгих сравнений synonym freedom против controlled vocabulary почти нет. Нельзя считать, что enum автоматически лучше: знакомое естественное слово может иметь сильную визуальную ассоциацию в pretrained encoder, тогда как редкий код превращается в несколько плохо освоенных tokens. С другой стороны, свободные синонимы увеличивают языковую вариативность и могут ослаблять стабильность.
+
+BabelTele иногда приводят как аргумент в пользу нечеловеческого компактного языка. [BabelTele, arXiv:2606.19857](https://arxiv.org/abs/2606.19857) действительно показывает, что instruction-tuned LLM способен восстанавливать смысл из сокращённой, смешанной и символической записи. Но reader там — LLM, а не T2I text encoder плюс diffuser. Переносить этот результат на генерацию изображений без опыта нельзя.
+
+**Предлагаемый эксперимент.** Для каждого типа поля подготовить:
+
+- canonical natural-language value;
+- несколько проверенных синонимов;
+- controlled enum;
+- numeric value;
+- compact symbolic alias.
+
+Сохранять одинаковую визуальную цель и балансировать encoder token count. Для цвета измерять ΔE, для текста — OCR/CER, для камеры — классифицируемые framing и depth-of-field, для действий — contact/action accuracy. Отдельно проверить seen и unseen lexical variants. Ожидаемый результат, вероятно, будет model-specific: нативные enums выиграют в schema-trained моделях, а familiar prose — в моделях, обученных на caption text.
+
+---
+
+### 9. Плотность, token budget, сжатие и повторение одних фактов
+
+Длина сама по себе не равна информации. Репромптер может растянуть пять фактов на двести tokens, повторить их разными словами или сжать в короткий символический блок. Эта степень свободы особенно важна при длинных схемах и ограниченном context window.
+
+[Seed](https://arxiv.org/abs/2607.29679) даёт наиболее сильный современный результат: на нескольких open-weight моделях простое удлинение natural-language prompt не улучшало результаты и в их sweep часто ухудшало их относительно краткого варианта. В controlled training runs diffusion loss хорошо коррелировал с измеренной image-grounded informativeness, а не с числом tokens. Авторы, однако, честно ограничивают вывод: nested structured prompts добавляли новые поля и новую grounded information. Это не чистый эксперимент по сжатию одинаковых фактов.
+
+FIBO показывает, что тысячословные caption могут работать очень хорошо, если generator и LLM encoder специально рассчитаны на них. В его 1B ablation long structured captions дали FID 19.01 против 34.04 для short captions. Но длинный вариант содержал значительно больше визуальной информации, а система использовала DimFusion. Из результата нельзя вывести правило «чем длиннее, тем лучше» для обычного CLIP или frozen T5 pipeline.
+
+BabelTele подтверждает возможность сильного text compression для LLM-to-LLM communication: в работе заявлено сохранение 99.5% семантики при 27.9% исходного объёма. Но это только гипотеза для T2I artifact.
+
+**Предлагаемый эксперимент.** Зафиксировать набор атомарных фактов и создать четыре длины: минимальную, компактную, подробную и повторяющую. Проверять эквивалентность двусторонним entailment-тестом и ручным аудитом. В repeated-варианте не добавлять новых визуальных утверждений. Сравнивать по actual encoder tokens и по числу фактов на token. Дополнительно перемещать один и тот же факт по позициям, чтобы не перепутать density с positional bias.
+
+Вероятна не монотонная зависимость, а оптимальный диапазон: слишком коротко — неоднозначно, слишком длинно — конкуренция и truncation. Значение этого диапазона почти наверняка зависит от encoder и training captions.
+
+---
+
+### 10. Многоканальная доставка: positive, negative, regions и разные encoder strings
+
+Выходом репромптера может быть не одна строка, а пакет:
+
+```text
+positive_prompt
+negative_prompt
+global_prompt
+region_1_prompt
+region_2_prompt
+encoder_A_prompt
+encoder_B_prompt
+```
+
+Здесь степень свободы — не только формулировка, но и то, **в какой conditioning channel помещён факт**.
+
+Negative prompt является реальным отдельным каналом в classifier-free guidance. Работа [Understanding the Impact of Negative Prompts](https://arxiv.org/abs/2406.02965) показывает, что отрицательные concepts действуют с задержкой: negative branch не может локализовать удаляемый объект, пока positive branch не сформировал соответствующую область. Слишком раннее действие отрицательного сигнала способно менять фон и композицию. Значит, фраза `"without glasses"` в positive prompt и `"glasses"` в negative prompt не являются эквивалентными сериализациями.
+
+LMD разделяет foreground boxes, background и negative prompt. RPG назначает subprompts отдельным регионам. Эти системы заметно улучшают композиционность, но одновременно используют специальные controllers. Поэтому они подтверждают силу routing, а не преимущество разделителей или JSON-ключей.
+
+Для dual-encoder систем почти нет чистых исследований того, полезно ли отправлять краткое семантическое описание одному encoder, а style/detail — другому. Обычно интерфейс просто дублирует один prompt или использует сложившиеся pipeline defaults.
+
+**Предлагаемый эксперимент.** Сохранить объединение всех фактов постоянным и сравнить:
+
+1. Всё в positive prompt.
+2. Запрет как positive-фраза `without X`.
+3. Тот же запрет в отдельном negative channel.
+4. Все объекты в global prompt.
+5. Object facts в region-specific prompts.
+6. Одинаковая строка в обоих encoders.
+7. Semantic/style split между encoders.
+
+Для negative channel дополнительно варьировать schedule, иначе измеряется смесь artifact routing и sampler timing. Для regional channels использовать те же masks во всех условиях. Результаты следует формулировать как свойства конкретного интерфейса, а не как универсальное преимущество «структурированного prompt».
+
+---
+
+### 11. Гигиена протокола: валидность, canonicalization и отсутствие служебного мусора
+
+Даже хорошая схема бесполезна, если репромптер иногда выдаёт code fences, пояснение `"Here is your JSON"`, trailing commas, неизвестные ключи, неправильные типы или chain-of-thought перед объектом. Эти ошибки влияют не только на удобство интеграции. Если parser пропускает мусор дальше, он становится частью text conditioning и занимает ранние позиции или token budget.
+
+Ideogram 4 — наиболее ясный production-пример. Его `CaptionVerifier` проверяет JSON, обязательные поля, порядок ключей, тип элемента, диапазон bbox, uppercase hex palettes и encoding non-ASCII. Документация рекомендует компактную сериализацию через `separators=(",", ":")` и `ensure_ascii=False`. Это показывает, что canonicalization считается частью модельного контракта, а не косметикой.
+
+При этом жёсткая нормализация имеет собственный риск. Generic JSON serializer может переставить ключи, хотя модель обучалась на фиксированном порядке. Repair-процедура может удалить неизвестное поле, которое на самом деле содержало важный факт. Поэтому validation должна различать syntax repair и semantic repair.
+
+**Что не изучено чисто.** Нет хороших опубликованных кривых качества для code fences, комментариев, chat residue, скрытого CoT и частично malformed JSON. Многие pipelines просто отклоняют такой input, поэтому эффект проявляется как request failure, а не как более плохая картинка.
+
+**Предлагаемый эксперимент.** Создать corruption suite поверх валидных artifacts:
+
+- code fences;
+- вводное предложение;
+- заключительный комментарий;
+- переставленные ключи;
+- неизвестный ключ;
+- `null` неправильного типа;
+- lowercase hex;
+- escaped Unicode;
+- обрезанный JSON;
+- краткий или длинный reasoning residue.
+
+Для каждого варианта измерить parser acceptance, warnings, фактическую строку после normalization и качество изображения. Production-контракт должен требовать: parse → schema validation → semantic invariant checks → canonical serialization → token-budget check. CoT и служебный диалог не должны попадать в artifact, если их полезность для конкретного encoder отдельно не доказана.
+
+---
+
+## Список к обсуждению
+
+1. **Носитель и синтаксис**
+   - **Claim A:** JSON не является универсально лучшим языком для T2I; доказана прежде всего польза совпадения с нативным форматом генератора.
+   - **Claim B:** Большинство работ смешивают синтаксис, полноту фактов и стабильность структуры.
+   - **Open question:** Сохраняется ли преимущество JSON над prose после выравнивания фактов, порядка и token budget?
+
+2. **Текстовая или исполняемая структура**
+   - **Claim A:** Структурная строка и parsed control program являются разными intervention.
+   - **Claim B:** Результаты LMD/RPG нельзя использовать как доказательство того, что text encoder предпочитает JSON или CSS.
+   - **Open question:** Какую долю выигрыша даёт сама запись, а какую — маршрутизация по каналам?
+
+3. **Топология схемы**
+   - **Claim A:** Entity-centric records должны снижать ошибки binding по сравнению с параллельными field lists.
+   - **Claim B:** Отдельный relation layer должен лучше масштабироваться на сцены с несколькими связями.
+   - **Open question:** Нужен ли global summary, если все факты уже представлены в object records?
+
+4. **Разреженность и отсутствие**
+   - **Claim A:** Omission экономит tokens, но лишает поля постоянной позиции.
+   - **Claim B:** `null`, empty string и `"unknown"` не следует считать нейтрально эквивалентными.
+   - **Open question:** Какая политика минимизирует ложную конкретизацию при незаданных атрибутах?
+
+5. **Порядок и позиция**
+   - **Claim A:** Постоянный порядок полезнее случайного; это подтверждено Structured Captions и production-контрактом Ideogram.
+   - **Claim B:** Критичные объекты и ограничения следует защищать от поздней позиции и truncation.
+   - **Open question:** Что лучше для современных long-context encoders — summary-first или objects-first?
+
+6. **Binding и ссылки**
+   - **Claim A:** Уникальные object IDs и локальные attribute records должны уменьшать swaps и leakage.
+   - **Claim B:** Повторение имени объекта может помочь, но его эффект нельзя смешивать с эффектом ID-ссылки.
+   - **Open question:** Понимает ли frozen generator формальные IDs без нативного обучения на них?
+
+7. **Отношения и геометрия**
+   - **Claim A:** Явная геометрия полезна, если generator или parser обучен её интерпретировать.
+   - **Claim B:** Bbox и словесное `left_of` несут разное количество информации и не являются честными парными условиями.
+   - **Open question:** Какой numeric dialect лучше кодируется конкретным text encoder?
+
+8. **Язык значений**
+   - **Claim A:** Controlled enums полезны только тогда, когда они входят в освоенный генератором словарь.
+   - **Claim B:** Familiar natural language может превосходить компактные codes у ненативных моделей.
+   - **Open question:** Можно ли получить переносимый model-centric visual language, аналогичный BabelTele?
+
+9. **Плотность и token budget**
+   - **Claim A:** Полезная grounded information важнее длины.
+   - **Claim B:** Длинный prompt может быть сильным в long-caption-native системе и вредным в short-caption-native системе.
+   - **Open question:** Где находится оптимальная плотность для каждого encoder и класса сцен?
+
+10. **Многоканальная доставка**
+    - **Claim A:** Перемещение факта между positive, negative и region channels является причинным изменением conditioning, а не косметической сериализацией.
+    - **Claim B:** Выигрыш regional prompting нельзя приписывать только тексту, если regions реально управляют attention.
+    - **Open question:** Как оптимально разделять semantic и style facts между несколькими encoders?
+
+11. **Гигиена протокола**
+    - **Claim A:** Validation и canonical serialization должны считаться частью output artifact.
+    - **Claim B:** Code fences, chat residue и CoT по умолчанию являются ошибками контракта, а не полезным контекстом.
+    - **Open question:** Какие «безобидные» нарушения формата реально ухудшают изображение, а какие только вызывают parser warning?
+
+---
+
+## Что делать первым
+
+1. **Зафиксировать каноническое промежуточное представление.** Подготовить 300–500 сцен как атомарные объекты, атрибуты, отношения, текст и optional geometry. Оно нужно только как экспериментальный источник истины; генератор его напрямую не получает.
+
+2. **Провести первый factorial experiment по четырём наиболее смешиваемым факторам.** Варьировать carrier, block order, token density и summary placement. Использовать детерминированные compilers, одинаковые факты, не менее восьми seeds и отчёт по actual encoder tokens.
+
+3. **Следующим изолировать binding и relations.** Использовать сцены с похожими объектами и контролируемыми swaps. Сравнить adjacency, object records, IDs и triples без повторения фактов.
+
+4. **Отдельно проверить geometry и channel routing.** Не смешивать text-only coordinates с parsed boxes и regional controllers. Для каждого результата явно указывать, какая часть артефакта была просто tokenized, а какая получила специальную семантику.
+
+5. **Сразу ввести protocol validator.** Он должен отклонять chat residue, проверять schema, сохранять требуемый key order, считать tokens после canonicalization и логировать точную строку, которую увидел encoder.
+
+Такой порядок сначала ответит на главный нерешённый вопрос — влияет ли сама организация одинаковых фактов, — а затем позволит исследовать более сильные, но архитектурно зависимые механизмы: IDs, geometry и routing.
