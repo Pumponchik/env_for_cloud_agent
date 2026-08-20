@@ -1,0 +1,123 @@
+# Text diffusion research plan
+
+topic: Diffusion models for text (discrete / continuous / hybrid diffusion language models)
+created: 2026-08-20
+branch: cursor/text-diffusion-models-research-5da7
+related_artifacts:
+  - ../../how_text_diffusion_works.md
+  - ../../report_text_diffusion_landscape.md
+  - ../../take_text_diffusion_dofs.md
+
+items:
+  - name: D3PM
+    category: Discrete Foundations
+    description: >
+      Discrete Denoising Diffusion Probabilistic Models; transition matrices
+      (uniform, absorbing, nearest-neighbor); foundational discrete recipe.
+
+  - name: Diffusion-LM
+    category: Continuous Embedding Diffusion
+    description: >
+      Continuous diffusion over word embeddings with gradient-based control;
+      historical continuous path for controllable text generation.
+
+  - name: SEDD
+    category: Discrete Foundations
+    description: >
+      Score Entropy Discrete Diffusion; concrete score / ratio matching for
+      continuous-time discrete diffusion; Absorb and Uniform variants.
+
+  - name: MDLM
+    category: Masked Diffusion
+    description: >
+      Simple and Effective Masked Diffusion Language Models; Rao-Blackwellized
+      absorbing objectives as mixture of masked LM losses.
+
+  - name: MD4 and GenMD4
+    category: Masked Diffusion
+    description: >
+      Simplified continuous-time masked diffusion ELBO as weighted CE integral;
+      state-dependent schedules (GenMD4); DeepMind MD4.
+
+  - name: RADD and Absorbing Theory
+    category: Masked Diffusion
+    description: >
+      Theoretical simplifications showing absorbing discrete diffusion models
+      conditional clean-data distributions; links to modern MDM training.
+
+  - name: LLaDA
+    category: Scaled Diffusion LLMs
+    description: >
+      8B masked diffusion LM trained from scratch with pretrain+SFT; claims
+      parity with LLaMA3-8B; reversal-curse findings; LLaDA-V / MoE follow-ups.
+
+  - name: Dream 7B
+    category: Scaled Diffusion LLMs
+    description: >
+      Diffusion LLM adapted from AR (Qwen-2.5) with context-adaptive noise;
+      strong math/reasoning among open dLLMs.
+
+  - name: DiffuLLaMA and AR Adaptation
+    category: Scaled Diffusion LLMs
+    description: >
+      Continual pretraining path converting pretrained AR models (GPT/LLaMA)
+      into diffusion LMs; scaling recipe without training from scratch.
+
+  - name: Block Diffusion BD3-LM
+    category: Hybrid AR x Diffusion
+    description: >
+      Autoregression over blocks + diffusion inside blocks; KV cache; flexible
+      length; interpolates AR and full parallel diffusion via block size.
+
+  - name: Mercury
+    category: Industrial Systems
+    description: >
+      Inception Labs commercial diffusion LLMs; Mercury Coder throughput claims
+      (~700–1100 tok/s on H100); coding-focused productization.
+
+  - name: Gemini Diffusion
+    category: Industrial Systems
+    description: >
+      Google industrial discrete diffusion LM; reported AR-competitive quality
+      with large speedups; closed details, survey-cited landmark.
+
+  - name: Fast-dLLM and Unmasking Policies
+    category: Inference Acceleration
+    description: >
+      Training-free confidence-threshold parallel unmasking + KV cache tricks;
+      learned unmasking policies; core inference-DOF literature.
+
+  - name: Remasking and Self-Correction
+    category: Inference Acceleration
+    description: >
+      WINO / STaRR / edit-based refinement; post-hoc remasking to fix early
+      commitment errors; contested benefit vs Fast-dLLM baselines.
+
+  - name: CFG for Masked Diffusion
+    category: Guidance and Control
+    description: >
+      Classifier-free guidance schedules for discrete/masked diffusion;
+      theory of early vs late guidance; when CFG becomes unnecessary.
+
+  - name: Distillation and Few-Step dLLMs
+    category: Inference Acceleration
+    description: >
+      Trajectory / guidance distillation, consistency-style CDLM, infinite-mask
+      few-step methods; closing NFE gap to AR.
+
+  - name: Diffusion Multimodal LLaDA-V Dimple
+    category: Multimodal Diffusion LMs
+    description: >
+      Vision-language diffusion models built on dLLM backbones; emerging dMLLM
+      line after text-only scale-up.
+
+  - name: Surveys Discrete Diffusion LLM 2025
+    category: Surveys and Taxonomies
+    description: >
+      Discrete Diffusion in Large Language and Multimodal Models survey
+      (2506.13759) and A Survey on Diffusion Language Models (2508.10875).
+
+execution:
+  batch_size: 6
+  items_per_agent: 1
+  output_dir: ./research/text-diffusion/results

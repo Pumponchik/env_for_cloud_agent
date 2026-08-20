@@ -1,0 +1,164 @@
+# Field definitions for text / discrete diffusion LM research
+# Focus: representation, forward process, training, inference DOFs, evidence quality
+
+field_categories:
+  - category: Identity
+    fields:
+      - name: name
+        description: Canonical name of the paper, model family, or method
+        detail_level: brief
+      - name: year
+        description: Publication or release year
+        detail_level: brief
+      - name: organization
+        description: Authors' organization or company
+        detail_level: brief
+      - name: model_type
+        description: >
+          Category such as discrete foundation, masked diffusion, continuous
+          embedding diffusion, scaled dLLM, hybrid AR-diffusion, industrial
+          system, inference method, guidance method, survey
+        detail_level: brief
+      - name: paper_or_source
+        description: Primary paper title or official documentation source
+        detail_level: moderate
+      - name: arxiv_id
+        description: arXiv identifier if available
+        detail_level: brief
+      - name: primary_url
+        description: Primary URL (arXiv HTML/PDF, blog, GitHub, or docs)
+        detail_level: brief
+
+  - category: Representation and Forward Process
+    fields:
+      - name: state_space
+        description: discrete tokens, continuous embeddings, latent continuous, or hybrid
+        detail_level: detailed
+      - name: corruption_process
+        description: absorbing/mask, uniform, Gaussian-on-embeddings, mixture, other
+        detail_level: detailed
+      - name: time_formulation
+        description: discrete-time DDPM-style vs continuous-time CTMC / continuous ELBO
+        detail_level: detailed
+      - name: noise_or_mask_schedule
+        description: Schedule family (linear, cosine, spindle, data-driven, state-dependent)
+        detail_level: detailed
+      - name: absorbing_token
+        description: Whether an absorbing MASK (or equivalent) token is used
+        detail_level: brief
+
+  - category: Reverse Model and Training
+    fields:
+      - name: parameterization
+        description: x0 logits, concrete score/rates, mean/posterior, other
+        detail_level: detailed
+      - name: training_objective
+        description: ELBO variant, score entropy, weighted CE, consistency, preference/RL
+        detail_level: detailed
+      - name: architecture_backbone
+        description: Bidirectional Transformer, AR-adapted, MoE, block-causal, etc.
+        detail_level: moderate
+      - name: init_from_ar
+        description: Whether initialized or continually pretrained from an AR LM
+        detail_level: moderate
+      - name: scale_params
+        description: Parameter count and notable scale points
+        detail_level: moderate
+      - name: training_data_notes
+        description: Pretrain/SFT data scale and notable mixtures
+        detail_level: moderate
+      - name: conditioning_mechanism
+        description: How prompts/conditions enter (prefix clean tokens, CFG dropout, etc.)
+        detail_level: detailed
+
+  - category: Inference
+    fields:
+      - name: sampling_algorithm
+        description: Ancestral unmasking, CTMC solver, block decode, distilled few-step, etc.
+        detail_level: detailed
+      - name: typical_num_steps
+        description: Reported default or recommended denoising / unmasking steps
+        detail_level: detailed
+      - name: unmasking_or_remasking_policy
+        description: Random, confidence threshold, learned policy, remask rules
+        detail_level: detailed
+      - name: guidance_methods
+        description: CFG, classifier, reward/energy, structured constraints
+        detail_level: detailed
+      - name: kv_cache_or_parallelism
+        description: Whether KV cache / block cache / parallel token updates are supported
+        detail_level: detailed
+      - name: claimed_throughput
+        description: Tokens/sec or speedup vs AR if reported
+        detail_level: moderate
+
+  - category: Evidence and Comparison
+    fields:
+      - name: reported_benchmarks
+        description: Key LM / math / code / chat metrics and AR baselines compared
+        detail_level: detailed
+      - name: strengths_claimed
+        description: Authors' claimed advantages (parallelism, controllability, reversal, FIM)
+        detail_level: detailed
+      - name: known_failure_modes
+        description: Documented weaknesses or contested claims
+        detail_level: detailed
+      - name: open_source_status
+        description: Weights/code availability
+        detail_level: brief
+      - name: isolation_quality
+        description: How cleanly design choices are ablated vs confounded system changes
+        detail_level: detailed
+
+  - category: Degrees of Freedom Relevance
+    fields:
+      - name: primary_dofs_touched
+        description: Which DOFs from the take_text_diffusion_dofs analysis this item primarily probes
+        detail_level: detailed
+      - name: sota_claim_summary
+        description: One-paragraph SOTA claim relevant to those DOFs
+        detail_level: detailed
+      - name: remaining_ambiguity
+        description: What is still unclear about the touched DOFs after this work
+        detail_level: detailed
+      - name: suggested_followup_experiment
+        description: Concrete isolation experiment if ambiguity remains
+        detail_level: detailed
+
+  - category: Activity Signal
+    fields:
+      - name: active_threads_2025_2026
+        description: Follow-up lines this work spawned or belongs to
+        detail_level: moderate
+      - name: practical_takeaway
+        description: One-sentence practitioner takeaway
+        detail_level: detailed
+
+  - category: Systems Metrics
+    fields:
+      - name: bits_per_byte
+        description: Likelihood in bits/byte when reported (tokenizer-fair metric)
+        detail_level: moderate
+      - name: nfe_vs_quality_notes
+        description: Reported tradeoff between neural function evaluations / steps and quality
+        detail_level: detailed
+      - name: block_size
+        description: Block size for hybrid/semi-AR diffusion if applicable
+        detail_level: moderate
+      - name: unmask_policy_name
+        description: Named inference unmasking policy (random-k, confidence-threshold, learned, etc.)
+        detail_level: moderate
+      - name: remask_policy
+        description: Whether remasking/self-correction is used and its budget in extra NFE
+        detail_level: moderate
+      - name: cfg_schedule
+        description: CFG scale and time/prompt schedule (constant, late-only, adaptive commitment)
+        detail_level: detailed
+      - name: train_infer_mask_mismatch
+        description: Notes on mismatch between training mask distribution and inference masks
+        detail_level: detailed
+      - name: industrial_closed_details
+        description: Flag/notes when architecture or data details are non-reproducible
+        detail_level: brief
+
+uncertain: []
