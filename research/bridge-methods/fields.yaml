@@ -1,0 +1,107 @@
+categories:
+  - name: Basic Info
+    fields:
+      - name: name
+        description: Canonical name of the method family, paper, or system
+        detail_level: brief
+      - name: aliases
+        description: Alternative names, arXiv ids, product names
+        detail_level: brief
+      - name: year
+        description: First public year
+        detail_level: brief
+      - name: venue_or_source
+        description: Venue, arXiv, blog, tech report, or code release
+        detail_level: brief
+      - name: urls
+        description: Primary URLs (arXiv, PDF, code, blog)
+        detail_level: moderate
+      - name: orgs
+        description: Affiliated labs / companies
+        detail_level: brief
+
+  - name: Bridge Characterization
+    fields:
+      - name: bridge_family
+        description: Family tag — textual_rewrite | embedding_adapter | layout_plan | schema_json | endogenous_cot | nontext_action | hybrid
+        detail_level: brief
+      - name: wire_artifact
+        description: What the generator actually consumes (prose, embeddings, boxes, JSON, CoT tokens, weights, …)
+        detail_level: detailed
+      - name: internal_ir
+        description: Optional internal intermediate representation before the wire artifact
+        detail_level: detailed
+      - name: problem_solved
+        description: Which user/system gap this bridge closes
+        detail_level: detailed
+      - name: assumed_gap
+        description: Assumed mismatch (train↔user captions, spatial binding, encoder capacity, parametric control, …)
+        detail_level: detailed
+
+  - name: Method
+    fields:
+      - name: method_summary
+        description: How the bridge works end-to-end in authors' terms
+        detail_level: detailed
+      - name: architecture
+        description: Modules, frozen vs trainable parts, coupling to generator
+        detail_level: detailed
+      - name: training_requirements
+        description: Data and training needed (none / SFT / RL / co-train generator / …)
+        detail_level: detailed
+      - name: inference_pipeline
+        description: Runtime flow from user prompt to image
+        detail_level: detailed
+      - name: human_editability
+        description: Whether intermediate artifact is inspectable/editable by users
+        detail_level: moderate
+      - name: portability
+        description: Works across frozen third-party generators vs requires owned training
+        detail_level: moderate
+
+  - name: Pros Cons Evidence
+    fields:
+      - name: pros
+        description: Strengths claimed or evidenced
+        detail_level: detailed
+      - name: cons
+        description: Weaknesses, costs, failure modes
+        detail_level: detailed
+      - name: key_results
+        description: Main empirical claims with numbers when available
+        detail_level: detailed
+      - name: failure_modes
+        description: Documented failure modes
+        detail_level: moderate
+      - name: evaluation_protocol
+        description: Benchmarks and metrics used
+        detail_level: moderate
+      - name: best_when
+        description: Conditions under which this bridge is the right choice
+        detail_level: detailed
+      - name: wrong_when
+        description: Conditions under which this bridge is a poor fit
+        detail_level: detailed
+
+  - name: Design Relevance
+    fields:
+      - name: relevance_to_bridge_design
+        description: Why this object matters for choosing/building a bridge
+        detail_level: detailed
+      - name: must_read
+        description: true/false
+        detail_level: brief
+      - name: reading_priority
+        description: 1 (must) / 2 (strong) / 3 (context) / 4 (peripheral)
+        detail_level: brief
+      - name: takeaways_for_builders
+        description: Concrete normative takeaways
+        detail_level: detailed
+      - name: related_papers
+        description: Ancestors, siblings, descendants for citation trees
+        detail_level: moderate
+      - name: cites_or_cited_by_seeds
+        description: Key papers this cites or is cited by (for tree building)
+        detail_level: moderate
+
+uncertain: []

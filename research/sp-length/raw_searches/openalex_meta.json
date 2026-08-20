@@ -1,0 +1,33 @@
+{
+  "2505.16915": {
+    "error": "not found"
+  },
+  "2511.06876": {
+    "title": "Generating an Image From 1,000 Words: Enhancing Text-to-Image With Structured Captions",
+    "cited_by_count": 0,
+    "year": 2025
+  },
+  "2403.15378": {
+    "title": "Long-CLIP: Unlocking the Long-Text Capability of CLIP",
+    "cited_by_count": 2,
+    "year": 2024
+  },
+  "2507.05300": {
+    "title": "Structured Captions Improve Prompt Adherence in Text-to-Image Models (Re-LAION-Caption 19M)",
+    "cited_by_count": 0,
+    "year": 2025
+  },
+  "2503.08250": {
+    "error": "not found"
+  },
+  "2505.05460": {
+    "title": "Reduced Basis Method for Driven-Dissipative Quantum Systems",
+    "cited_by_count": 0,
+    "year": 2025
+  },
+  "2606.03715": {
+    "title": "Text-to-Image Models Need Less from Text Encoders Than You Think",
+    "cited_by_count": 0,
+    "year": 2026
+  }
+}

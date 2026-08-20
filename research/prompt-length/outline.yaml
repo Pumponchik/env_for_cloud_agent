@@ -1,0 +1,120 @@
+topic: Prompt length for diffusion text-to-image models (training, inference, and re-prompt output length)
+topic_slug: t2i-prompt-length
+description: >
+  Research what prompt/caption length authors recommend or use when training and
+  running diffusion text-to-image models, including re-prompt/recaption model
+  output lengths and stated motivations.
+
+items:
+  - name: CLIP 77-token limit
+    category: Text Encoder Foundation
+    description: >
+      OpenAI CLIP text encoder hard 77-token context; effective usable length;
+      how this shaped SD1.x/SD2.x prompt length conventions.
+
+  - name: Stable Diffusion 1.x and 2.x
+    category: Classic Diffusion T2I
+    description: >
+      Training and inference prompt length practices under CLIP; truncation,
+      padding, and community long-prompt chunking workarounds.
+
+  - name: Stable Diffusion XL
+    category: Classic Diffusion T2I
+    description: >
+      Dual CLIP encoders, 77-token limits, pooled embeddings, and long-prompt
+      chunking practices for SDXL training and inference.
+
+  - name: Stable Diffusion 3 and FLUX.1
+    category: Modern Diffusion T2I
+    description: >
+      T5-XXL conditioning with longer sequence lengths (77/256/512 configs);
+      training caption length and inference max_sequence_length practices.
+
+  - name: Imagen family
+    category: Modern Diffusion T2I
+    description: >
+      Google Imagen/Imagen 2/3/4 using frozen T5-XXL; claimed advantages of long
+      language-model encodings over CLIP; API token limits (e.g. Imagen 4 480).
+
+  - name: DALL-E 3 Better Captions
+    category: Re-prompt and Recaption
+    description: >
+      Improving Image Generation with Better Captions; synthetic detailed
+      training captions; prompt upsampling/revision at inference; lengths used.
+
+  - name: PixArt-alpha and PixArt-Sigma
+    category: Modern Diffusion T2I
+    description: >
+      T5-XXL with dense/long Share-Captioner captions; token-length settings and
+      ablations for training and inference.
+
+  - name: DetailMaster
+    category: Benchmark and Ablation
+    description: >
+      Long-prompt benchmark (~285 tokens) with controlled 77-vs-512 × short-vs-long
+      training ablation; core evidence on what length regime wins.
+
+  - name: i1 Open Recipe
+    category: Benchmark and Ablation
+    description: >
+      Fully open T2I recipe truncating T5Gemma to 256 tokens; GenEval table showing
+      short-prompt collapse vs repeat-12x vs LLM rewrite; train-long then lengthen infer.
+
+  - name: How to Train your T2I Model
+    category: Training Caption Strategy
+    description: >
+      Synthetic training captions paper arguing randomized caption length per image
+      removes alignment/aesthetics trade-off; temperature and length findings.
+
+  - name: RECAP Principled Recaptioning
+    category: Training Caption Strategy
+    description: >
+      RECAP-Short vs RECAP-Long vs 50/50 mix; FID vs semantics; dropping captions
+      over 77 tokens; early evidence on caption length mixing.
+
+  - name: LongAlign
+    category: Long Prompt Method
+    description: >
+      Segment-level encoding for long prompts; training data mostly under 300 tokens;
+      later papers report degradation above 500 tokens.
+
+  - name: FIBO 1000 Words
+    category: Modern Diffusion T2I
+    description: >
+      Open T2I trained on long structured JSON captions (mean ~1160 tokens);
+      DimFusion vs TokenFusion; long vs short caption ablations.
+
+  - name: PromptEnhancer and HunyuanImage
+    category: Re-prompt and Recaption
+    description: >
+      HunyuanImage training with compositional captions ~30-1000 words; PromptEnhancer
+      CoT rewriter; train/infer rewrite length practices and motivations.
+
+  - name: Qwen-Image and FLUX.2 Re-prompt
+    category: Re-prompt and Recaption
+    description: >
+      Built-in prompt extend / caption upsampling (max_new_tokens, API 800-1300 tokens);
+      default-on rewriting and encoder max length 512.
+
+  - name: Recap-DataComp-1B and Dense Caption Datasets
+    category: Training Caption Strategy
+    description: >
+      Recap-DataComp max_new_tokens=128 mean ~49 tokens; DCI ~1282 CLIP tokens;
+      DOCCI ~136 words; ImageInWords ~217 tokens — caption length statistics for training data.
+
+  - name: TIPO and Input-Side Inference Scaling
+    category: Re-prompt and Recaption
+    description: >
+      Prompt optimization/rewriting to match training text distribution; rewriter
+      transfer across backbones; output length goals and motivations.
+
+  - name: Padding Tone and Memorization Length Effects
+    category: Mechanistic Analysis
+    description: >
+      How padding tokens interact with prompt length; memorized prompts typically
+      under 40 tokens; implications for pad-to-max training/inference.
+
+execution:
+  batch_size: 6
+  items_per_agent: 1
+  output_dir: ./t2i-prompt-length/results

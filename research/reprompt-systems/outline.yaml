@@ -1,0 +1,133 @@
+topic: "Text-to-Image Re-Prompt / Prompt Enhancement Systems — academic foundations, methods, and correct design"
+topic_slug: t2i-reprompt-systems
+created: "2026-07-29"
+time_range: "since 2020, emphasis 2022–2026"
+goal: >
+  Understand what problem a re-prompt (prompt rewrite / prompt enhancement / prompt upsampling)
+  system is solving, which methods exist, why production systems look the way they do,
+  and how to design one correctly — via broad literature, citation trees, and major lab reports.
+
+execution:
+  batch_size: 8
+  items_per_agent: 1
+  output_dir: ./results
+
+items:
+  # --- Problem framing / theory ---
+  - name: "Train-User Prompt Distribution Gap"
+    category: Problem Framing
+    description: Core mismatch between short user prompts and long dense training captions; why PE exists.
+  - name: "Prompt Length and Variability as PE Context"
+    category: Problem Framing
+    description: How training caption length/variability determines when and how PE should behave (Brack, i1, RECAP).
+  - name: "Faithfulness vs Aesthetic Improvement Tradeoff"
+    category: Problem Framing
+    description: Hallucination, over-specification, and intent drift as central PE failure modes.
+
+  # --- Foundational ancestors ---
+  - name: "Promptist and Early RL Prompt Optimization"
+    category: Foundations
+    description: Early RL/preference-based prompt optimization for diffusion (Promptist and kin).
+  - name: "Automatic Prompt Engineering APE"
+    category: Foundations
+    description: General APE lineage for LLMs and transfer of ideas to T2I rewrite.
+  - name: "DALL-E 3 Better Captions and GPT Rewrite"
+    category: Foundations
+    description: OpenAI Better Captions report as industrial PE/recaption ancestor.
+
+  # --- Modern PE systems (core papers) ---
+  - name: "PromptEnhancer"
+    category: Core PE Systems
+    description: Structured prompt enhancement for modern T2I; architecture and training.
+  - name: "Input-Side Scaling"
+    category: Core PE Systems
+    description: Scaling rewrite quality/compute on the input prompt side rather than the generator.
+  - name: "TIPO Text-to-Image Prompt Optimization"
+    category: Core PE Systems
+    description: Prompt optimization methods and objectives in TIPO.
+  - name: "RePrompt ICCV"
+    category: Core PE Systems
+    description: RePrompt paper framing of automatic rewrite for diffusion.
+  - name: "FaithRewriter"
+    category: Core PE Systems
+    description: Faithfulness-aware rewriting; anti-hallucination PE.
+  - name: "RAPO and RAPO++"
+    category: Core PE Systems
+    description: Reward-aware / preference-optimized prompt rewriting line.
+  - name: "BanditRewriter"
+    category: Core PE Systems
+    description: Bandit / exploration framing for rewrite selection.
+  - name: "BeautifulPrompt Family"
+    category: Core PE Systems
+    description: BeautifulPrompt / related aesthetic rewrite systems.
+
+  # --- Lab / product PE stacks ---
+  - name: "OpenAI DALL-E Prompt Rewrite Practice"
+    category: Lab Systems
+    description: How OpenAI frames and ships prompt rewriting around DALL-E 3.
+  - name: "Google Imagen Parti Prompt Upsampling"
+    category: Lab Systems
+    description: Google prompt upsampling / rewriter practice in Imagen/Parti family.
+  - name: "Black Forest Labs FLUX Prompt Upsampler"
+    category: Lab Systems
+    description: FLUX.1/FLUX.2 prompt upsampler design and length policy.
+  - name: "Qwen-Image Prompt Extend"
+    category: Lab Systems
+    description: Qwen-Image / Qwen2.5-VL prompt_extend module and defaults.
+  - name: "Wan Prompt Extend"
+    category: Lab Systems
+    description: Alibaba Wan T2I/T2V prompt extend pipeline.
+  - name: "ByteDance Seedream Prompt Rewrite"
+    category: Lab Systems
+    description: Seedream / Seed family PE if documented.
+  - name: "Tencent Hunyuan Prompt Rewrite"
+    category: Lab Systems
+    description: HunyuanImage PE/recaption practices.
+  - name: "Midjourney and Commercial Prompt Culture"
+    category: Lab Systems
+    description: Commercial PE conventions vs academic PE (style tokens, parameters).
+
+  # --- Method families ---
+  - name: "Supervised Rewrite from Caption Pairs"
+    category: Method Families
+    description: SFT on (short→long) or (noisy→clean) caption pairs as PE training.
+  - name: "RLHF RLAIF Preference Rewriters"
+    category: Method Families
+    description: Reward models (ImageReward, PickScore, HPSv2) driving rewrite policy.
+  - name: "LLM Zero-Shot Rewrite Prompts"
+    category: Method Families
+    description: Prompted LLM rewrite without PE finetuning; system prompts and length budgets.
+  - name: "Iterative Multi-Turn Rewrite"
+    category: Method Families
+    description: Multi-round PE, self-refine, critique-then-rewrite loops.
+  - name: "Retrieval Augmented Prompt Rewrite"
+    category: Method Families
+    description: RAG / exemplar retrieval for style or domain rewrite.
+  - name: "Structured Prompt Templates and Schemas"
+    category: Method Families
+    description: Slot-filling, JSON schemas, FIBO-like structured captions as PE target format.
+
+  # --- Evaluation / correctness ---
+  - name: "PE Evaluation Metrics and Benchmarks"
+    category: Evaluation
+    description: How to measure PE success beyond pretty images (faithfulness, GenEval, human prefs).
+  - name: "When Not to Re-Prompt"
+    category: Evaluation
+    description: Conditions where PE hurts (already-long prompts, variable-length training, artistic brevity).
+
+  # --- Design synthesis nodes ---
+  - name: "Correct PE System Design Principles"
+    category: Synthesis
+    description: Normative design checklist derived from literature (target distribution, length, faithfulness, gating).
+  - name: "Related Recaptioning vs Inference PE Distinction"
+    category: Synthesis
+    description: Training-time recaption (RECAP, Recap-DataComp) vs inference-time PE — shared methods, different goals.
+
+# --- Items supplemented after web/citation pass (2026-07-29) ---
+supplementary_items_note: >
+  After parallel web-search agents and arXiv/S2 passes, the active reading set
+  expanded beyond the initial outline. See report_reprompt_systems.md and
+  corpus/curated_reading_list.json. Major additions: VisualPrompter, TARA, PRISM,
+  OPT2I, Idea2Img, PromptLoop, APE-agentic, FIBO, LMD/RPG, T2I-R1, Parrot,
+  VPO, Prompt Expansion (Google), GenEval2, FairPro, Qwen-Image-2.0 PE,
+  Seedance/Seedream PE, Ideogram Magic Prompt, Midjourney/Stability non-rewriter cases.

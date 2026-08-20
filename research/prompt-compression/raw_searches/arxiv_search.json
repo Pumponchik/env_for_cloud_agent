@@ -1,0 +1,359 @@
+[
+  {
+    "query": "ti:\"LLMLingua\"",
+    "papers": [
+      {
+        "title": "LLMLingua: Compressing Prompts for Accelerated Inference of Large Language Models",
+        "id": null
+      },
+      {
+        "title": "LLMLingua-2: Data Distillation for Efficient and Faithful Task-Agnostic Prompt Compression",
+        "id": null
+      },
+      {
+        "title": "Prompt Compression in Diffusion Large Language Models: Evaluating LLMLingua-2 on LLaDA",
+        "id": null
+      }
+    ]
+  },
+  {
+    "query": "ti:\"LongLLMLingua\"",
+    "papers": [
+      {
+        "title": "LongLLMLingua: Accelerating and Enhancing LLMs in Long Context Scenarios via Prompt Compression",
+        "id": null
+      }
+    ]
+  },
+  {
+    "query": "ti:\"Gisting\" AND abs:\"language model\"",
+    "papers": [
+      {
+        "title": "Investigating the Effectiveness of HyperTuning via Gisting",
+        "id": null
+      },
+      {
+        "title": "Learning to Compress Prompts with Gist Tokens",
+        "id": null
+      },
+      {
+        "title": "GIST: Generating Image-Specific Text for Fine-grained Object Classification",
+        "id": null
+      },
+      {
+        "title": "Sentence-Anchored Gist Compression for Long-Context LLMs",
+        "id": null
+      },
+      {
+        "title": "Say More with Less: Understanding Prompt Learning Behaviors through Gist Compression",
+        "id": null
+      }
+    ]
+  },
+  {
+    "query": "ti:\"Learning to Compress Prompts\"",
+    "papers": [
+      {
+        "title": "Learning to Compress Prompts with Gist Tokens",
+        "id": null
+      },
+      {
+        "title": "Learning to Compress Prompt in Natural Language Formats",
+        "id": null
+      }
+    ]
+  },
+  {
+    "query": "ti:\"In-context Autoencoder\"",
+    "papers": [
+      {
+        "title": "CAE v2: Context Autoencoder with CLIP Target",
+        "id": null
+      },
+      {
+        "title": "Context Autoencoder for Self-Supervised Representation Learning",
+        "id": null
+      },
+      {
+        "title": "In-context Autoencoder for Context Compression in a Large Language Model",
+        "id": null
+      },
+      {
+        "title": "Filling time-series gaps using image techniques: Multidimensional context autoencoder approach for building energy data imputation",
+        "id": null
+      }
+    ]
+  },
+  {
+    "query": "ti:\"AutoCompressor\"",
+    "papers": []
+  },
+  {
+    "query": "ti:\"prompt compression\"",
+    "papers": [
+      {
+        "title": "Prompt Compression via Activation Aggregation",
+        "id": null
+      },
+      {
+        "title": "Discrete Prompt Compression with Reinforcement Learning",
+        "id": null
+      },
+      {
+        "title": "Parse Trees Guided LLM Prompt Compression",
+        "id": null
+      },
+      {
+        "title": "ProCut: LLM Prompt Compression via Attribution Estimation",
+        "id": null
+      },
+      {
+        "title": "EFPC: Towards Efficient and Flexible Prompt Compression",
+        "id": null
+      }
+    ]
+  },
+  {
+    "query": "abs:\"prompt compression\" AND abs:\"LLM\"",
+    "papers": [
+      {
+        "title": "ICPC: In-context Prompt Compression with Faster Inference",
+        "id": null
+      },
+      {
+        "title": "An Empirical Study on Prompt Compression for Large Language Models",
+        "id": null
+      },
+      {
+        "title": "Fundamental Limits of Prompt Compression: A Rate-Distortion Framework for Black-Box Language Models",
+        "id": null
+      },
+      {
+        "title": "Efficient Prompt Compression with Evaluator Heads for Long-Context Transformer Inference",
+        "id": null
+      },
+      {
+        "title": "Prompt Compression for Large Language Models: A Survey",
+        "id": null
+      }
+    ]
+  },
+  {
+    "query": "ti:\"Soft Prompt\" AND abs:\"diffusion\"",
+    "papers": []
+  },
+  {
+    "query": "ti:\"SoftREPA\"",
+    "papers": []
+  },
+  {
+    "query": "ti:\"REPA\" AND abs:\"representation\"",
+    "papers": [
+      {
+        "title": "U-REPA: Aligning Diffusion U-Nets to ViTs",
+        "id": null
+      },
+      {
+        "title": "AG-REPA: Causal Layer Selection for Representation Alignment in Audio Flow Matching",
+        "id": null
+      },
+      {
+        "title": "REPA Works Until It Doesn't: Early-Stopped, Holistic Alignment Supercharges Diffusion Training",
+        "id": null
+      },
+      {
+        "title": "REPA-E: Unlocking VAE for End-to-End Tuning with Latent Diffusion Transformers",
+        "id": null
+      }
+    ]
+  },
+  {
+    "query": "abs:\"gist token\" AND abs:\"prompt\"",
+    "papers": [
+      {
+        "title": "Say More with Less: Understanding Prompt Learning Behaviors through Gist Compression",
+        "id": null
+      },
+      {
+        "title": "Learning to Compress Prompts with Gist Tokens",
+        "id": null
+      }
+    ]
+  },
+  {
+    "query": "ti:\"Activation Beacon\"",
+    "papers": [
+      {
+        "title": "Long Context Compression with Activation Beacon",
+        "id": null
+      }
+    ]
+  },
+  {
+    "query": "ti:\"500x Compressor\"",
+    "papers": []
+  },
+  {
+    "query": "ti:\"ICAE\"",
+    "papers": [
+      {
+        "title": "ICAE-Bench: Evaluating Coding Agents as Interactive Project Builders",
+        "id": null
+      },
+      {
+        "title": "Sparse Gaussian ICA",
+        "id": null
+      },
+      {
+        "title": "ICA based on the data asymmetry",
+        "id": null
+      },
+      {
+        "title": "Group ICA 2.0: Closing the Gap Between Subjects and Group Latent Decomposition with Copula-Linked Group ICA (CoLiG-ICA)",
+        "id": null
+      },
+      {
+        "title": "Bayesian ICA for Causal Discovery",
+        "id": null
+      }
+    ]
+  },
+  {
+    "query": "abs:\"KV cache\" AND abs:\"prompt compression\"",
+    "papers": [
+      {
+        "title": "G-KV: Decoding-Time KV Cache Eviction with Global Attention",
+        "id": null
+      },
+      {
+        "title": "SCBench: A KV Cache-Centric Analysis of Long-Context Methods",
+        "id": null
+      },
+      {
+        "title": "EARN: Efficient Inference Acceleration for LLM-based Generative Recommendation by Register Tokens",
+        "id": null
+      },
+      {
+        "title": "Draft-based Approximate Inference for LLMs",
+        "id": null
+      },
+      {
+        "title": "KV Cache Compression, But What Must We Give in Return? A Comprehensive Benchmark of Long Context Capable Approaches",
+        "id": null
+      }
+    ]
+  },
+  {
+    "query": "ti:\"Distill\" AND abs:\"prompt\" AND abs:\"encoder\"",
+    "papers": [
+      {
+        "title": "EdgeSAM: Prompt-In-the-Loop Distillation for SAM",
+        "id": null
+      },
+      {
+        "title": "PromptKD: Unsupervised Prompt Distillation for Vision-Language Models",
+        "id": null
+      },
+      {
+        "title": "TeleStyle V2: Beyond Content-Preserving Style Transfer with Self-Distillation and Distribution-Matching-Distillation",
+        "id": null
+      },
+      {
+        "title": "PLPP: Prompt Learning with Perplexity Is Self-Distillation for Vision-Language Models",
+        "id": null
+      },
+      {
+        "title": "LLMLingua-2: Data Distillation for Efficient and Faithful Task-Agnostic Prompt Compression",
+        "id": null
+      }
+    ]
+  },
+  {
+    "query": "abs:\"soft tokens\" AND abs:\"text-to-image\"",
+    "papers": [
+      {
+        "title": "JetFormer: An Autoregressive Generative Model of Raw Images and Text",
+        "id": null
+      },
+      {
+        "title": "Finetuning Text-to-Image Diffusion Models for Fairness",
+        "id": null
+      }
+    ]
+  },
+  {
+    "query": "ti:\"Prompt Distillation\"",
+    "papers": [
+      {
+        "title": "Automatic Prompt Optimization with Prompt Distillation",
+        "id": null
+      },
+      {
+        "title": "Adversarial Prompt Distillation for Vision-Language Models",
+        "id": null
+      },
+      {
+        "title": "PromptKD: Unsupervised Prompt Distillation for Vision-Language Models",
+        "id": null
+      },
+      {
+        "title": "Few-Shot Stance Detection via Target-Aware Prompt Distillation",
+        "id": null
+      },
+      {
+        "title": "Multimodal Robust Prompt Distillation for 3D Point Cloud Models",
+        "id": null
+      }
+    ]
+  },
+  {
+    "query": "ti:\"COMEDY\" AND abs:\"compress\"",
+    "papers": []
+  },
+  {
+    "query": "ti:\"CPC\" AND abs:\"prompt compression\"",
+    "papers": []
+  },
+  {
+    "query": "ti:\"LLM2Vec\"",
+    "papers": [
+      {
+        "title": "LLM2Vec-Gen: Generative Embeddings from Large Language Models",
+        "id": null
+      },
+      {
+        "title": "LLM2Vec: Large Language Models Are Secretly Powerful Text Encoders",
+        "id": null
+      },
+      {
+        "title": "New Encoders for German Trained from Scratch: Comparing ModernGBERT with Converted LLM2Vec Models",
+        "id": null
+      }
+    ]
+  },
+  {
+    "query": "abs:\"hidden state\" AND abs:\"transfer\" AND abs:\"language model\" AND abs:\"prompt\"",
+    "papers": [
+      {
+        "title": "Prompt Embedding Probes (PEP): Hallucination Detection in LLMs from Hidden States",
+        "id": null
+      },
+      {
+        "title": "The Illusion of Cross-Lingual Safety in Low-Resource Languages",
+        "id": null
+      },
+      {
+        "title": "RelayAttention for Efficient Large Language Model Serving with Long System Prompts",
+        "id": null
+      },
+      {
+        "title": "The Granularity Axis: A Micro-to-Macro Latent Direction for Social Roles in Language Models",
+        "id": null
+      },
+      {
+        "title": "Extracting Latent Steering Vectors from Pretrained Language Models",
+        "id": null
+      }
+    ]
+  }
+]

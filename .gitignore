@@ -1,16 +1,20 @@
-# Runtime installs (created by scripts/cloud-agent-install.sh)
-tools/
-node_modules/
+# Research intermediates (large / local only)
+research/prompt-length/corpus/arxiv_raw.json
+research/prompt-length/paper_extracts/
+research/prompt-length/papers/
 
-# Python / OS
-__pycache__/
-*.pyc
+# Legacy paths (if any leftover)
+t2i-prompt-length/corpus/arxiv_raw.json
+t2i-prompt-length/paper_extracts/
+t2i-prompt-length/papers/
+
+# Camofox / runtime
+.camofox/
+tools/
 .venv/
 venv/
-
-# Camofox local state
-.camofox/
+node_modules/
+__pycache__/
+*.pyc
 *.log
-
-# Editor
 .DS_Store

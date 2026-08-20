@@ -1,0 +1,692 @@
+[
+  {
+    "arxiv": "2210.04885",
+    "title": "What the DAAM: Interpreting Stable Diffusion Using Cross Attention",
+    "cited_by_count": 5,
+    "id": "https://openalex.org/W4320855201",
+    "year": 2022,
+    "citing": [
+      {
+        "title": "The Metacognitive Demands and Opportunities of Generative AI",
+        "year": 2024,
+        "cited_by_count": 231,
+        "doi": "https://doi.org/10.1145/3613904.3642902"
+      },
+      {
+        "title": "A Comprehensive Survey of Image Generation Models Based on Deep Learning",
+        "year": 2024,
+        "cited_by_count": 33,
+        "doi": "https://doi.org/10.1007/s40745-024-00544-1"
+      },
+      {
+        "title": "The Metacognitive Demands and Opportunities of Generative AI",
+        "year": 2023,
+        "cited_by_count": 17,
+        "doi": "https://doi.org/10.48550/arxiv.2312.10893"
+      },
+      {
+        "title": "Leveraging Generative AI for Renewable Energy: Photovoltaic Panel Semantic Segmentation Case Study",
+        "year": 2024,
+        "cited_by_count": 2,
+        "doi": "https://doi.org/10.46855/energy-proceedings-11182"
+      },
+      {
+        "title": "Deep learning mechanism and its application in biomacromolecules",
+        "year": 2026,
+        "cited_by_count": 0,
+        "doi": "https://doi.org/10.1039/d6ra00550k"
+      }
+    ]
+  },
+  {
+    "arxiv": "2211.15462",
+    "title": "Investigating Prompt Engineering in Diffusion Models",
+    "cited_by_count": 16,
+    "id": "https://openalex.org/W4310428424",
+    "year": 2022,
+    "citing": [
+      {
+        "title": "DiffuMask: Synthesizing Images with Pixel-level Annotations for Semantic Segmentation Using Diffusion Models",
+        "year": 2023,
+        "cited_by_count": 141,
+        "doi": "https://doi.org/10.1109/iccv51070.2023.00117"
+      },
+      {
+        "title": "TF-ICON: Diffusion-Based Training-Free Cross-Domain Image Composition",
+        "year": 2023,
+        "cited_by_count": 88,
+        "doi": "https://doi.org/10.1109/iccv51070.2023.00218"
+      },
+      {
+        "title": "Prompt-Free Diffusion: Taking “Text” Out of Text-to-Image Diffusion Models",
+        "year": 2024,
+        "cited_by_count": 50,
+        "doi": "https://doi.org/10.1109/cvpr52733.2024.00829"
+      },
+      {
+        "title": "A-STAR: Test-time Attention Segregation and Retention for Text-to-image Synthesis",
+        "year": 2023,
+        "cited_by_count": 32,
+        "doi": "https://doi.org/10.1109/iccv51070.2023.00217"
+      },
+      {
+        "title": "Image generation of hazardous situations in construction sites using text-to-image generative model for training deep neural networks",
+        "year": 2024,
+        "cited_by_count": 30,
+        "doi": "https://doi.org/10.1016/j.autcon.2024.105615"
+      },
+      {
+        "title": "Model-Driven Prompt Engineering",
+        "year": 2023,
+        "cited_by_count": 27,
+        "doi": "https://doi.org/10.1109/models58315.2023.00020"
+      },
+      {
+        "title": "CONFORM: Contrast is All You Need For High-Fidelity Text-to-Image Diffusion Models",
+        "year": 2024,
+        "cited_by_count": 15,
+        "doi": "https://doi.org/10.1109/cvpr52733.2024.00860"
+      },
+      {
+        "title": "Cut-and-Paste: Subject-driven video editing with attention control",
+        "year": 2024,
+        "cited_by_count": 7,
+        "doi": "https://doi.org/10.1016/j.neunet.2024.106818"
+      },
+      {
+        "title": "SCAPE: Searching Conceptual Architecture Prompts using Evolution",
+        "year": 2024,
+        "cited_by_count": 3,
+        "doi": "https://doi.org/10.1109/cec60901.2024.10612168"
+      },
+      {
+        "title": "CoProNN: Concept-Based Prototypical Nearest Neighbors for Explaining Vision Models",
+        "year": 2024,
+        "cited_by_count": 3,
+        "doi": "https://doi.org/10.1007/978-3-031-63787-2_5"
+      },
+      {
+        "title": "Cut-and-Paste: Subject-Driven Video Editing with Attention Control",
+        "year": 2024,
+        "cited_by_count": 2,
+        "doi": "https://doi.org/10.2139/ssrn.4877233"
+      },
+      {
+        "title": "Text-Guided Artistic Image Synthesis Using Diffusion Model",
+        "year": 2024,
+        "cited_by_count": 1,
+        "doi": "https://doi.org/10.47392/irjash.2024.024"
+      },
+      {
+        "title": "Adaptive Prompt Modifier for Text-to-Image Model",
+        "year": 2025,
+        "cited_by_count": 0,
+        "doi": "https://doi.org/10.1109/icmew68306.2025.11152055"
+      },
+      {
+        "title": "Improving the Stable Diffusion Model",
+        "year": 2026,
+        "cited_by_count": 0,
+        "doi": "https://doi.org/10.1007/978-3-032-32726-0_47"
+      },
+      {
+        "title": "A study on the Use of a Text-to-image Generative Model to Generate Consistent Story Illustrations",
+        "year": 2024,
+        "cited_by_count": 0,
+        "doi": "https://doi.org/10.5909/jbe.2024.29.6.1043"
+      },
+      {
+        "title": "Application of deep learning on font design for ethnic minority writing systems",
+        "year": 2025,
+        "cited_by_count": 0,
+        "doi": "https://doi.org/10.7717/peerj-cs.3340"
+      }
+    ]
+  },
+  {
+    "arxiv": "2109.06977",
+    "title": "Design Guidelines for Prompt Engineering Text-to-Image Generative Models",
+    "cited_by_count": 33,
+    "id": "https://openalex.org/W4303685983",
+    "year": 2021,
+    "citing": [
+      {
+        "title": "Why Johnny Can’t Prompt: How Non-AI Experts Try (and Fail) to Design LLM Prompts",
+        "year": 2023,
+        "cited_by_count": 862,
+        "doi": "https://doi.org/10.1145/3544548.3581388"
+      },
+      {
+        "title": "T2I-Adapter: Learning Adapters to Dig Out More Controllable Ability for Text-to-Image Diffusion Models",
+        "year": 2024,
+        "cited_by_count": 789,
+        "doi": "https://doi.org/10.1609/aaai.v38i5.28226"
+      },
+      {
+        "title": "Prompt engineering as a new 21st century skill",
+        "year": 2024,
+        "cited_by_count": 111,
+        "doi": "https://doi.org/10.3389/feduc.2024.1366434"
+      },
+      {
+        "title": "Generative Image AI Using Design Sketches as input: Opportunities and Challenges",
+        "year": 2023,
+        "cited_by_count": 72,
+        "doi": "https://doi.org/10.1145/3591196.3596820"
+      },
+      {
+        "title": "Reinforcement Learning for Generative AI: State of the Art, Opportunities and Open Research Challenges",
+        "year": 2024,
+        "cited_by_count": 48,
+        "doi": "https://doi.org/10.1613/jair.1.15278"
+      },
+      {
+        "title": "Large Language Models for Text Classification: From Zero-Shot Learning to Instruction-Tuning",
+        "year": 2023,
+        "cited_by_count": 45,
+        "doi": "https://doi.org/10.31235/osf.io/sthwk"
+      },
+      {
+        "title": "Prompting for Discovery: Flexible Sense-Making for AI Art-Making with Dreamsheets",
+        "year": 2024,
+        "cited_by_count": 45,
+        "doi": "https://doi.org/10.1145/3613904.3642858"
+      },
+      {
+        "title": "Generating Images of Rare Concepts Using Pre-trained Diffusion Models",
+        "year": 2024,
+        "cited_by_count": 24,
+        "doi": "https://doi.org/10.1609/aaai.v38i5.28270"
+      },
+      {
+        "title": "Will Code Remain a Relevant User Interface for End-User Programming with Generative AI Models?",
+        "year": 2023,
+        "cited_by_count": 21,
+        "doi": "https://doi.org/10.1145/3622758.3622882"
+      },
+      {
+        "title": "A Multi-Modal Contrastive Diffusion Model for Therapeutic Peptide Generation",
+        "year": 2024,
+        "cited_by_count": 19,
+        "doi": "https://doi.org/10.1609/aaai.v38i1.27749"
+      },
+      {
+        "title": "BeautifulPrompt: Towards Automatic Prompt Engineering for Text-to-Image Synthesis",
+        "year": 2023,
+        "cited_by_count": 18,
+        "doi": "https://doi.org/10.18653/v1/2023.emnlp-industry.1"
+      },
+      {
+        "title": "Leveraging Large Language Models to Power Chatbots for Collecting User Self-Reported Data",
+        "year": 2023,
+        "cited_by_count": 15,
+        "doi": "https://doi.org/10.48550/arxiv.2301.05843"
+      },
+      {
+        "title": "Interacting with Large Language Models: A Case Study on AI-Aided Brainstorming for Guesstimation Problems",
+        "year": 2023,
+        "cited_by_count": 15,
+        "doi": "https://doi.org/10.3233/faia230081"
+      },
+      {
+        "title": "Designer-Generative AI Ideation Process: Generating Images Aligned with Designer Intent in Early-Stage Concept Exploration in Product Design",
+        "year": 2024,
+        "cited_by_count": 15,
+        "doi": "https://doi.org/10.15187/adr.2024.07.37.3.7"
+      },
+      {
+        "title": "Impact of Guidance and Interaction Strategies for LLM Use on Learner Performance and Perception",
+        "year": 2023,
+        "cited_by_count": 10,
+        "doi": "https://doi.org/10.48550/arxiv.2310.13712"
+      },
+      {
+        "title": "A User-Friendly Framework for Generating Model-Preferred Prompts in Text-to-Image Synthesis",
+        "year": 2024,
+        "cited_by_count": 9,
+        "doi": "https://doi.org/10.1609/aaai.v38i3.27986"
+      },
+      {
+        "title": "Generative AI text-to-image for community participation in landscape planning",
+        "year": 2025,
+        "cited_by_count": 9,
+        "doi": "https://doi.org/10.1016/j.landurbplan.2025.105464"
+      },
+      {
+        "title": "&lt;p&gt;How Disclosing Generative AI&amp;nbsp;&lt;span&gt;Use Impacts Human Creative Involvement&amp;nbsp;&lt;/span&gt;&lt;span&gt;in Human-GenAI Collaboration&lt;/span&gt;&lt;/p&gt;",
+        "year": 2024,
+        "cited_by_count": 7,
+        "doi": "https://doi.org/10.2139/ssrn.4782554"
+      },
+      {
+        "title": "KI-basierte Textkreation im Content Marketing: Design und Evaluation eines effektiven Prompts",
+        "year": 2024,
+        "cited_by_count": 7,
+        "doi": "https://doi.org/10.1365/s40702-024-01058-3"
+      },
+      {
+        "title": "Bane and boon of hallucinations in context of generative AI",
+        "year": 2024,
+        "cited_by_count": 7,
+        "doi": "https://doi.org/10.36227/techrxiv.171198062.20183635/v1"
+      }
+    ]
+  },
+  {
+    "arxiv": "2208.01626",
+    "title": "Prompt-to-Prompt Image Editing with Cross Attention Control",
+    "cited_by_count": 366,
+    "id": "https://openalex.org/W4289785045",
+    "year": 2022,
+    "citing": [
+      {
+        "title": "Adding Conditional Control to Text-to-Image Diffusion Models",
+        "year": 2023,
+        "cited_by_count": 3951,
+        "doi": "https://doi.org/10.1109/iccv51070.2023.00355"
+      },
+      {
+        "title": "DreamBooth: Fine Tuning Text-to-Image Diffusion Models for Subject-Driven Generation",
+        "year": 2023,
+        "cited_by_count": 2075,
+        "doi": "https://doi.org/10.1109/cvpr52729.2023.02155"
+      },
+      {
+        "title": "InstructPix2Pix: Learning to Follow Image Editing Instructions",
+        "year": 2023,
+        "cited_by_count": 1278,
+        "doi": "https://doi.org/10.1109/cvpr52729.2023.01764"
+      },
+      {
+        "title": "Imagic: Text-Based Real Image Editing with Diffusion Models",
+        "year": 2023,
+        "cited_by_count": 715,
+        "doi": "https://doi.org/10.1109/cvpr52729.2023.00582"
+      },
+      {
+        "title": "Null-text Inversion for Editing Real Images using Guided Diffusion Models",
+        "year": 2023,
+        "cited_by_count": 642,
+        "doi": "https://doi.org/10.1109/cvpr52729.2023.00585"
+      },
+      {
+        "title": "Align Your Latents: High-Resolution Video Synthesis with Latent Diffusion Models",
+        "year": 2023,
+        "cited_by_count": 620,
+        "doi": "https://doi.org/10.1109/cvpr52729.2023.02161"
+      },
+      {
+        "title": "Multi-Concept Customization of Text-to-Image Diffusion",
+        "year": 2023,
+        "cited_by_count": 593,
+        "doi": "https://doi.org/10.1109/cvpr52729.2023.00192"
+      },
+      {
+        "title": "Plug-and-Play Diffusion Features for Text-Driven Image-to-Image Translation",
+        "year": 2023,
+        "cited_by_count": 554,
+        "doi": "https://doi.org/10.1109/cvpr52729.2023.00191"
+      },
+      {
+        "title": "Tune-A-Video: One-Shot Tuning of Image Diffusion Models for Text-to-Video Generation",
+        "year": 2023,
+        "cited_by_count": 518,
+        "doi": "https://doi.org/10.1109/iccv51070.2023.00701"
+      },
+      {
+        "title": "A Survey on Generative Diffusion Models",
+        "year": 2024,
+        "cited_by_count": 506,
+        "doi": "https://doi.org/10.1109/tkde.2024.3361474"
+      },
+      {
+        "title": "MasaCtrl: Tuning-Free Mutual Self-Attention Control for Consistent Image Synthesis and Editing",
+        "year": 2023,
+        "cited_by_count": 356,
+        "doi": "https://doi.org/10.1109/iccv51070.2023.02062"
+      },
+      {
+        "title": "Inversion-based Style Transfer with Diffusion Models",
+        "year": 2023,
+        "cited_by_count": 335,
+        "doi": "https://doi.org/10.1109/cvpr52729.2023.00978"
+      },
+      {
+        "title": "Paint by Example: Exemplar-based Image Editing with Diffusion Models",
+        "year": 2023,
+        "cited_by_count": 333,
+        "doi": "https://doi.org/10.1109/cvpr52729.2023.01763"
+      },
+      {
+        "title": "Proceedings of the 32nd ACM International Conference on Multimedia",
+        "year": 2024,
+        "cited_by_count": 288,
+        "doi": "https://doi.org/10.1145/3664647"
+      },
+      {
+        "title": "DIRE for Diffusion-Generated Image Detection",
+        "year": 2023,
+        "cited_by_count": 282,
+        "doi": "https://doi.org/10.1109/iccv51070.2023.02051"
+      },
+      {
+        "title": "All are Worth Words: A ViT Backbone for Diffusion Models",
+        "year": 2023,
+        "cited_by_count": 239,
+        "doi": "https://doi.org/10.1109/cvpr52729.2023.02171"
+      },
+      {
+        "title": "ELITE: Encoding Visual Concepts into Textual Embeddings for Customized Text-to-Image Generation",
+        "year": 2023,
+        "cited_by_count": 220,
+        "doi": "https://doi.org/10.1109/iccv51070.2023.01461"
+      },
+      {
+        "title": "SmartBrush: Text and Shape Guided Object Inpainting with Diffusion Model",
+        "year": 2023,
+        "cited_by_count": 206,
+        "doi": "https://doi.org/10.1109/cvpr52729.2023.02148"
+      },
+      {
+        "title": "RODIN: A Generative Model for Sculpting 3D Digital Avatars Using Diffusion",
+        "year": 2023,
+        "cited_by_count": 192,
+        "doi": "https://doi.org/10.1109/cvpr52729.2023.00443"
+      },
+      {
+        "title": "Safe Latent Diffusion: Mitigating Inappropriate Degeneration in Diffusion Models",
+        "year": 2023,
+        "cited_by_count": 178,
+        "doi": "https://doi.org/10.1109/cvpr52729.2023.02157"
+      }
+    ]
+  },
+  {
+    "arxiv": "2307.06350",
+    "title": "T2I-CompBench++: An Enhanced and Comprehensive Benchmark for Compositional Text-to-image Generation",
+    "cited_by_count": 23,
+    "id": "https://openalex.org/W4384389674",
+    "year": 2023,
+    "citing": [
+      {
+        "title": "VBench: Comprehensive Benchmark Suite for Video Generative Models",
+        "year": 2024,
+        "cited_by_count": 264,
+        "doi": "https://doi.org/10.1109/cvpr52733.2024.02060"
+      },
+      {
+        "title": "Rich Human Feedback for Text-to-Image Generation",
+        "year": 2024,
+        "cited_by_count": 57,
+        "doi": "https://doi.org/10.1109/cvpr52733.2024.01835"
+      },
+      {
+        "title": "A comprehensive overview of Generative AI (GAI): Technologies, applications, and challenges",
+        "year": 2025,
+        "cited_by_count": 27,
+        "doi": "https://doi.org/10.1016/j.neucom.2025.129645"
+      },
+      {
+        "title": "Ranni: Taming Text-to-Image Diffusion for Accurate Instruction Following",
+        "year": 2024,
+        "cited_by_count": 25,
+        "doi": "https://doi.org/10.1109/cvpr52733.2024.00454"
+      },
+      {
+        "title": "Benchmark Evaluations, Applications, and Challenges of Large Vision Language Models: A Survey",
+        "year": 2025,
+        "cited_by_count": 23,
+        "doi": "https://doi.org/10.32388/gxr68q"
+      },
+      {
+        "title": "TEXGen: a Generative Diffusion Model for Mesh Textures",
+        "year": 2024,
+        "cited_by_count": 22,
+        "doi": "https://doi.org/10.1145/3687909"
+      },
+      {
+        "title": "A Survey of Reasoning with Foundation Models",
+        "year": 2023,
+        "cited_by_count": 16,
+        "doi": "https://doi.org/10.31219/osf.io/ac4sp"
+      },
+      {
+        "title": "CosmicMan: A Text-to-Image Foundation Model for Humans",
+        "year": 2024,
+        "cited_by_count": 16,
+        "doi": "https://doi.org/10.1109/cvpr52733.2024.00664"
+      },
+      {
+        "title": "AIGCBench: Comprehensive evaluation of image-to-video content generated by AI",
+        "year": 2023,
+        "cited_by_count": 16,
+        "doi": "https://doi.org/10.1016/j.tbench.2024.100152"
+      },
+      {
+        "title": "ConceptVis: Exploring and Visualizing Design Concepts With Large Language Models Using Interactive Knowledge Graph",
+        "year": 2025,
+        "cited_by_count": 9,
+        "doi": "https://doi.org/10.1115/1.4069499"
+      },
+      {
+        "title": "ConceptBed: Evaluating Concept Learning Abilities of Text-to-Image Diffusion Models",
+        "year": 2024,
+        "cited_by_count": 7,
+        "doi": "https://doi.org/10.1609/aaai.v38i13.29371"
+      },
+      {
+        "title": "Visualizing Ambiguity: Analyzing Linguistic Ambiguity Resolution in Text-to-Image Models",
+        "year": 2025,
+        "cited_by_count": 6,
+        "doi": "https://doi.org/10.3390/computers14010019"
+      },
+      {
+        "title": "On the Robustness of Language Guidance for Low-Level Vision Tasks: Findings from Depth Estimation",
+        "year": 2024,
+        "cited_by_count": 6,
+        "doi": "https://doi.org/10.1109/cvpr52733.2024.00270"
+      },
+      {
+        "title": "ECLIPSE: A Resource-Efficient Text-to-Image Prior for Image Generations",
+        "year": 2024,
+        "cited_by_count": 5,
+        "doi": "https://doi.org/10.1109/cvpr52733.2024.00866"
+      },
+      {
+        "title": "Diverse and High-Quality Food Image Generation from Only Food Names",
+        "year": 2025,
+        "cited_by_count": 3,
+        "doi": "https://doi.org/10.1145/3730588"
+      },
+      {
+        "title": "Quality Assessment of AI-Generated and AI-Enhanced Content: Challenges and Opportunities",
+        "year": 2025,
+        "cited_by_count": 2,
+        "doi": "https://doi.org/10.1145/3715675.3715831"
+      },
+      {
+        "title": "Offline Evaluation of Set-Based Text-to-Image Generation",
+        "year": 2024,
+        "cited_by_count": 1,
+        "doi": "https://doi.org/10.1145/3673791.3698424"
+      },
+      {
+        "title": "Comprehensive regional guidance for attention map semantics in text-to-image diffusion models",
+        "year": 2025,
+        "cited_by_count": 1,
+        "doi": "https://doi.org/10.1016/j.cviu.2025.104492"
+      },
+      {
+        "title": "Mitigating Compositional Failures in Text-to-Image Models with Causal Text Embedding Refinement",
+        "year": 2025,
+        "cited_by_count": 1,
+        "doi": "https://doi.org/10.1109/percomworkshops65533.2025.00044"
+      },
+      {
+        "title": "Judge Anything: MLLM as a Judge Across Any Modality",
+        "year": 2025,
+        "cited_by_count": 1,
+        "doi": "https://doi.org/10.1145/3711896.3737409"
+      }
+    ]
+  },
+  {
+    "arxiv": "2310.07972",
+    "title": "Interpretable Diffusion via Information Decomposition",
+    "cited_by_count": 3,
+    "id": "https://openalex.org/W4387635099",
+    "year": 2023,
+    "citing": [
+      {
+        "title": "CPR: Retrieval Augmented Generation for Copyright Protection",
+        "year": 2024,
+        "cited_by_count": 13,
+        "doi": "https://doi.org/10.1109/cvpr52733.2024.01176"
+      },
+      {
+        "title": "Partial Information Decomposition for Causal Discovery With Application to Internet of Things",
+        "year": 2024,
+        "cited_by_count": 6,
+        "doi": "https://doi.org/10.1109/jiot.2024.3390449"
+      },
+      {
+        "title": "Interpretable Measures of Conceptual Similarity by Complexity-Constrained Descriptive Auto-Encoding",
+        "year": 2024,
+        "cited_by_count": 2,
+        "doi": "https://doi.org/10.1109/cvpr52733.2024.01052"
+      }
+    ]
+  },
+  {
+    "arxiv": "2403.05135",
+    "title": "ELLA: Equip Diffusion Models with LLM for Enhanced Semantic Alignment",
+    "cited_by_count": 4,
+    "id": "https://openalex.org/W4392678285",
+    "year": 2024,
+    "citing": [
+      {
+        "title": "Benchmark Evaluations, Applications, and Challenges of Large Vision Language Models: A Survey",
+        "year": 2025,
+        "cited_by_count": 23,
+        "doi": "https://doi.org/10.32388/gxr68q"
+      },
+      {
+        "title": "Comprehensive regional guidance for attention map semantics in text-to-image diffusion models",
+        "year": 2025,
+        "cited_by_count": 1,
+        "doi": "https://doi.org/10.1016/j.cviu.2025.104492"
+      },
+      {
+        "title": "ScribbleSense: Generative Scribble-Based Texture Editing with Intent Prediction",
+        "year": 2025,
+        "cited_by_count": 0,
+        "doi": "https://doi.org/10.36227/techrxiv.175372778.81110679/v1"
+      },
+      {
+        "title": "CompArt: Operationalizing Aesthetic Alignment in Text-to-Image Generation via Principles of Art",
+        "year": 2026,
+        "cited_by_count": 0,
+        "doi": "https://doi.org/10.1145/3805622.3810794"
+      }
+    ]
+  },
+  {
+    "arxiv": "2507.05300",
+    "title": "Structured Captions Improve Prompt Adherence in Text-to-Image Models (Re-LAION-Caption 19M)",
+    "cited_by_count": 0,
+    "id": "https://openalex.org/W4416059700",
+    "year": 2025,
+    "citing": []
+  },
+  {
+    "arxiv": "2607.29679",
+    "error": "not found"
+  },
+  {
+    "arxiv": "2408.14339",
+    "title": "ConceptMix: A Compositional Image Generation Benchmark with Controllable Difficulty",
+    "cited_by_count": 1,
+    "id": "https://openalex.org/W4402699879",
+    "year": 2024,
+    "citing": [
+      {
+        "title": "Symmetry-Aware Advances in Multimodal Large Language Models: Architectures, Training, and Evaluation",
+        "year": 2025,
+        "cited_by_count": 1,
+        "doi": "https://doi.org/10.3390/sym17091400"
+      }
+    ]
+  },
+  {
+    "arxiv": "2403.15378",
+    "title": "Long-CLIP: Unlocking the Long-Text Capability of CLIP",
+    "cited_by_count": 2,
+    "id": "https://openalex.org/W4393178688",
+    "year": 2024,
+    "citing": [
+      {
+        "title": "CFDT-CLIP:fabric anomaly detection with collaborative fusion under dual-text prompts",
+        "year": 2026,
+        "cited_by_count": 1,
+        "doi": "https://doi.org/10.1007/s11227-026-08397-6"
+      },
+      {
+        "title": "Creating Datasets of Moth Morphology and Behaviour from Textual Sources with Large Language Models",
+        "year": 2025,
+        "cited_by_count": 0,
+        "doi": "https://doi.org/10.1007/978-3-032-06136-2_36"
+      }
+    ]
+  },
+  {
+    "arxiv": "2209.11711",
+    "title": "Best Prompts for Text-to-Image Models and How to Find Them",
+    "cited_by_count": 7,
+    "id": "https://openalex.org/W4297162910",
+    "year": 2022,
+    "citing": [
+      {
+        "title": "A taxonomy of prompt modifiers for text-to-image generation",
+        "year": 2023,
+        "cited_by_count": 189,
+        "doi": "https://doi.org/10.1080/0144929x.2023.2286532"
+      },
+      {
+        "title": "Unsafe Diffusion: On the Generation of Unsafe Images and Hateful Memes From Text-To-Image Models",
+        "year": 2023,
+        "cited_by_count": 67,
+        "doi": "https://doi.org/10.1145/3576915.3616679"
+      },
+      {
+        "title": "Examining the Text-to-Image Community of Practice: Why and How do People Prompt Generative AIs?",
+        "year": 2023,
+        "cited_by_count": 48,
+        "doi": "https://doi.org/10.1145/3591196.3593051"
+      },
+      {
+        "title": "Text-to-Image Generation for Abstract Concepts",
+        "year": 2024,
+        "cited_by_count": 11,
+        "doi": "https://doi.org/10.1609/aaai.v38i4.28122"
+      },
+      {
+        "title": "Perspectives on AI artists in generating artwork in advertising industry",
+        "year": 2024,
+        "cited_by_count": 10,
+        "doi": "https://doi.org/10.1007/s41870-024-01878-y"
+      },
+      {
+        "title": "A User-Friendly Framework for Generating Model-Preferred Prompts in Text-to-Image Synthesis",
+        "year": 2024,
+        "cited_by_count": 9,
+        "doi": "https://doi.org/10.1609/aaai.v38i3.27986"
+      },
+      {
+        "title": "CoProNN: Concept-Based Prototypical Nearest Neighbors for Explaining Vision Models",
+        "year": 2024,
+        "cited_by_count": 3,
+        "doi": "https://doi.org/10.1007/978-3-031-63787-2_5"
+      }
+    ]
+  }
+]

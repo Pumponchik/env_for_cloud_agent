@@ -1,0 +1,119 @@
+topic: "User→Generator Bridge Methods for Text-to-Image — taxonomy beyond textual re-prompt"
+topic_slug: t2i-bridge-methods
+created: "2026-07-31"
+time_range: "since 2020, emphasis 2023–2026"
+goal: >
+  Map all major ways to close the gap between short/underspecified user prompts and what a
+  T2I/T2V generator consumes — not only textual re-prompters, but embedding/adapter bridges,
+  layout/plan side-channels, schema/JSON interfaces, endogenous CoT inside the generator,
+  and non-text action spaces (token weights, latents, resample/edit). Generalize families,
+  compare pros/cons, cover main papers + citation trees, and extract builder-facing design rules.
+
+execution:
+  batch_size: 10
+  items_per_agent: 1
+  output_dir: ./results
+
+items:
+  # --- Method families (primary research objects) ---
+  - name: "Textual External Re-Prompt Family"
+    category: Method Family
+    description: External LLM/VLM rewrite to prose matching train captions (APE, PromptEnhancer, Wan/Seed/Cosmos PE).
+
+  - name: "Embedding Adapter Soft-Prompt Family"
+    category: Method Family
+    description: Bridge via continuous embeddings, LLM connectors, soft prompts (ELLA, DimFusion, PEZ, DPO-Diff, ParaDiffusion-like).
+
+  - name: "Layout Plan Side-Channel Family"
+    category: Method Family
+    description: Boxes, regions, scene graphs, draft/canvas plans instead of or beside prose (LMD, RPG, GLIGEN, region control).
+
+  - name: "Schema JSON Structured Interface Family"
+    category: Method Family
+    description: Generator trained on structured captions; bridge fills schema (FIBO, Ideogram 4, BBQ, Structured Captions).
+
+  - name: "Endogenous CoT Internalized Bridge Family"
+    category: Method Family
+    description: Thinking/rewrite inside the generator checkpoint (T2I-R1, HunyuanImage 3 CoT, SEER, Z-Image PE-aware).
+
+  - name: "Non-Text Action Space Family"
+    category: Method Family
+    description: Optimize token weights, timesteps, latents, resample/edit actions (PAE, PromptLoop, RAISE, Attend-and-Excite lineage).
+
+  - name: "Hybrid Cascaded Bridge Family"
+    category: Method Family
+    description: Systems combining multiple IRs — retrieve+rewrite, diagnose+layout, schema then embeddings, agent orchestration.
+
+  # --- Anchor papers / systems per family ---
+  - name: "ELLA"
+    category: Embedding Anchor
+    description: Equip diffusion with LLM via connector for dense semantic alignment without rewrite-as-product.
+
+  - name: "FIBO and DimFusion"
+    category: Schema Anchor
+    description: Long structured JSON captions + DimFusion continuous fusion.
+
+  - name: "Ideogram 4 JSON Magic Prompt"
+    category: Schema Anchor
+    description: JSON-native generator; Magic Prompt as compiler plain→schema.
+
+  - name: "LMD LLM-grounded Diffusion"
+    category: Layout Anchor
+    description: LLM emits layout boxes; layout-conditioned generation.
+
+  - name: "RPG Recaption Plan Generate"
+    category: Layout Anchor
+    description: MLLM CoT plan then regional generation.
+
+  - name: "T2I-R1"
+    category: Endogenous Anchor
+    description: Semantic + token CoT internalized with RL.
+
+  - name: "SEER Endogenous Reprompting"
+    category: Endogenous Anchor
+    description: Self-evolving evaluator+reprompter inside UMM.
+
+  - name: "PAE Prompt Adaptation"
+    category: Action-Space Anchor
+    description: Optimize weights and timesteps not only text.
+
+  - name: "PromptLoop"
+    category: Action-Space Anchor
+    description: Latent-state feedback for stepwise prompt refinement during denoising.
+
+  - name: "APE NVIDIA Agentic Prompt Enhancer"
+    category: Textual Anchor
+    description: Modern textual PE with router/no_rewrite; contrast baseline for other bridges.
+
+  - name: "PromptEnhancer Hunyuan"
+    category: Textual Anchor
+    description: Decoupled CoT rewriter with fine-grained reward taxonomy.
+
+  - name: "BBQ-to-Image"
+    category: Schema Anchor
+    description: Numeric boxes+RGB in structured language as parametric bridge.
+
+  - name: "GLIGEN and Layout Controllable T2I"
+    category: Layout Anchor
+    description: Foundational layout-conditioned generation lineage feeding LMD/RPG.
+
+  - name: "Attend-and-Excite and Semantic Guidance"
+    category: Action-Space Anchor
+    description: Cross-attention / guidance interventions without rewriting prompt text.
+
+  - name: "IP-Adapter and Image Prompt Conditioning"
+    category: Embedding Anchor
+    description: Visual/image embeddings as alternative conditioning channel (related bridge).
+
+  # --- Cross-cutting / evaluation ---
+  - name: "Bridge Evaluation and Failure Modes"
+    category: Cross-Cutting
+    description: How to evaluate bridges; GenEval2, counting limits, faithfulness vs aesthetics, portability.
+
+  - name: "When Textual PE Is Wrong Choice"
+    category: Cross-Cutting
+    description: Conditions favoring embeddings, layout, schema, or endogenous over prose rewrite.
+
+  - name: "Controllable T2I Surveys and APO Surveys"
+    category: Surveys
+    description: Existing surveys that cover layout/control/APO but not dedicated bridge taxonomy.

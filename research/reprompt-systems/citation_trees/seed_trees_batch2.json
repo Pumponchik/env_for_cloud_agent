@@ -1,0 +1,2638 @@
+{
+  "faithrewriter": {
+    "arxiv": "2606.08492",
+    "error": "not found"
+  },
+  "visualprompter": {
+    "paper": {
+      "paperId": "9093860c40dac59e205284623fcd9f4884032ddf",
+      "externalIds": {
+        "ArXiv": "2506.23138",
+        "CorpusId": 286367912
+      },
+      "url": "https://www.semanticscholar.org/paper/9093860c40dac59e205284623fcd9f4884032ddf",
+      "title": "VisualPrompter: Semantic-Aware Prompt Optimization with Visual Feedback for Text-to-Image Synthesis",
+      "year": 2025,
+      "citationCount": 3
+    },
+    "n_cites": 3,
+    "n_refs": 49,
+    "citations": [
+      {
+        "paperId": "ca196a2bad60976f8c06d74e9e9222798648e682",
+        "externalIds": {
+          "ArXiv": "2607.18724",
+          "CorpusId": 290395929
+        },
+        "url": "https://www.semanticscholar.org/paper/ca196a2bad60976f8c06d74e9e9222798648e682",
+        "title": "One Rewrite to Fix Them All? Type-Aware Repair Allocation for Text-to-Image Prompt Optimization",
+        "year": 2026,
+        "citationCount": 0
+      },
+      {
+        "paperId": "25c26f9e7e8719529c297d163718550905f4badb",
+        "externalIds": {
+          "ArXiv": "2606.03243",
+          "CorpusId": 288863575
+        },
+        "url": "https://www.semanticscholar.org/paper/25c26f9e7e8719529c297d163718550905f4badb",
+        "title": "MemoGen: Can Past Experience Improve Future Text-to-Image Generation?",
+        "year": 2026,
+        "citationCount": 0
+      },
+      {
+        "paperId": "5c2b92b07673dd916915dc933d1e7a05ec9cb6a0",
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2605-08043",
+          "ArXiv": "2605.08043",
+          "DOI": "10.48550/arXiv.2605.08043",
+          "CorpusId": 288148127
+        },
+        "url": "https://www.semanticscholar.org/paper/5c2b92b07673dd916915dc933d1e7a05ec9cb6a0",
+        "title": "SCOPE: Structured Decomposition and Conditional Skill Orchestration for Complex Image Generation",
+        "year": 2026,
+        "citationCount": 2
+      }
+    ],
+    "references": [
+      {
+        "paperId": "018342d4d9bb8f4dbe1456f64f0511b6adc66bc1",
+        "externalIds": {
+          "DBLP": "conf/iclr/WangSPS025",
+          "ArXiv": "2505.11245",
+          "DOI": "10.48550/arXiv.2505.11245",
+          "CorpusId": 278714771
+        },
+        "url": "https://www.semanticscholar.org/paper/018342d4d9bb8f4dbe1456f64f0511b6adc66bc1",
+        "title": "Diffusion-NPO: Negative Preference Optimization for Better Preference Aligned Generation of Diffusion Models",
+        "year": 2025,
+        "citationCount": 25
+      },
+      {
+        "paperId": "3ef9dbd95a174d4c175fcd603f62b8cc197e8d7e",
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2501-17811",
+          "ArXiv": "2501.17811",
+          "DOI": "10.48550/arXiv.2501.17811",
+          "CorpusId": 275954151
+        },
+        "url": "https://www.semanticscholar.org/paper/3ef9dbd95a174d4c175fcd603f62b8cc197e8d7e",
+        "title": "Janus-Pro: Unified Multimodal Understanding and Generation with Data and Model Scaling",
+        "year": 2025,
+        "citationCount": 821
+      },
+      {
+        "paperId": "a22b23b65cdbc0335b872ed7c7a7206c710f8997",
+        "externalIds": {
+          "ArXiv": "2409.12191",
+          "DBLP": "journals/corr/abs-2409-12191",
+          "DOI": "10.48550/arXiv.2409.12191",
+          "CorpusId": 272704132
+        },
+        "url": "https://www.semanticscholar.org/paper/a22b23b65cdbc0335b872ed7c7a7206c710f8997",
+        "title": "Qwen2-VL: Enhancing Vision-Language Model's Perception of the World at Any Resolution",
+        "year": 2024,
+        "citationCount": 4624
+      },
+      {
+        "paperId": "502987c72f29cf1f6189406c49d125ffb04eb5d3",
+        "externalIds": {
+          "ArXiv": "2406.04314",
+          "DBLP": "conf/cvpr/LiangYGCHCLZ25",
+          "DOI": "10.1109/CVPR52734.2025.01232",
+          "CorpusId": 270285804
+        },
+        "url": "https://www.semanticscholar.org/paper/502987c72f29cf1f6189406c49d125ffb04eb5d3",
+        "title": "Aesthetic Post-Training Diffusion Models from Generic Preferences with Step-by-step Preference Optimization",
+        "year": 2024,
+        "citationCount": 76
+      },
+      {
+        "paperId": "c6e2837894bb545fc62ef41d7dadcd6e1bb51dc5",
+        "externalIds": {
+          "DBLP": "conf/chi/WangHS0024",
+          "ArXiv": "2403.04014",
+          "DOI": "10.1145/3613904.3642803",
+          "CorpusId": 268264261
+        },
+        "url": "https://www.semanticscholar.org/paper/c6e2837894bb545fc62ef41d7dadcd6e1bb51dc5",
+        "title": "PromptCharm: Text-to-Image Generation through Multi-modal Prompting and Refinement",
+        "year": 2024,
+        "citationCount": 175
+      },
+      {
+        "paperId": "41a66997ce0a366bba3becf7c3f37c9aebb13fbd",
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2403-03206",
+          "ArXiv": "2403.03206",
+          "DOI": "10.48550/arXiv.2403.03206",
+          "CorpusId": 268247980
+        },
+        "url": "https://www.semanticscholar.org/paper/41a66997ce0a366bba3becf7c3f37c9aebb13fbd",
+        "title": "Scaling Rectified Flow Transformers for High-Resolution Image Synthesis",
+        "year": 2024,
+        "citationCount": 4411
+      },
+      {
+        "paperId": "57866c5ba4eb25130faeaea82b39b70cab23ef98",
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2402-12760",
+          "ArXiv": "2402.12760",
+          "DOI": "10.1609/aaai.v38i3.27986",
+          "CorpusId": 267759627
+        },
+        "url": "https://www.semanticscholar.org/paper/57866c5ba4eb25130faeaea82b39b70cab23ef98",
+        "title": "A User-Friendly Framework for Generating Model-Preferred Prompts in Text-to-Image Synthesis",
+        "year": 2024,
+        "citationCount": 12
+      },
+      {
+        "paperId": "31d2ccff82e313eb5c1620c44bb8322da4a38513",
+        "externalIds": {
+          "ArXiv": "2402.07927",
+          "DBLP": "journals/corr/abs-2402-07927",
+          "DOI": "10.48550/arXiv.2402.07927",
+          "CorpusId": 267636769
+        },
+        "url": "https://www.semanticscholar.org/paper/31d2ccff82e313eb5c1620c44bb8322da4a38513",
+        "title": "A Systematic Survey of Prompt Engineering in Large Language Models: Techniques and Applications",
+        "year": 2024,
+        "citationCount": 963
+      },
+      {
+        "paperId": "bde9fc752842a2a91c70933169fb8cee2b81f8b2",
+        "externalIds": {
+          "DBLP": "conf/acl/DattaKRA24",
+          "ArXiv": "2312.16720",
+          "DOI": "10.48550/arXiv.2312.16720",
+          "CorpusId": 266573609
+        },
+        "url": "https://www.semanticscholar.org/paper/bde9fc752842a2a91c70933169fb8cee2b81f8b2",
+        "title": "Prompt Expansion for Adaptive Text-to-Image Generation",
+        "year": 2023,
+        "citationCount": 34
+      },
+      {
+        "paperId": "42c4315b5d2e33d7d9a0afdf84e6a47ccd7a700e",
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2311-16090",
+          "ArXiv": "2311.16090",
+          "DOI": "10.1109/CVPR52733.2024.00605",
+          "CorpusId": 265457140
+        },
+        "url": "https://www.semanticscholar.org/paper/42c4315b5d2e33d7d9a0afdf84e6a47ccd7a700e",
+        "title": "Self-Correcting LLM-Controlled Diffusion Models",
+        "year": 2023,
+        "citationCount": 133
+      },
+      {
+        "paperId": "44c3c0d08af2810324d081024e35d3bfe3a5ea1a",
+        "externalIds": {
+          "DBLP": "conf/eacl/RosenmanLH24",
+          "ACL": "2024.eacl-demo.17",
+          "ArXiv": "2311.12229",
+          "DOI": "10.48550/arXiv.2311.12229",
+          "CorpusId": 265308563
+        },
+        "url": "https://www.semanticscholar.org/paper/44c3c0d08af2810324d081024e35d3bfe3a5ea1a",
+        "title": "NeuroPrompts: An Adaptive Framework to Optimize Prompts for Text-to-Image Generation",
+        "year": 2023,
+        "citationCount": 12
+      },
+      {
+        "paperId": "c3b1174989748777173f25406627727073608c05",
+        "externalIds": {
+          "DBLP": "conf/iclr/0001HBGAKBP024",
+          "ArXiv": "2310.18235",
+          "DOI": "10.48550/arXiv.2310.18235",
+          "CorpusId": 264555374
+        },
+        "url": "https://www.semanticscholar.org/paper/c3b1174989748777173f25406627727073608c05",
+        "title": "Davidsonian Scene Graph: Improving Reliability in Fine-grained Evaluation for Text-to-Image Generation",
+        "year": 2023,
+        "citationCount": 166
+      },
+      {
+        "paperId": "afe4ee7ba225d8965cd96056b3e1e76a31451a75",
+        "externalIds": {
+          "ArXiv": "2307.09036",
+          "DBLP": "journals/tvcg/FengWWWLZWC24",
+          "DOI": "10.1109/TVCG.2023.3327168",
+          "CorpusId": 259950893,
+          "PubMed": "37878445"
+        },
+        "url": "https://www.semanticscholar.org/paper/afe4ee7ba225d8965cd96056b3e1e76a31451a75",
+        "title": "PromptMagician: Interactive Prompt Engineering for Text-to-Image Creation",
+        "year": 2023,
+        "citationCount": 165
+      },
+      {
+        "paperId": "d7890d1906d95c4ae4c430b350455156d6d8aed9",
+        "externalIds": {
+          "DBLP": "conf/iclr/PodellELBDMPR24",
+          "ArXiv": "2307.01952",
+          "CorpusId": 259341735
+        },
+        "url": "https://www.semanticscholar.org/paper/d7890d1906d95c4ae4c430b350455156d6d8aed9",
+        "title": "SDXL: Improving Latent Diffusion Models for High-Resolution Image Synthesis",
+        "year": 2023,
+        "citationCount": 5129
+      },
+      {
+        "paperId": "4e33c5756aa18d248cf50fef9382acda1e0f65da",
+        "externalIds": {
+          "DBLP": "conf/nips/ChenLWZSZL23",
+          "ArXiv": "2305.18500",
+          "DOI": "10.48550/arXiv.2305.18500",
+          "CorpusId": 258967371
+        },
+        "url": "https://www.semanticscholar.org/paper/4e33c5756aa18d248cf50fef9382acda1e0f65da",
+        "title": "VAST: A Vision-Audio-Subtitle-Text Omni-Modality Foundation Model and Dataset",
+        "year": 2023,
+        "citationCount": 233
+      },
+      {
+        "paperId": "bd5deadc58ee45b5e004378ba1d54a96bc947b4a",
+        "externalIds": {
+          "ArXiv": "2305.14251",
+          "DBLP": "conf/emnlp/MinKLLYKIZH23",
+          "DOI": "10.48550/arXiv.2305.14251",
+          "CorpusId": 258841470
+        },
+        "url": "https://www.semanticscholar.org/paper/bd5deadc58ee45b5e004378ba1d54a96bc947b4a",
+        "title": "FActScore: Fine-grained Atomic Evaluation of Factual Precision in Long Form Text Generation",
+        "year": 2023,
+        "citationCount": 1504
+      },
+      {
+        "paperId": "b1ef91c5541f88297c7551e1adf15fcee7987197",
+        "externalIds": {
+          "DBLP": "conf/nips/YaromBCAHLOS23",
+          "ArXiv": "2305.10400",
+          "DOI": "10.48550/arXiv.2305.10400",
+          "CorpusId": 258740893
+        },
+        "url": "https://www.semanticscholar.org/paper/b1ef91c5541f88297c7551e1adf15fcee7987197",
+        "title": "What You See is What You Read? Improving Text-Image Alignment Evaluation",
+        "year": 2023,
+        "citationCount": 140
+      },
+      {
+        "paperId": "cf694df964caa156ec306b45d3a3127533cb458f",
+        "externalIds": {
+          "ArXiv": "2305.01569",
+          "DBLP": "journals/corr/abs-2305-01569",
+          "DOI": "10.48550/arXiv.2305.01569",
+          "CorpusId": 258437096
+        },
+        "url": "https://www.semanticscholar.org/paper/cf694df964caa156ec306b45d3a3127533cb458f",
+        "title": "Pick-a-Pic: An Open Dataset of User Preferences for Text-to-Image Generation",
+        "year": 2023,
+        "citationCount": 1071
+      },
+      {
+        "paperId": "421a3f9355c83e30f9b6fd0df2f295430fc1766d",
+        "externalIds": {
+          "DBLP": "conf/uist/BradeWSOG23",
+          "ArXiv": "2304.09337",
+          "DOI": "10.1145/3586183.3606725",
+          "CorpusId": 258212979
+        },
+        "url": "https://www.semanticscholar.org/paper/421a3f9355c83e30f9b6fd0df2f295430fc1766d",
+        "title": "Promptify: Text-to-Image Generation through Interactive Prompt Exploration with Large Language Models",
+        "year": 2023,
+        "citationCount": 205
+      },
+      {
+        "paperId": "03755613d50e1958a97bfaad2efb976f786fbb70",
+        "externalIds": {
+          "DBLP": "journals/pami/LiuCHGZWT25",
+          "ArXiv": "2304.08345",
+          "DOI": "10.1109/TPAMI.2024.3479776",
+          "CorpusId": 258179576,
+          "PubMed": "39418158"
+        },
+        "url": "https://www.semanticscholar.org/paper/03755613d50e1958a97bfaad2efb976f786fbb70",
+        "title": "VALOR: Vision-Audio-Language Omni-Perception Pretraining Model and Dataset",
+        "year": 2023,
+        "citationCount": 193
+      },
+      {
+        "paperId": "9550076d9930dd3533ab9276126f1a9265fad7b4",
+        "externalIds": {
+          "ArXiv": "2303.14420",
+          "DBLP": "conf/iccv/WuSZZL23",
+          "DOI": "10.1109/ICCV51070.2023.00200",
+          "CorpusId": 257767281
+        },
+        "url": "https://www.semanticscholar.org/paper/9550076d9930dd3533ab9276126f1a9265fad7b4",
+        "title": "Human Preference Score: Better Aligning Text-to-image Models with Human Preference",
+        "year": 2023,
+        "citationCount": 353
+      },
+      {
+        "paperId": "1f02ba1c6fae779ec3d003340e72eaf82351cfb9",
+        "externalIds": {
+          "DBLP": "conf/iccv/HuLKWOKS23",
+          "ArXiv": "2303.11897",
+          "DOI": "10.1109/ICCV51070.2023.01866",
+          "CorpusId": 257636562
+        },
+        "url": "https://www.semanticscholar.org/paper/1f02ba1c6fae779ec3d003340e72eaf82351cfb9",
+        "title": "TIFA: Accurate and Interpretable Text-to-Image Faithfulness Evaluation with Question Answering",
+        "year": 2023,
+        "citationCount": 447
+      },
+      {
+        "paperId": "23f4c8d980d8288131f80cbdb4173f05a21e8724",
+        "externalIds": {
+          "DBLP": "conf/chi/0005SL23",
+          "ArXiv": "2302.09466",
+          "DOI": "10.1145/3544548.3581402",
+          "CorpusId": 257038210
+        },
+        "url": "https://www.semanticscholar.org/paper/23f4c8d980d8288131f80cbdb4173f05a21e8724",
+        "title": "RePrompt: Automatic Prompt Editing to Refine AI-Generative Art Towards Precise Expressions",
+        "year": 2023,
+        "citationCount": 153
+      },
+      {
+        "paperId": "efbe97d20c4ffe356e8826c01dc550bacc405add",
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2302-05543",
+          "ArXiv": "2302.05543",
+          "DOI": "10.1109/ICCV51070.2023.00355",
+          "CorpusId": 256827727
+        },
+        "url": "https://www.semanticscholar.org/paper/efbe97d20c4ffe356e8826c01dc550bacc405add",
+        "title": "Adding Conditional Control to Text-to-Image Diffusion Models",
+        "year": 2023,
+        "citationCount": 7417
+      },
+      {
+        "paperId": "4d81c33b295c092016ac236cfd32020a5bb70b97",
+        "externalIds": {
+          "ArXiv": "2212.09611",
+          "DBLP": "conf/nips/HaoC0W23",
+          "DOI": "10.48550/arXiv.2212.09611",
+          "CorpusId": 254853701
+        },
+        "url": "https://www.semanticscholar.org/paper/4d81c33b295c092016ac236cfd32020a5bb70b97",
+        "title": "Optimizing Prompts for Text-to-Image Generation",
+        "year": 2022,
+        "citationCount": 284
+      },
+      {
+        "paperId": "8fe6a16df99a87f79fc0cb0fbd1af44f79f7885f",
+        "externalIds": {
+          "DBLP": "conf/acl/WangMMYHC23",
+          "ArXiv": "2210.14896",
+          "ACL": "2023.acl-long.51",
+          "DOI": "10.48550/arXiv.2210.14896",
+          "CorpusId": 253116574
+        },
+        "url": "https://www.semanticscholar.org/paper/8fe6a16df99a87f79fc0cb0fbd1af44f79f7885f",
+        "title": "DiffusionDB: A Large-scale Prompt Gallery Dataset for Text-to-Image Generative Models",
+        "year": 2022,
+        "citationCount": 496
+      },
+      {
+        "paperId": "e5c8960eb2ec034ffbd353ef39fd1cb541d3c7c9",
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2210-08402",
+          "ArXiv": "2210.08402",
+          "DOI": "10.48550/arXiv.2210.08402",
+          "CorpusId": 252917726
+        },
+        "url": "https://www.semanticscholar.org/paper/e5c8960eb2ec034ffbd353ef39fd1cb541d3c7c9",
+        "title": "LAION-5B: An open large-scale dataset for training next generation image-text models",
+        "year": 2022,
+        "citationCount": 5410
+      },
+      {
+        "paperId": "61d728e2182d7334e7617ea078b112c175cc7dcd",
+        "externalIds": {
+          "DBLP": "conf/sigir/PavlichenkoU23",
+          "ArXiv": "2209.11711",
+          "DOI": "10.1145/3539618.3592000",
+          "CorpusId": 252519648
+        },
+        "url": "https://www.semanticscholar.org/paper/61d728e2182d7334e7617ea078b112c175cc7dcd",
+        "title": "Best Prompts for Text-to-Image Models and How to Find Them",
+        "year": 2022,
+        "citationCount": 84
+      },
+      {
+        "paperId": "9695824d7a01fad57ba9c01d7d76a519d78d65e7",
+        "externalIds": {
+          "ArXiv": "2205.11487",
+          "DBLP": "journals/corr/abs-2205-11487",
+          "DOI": "10.48550/arXiv.2205.11487",
+          "CorpusId": 248986576
+        },
+        "url": "https://www.semanticscholar.org/paper/9695824d7a01fad57ba9c01d7d76a519d78d65e7",
+        "title": "Photorealistic Text-to-Image Diffusion Models with Deep Language Understanding",
+        "year": 2022,
+        "citationCount": 8667
+      },
+      {
+        "paperId": "c10075b3746a9f3dd5811970e93c8ca3ad39b39d",
+        "externalIds": {
+          "ArXiv": "2112.10752",
+          "DBLP": "journals/corr/abs-2112-10752",
+          "DOI": "10.1109/CVPR52688.2022.01042",
+          "CorpusId": 245335280
+        },
+        "url": "https://www.semanticscholar.org/paper/c10075b3746a9f3dd5811970e93c8ca3ad39b39d",
+        "title": "High-Resolution Image Synthesis with Latent Diffusion Models",
+        "year": 2021,
+        "citationCount": 26418
+      },
+      {
+        "paperId": "0968f1592f9401d72bf0d97e740496818c1a3135",
+        "externalIds": {
+          "DBLP": "conf/chi/LiuC22a",
+          "ArXiv": "2109.06977",
+          "DOI": "10.1145/3491102.3501825",
+          "CorpusId": 237513697
+        },
+        "url": "https://www.semanticscholar.org/paper/0968f1592f9401d72bf0d97e740496818c1a3135",
+        "title": "Design Guidelines for Prompt Engineering Text-to-Image Generative Models",
+        "year": 2021,
+        "citationCount": 736
+      },
+      {
+        "paperId": "96ea07447d2f9adefe03852a878517a2a6d45b96",
+        "externalIds": {
+          "ArXiv": "2109.01134",
+          "DBLP": "journals/ijcv/ZhouYLL22",
+          "DOI": "10.1007/s11263-022-01653-1",
+          "CorpusId": 237386023
+        },
+        "url": "https://www.semanticscholar.org/paper/96ea07447d2f9adefe03852a878517a2a6d45b96",
+        "title": "Learning to Prompt for Vision-Language Models",
+        "year": 2021,
+        "citationCount": 4195
+      },
+      {
+        "paperId": "28692beece311a90f5fa1ca2ec9d0c2ce293d069",
+        "externalIds": {
+          "DBLP": "journals/csur/LiuYFJHN23",
+          "ArXiv": "2107.13586",
+          "DOI": "10.1145/3560815",
+          "CorpusId": 236493269
+        },
+        "url": "https://www.semanticscholar.org/paper/28692beece311a90f5fa1ca2ec9d0c2ce293d069",
+        "title": "Pre-train, Prompt, and Predict: A Systematic Survey of Prompting Methods in Natural Language Processing",
+        "year": 2021,
+        "citationCount": 5585
+      },
+      {
+        "paperId": "38b0567e83386ddc294d6c81b541deacbd8e3c2a",
+        "externalIds": {
+          "DBLP": "conf/emnlp/HesselHFBC21",
+          "ACL": "2021.emnlp-main.595",
+          "ArXiv": "2104.08718",
+          "DOI": "10.18653/v1/2021.emnlp-main.595",
+          "CorpusId": 233296711
+        },
+        "url": "https://www.semanticscholar.org/paper/38b0567e83386ddc294d6c81b541deacbd8e3c2a",
+        "title": "CLIPScore: A Reference-free Evaluation Metric for Image Captioning",
+        "year": 2021,
+        "citationCount": 3033
+      },
+      {
+        "paperId": "6f870f7f02a8c59c3e23f407f3ef00dd1dcf8fc4",
+        "externalIds": {
+          "DBLP": "conf/icml/RadfordKHRGASAM21",
+          "ArXiv": "2103.00020",
+          "CorpusId": 231591445
+        },
+        "url": "https://www.semanticscholar.org/paper/6f870f7f02a8c59c3e23f407f3ef00dd1dcf8fc4",
+        "title": "Learning Transferable Visual Models From Natural Language Supervision",
+        "year": 2021,
+        "citationCount": 52982
+      },
+      {
+        "paperId": "85e7d63f75c0916bd350a229e040c5fbb1472e7a",
+        "externalIds": {
+          "ArXiv": "2012.15723",
+          "ACL": "2021.acl-long.295",
+          "DBLP": "conf/acl/GaoFC20",
+          "DOI": "10.18653/v1/2021.acl-long.295",
+          "CorpusId": 229923710
+        },
+        "url": "https://www.semanticscholar.org/paper/85e7d63f75c0916bd350a229e040c5fbb1472e7a",
+        "title": "Making Pre-trained Language Models Better Few-shot Learners",
+        "year": 2021,
+        "citationCount": 2309
+      },
+      {
+        "paperId": "014576b866078524286802b1d0e18628520aa886",
+        "externalIds": {
+          "ArXiv": "2010.02502",
+          "DBLP": "journals/corr/abs-2010-02502",
+          "MAG": "3092442149",
+          "CorpusId": 222140788
+        },
+        "url": "https://www.semanticscholar.org/paper/014576b866078524286802b1d0e18628520aa886",
+        "title": "Denoising Diffusion Implicit Models",
+        "year": 2020,
+        "citationCount": 12928
+      },
+      {
+        "paperId": "53c283cc281deb515c4b4b539dbcd636c5842e62",
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2010-00490",
+          "MAG": "3091075079",
+          "ArXiv": "2010.00490",
+          "DOI": "10.1162/tacl_a_00397",
+          "CorpusId": 222090341
+        },
+        "url": "https://www.semanticscholar.org/paper/53c283cc281deb515c4b4b539dbcd636c5842e62",
+        "title": "Towards Question-Answering as an Automatic Metric for Evaluating the Content Quality of a Summary",
+        "year": 2020,
+        "citationCount": 147
+      },
+      {
+        "paperId": "5c126ae3421f05768d8edd97ecd44b1364e2c99a",
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2006-11239",
+          "MAG": "3100572490",
+          "ArXiv": "2006.11239",
+          "CorpusId": 219955663
+        },
+        "url": "https://www.semanticscholar.org/paper/5c126ae3421f05768d8edd97ecd44b1364e2c99a",
+        "title": "Denoising Diffusion Probabilistic Models",
+        "year": 2020,
+        "citationCount": 33468
+      },
+      {
+        "paperId": "90abbc2cf38462b954ae1b772fac9532e2ccd8b0",
+        "externalIds": {
+          "ArXiv": "2005.14165",
+          "DBLP": "conf/nips/BrownMRSKDNSSAA20",
+          "MAG": "3030163527",
+          "CorpusId": 218971783
+        },
+        "url": "https://www.semanticscholar.org/paper/90abbc2cf38462b954ae1b772fac9532e2ccd8b0",
+        "title": "Language Models are Few-Shot Learners",
+        "year": 2020,
+        "citationCount": 61355
+      },
+      {
+        "paperId": "974ff86cdf8550cffde4d8048609baaac876b563",
+        "externalIds": {
+          "DBLP": "journals/corr/abs-1907-02665",
+          "ArXiv": "1907.02665",
+          "MAG": "2905544033",
+          "DOI": "10.1109/TCSVT.2018.2886771",
+          "CorpusId": 69993921
+        },
+        "url": "https://www.semanticscholar.org/paper/974ff86cdf8550cffde4d8048609baaac876b563",
+        "title": "Blind Image Quality Assessment Using a Deep Bilinear Convolutional Neural Network",
+        "year": 2019,
+        "citationCount": 944
+      },
+      {
+        "paperId": "231af7dc01a166cac3b5b01ca05778238f796e41",
+        "externalIds": {
+          "MAG": "2963981733",
+          "DBLP": "conf/nips/HeuselRUNH17",
+          "CorpusId": 326772
+        },
+        "url": "https://www.semanticscholar.org/paper/231af7dc01a166cac3b5b01ca05778238f796e41",
+        "title": "GANs Trained by a Two Time-Scale Update Rule Converge to a Local Nash Equilibrium",
+        "year": 2017,
+        "citationCount": 19093
+      },
+      {
+        "paperId": "9d3af1c5fd5f7fb51467b4308952bc4da8285396",
+        "externalIds": {
+          "MAG": "2206047865",
+          "DOI": "10.1177/003591577707000909",
+          "CorpusId": 28208293
+        },
+        "url": "https://www.semanticscholar.org/paper/9d3af1c5fd5f7fb51467b4308952bc4da8285396",
+        "title": "Paper",
+        "year": 1977,
+        "citationCount": 5514
+      },
+      {
+        "paperId": "d7265061f1ef23e985ba32e61d68296289e8ba9e",
+        "externalIds": {
+          "DBLP": "conf/hci/FanWZPL23",
+          "DOI": "10.1007/978-3-031-36004-6_55",
+          "CorpusId": 259763853
+        },
+        "url": "https://www.semanticscholar.org/paper/d7265061f1ef23e985ba32e61d68296289e8ba9e",
+        "title": "Towards an Automatic Prompt Optimization Framework for AI Image Generation",
+        "year": 2023,
+        "citationCount": 7
+      },
+      {
+        "paperId": "1d62babc85835e7b1fc61e8a2ad4b9301e3e93ea",
+        "externalIds": {
+          "DBLP": "conf/nips/0001ZB23",
+          "CorpusId": 268030751
+        },
+        "url": "https://www.semanticscholar.org/paper/1d62babc85835e7b1fc61e8a2ad4b9301e3e93ea",
+        "title": "Visual Programming for Step-by-Step Text-to-Image Generation and Evaluation",
+        "year": 2023,
+        "citationCount": 60
+      },
+      {
+        "paperId": "53d8b356551a2361020a948f64454a6d599af69f",
+        "externalIds": {
+          "DBLP": "conf/acl/LiL20",
+          "ACL": "2021.acl-long.353",
+          "ArXiv": "2101.00190",
+          "DOI": "10.18653/v1/2021.acl-long.353",
+          "CorpusId": 230433941
+        },
+        "url": "https://www.semanticscholar.org/paper/53d8b356551a2361020a948f64454a6d599af69f",
+        "title": "Prefix-Tuning: Optimizing Continuous Prompts for Generation",
+        "year": 2021,
+        "citationCount": 6117
+      },
+      {
+        "paperId": null,
+        "externalIds": null,
+        "url": null,
+        "title": "Midjourney",
+        "year": 2021,
+        "citationCount": null
+      },
+      {
+        "paperId": null,
+        "externalIds": null,
+        "url": null,
+        "title": "BlackForestLabs",
+        "year": null,
+        "citationCount": null
+      },
+      {
+        "paperId": null,
+        "externalIds": null,
+        "url": null,
+        "title": "DouBao",
+        "year": null,
+        "citationCount": null
+      }
+    ]
+  },
+  "brack": {
+    "arxiv": "2506.16679",
+    "error": "not found"
+  },
+  "prompt_expansion": {
+    "paper": {
+      "paperId": "bde9fc752842a2a91c70933169fb8cee2b81f8b2",
+      "externalIds": {
+        "DBLP": "conf/acl/DattaKRA24",
+        "ArXiv": "2312.16720",
+        "DOI": "10.48550/arXiv.2312.16720",
+        "CorpusId": 266573609
+      },
+      "url": "https://www.semanticscholar.org/paper/bde9fc752842a2a91c70933169fb8cee2b81f8b2",
+      "title": "Prompt Expansion for Adaptive Text-to-Image Generation",
+      "year": 2023,
+      "citationCount": 34
+    },
+    "n_cites": 34,
+    "n_refs": 26,
+    "citations": [
+      {
+        "paperId": "ca196a2bad60976f8c06d74e9e9222798648e682",
+        "externalIds": {
+          "ArXiv": "2607.18724",
+          "CorpusId": 290395929
+        },
+        "url": "https://www.semanticscholar.org/paper/ca196a2bad60976f8c06d74e9e9222798648e682",
+        "title": "One Rewrite to Fix Them All? Type-Aware Repair Allocation for Text-to-Image Prompt Optimization",
+        "year": 2026,
+        "citationCount": 0
+      },
+      {
+        "paperId": "8f6f70a4edd218ad4fe687b1722c1d25b5b16a5d",
+        "externalIds": {
+          "DBLP": "conf/mir/OeTS26",
+          "DOI": "10.1145/3805622.3810691",
+          "CorpusId": 289366889
+        },
+        "url": "https://www.semanticscholar.org/paper/8f6f70a4edd218ad4fe687b1722c1d25b5b16a5d",
+        "title": "Asymmetric Pipeline for Dataset Construction and Situation-aware Generative Outfit Retrieval Leveraging Differences in Task Difficulty",
+        "year": 2026,
+        "citationCount": 0
+      },
+      {
+        "paperId": "4ed7f1066cd5fa02269a97b9d09144af7f65240b",
+        "externalIds": {
+          "ArXiv": "2606.14125",
+          "CorpusId": 289209360
+        },
+        "url": "https://www.semanticscholar.org/paper/4ed7f1066cd5fa02269a97b9d09144af7f65240b",
+        "title": "Conditioning Matters: Stabilizing Inversion and Attention in Diffusion Image Editing",
+        "year": 2026,
+        "citationCount": 0
+      },
+      {
+        "paperId": "ed578a77ed68a5a510334d328b2f2067c96b1a52",
+        "externalIds": {
+          "ArXiv": "2605.02805",
+          "DBLP": "journals/corr/abs-2605-02805",
+          "DOI": "10.1145/3800645.3812872",
+          "CorpusId": 287950357
+        },
+        "url": "https://www.semanticscholar.org/paper/ed578a77ed68a5a510334d328b2f2067c96b1a52",
+        "title": "Re-Envisioning Instant Photography using Generative AI: An Exploratory Design Probe Using the UnReality Camera",
+        "year": 2026,
+        "citationCount": 0
+      },
+      {
+        "paperId": "bf7b283e6ea4af4663284496f897d99471fea060",
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2602-04713",
+          "ArXiv": "2602.04713",
+          "DOI": "10.1145/3742413.3789149",
+          "CorpusId": 285285933
+        },
+        "url": "https://www.semanticscholar.org/paper/bf7b283e6ea4af4663284496f897d99471fea060",
+        "title": "Adaptive Prompt Elicitation for Text-to-Image Generation",
+        "year": 2026,
+        "citationCount": 1
+      },
+      {
+        "paperId": "90217f7bde701e0248e39b006a723922ab38649a",
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2601-11743",
+          "ArXiv": "2601.11743",
+          "DOI": "10.48550/arXiv.2601.11743",
+          "CorpusId": 284910511
+        },
+        "url": "https://www.semanticscholar.org/paper/90217f7bde701e0248e39b006a723922ab38649a",
+        "title": "Nixie: Efficient, Transparent Temporal Multiplexing for Consumer GPUs",
+        "year": 2026,
+        "citationCount": 1
+      },
+      {
+        "paperId": "f0a8d44f37d51b1b84bd358470c7b6f90b0a9b43",
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2601-10553",
+          "ArXiv": "2601.10553",
+          "DOI": "10.48550/arXiv.2601.10553",
+          "CorpusId": 284738472
+        },
+        "url": "https://www.semanticscholar.org/paper/f0a8d44f37d51b1b84bd358470c7b6f90b0a9b43",
+        "title": "Inference-time Physics Alignment of Video Generative Models with Latent World Models",
+        "year": 2026,
+        "citationCount": 18
+      },
+      {
+        "paperId": "74108e3705c4961386cf102bb0bee243bebe99c4",
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2512-03534",
+          "ArXiv": "2512.03534",
+          "DOI": "10.48550/arXiv.2512.03534",
+          "CorpusId": 283466464
+        },
+        "url": "https://www.semanticscholar.org/paper/74108e3705c4961386cf102bb0bee243bebe99c4",
+        "title": "Rethinking Prompt Design for Inference-time Scaling in Text-to-Visual Generation",
+        "year": 2025,
+        "citationCount": 1
+      },
+      {
+        "paperId": "1905143fd0e598bf5babd7706a20582a1f29c4fa",
+        "externalIds": {
+          "ArXiv": "2511.19458",
+          "DBLP": "journals/corr/abs-2511-19458",
+          "DOI": "10.48550/arXiv.2511.19458",
+          "CorpusId": 283250754
+        },
+        "url": "https://www.semanticscholar.org/paper/1905143fd0e598bf5babd7706a20582a1f29c4fa",
+        "title": "Personalized Reward Modeling for Text-to-Image Generation",
+        "year": 2025,
+        "citationCount": 3
+      },
+      {
+        "paperId": "84c90e8d86bfcadb6d612d961d77f094b29a31b1",
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2511-00686",
+          "ArXiv": "2511.00686",
+          "DOI": "10.48550/arXiv.2511.00686",
+          "CorpusId": 282739614
+        },
+        "url": "https://www.semanticscholar.org/paper/84c90e8d86bfcadb6d612d961d77f094b29a31b1",
+        "title": "Evolve to Inspire: Novelty Search for Diverse Image Generation",
+        "year": 2025,
+        "citationCount": 0
+      },
+      {
+        "paperId": "9b585aacb9894aebd603f98cb2333e12c71f2781",
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2510-19557",
+          "ArXiv": "2510.19557",
+          "DOI": "10.48550/arXiv.2510.19557",
+          "CorpusId": 282271977
+        },
+        "url": "https://www.semanticscholar.org/paper/9b585aacb9894aebd603f98cb2333e12c71f2781",
+        "title": "The Intricate Dance of Prompt Complexity, Quality, Diversity, and Consistency in T2I Models",
+        "year": 2025,
+        "citationCount": 4
+      },
+      {
+        "paperId": "2878d1e09e86199c504c8b27f93b6b8c539451fa",
+        "externalIds": {
+          "DBLP": "conf/iccv/GuptaSF25",
+          "DOI": "10.1109/ICCVW69036.2025.00209",
+          "CorpusId": 286013768
+        },
+        "url": "https://www.semanticscholar.org/paper/2878d1e09e86199c504c8b27f93b6b8c539451fa",
+        "title": "Axes-and-Tags: LLM-Driven Design Galleries for Generative Content",
+        "year": 2025,
+        "citationCount": 0
+      },
+      {
+        "paperId": "e40cbb9cf96ca92d7ad4cf83ab937612a85e1cfb",
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2510-12041",
+          "ArXiv": "2510.12041",
+          "DOI": "10.48550/arXiv.2510.12041",
+          "CorpusId": 282064537
+        },
+        "url": "https://www.semanticscholar.org/paper/e40cbb9cf96ca92d7ad4cf83ab937612a85e1cfb",
+        "title": "Improving Text-to-Image Generation with Input-Side Inference-Time Scaling",
+        "year": 2025,
+        "citationCount": 4
+      },
+      {
+        "paperId": "f57e4f3166555ab59dfa2728cdcbc70baec0b3ba",
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2509-21262",
+          "ArXiv": "2509.21262",
+          "DOI": "10.48550/arXiv.2509.21262",
+          "CorpusId": 281526078
+        },
+        "url": "https://www.semanticscholar.org/paper/f57e4f3166555ab59dfa2728cdcbc70baec0b3ba",
+        "title": "Un-Doubling Diffusion: LLM-guided Disambiguation of Homonym Duplication",
+        "year": 2025,
+        "citationCount": 0
+      },
+      {
+        "paperId": "9ac4911450c42066330a4e6e02f435c76856e119",
+        "externalIds": {
+          "ArXiv": "2509.10704",
+          "DBLP": "journals/corr/abs-2509-10704",
+          "DOI": "10.48550/arXiv.2509.10704",
+          "CorpusId": 281315586
+        },
+        "url": "https://www.semanticscholar.org/paper/9ac4911450c42066330a4e6e02f435c76856e119",
+        "title": "Maestro: Self-Improving Text-to-Image Generation via Agent Orchestration",
+        "year": 2025,
+        "citationCount": 13
+      },
+      {
+        "paperId": "69d1e7da964ce3936ff82dfdf1fbb63fe2cb6740",
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2508-21032",
+          "ArXiv": "2508.21032",
+          "DOI": "10.1109/ICCV51701.2025.01530",
+          "CorpusId": 280949892
+        },
+        "url": "https://www.semanticscholar.org/paper/69d1e7da964ce3936ff82dfdf1fbb63fe2cb6740",
+        "title": "Reusing Computation in Text-to-Image Diffusion for Efficient Generation of Image Sets",
+        "year": 2025,
+        "citationCount": 3
+      },
+      {
+        "paperId": "7e343692d67606123a6d3f910899cefb4aba997b",
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2508-05954",
+          "ArXiv": "2508.05954",
+          "DOI": "10.48550/arXiv.2508.05954",
+          "CorpusId": 280561829
+        },
+        "url": "https://www.semanticscholar.org/paper/7e343692d67606123a6d3f910899cefb4aba997b",
+        "title": "Bifrost-1: Bridging Multimodal LLMs and Diffusion Models with Patch-level CLIP Latents",
+        "year": 2025,
+        "citationCount": 9
+      },
+      {
+        "paperId": "bfcdd816d0125732a480360687dfc585cc3b82fd",
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2507-09122",
+          "ArXiv": "2507.09122",
+          "DOI": "10.48550/arXiv.2507.09122",
+          "CorpusId": 280220713
+        },
+        "url": "https://www.semanticscholar.org/paper/bfcdd816d0125732a480360687dfc585cc3b82fd",
+        "title": "SnapMoGen: Human Motion Generation from Expressive Texts",
+        "year": 2025,
+        "citationCount": 43
+      },
+      {
+        "paperId": "be568c4b71f92047195ddfe1c9b8e85070857eb3",
+        "externalIds": {
+          "DBLP": "conf/cui/ChiHSKSDEC25",
+          "DOI": "10.1145/3719160.3736624",
+          "CorpusId": 279956512
+        },
+        "url": "https://www.semanticscholar.org/paper/be568c4b71f92047195ddfe1c9b8e85070857eb3",
+        "title": "WatchWithMe: LLM-Based Interactive Guided Watching of Review Videos",
+        "year": 2025,
+        "citationCount": 2
+      },
+      {
+        "paperId": "9093860c40dac59e205284623fcd9f4884032ddf",
+        "externalIds": {
+          "ArXiv": "2506.23138",
+          "CorpusId": 286367912
+        },
+        "url": "https://www.semanticscholar.org/paper/9093860c40dac59e205284623fcd9f4884032ddf",
+        "title": "VisualPrompter: Semantic-Aware Prompt Optimization with Visual Feedback for Text-to-Image Synthesis",
+        "year": 2025,
+        "citationCount": 3
+      },
+      {
+        "paperId": "bc86760ec99d66033191822c4dfc3da95e0ccea4",
+        "externalIds": {
+          "ArXiv": "2505.00703",
+          "DBLP": "journals/corr/abs-2505-00703",
+          "DOI": "10.48550/arXiv.2505.00703",
+          "CorpusId": 278237703
+        },
+        "url": "https://www.semanticscholar.org/paper/bc86760ec99d66033191822c4dfc3da95e0ccea4",
+        "title": "T2I-R1: Reinforcing Image Generation with Collaborative Semantic-level and Token-level CoT",
+        "year": 2025,
+        "citationCount": 159
+      },
+      {
+        "paperId": "3660e3afc607fed3003f1d16a630fa042ff4d425",
+        "externalIds": {
+          "ArXiv": "2502.15242",
+          "DBLP": "conf/fat/ShawYKZ25",
+          "DOI": "10.1145/3715275.3732030",
+          "CorpusId": 276557826
+        },
+        "url": "https://www.semanticscholar.org/paper/3660e3afc607fed3003f1d16a630fa042ff4d425",
+        "title": "Agonistic Image Generation: Unsettling the Hegemony of Intention",
+        "year": 2025,
+        "citationCount": 7
+      },
+      {
+        "paperId": "df48a172ac311474c2b28c8f084608d66c61f180",
+        "externalIds": {
+          "ArXiv": "2501.00917",
+          "DBLP": "journals/corr/abs-2501-00917",
+          "DOI": "10.48550/arXiv.2501.00917",
+          "CorpusId": 275213056
+        },
+        "url": "https://www.semanticscholar.org/paper/df48a172ac311474c2b28c8f084608d66c61f180",
+        "title": "Hierarchical Vision-Language Alignment for Text-to-Image Generation via Diffusion Models",
+        "year": 2025,
+        "citationCount": 0
+      },
+      {
+        "paperId": "5c442e2ea67075e89e33316dbb51a7a305e45f56",
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2412-06771",
+          "ArXiv": "2412.06771",
+          "DOI": "10.48550/arXiv.2412.06771",
+          "CorpusId": 274610848
+        },
+        "url": "https://www.semanticscholar.org/paper/5c442e2ea67075e89e33316dbb51a7a305e45f56",
+        "title": "Proactive Agents for Multi-Turn Text-to-Image Generation Under Uncertainty",
+        "year": 2024,
+        "citationCount": 23
+      },
+      {
+        "paperId": "a25091348153da23b016161ca1fbba1ffcb386ad",
+        "externalIds": {
+          "ArXiv": "2412.02700",
+          "DBLP": "conf/cvpr/GengHHCZPLAR0WO25",
+          "DOI": "10.1109/CVPR52734.2025.00010",
+          "CorpusId": 274446282
+        },
+        "url": "https://www.semanticscholar.org/paper/a25091348153da23b016161ca1fbba1ffcb386ad",
+        "title": "Motion Prompting: Controlling Video Generation with Motion Trajectories",
+        "year": 2024,
+        "citationCount": 168
+      },
+      {
+        "paperId": "3b7f6362f1efddbbb2e007d067d7921d85089c6a",
+        "externalIds": {
+          "DOI": "10.1177/00405175241289578",
+          "CorpusId": 273726389
+        },
+        "url": "https://www.semanticscholar.org/paper/3b7f6362f1efddbbb2e007d067d7921d85089c6a",
+        "title": "An intelligent generative method of fashion design combining attribute knowledge and Stable Diffusion Model",
+        "year": 2024,
+        "citationCount": 13
+      },
+      {
+        "paperId": "a5a18eb8a4a84435143c189147a37f159499ee82",
+        "externalIds": {
+          "DBLP": "conf/iiaiaai/SongSLKM24",
+          "DOI": "10.1109/IIAI-AAI63651.2024.00118",
+          "CorpusId": 273376955
+        },
+        "url": "https://www.semanticscholar.org/paper/a5a18eb8a4a84435143c189147a37f159499ee82",
+        "title": "Exploring the Potential of Novel Image-to-Text Generators as Prompt Engineers for CivitAI Models",
+        "year": 2024,
+        "citationCount": 2
+      },
+      {
+        "paperId": "444936e20c15bbf2734e2024e820707a223aa551",
+        "externalIds": {
+          "ArXiv": "2403.07944",
+          "DBLP": "journals/corr/abs-2403-07944",
+          "DOI": "10.48550/arXiv.2403.07944",
+          "CorpusId": 268379428
+        },
+        "url": "https://www.semanticscholar.org/paper/444936e20c15bbf2734e2024e820707a223aa551",
+        "title": "WorldGPT: A Sora-Inspired Video AI Agent as Rich World Models from Text and Image Inputs",
+        "year": 2024,
+        "citationCount": 22
+      },
+      {
+        "paperId": "060ed53d739e0945e67720c3d310088aeb551746",
+        "externalIds": {
+          "ArXiv": "2402.12412",
+          "DBLP": "journals/tbc/AhnYLP24",
+          "DOI": "10.1109/TBC.2024.3380474",
+          "CorpusId": 267760209
+        },
+        "url": "https://www.semanticscholar.org/paper/060ed53d739e0945e67720c3d310088aeb551746",
+        "title": "Dynamic and Super-Personalized Media Ecosystem Driven by Generative AI: Unpredictable Plays Never Repeating the Same",
+        "year": 2024,
+        "citationCount": 11
+      },
+      {
+        "paperId": "c874aa93efe663ed31f2ec72d45a5dd4b4cdffba",
+        "externalIds": {
+          "ArXiv": "2311.08364",
+          "DBLP": "journals/corr/abs-2311-08364",
+          "DOI": "10.48550/arXiv.2311.08364",
+          "CorpusId": 265158095
+        },
+        "url": "https://www.semanticscholar.org/paper/c874aa93efe663ed31f2ec72d45a5dd4b4cdffba",
+        "title": "Plum: Prompt Learning using Metaheuristic",
+        "year": 2023,
+        "citationCount": 10
+      },
+      {
+        "paperId": "7a6684eeacddfc065cc0139ce845dbc2671b764d",
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2506-23138",
+          "DOI": "10.48550/arXiv.2506.23138",
+          "CorpusId": 280012181
+        },
+        "url": "https://www.semanticscholar.org/paper/7a6684eeacddfc065cc0139ce845dbc2671b764d",
+        "title": "VisualPrompter: Prompt Optimization with Visual Feedback for Text-to-Image Synthesis",
+        "year": 2025,
+        "citationCount": 1
+      },
+      {
+        "paperId": "0c61d3b7292f6a0af45a6318d8788a1c616707a6",
+        "externalIds": {
+          "DBLP": "journals/tmlr/LiZKSGZXSLYZ25",
+          "CorpusId": 282267751
+        },
+        "url": "https://www.semanticscholar.org/paper/0c61d3b7292f6a0af45a6318d8788a1c616707a6",
+        "title": "Enhancing Diversity in Text-to-Image Generation without Compromising Fidelity",
+        "year": 2025,
+        "citationCount": 2
+      },
+      {
+        "paperId": "f6f758cbcfdc9110295b89d04a7d2fa6b3930271",
+        "externalIds": {
+          "CorpusId": 281712152
+        },
+        "url": "https://www.semanticscholar.org/paper/f6f758cbcfdc9110295b89d04a7d2fa6b3930271",
+        "title": "PROMPT-BASED IMAGE GENERATION USING REACTJS AND FASTAPI",
+        "year": null,
+        "citationCount": 0
+      },
+      {
+        "paperId": "6a8bd12130ddd66954eaa2b6a4250df374bbe388",
+        "externalIds": {
+          "CorpusId": 284973452
+        },
+        "url": "https://www.semanticscholar.org/paper/6a8bd12130ddd66954eaa2b6a4250df374bbe388",
+        "title": ": Journal of Curriculum Development",
+        "year": null,
+        "citationCount": 0
+      }
+    ],
+    "references": [
+      {
+        "paperId": "7b18bdf21b74b7d97bace715f78d05bd447ee30f",
+        "externalIds": {
+          "DBLP": "conf/aies/NaikN23",
+          "ArXiv": "2304.06034",
+          "DOI": "10.1145/3600211.3604711",
+          "CorpusId": 258108384
+        },
+        "url": "https://www.semanticscholar.org/paper/7b18bdf21b74b7d97bace715f78d05bd447ee30f",
+        "title": "Social Biases through the Text-to-Image Generation Lens",
+        "year": 2023,
+        "citationCount": 219
+      },
+      {
+        "paperId": "0c26bfc15a7caecce0ed4567dc2f2909b80e5bdd",
+        "externalIds": {
+          "DBLP": "conf/nips/WenJKGGG23",
+          "ArXiv": "2302.03668",
+          "DOI": "10.48550/arXiv.2302.03668",
+          "CorpusId": 256627601
+        },
+        "url": "https://www.semanticscholar.org/paper/0c26bfc15a7caecce0ed4567dc2f2909b80e5bdd",
+        "title": "Hard Prompts Made Easy: Gradient-Based Discrete Optimization for Prompt Tuning and Discovery",
+        "year": 2023,
+        "citationCount": 429
+      },
+      {
+        "paperId": "ac40e91e7414aa2762ee6e2d3db5ff28464cf592",
+        "externalIds": {
+          "ArXiv": "2210.05815",
+          "DBLP": "conf/ijcnlp/HutchinsonBP22",
+          "ACL": "2022.aacl-main.86",
+          "DOI": "10.48550/arXiv.2210.05815",
+          "CorpusId": 252846123
+        },
+        "url": "https://www.semanticscholar.org/paper/ac40e91e7414aa2762ee6e2d3db5ff28464cf592",
+        "title": "Underspecification in Scene Description-to-Depiction Tasks",
+        "year": 2022,
+        "citationCount": 43
+      },
+      {
+        "paperId": "28630034bb29760df01ab033b743e30b37f336ae",
+        "externalIds": {
+          "ArXiv": "2209.06794",
+          "DBLP": "journals/corr/abs-2209-06794",
+          "DOI": "10.48550/arXiv.2209.06794",
+          "CorpusId": 252222320
+        },
+        "url": "https://www.semanticscholar.org/paper/28630034bb29760df01ab033b743e30b37f336ae",
+        "title": "PaLI: A Jointly-Scaled Multilingual Language-Image Model",
+        "year": 2022,
+        "citationCount": 1018
+      },
+      {
+        "paperId": "5b19bf6c3f4b25cac96362c98b930cf4b37f6744",
+        "externalIds": {
+          "DBLP": "conf/cvpr/RuizLJPRA23",
+          "ArXiv": "2208.12242",
+          "DOI": "10.1109/CVPR52729.2023.02155",
+          "CorpusId": 251800180
+        },
+        "url": "https://www.semanticscholar.org/paper/5b19bf6c3f4b25cac96362c98b930cf4b37f6744",
+        "title": "DreamBooth: Fine Tuning Text-to-Image Diffusion Models for Subject-Driven Generation",
+        "year": 2022,
+        "citationCount": 4428
+      },
+      {
+        "paperId": "04e541391e8dce14d099d00fb2c21dbbd8afe87f",
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2208-01626",
+          "ArXiv": "2208.01626",
+          "DOI": "10.48550/arXiv.2208.01626",
+          "CorpusId": 251252882
+        },
+        "url": "https://www.semanticscholar.org/paper/04e541391e8dce14d099d00fb2c21dbbd8afe87f",
+        "title": "Prompt-to-Prompt Image Editing with Cross Attention Control",
+        "year": 2022,
+        "citationCount": 2866
+      },
+      {
+        "paperId": "af9f365ed86614c800f082bd8eb14be76072ad16",
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2207-12598",
+          "ArXiv": "2207.12598",
+          "DOI": "10.48550/arXiv.2207.12598",
+          "CorpusId": 249145348
+        },
+        "url": "https://www.semanticscholar.org/paper/af9f365ed86614c800f082bd8eb14be76072ad16",
+        "title": "Classifier-Free Diffusion Guidance",
+        "year": 2022,
+        "citationCount": 6812
+      },
+      {
+        "paperId": "9695824d7a01fad57ba9c01d7d76a519d78d65e7",
+        "externalIds": {
+          "ArXiv": "2205.11487",
+          "DBLP": "journals/corr/abs-2205-11487",
+          "DOI": "10.48550/arXiv.2205.11487",
+          "CorpusId": 248986576
+        },
+        "url": "https://www.semanticscholar.org/paper/9695824d7a01fad57ba9c01d7d76a519d78d65e7",
+        "title": "Photorealistic Text-to-Image Diffusion Models with Deep Language Understanding",
+        "year": 2022,
+        "citationCount": 8667
+      },
+      {
+        "paperId": "b21670e8061a06ab97e7d6052c9345a326e84ff8",
+        "externalIds": {
+          "ArXiv": "2205.05131",
+          "DBLP": "conf/iclr/Tay00GW0CBSZZHM23",
+          "CorpusId": 252780443
+        },
+        "url": "https://www.semanticscholar.org/paper/b21670e8061a06ab97e7d6052c9345a326e84ff8",
+        "title": "UL2: Unifying Language Learning Paradigms",
+        "year": 2022,
+        "citationCount": 397
+      },
+      {
+        "paperId": "a26a7a74f1e5fd562be95c3611a0680759fbdf84",
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2205-01917",
+          "ArXiv": "2205.01917",
+          "DOI": "10.48550/arXiv.2205.01917",
+          "CorpusId": 248512473
+        },
+        "url": "https://www.semanticscholar.org/paper/a26a7a74f1e5fd562be95c3611a0680759fbdf84",
+        "title": "CoCa: Contrastive Captioners are Image-Text Foundation Models",
+        "year": 2022,
+        "citationCount": 1785
+      },
+      {
+        "paperId": "c57293882b2561e1ba03017902df9fc2f289dea2",
+        "externalIds": {
+          "ArXiv": "2204.06125",
+          "DBLP": "journals/corr/abs-2204-06125",
+          "DOI": "10.48550/arXiv.2204.06125",
+          "CorpusId": 248097655
+        },
+        "url": "https://www.semanticscholar.org/paper/c57293882b2561e1ba03017902df9fc2f289dea2",
+        "title": "Hierarchical Text-Conditional Image Generation with CLIP Latents",
+        "year": 2022,
+        "citationCount": 9239
+      },
+      {
+        "paperId": "094ff971d6a8b8ff870946c9b3ce5aa173617bfb",
+        "externalIds": {
+          "ArXiv": "2204.02311",
+          "DBLP": "journals/corr/abs-2204-02311",
+          "CorpusId": 247951931
+        },
+        "url": "https://www.semanticscholar.org/paper/094ff971d6a8b8ff870946c9b3ce5aa173617bfb",
+        "title": "PaLM: Scaling Language Modeling with Pathways",
+        "year": 2022,
+        "citationCount": 8231
+      },
+      {
+        "paperId": "e3d06054af531ee2f42270d43100b309c28546ef",
+        "externalIds": {
+          "ArXiv": "2108.05997",
+          "DBLP": "conf/iccv/KeWWMY21",
+          "DOI": "10.1109/ICCV48922.2021.00510",
+          "CorpusId": 237048383
+        },
+        "url": "https://www.semanticscholar.org/paper/e3d06054af531ee2f42270d43100b309c28546ef",
+        "title": "MUSIQ: Multi-scale Image Quality Transformer",
+        "year": 2021,
+        "citationCount": 1542
+      },
+      {
+        "paperId": "38b0567e83386ddc294d6c81b541deacbd8e3c2a",
+        "externalIds": {
+          "DBLP": "conf/emnlp/HesselHFBC21",
+          "ACL": "2021.emnlp-main.595",
+          "ArXiv": "2104.08718",
+          "DOI": "10.18653/v1/2021.emnlp-main.595",
+          "CorpusId": 233296711
+        },
+        "url": "https://www.semanticscholar.org/paper/38b0567e83386ddc294d6c81b541deacbd8e3c2a",
+        "title": "CLIPScore: A Reference-free Evaluation Metric for Image Captioning",
+        "year": 2021,
+        "citationCount": 3033
+      },
+      {
+        "paperId": "ffdbd7f0b03b85747b001b4734d5ee31b5229aa4",
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2104-08691",
+          "ArXiv": "2104.08691",
+          "ACL": "2021.emnlp-main.243",
+          "DOI": "10.18653/v1/2021.emnlp-main.243",
+          "CorpusId": 233296808
+        },
+        "url": "https://www.semanticscholar.org/paper/ffdbd7f0b03b85747b001b4734d5ee31b5229aa4",
+        "title": "The Power of Scale for Parameter-Efficient Prompt Tuning",
+        "year": 2021,
+        "citationCount": 5808
+      },
+      {
+        "paperId": "141a5033d9994242b18bb3b217e79582f1ee9306",
+        "externalIds": {
+          "ArXiv": "2102.05918",
+          "DBLP": "conf/icml/JiaYXCPPLSLD21",
+          "CorpusId": 231879586
+        },
+        "url": "https://www.semanticscholar.org/paper/141a5033d9994242b18bb3b217e79582f1ee9306",
+        "title": "Scaling Up Visual and Vision-Language Representation Learning With Noisy Text Supervision",
+        "year": 2021,
+        "citationCount": 5785
+      },
+      {
+        "paperId": "53a77e8f73f2ca422d6e38fa9ecc490231ac044c",
+        "externalIds": {
+          "MAG": "2968297680",
+          "DBLP": "conf/iclr/WelleckKRDCW20",
+          "ArXiv": "1908.04319",
+          "CorpusId": 199551982
+        },
+        "url": "https://www.semanticscholar.org/paper/53a77e8f73f2ca422d6e38fa9ecc490231ac044c",
+        "title": "Neural Text Generation with Unlikelihood Training",
+        "year": 2019,
+        "citationCount": 734
+      },
+      {
+        "paperId": "fbc767686be57737717fcfa5a0b5d4ba81a81648",
+        "externalIds": {
+          "DBLP": "conf/coling/CollellM16",
+          "MAG": "2570058081",
+          "ACL": "C16-1264",
+          "CorpusId": 17308411
+        },
+        "url": "https://www.semanticscholar.org/paper/fbc767686be57737717fcfa5a0b5d4ba81a81648",
+        "title": "Is an Image Worth More than a Thousand Words? On the Fine-Grain Semantic Differences between Visual and Linguistic Representations",
+        "year": 2016,
+        "citationCount": 46
+      },
+      {
+        "paperId": null,
+        "externalIds": null,
+        "url": null,
+        "title": "2023. Promptify: Text-to-image generation through interactive prompt exploration with large language models",
+        "year": null,
+        "citationCount": null
+      },
+      {
+        "paperId": null,
+        "externalIds": null,
+        "url": null,
+        "title": "References",
+        "year": null,
+        "citationCount": null
+      },
+      {
+        "paperId": null,
+        "externalIds": null,
+        "url": null,
+        "title": "Gradio",
+        "year": null,
+        "citationCount": null
+      },
+      {
+        "paperId": null,
+        "externalIds": null,
+        "url": null,
+        "title": "2023. Non-commitment in mental imagery",
+        "year": null,
+        "citationCount": null
+      },
+      {
+        "paperId": null,
+        "externalIds": null,
+        "url": null,
+        "title": "CLIP-Interrogator",
+        "year": null,
+        "citationCount": null
+      },
+      {
+        "paperId": null,
+        "externalIds": null,
+        "url": null,
+        "title": "2022. Scaling instruction-finetuned language models",
+        "year": null,
+        "citationCount": null
+      },
+      {
+        "paperId": null,
+        "externalIds": null,
+        "url": null,
+        "title": "2022. Underspecification in",
+        "year": null,
+        "citationCount": null
+      },
+      {
+        "paperId": null,
+        "externalIds": null,
+        "url": null,
+        "title": "2022b. Scaling Autoregressive Models for Content-Rich Text-to-Image Generation",
+        "year": null,
+        "citationCount": null
+      }
+    ]
+  },
+  "ape_agentic": {
+    "paper": {
+      "paperId": "14333575850073eaa86bd09c2ffdd2d96c3536e4",
+      "externalIds": {
+        "ArXiv": "2606.00204",
+        "CorpusId": 288855113
+      },
+      "url": "https://www.semanticscholar.org/paper/14333575850073eaa86bd09c2ffdd2d96c3536e4",
+      "title": "APE: Agentic Prompt Enhancer for Image Generation and Editing",
+      "year": 2026,
+      "citationCount": 0
+    },
+    "n_cites": 0,
+    "n_refs": 50,
+    "citations": [],
+    "references": [
+      {
+        "paperId": "686ddccd36b1ea7cb214eecb6f50cc8fee7e36b2",
+        "externalIds": {
+          "ArXiv": "2601.05242",
+          "DBLP": "journals/corr/abs-2601-05242",
+          "DOI": "10.48550/arXiv.2601.05242",
+          "CorpusId": 284543897
+        },
+        "url": "https://www.semanticscholar.org/paper/686ddccd36b1ea7cb214eecb6f50cc8fee7e36b2",
+        "title": "GDPO: Group reward-Decoupled Normalization Policy Optimization for Multi-reward RL Optimization",
+        "year": 2026,
+        "citationCount": 107
+      },
+      {
+        "paperId": "f16bb2c6dc7ca560205f5abdd84b48384ac2a8e5",
+        "externalIds": {
+          "ArXiv": "2511.22699",
+          "DBLP": "journals/corr/abs-2511-22699",
+          "DOI": "10.48550/arXiv.2511.22699",
+          "CorpusId": 283438115
+        },
+        "url": "https://www.semanticscholar.org/paper/f16bb2c6dc7ca560205f5abdd84b48384ac2a8e5",
+        "title": "Z-Image: An Efficient Image Generation Foundation Model with Single-Stream Diffusion Transformer",
+        "year": 2025,
+        "citationCount": 196
+      },
+      {
+        "paperId": "38fd53bac34ba902b8e7f1cf3f6552da5a3eaaaf",
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2511-06876",
+          "ArXiv": "2511.06876",
+          "DOI": "10.48550/arXiv.2511.06876",
+          "CorpusId": 282912375
+        },
+        "url": "https://www.semanticscholar.org/paper/38fd53bac34ba902b8e7f1cf3f6552da5a3eaaaf",
+        "title": "Generating an Image From 1,000 Words: Enhancing Text-to-Image With Structured Captions",
+        "year": 2025,
+        "citationCount": 10
+      },
+      {
+        "paperId": "9e3aa8248fbd3459130f1c63a9afffca632d7639",
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2510-18701",
+          "ArXiv": "2510.18701",
+          "DOI": "10.48550/arXiv.2510.18701",
+          "CorpusId": 282245974
+        },
+        "url": "https://www.semanticscholar.org/paper/9e3aa8248fbd3459130f1c63a9afffca632d7639",
+        "title": "UniGenBench++: A Unified Semantic Evaluation Benchmark for Text-to-Image Generation",
+        "year": 2025,
+        "citationCount": 20
+      },
+      {
+        "paperId": "ee6a3ae4b821bd1538a07d0aebe6d6ce75e7125d",
+        "externalIds": {
+          "ArXiv": "2510.12697",
+          "DBLP": "journals/corr/abs-2510-12697",
+          "DOI": "10.48550/arXiv.2510.12697",
+          "CorpusId": 282065090
+        },
+        "url": "https://www.semanticscholar.org/paper/ee6a3ae4b821bd1538a07d0aebe6d6ce75e7125d",
+        "title": "Multi-Agent Debate for LLM Judges with Adaptive Stability Detection",
+        "year": 2025,
+        "citationCount": 14
+      },
+      {
+        "paperId": "1bb46cdf27726403f02b22d79ccf5dffc2332aa7",
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2510-04290",
+          "ArXiv": "2510.04290",
+          "DOI": "10.48550/arXiv.2510.04290",
+          "CorpusId": 281842523
+        },
+        "url": "https://www.semanticscholar.org/paper/1bb46cdf27726403f02b22d79ccf5dffc2332aa7",
+        "title": "ChronoEdit: Towards Temporal Reasoning for Image Editing and World Simulation",
+        "year": 2025,
+        "citationCount": 24
+      },
+      {
+        "paperId": "96b7b18af643fffceeac93b739d3418bd3e42645",
+        "externalIds": {
+          "ArXiv": "2509.16117",
+          "DBLP": "journals/corr/abs-2509-16117",
+          "DOI": "10.48550/arXiv.2509.16117",
+          "CorpusId": 281411162
+        },
+        "url": "https://www.semanticscholar.org/paper/96b7b18af643fffceeac93b739d3418bd3e42645",
+        "title": "DiffusionNFT: Online Diffusion Reinforcement with Forward Process",
+        "year": 2025,
+        "citationCount": 148
+      },
+      {
+        "paperId": "70a0f72b06327998b9274a5d7da6f89159b75d16",
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2509-04545",
+          "ArXiv": "2509.04545",
+          "DOI": "10.48550/arXiv.2509.04545",
+          "CorpusId": 281195390
+        },
+        "url": "https://www.semanticscholar.org/paper/70a0f72b06327998b9274a5d7da6f89159b75d16",
+        "title": "PromptEnhancer: A Simple Approach to Enhance Text-to-Image Models via Chain-of-Thought Prompt Rewriting",
+        "year": 2025,
+        "citationCount": 32
+      },
+      {
+        "paperId": "65556ef457ae6d61a8b43492495c0f8ef3665333",
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2508-02324",
+          "ArXiv": "2508.02324",
+          "DOI": "10.48550/arXiv.2508.02324",
+          "CorpusId": 280422608
+        },
+        "url": "https://www.semanticscholar.org/paper/65556ef457ae6d61a8b43492495c0f8ef3665333",
+        "title": "Qwen-Image Technical Report",
+        "year": 2025,
+        "citationCount": 856
+      },
+      {
+        "paperId": "81244a5f36534b41d6265d259082933d951c503e",
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2506-15742",
+          "ArXiv": "2506.15742",
+          "DOI": "10.48550/arXiv.2506.15742",
+          "CorpusId": 279464475
+        },
+        "url": "https://www.semanticscholar.org/paper/81244a5f36534b41d6265d259082933d951c503e",
+        "title": "FLUX.1 Kontext: Flow Matching for In-Context Image Generation and Editing in Latent Space",
+        "year": 2025,
+        "citationCount": 941
+      },
+      {
+        "paperId": "b21b337b7328537ac56be069d0e9f71697dbac26",
+        "externalIds": {
+          "ArXiv": "2505.20275",
+          "DBLP": "journals/corr/abs-2505-20275",
+          "DOI": "10.48550/arXiv.2505.20275",
+          "CorpusId": 278911803
+        },
+        "url": "https://www.semanticscholar.org/paper/b21b337b7328537ac56be069d0e9f71697dbac26",
+        "title": "ImgEdit: A Unified Image Editing Dataset and Benchmark",
+        "year": 2025,
+        "citationCount": 207
+      },
+      {
+        "paperId": "d2d84d56f730f81d276a02b48d5d44db5bde0b4a",
+        "externalIds": {
+          "ArXiv": "2505.09388",
+          "CorpusId": 278602855
+        },
+        "url": "https://www.semanticscholar.org/paper/d2d84d56f730f81d276a02b48d5d44db5bde0b4a",
+        "title": "Qwen3 Technical Report",
+        "year": 2025,
+        "citationCount": 6814
+      },
+      {
+        "paperId": "16c38a5b7d7d8487c9e03e7231330445eb64e5b1",
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2505-05470",
+          "ArXiv": "2505.05470",
+          "DOI": "10.48550/arXiv.2505.05470",
+          "CorpusId": 278394068
+        },
+        "url": "https://www.semanticscholar.org/paper/16c38a5b7d7d8487c9e03e7231330445eb64e5b1",
+        "title": "Flow-GRPO: Training Flow Matching Models via Online RL",
+        "year": 2025,
+        "citationCount": 513
+      },
+      {
+        "paperId": "78a6748e26fff8ead21327eb4384112a88cbd6a1",
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2503-05236",
+          "ArXiv": "2503.05236",
+          "DOI": "10.48550/arXiv.2503.05236",
+          "CorpusId": 276885050
+        },
+        "url": "https://www.semanticscholar.org/paper/78a6748e26fff8ead21327eb4384112a88cbd6a1",
+        "title": "Unified Reward Model for Multimodal Understanding and Generation",
+        "year": 2025,
+        "citationCount": 178
+      },
+      {
+        "paperId": "1d3de3a8eaac916f4eca09930ed8b593a10f5a46",
+        "externalIds": {
+          "ArXiv": "2501.06322",
+          "DBLP": "journals/corr/abs-2501-06322",
+          "DOI": "10.48550/arXiv.2501.06322",
+          "CorpusId": 275471465
+        },
+        "url": "https://www.semanticscholar.org/paper/1d3de3a8eaac916f4eca09930ed8b593a10f5a46",
+        "title": "Multi-Agent Collaboration Mechanisms: A Survey of LLMs",
+        "year": 2025,
+        "citationCount": 526
+      },
+      {
+        "paperId": "3486ffbbe2c8326133e30317c512081914b0a5d8",
+        "externalIds": {
+          "ArXiv": "2410.12853",
+          "DBLP": "journals/corr/abs-2410-12853",
+          "DOI": "10.33140/JRAR",
+          "CorpusId": 273403906
+        },
+        "url": "https://www.semanticscholar.org/paper/3486ffbbe2c8326133e30317c512081914b0a5d8",
+        "title": "Diversity of Thought Elicits Stronger Reasoning Capabilities in Multi-Agent Debate Frameworks",
+        "year": 2024,
+        "citationCount": 19
+      },
+      {
+        "paperId": "fc8ce12d6186ddaa797e2b36d5e8eb7921425308",
+        "externalIds": {
+          "DOI": "10.1007/s44336-024-00009-2",
+          "CorpusId": 273218743
+        },
+        "url": "https://www.semanticscholar.org/paper/fc8ce12d6186ddaa797e2b36d5e8eb7921425308",
+        "title": "A survey on LLM-based multi-agent systems: workflow, infrastructure, and challenges",
+        "year": 2024,
+        "citationCount": 576
+      },
+      {
+        "paperId": "8292083dd8f6ae898ea0ee54a6b97997d1a51c9d",
+        "externalIds": {
+          "ArXiv": "2408.03314",
+          "DBLP": "journals/corr/abs-2408-03314",
+          "DOI": "10.48550/arXiv.2408.03314",
+          "CorpusId": 271719990
+        },
+        "url": "https://www.semanticscholar.org/paper/8292083dd8f6ae898ea0ee54a6b97997d1a51c9d",
+        "title": "Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters",
+        "year": 2024,
+        "citationCount": 2002
+      },
+      {
+        "paperId": "41a66997ce0a366bba3becf7c3f37c9aebb13fbd",
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2403-03206",
+          "ArXiv": "2403.03206",
+          "DOI": "10.48550/arXiv.2403.03206",
+          "CorpusId": 268247980
+        },
+        "url": "https://www.semanticscholar.org/paper/41a66997ce0a366bba3becf7c3f37c9aebb13fbd",
+        "title": "Scaling Rectified Flow Transformers for High-Resolution Image Synthesis",
+        "year": 2024,
+        "citationCount": 4411
+      },
+      {
+        "paperId": "35b142ea69598e6241f0011312128031df55895c",
+        "externalIds": {
+          "ArXiv": "2402.03300",
+          "DBLP": "journals/corr/abs-2402-03300",
+          "DOI": "10.48550/arXiv.2402.03300",
+          "CorpusId": 267412607
+        },
+        "url": "https://www.semanticscholar.org/paper/35b142ea69598e6241f0011312128031df55895c",
+        "title": "DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models",
+        "year": 2024,
+        "citationCount": 7809
+      },
+      {
+        "paperId": "8f070e301979732e0dd73f6aa6170309cf73aa7d",
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2402-01680",
+          "ArXiv": "2402.01680",
+          "DOI": "10.48550/arXiv.2402.01680",
+          "CorpusId": 267412980
+        },
+        "url": "https://www.semanticscholar.org/paper/8f070e301979732e0dd73f6aa6170309cf73aa7d",
+        "title": "Large Language Model based Multi-Agents: A Survey of Progress and Challenges",
+        "year": 2024,
+        "citationCount": 1054
+      },
+      {
+        "paperId": "7fe071ea76e49bc3e573beb53f07721630954247",
+        "externalIds": {
+          "ArXiv": "2309.16797",
+          "DBLP": "conf/icml/FernandoBMOR24",
+          "DOI": "10.48550/arXiv.2309.16797",
+          "CorpusId": 263310323
+        },
+        "url": "https://www.semanticscholar.org/paper/7fe071ea76e49bc3e573beb53f07721630954247",
+        "title": "Promptbreeder: Self-Referential Self-Improvement Via Prompt Evolution",
+        "year": 2023,
+        "citationCount": 536
+      },
+      {
+        "paperId": "ad97671a924a9b3a060fee857e561f140ec79dd7",
+        "externalIds": {
+          "DBLP": "conf/iclr/ChenSZ0YCYLHQQC24",
+          "ArXiv": "2308.10848",
+          "DOI": "10.48550/arXiv.2308.10848",
+          "CorpusId": 261048935
+        },
+        "url": "https://www.semanticscholar.org/paper/ad97671a924a9b3a060fee857e561f140ec79dd7",
+        "title": "AgentVerse: Facilitating Multi-Agent Collaboration and Exploring Emergent Behaviors in Agents",
+        "year": 2023,
+        "citationCount": 707
+      },
+      {
+        "paperId": "9ea0757c750ab1222a7442d3485a74d1c526b04c",
+        "externalIds": {
+          "ArXiv": "2308.08155",
+          "CorpusId": 263611068
+        },
+        "url": "https://www.semanticscholar.org/paper/9ea0757c750ab1222a7442d3485a74d1c526b04c",
+        "title": "AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation",
+        "year": 2023,
+        "citationCount": 2193
+      },
+      {
+        "paperId": "703035b483c181953de1b55b5fd59cd4cd4cf211",
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2308-00352",
+          "ArXiv": "2308.00352",
+          "DOI": "10.48550/arXiv.2308.00352",
+          "CorpusId": 260351380
+        },
+        "url": "https://www.semanticscholar.org/paper/703035b483c181953de1b55b5fd59cd4cd4cf211",
+        "title": "MetaGPT: Meta Programming for Multi-Agent Collaborative Framework",
+        "year": 2023,
+        "citationCount": 2185
+      },
+      {
+        "paperId": "9474b463654fd92a62c103b21f95aed94b087907",
+        "externalIds": {
+          "DBLP": "conf/acl/QianLLCDL0CSCXL24",
+          "ArXiv": "2307.07924",
+          "DOI": "10.18653/v1/2024.acl-long.810",
+          "CorpusId": 270257715
+        },
+        "url": "https://www.semanticscholar.org/paper/9474b463654fd92a62c103b21f95aed94b087907",
+        "title": "ChatDev: Communicative Agents for Software Development",
+        "year": 2023,
+        "citationCount": 1011
+      },
+      {
+        "paperId": "d7890d1906d95c4ae4c430b350455156d6d8aed9",
+        "externalIds": {
+          "DBLP": "conf/iclr/PodellELBDMPR24",
+          "ArXiv": "2307.01952",
+          "CorpusId": 259341735
+        },
+        "url": "https://www.semanticscholar.org/paper/d7890d1906d95c4ae4c430b350455156d6d8aed9",
+        "title": "SDXL: Improving Latent Diffusion Models for High-Resolution Image Synthesis",
+        "year": 2023,
+        "citationCount": 5129
+      },
+      {
+        "paperId": "d8008ace077d72ccd277be795c720e9381623c10",
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2306-09341",
+          "ArXiv": "2306.09341",
+          "DOI": "10.48550/arXiv.2306.09341",
+          "CorpusId": 259171771
+        },
+        "url": "https://www.semanticscholar.org/paper/d8008ace077d72ccd277be795c720e9381623c10",
+        "title": "Human Preference Score v2: A Solid Benchmark for Evaluating Human Preferences of Text-to-Image Synthesis",
+        "year": 2023,
+        "citationCount": 871
+      },
+      {
+        "paperId": "e9ae0c76a71b8f302eb17b1c4462b9cc97d87cd0",
+        "externalIds": {
+          "DBLP": "journals/tmlr/LianLYD24",
+          "ArXiv": "2305.13655",
+          "DOI": "10.48550/arXiv.2305.13655",
+          "CorpusId": 258841035
+        },
+        "url": "https://www.semanticscholar.org/paper/e9ae0c76a71b8f302eb17b1c4462b9cc97d87cd0",
+        "title": "LLM-grounded Diffusion: Enhancing Prompt Understanding of Text-to-Image Diffusion Models with Large Language Models",
+        "year": 2023,
+        "citationCount": 268
+      },
+      {
+        "paperId": "cf694df964caa156ec306b45d3a3127533cb458f",
+        "externalIds": {
+          "ArXiv": "2305.01569",
+          "DBLP": "journals/corr/abs-2305-01569",
+          "DOI": "10.48550/arXiv.2305.01569",
+          "CorpusId": 258437096
+        },
+        "url": "https://www.semanticscholar.org/paper/cf694df964caa156ec306b45d3a3127533cb458f",
+        "title": "Pick-a-Pic: An Open Dataset of User Preferences for Text-to-Image Generation",
+        "year": 2023,
+        "citationCount": 1071
+      },
+      {
+        "paperId": "1b2355c3c674b26a977768a91a164384ad51bbb1",
+        "externalIds": {
+          "ArXiv": "2304.05977",
+          "DBLP": "journals/corr/abs-2304-05977",
+          "DOI": "10.48550/arXiv.2304.05977",
+          "CorpusId": 258079316
+        },
+        "url": "https://www.semanticscholar.org/paper/1b2355c3c674b26a977768a91a164384ad51bbb1",
+        "title": "ImageReward: Learning and Evaluating Human Preferences for Text-to-Image Generation",
+        "year": 2023,
+        "citationCount": 1160
+      },
+      {
+        "paperId": "7bf72a3b5fbac8bc0f461780810fbc781c28ef53",
+        "externalIds": {
+          "DBLP": "conf/nips/LiHIKG23",
+          "ArXiv": "2303.17760",
+          "DOI": "10.52202/075280-2264",
+          "CorpusId": 268042527
+        },
+        "url": "https://www.semanticscholar.org/paper/7bf72a3b5fbac8bc0f461780810fbc781c28ef53",
+        "title": "CAMEL: Communicative Agents for \"Mind\" Exploration of Large Language Model Society",
+        "year": 2023,
+        "citationCount": 1665
+      },
+      {
+        "paperId": "736973165f98105fec3729b7db414ae4d80fcbeb",
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2212-09748",
+          "ArXiv": "2212.09748",
+          "DOI": "10.1109/ICCV51070.2023.00387",
+          "CorpusId": 254854389
+        },
+        "url": "https://www.semanticscholar.org/paper/736973165f98105fec3729b7db414ae4d80fcbeb",
+        "title": "Scalable Diffusion Models with Transformers",
+        "year": 2022,
+        "citationCount": 6740
+      },
+      {
+        "paperId": "4610ffb1b016acaa82a2065ffd1a3adbae1ce722",
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2211-01910",
+          "ArXiv": "2211.01910",
+          "DOI": "10.48550/arXiv.2211.01910",
+          "CorpusId": 253265328
+        },
+        "url": "https://www.semanticscholar.org/paper/4610ffb1b016acaa82a2065ffd1a3adbae1ce722",
+        "title": "Large Language Models Are Human-Level Prompt Engineers",
+        "year": 2022,
+        "citationCount": 1492
+      },
+      {
+        "paperId": "af68f10ab5078bfc519caae377c90ee6d9c504e9",
+        "externalIds": {
+          "ArXiv": "2210.02747",
+          "DBLP": "journals/corr/abs-2210-02747",
+          "CorpusId": 252734897
+        },
+        "url": "https://www.semanticscholar.org/paper/af68f10ab5078bfc519caae377c90ee6d9c504e9",
+        "title": "Flow Matching for Generative Modeling",
+        "year": 2022,
+        "citationCount": 5580
+      },
+      {
+        "paperId": "9695824d7a01fad57ba9c01d7d76a519d78d65e7",
+        "externalIds": {
+          "ArXiv": "2205.11487",
+          "DBLP": "journals/corr/abs-2205-11487",
+          "DOI": "10.48550/arXiv.2205.11487",
+          "CorpusId": 248986576
+        },
+        "url": "https://www.semanticscholar.org/paper/9695824d7a01fad57ba9c01d7d76a519d78d65e7",
+        "title": "Photorealistic Text-to-Image Diffusion Models with Deep Language Understanding",
+        "year": 2022,
+        "citationCount": 8667
+      },
+      {
+        "paperId": "c10075b3746a9f3dd5811970e93c8ca3ad39b39d",
+        "externalIds": {
+          "ArXiv": "2112.10752",
+          "DBLP": "journals/corr/abs-2112-10752",
+          "DOI": "10.1109/CVPR52688.2022.01042",
+          "CorpusId": 245335280
+        },
+        "url": "https://www.semanticscholar.org/paper/c10075b3746a9f3dd5811970e93c8ca3ad39b39d",
+        "title": "High-Resolution Image Synthesis with Latent Diffusion Models",
+        "year": 2021,
+        "citationCount": 26418
+      },
+      {
+        "paperId": "6296aa7cab06eaf058f7291040b320b5a83c0091",
+        "externalIds": {
+          "DBLP": "conf/icccnt/Krichen23",
+          "ArXiv": "2203.00667",
+          "MAG": "3193917007",
+          "DOI": "10.1109/ICCCNT56998.2023.10306417",
+          "CorpusId": 1033682
+        },
+        "url": "https://www.semanticscholar.org/paper/6296aa7cab06eaf058f7291040b320b5a83c0091",
+        "title": "Generative Adversarial Networks",
+        "year": 2021,
+        "citationCount": 30469
+      },
+      {
+        "paperId": "38b0567e83386ddc294d6c81b541deacbd8e3c2a",
+        "externalIds": {
+          "DBLP": "conf/emnlp/HesselHFBC21",
+          "ACL": "2021.emnlp-main.595",
+          "ArXiv": "2104.08718",
+          "DOI": "10.18653/v1/2021.emnlp-main.595",
+          "CorpusId": 233296711
+        },
+        "url": "https://www.semanticscholar.org/paper/38b0567e83386ddc294d6c81b541deacbd8e3c2a",
+        "title": "CLIPScore: A Reference-free Evaluation Metric for Image Captioning",
+        "year": 2021,
+        "citationCount": 3033
+      },
+      {
+        "paperId": "2cd605106b88c85d7d8b865b1ef0f8c8293debf1",
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2102-12092",
+          "ArXiv": "2102.12092",
+          "MAG": "3170016573",
+          "CorpusId": 232035663
+        },
+        "url": "https://www.semanticscholar.org/paper/2cd605106b88c85d7d8b865b1ef0f8c8293debf1",
+        "title": "Zero-Shot Text-to-Image Generation",
+        "year": 2021,
+        "citationCount": 6607
+      },
+      {
+        "paperId": "de18baa4964804cf471d85a5a090498242d2e79f",
+        "externalIds": {
+          "ArXiv": "2102.09672",
+          "DBLP": "conf/icml/NicholD21",
+          "CorpusId": 231979499
+        },
+        "url": "https://www.semanticscholar.org/paper/de18baa4964804cf471d85a5a090498242d2e79f",
+        "title": "Improved Denoising Diffusion Probabilistic Models",
+        "year": 2021,
+        "citationCount": 5672
+      },
+      {
+        "paperId": "633e2fbfc0b21e959a244100937c5853afca4853",
+        "externalIds": {
+          "ArXiv": "2011.13456",
+          "DBLP": "conf/iclr/0011SKKEP21",
+          "MAG": "3110257065",
+          "CorpusId": 227209335
+        },
+        "url": "https://www.semanticscholar.org/paper/633e2fbfc0b21e959a244100937c5853afca4853",
+        "title": "Score-Based Generative Modeling through Stochastic Differential Equations",
+        "year": 2020,
+        "citationCount": 11594
+      },
+      {
+        "paperId": "5c126ae3421f05768d8edd97ecd44b1364e2c99a",
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2006-11239",
+          "MAG": "3100572490",
+          "ArXiv": "2006.11239",
+          "CorpusId": 219955663
+        },
+        "url": "https://www.semanticscholar.org/paper/5c126ae3421f05768d8edd97ecd44b1364e2c99a",
+        "title": "Denoising Diffusion Probabilistic Models",
+        "year": 2020,
+        "citationCount": 33468
+      },
+      {
+        "paperId": "ceb2ebef0b41e31c1a21b28c2734123900c005e2",
+        "externalIds": {
+          "DBLP": "journals/corr/abs-1812-04948",
+          "MAG": "2904367110",
+          "ArXiv": "1812.04948",
+          "DOI": "10.1109/CVPR.2019.00453",
+          "CorpusId": 54482423
+        },
+        "url": "https://www.semanticscholar.org/paper/ceb2ebef0b41e31c1a21b28c2734123900c005e2",
+        "title": "A Style-Based Generator Architecture for Generative Adversarial Networks",
+        "year": 2018,
+        "citationCount": 13305
+      },
+      {
+        "paperId": "1db9bd18681b96473f3c82b21edc9240b44dc329",
+        "externalIds": {
+          "ArXiv": "1802.05751",
+          "DBLP": "conf/icml/ParmarVUKSKT18",
+          "MAG": "2950739196",
+          "CorpusId": 3353110
+        },
+        "url": "https://www.semanticscholar.org/paper/1db9bd18681b96473f3c82b21edc9240b44dc329",
+        "title": "Image Transformer",
+        "year": 2018,
+        "citationCount": 1926
+      },
+      {
+        "paperId": "0936352b78a52bc5d2b5e3f04233efc56664af51",
+        "externalIds": {
+          "MAG": "2423557781",
+          "ArXiv": "1606.05328",
+          "DBLP": "journals/corr/OordKVEGK16",
+          "CorpusId": 14989939
+        },
+        "url": "https://www.semanticscholar.org/paper/0936352b78a52bc5d2b5e3f04233efc56664af51",
+        "title": "Conditional Image Generation with PixelCNN Decoders",
+        "year": 2016,
+        "citationCount": 2803
+      },
+      {
+        "paperId": "8388f1be26329fa45e5807e968a641ce170ea078",
+        "externalIds": {
+          "MAG": "2949811265",
+          "ArXiv": "1511.06434",
+          "DBLP": "journals/corr/RadfordMC15",
+          "CorpusId": 11758569
+        },
+        "url": "https://www.semanticscholar.org/paper/8388f1be26329fa45e5807e968a641ce170ea078",
+        "title": "Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks",
+        "year": 2015,
+        "citationCount": 15193
+      },
+      {
+        "paperId": "fd9be01cac1a30a195760987b8c0b5da9ddcc7b5",
+        "externalIds": {
+          "PubMedCentral": "5160495",
+          "CorpusId": 211051099,
+          "PubMed": "29000823"
+        },
+        "url": "https://www.semanticscholar.org/paper/fd9be01cac1a30a195760987b8c0b5da9ddcc7b5",
+        "title": "Extract",
+        "year": 1888,
+        "citationCount": 200
+      },
+      {
+        "paperId": "6a630ac89d7c0a57eb7bf4cb30dd5946bcf3ccce",
+        "externalIds": {
+          "MAG": "2525491769",
+          "DOI": "10.1201/b18055-8",
+          "CorpusId": 208945385
+        },
+        "url": "https://www.semanticscholar.org/paper/6a630ac89d7c0a57eb7bf4cb30dd5946bcf3ccce",
+        "title": "google,\u6211,\u8428\u5a1c",
+        "year": 2006,
+        "citationCount": 9273
+      },
+      {
+        "paperId": null,
+        "externalIds": null,
+        "url": null,
+        "title": "Black Forest Labs",
+        "year": null,
+        "citationCount": null
+      }
+    ]
+  },
+  "tara": {
+    "paper": {
+      "paperId": "ca196a2bad60976f8c06d74e9e9222798648e682",
+      "externalIds": {
+        "ArXiv": "2607.18724",
+        "CorpusId": 290395929
+      },
+      "url": "https://www.semanticscholar.org/paper/ca196a2bad60976f8c06d74e9e9222798648e682",
+      "title": "One Rewrite to Fix Them All? Type-Aware Repair Allocation for Text-to-Image Prompt Optimization",
+      "year": 2026,
+      "citationCount": 0
+    },
+    "n_cites": 0,
+    "n_refs": 42,
+    "citations": [],
+    "references": [
+      {
+        "paperId": "9093860c40dac59e205284623fcd9f4884032ddf",
+        "externalIds": {
+          "ArXiv": "2506.23138",
+          "CorpusId": 286367912
+        },
+        "url": "https://www.semanticscholar.org/paper/9093860c40dac59e205284623fcd9f4884032ddf",
+        "title": "VisualPrompter: Semantic-Aware Prompt Optimization with Visual Feedback for Text-to-Image Synthesis",
+        "year": 2025,
+        "citationCount": 3
+      },
+      {
+        "paperId": "3ef9dbd95a174d4c175fcd603f62b8cc197e8d7e",
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2501-17811",
+          "ArXiv": "2501.17811",
+          "DOI": "10.48550/arXiv.2501.17811",
+          "CorpusId": 275954151
+        },
+        "url": "https://www.semanticscholar.org/paper/3ef9dbd95a174d4c175fcd603f62b8cc197e8d7e",
+        "title": "Janus-Pro: Unified Multimodal Understanding and Generation with Data and Model Scaling",
+        "year": 2025,
+        "citationCount": 821
+      },
+      {
+        "paperId": "fbab0b8ecd8cd742ed0c8d92bfa7fa4e3ba59ec1",
+        "externalIds": {
+          "ArXiv": "2411.08127",
+          "DBLP": "journals/corr/abs-2411-08127",
+          "DOI": "10.48550/arXiv.2411.08127",
+          "CorpusId": 273993620
+        },
+        "url": "https://www.semanticscholar.org/paper/fbab0b8ecd8cd742ed0c8d92bfa7fa4e3ba59ec1",
+        "title": "TIPO: Text to Image with Text Presampling for Prompt Optimization",
+        "year": 2024,
+        "citationCount": 5
+      },
+      {
+        "paperId": "62607e5ec6cd338f30b040a98d7eaf297a25f83c",
+        "externalIds": {
+          "DBLP": "journals/tmlr/JiangHSSSLN25",
+          "ArXiv": "2408.11706",
+          "DOI": "10.48550/arXiv.2408.11706",
+          "CorpusId": 271916364
+        },
+        "url": "https://www.semanticscholar.org/paper/62607e5ec6cd338f30b040a98d7eaf297a25f83c",
+        "title": "FRAP: Faithful and Realistic Text-to-Image Generation with Adaptive Prompt Weighting",
+        "year": 2024,
+        "citationCount": 5
+      },
+      {
+        "paperId": "4777305738fd1aa30243f96a1687d57d8f70fa5d",
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2403-17804",
+          "ArXiv": "2403.17804",
+          "DOI": "10.48550/arXiv.2403.17804",
+          "CorpusId": 268691649
+        },
+        "url": "https://www.semanticscholar.org/paper/4777305738fd1aa30243f96a1687d57d8f70fa5d",
+        "title": "Improving Text-to-Image Consistency via Automatic Prompt Optimization",
+        "year": 2024,
+        "citationCount": 90
+      },
+      {
+        "paperId": "c6e2837894bb545fc62ef41d7dadcd6e1bb51dc5",
+        "externalIds": {
+          "DBLP": "conf/chi/WangHS0024",
+          "ArXiv": "2403.04014",
+          "DOI": "10.1145/3613904.3642803",
+          "CorpusId": 268264261
+        },
+        "url": "https://www.semanticscholar.org/paper/c6e2837894bb545fc62ef41d7dadcd6e1bb51dc5",
+        "title": "PromptCharm: Text-to-Image Generation through Multi-modal Prompting and Refinement",
+        "year": 2024,
+        "citationCount": 175
+      },
+      {
+        "paperId": "41a66997ce0a366bba3becf7c3f37c9aebb13fbd",
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2403-03206",
+          "ArXiv": "2403.03206",
+          "DOI": "10.48550/arXiv.2403.03206",
+          "CorpusId": 268247980
+        },
+        "url": "https://www.semanticscholar.org/paper/41a66997ce0a366bba3becf7c3f37c9aebb13fbd",
+        "title": "Scaling Rectified Flow Transformers for High-Resolution Image Synthesis",
+        "year": 2024,
+        "citationCount": 4411
+      },
+      {
+        "paperId": "57866c5ba4eb25130faeaea82b39b70cab23ef98",
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2402-12760",
+          "ArXiv": "2402.12760",
+          "DOI": "10.1609/aaai.v38i3.27986",
+          "CorpusId": 267759627
+        },
+        "url": "https://www.semanticscholar.org/paper/57866c5ba4eb25130faeaea82b39b70cab23ef98",
+        "title": "A User-Friendly Framework for Generating Model-Preferred Prompts in Text-to-Image Synthesis",
+        "year": 2024,
+        "citationCount": 12
+      },
+      {
+        "paperId": "31d2ccff82e313eb5c1620c44bb8322da4a38513",
+        "externalIds": {
+          "ArXiv": "2402.07927",
+          "DBLP": "journals/corr/abs-2402-07927",
+          "DOI": "10.48550/arXiv.2402.07927",
+          "CorpusId": 267636769
+        },
+        "url": "https://www.semanticscholar.org/paper/31d2ccff82e313eb5c1620c44bb8322da4a38513",
+        "title": "A Systematic Survey of Prompt Engineering in Large Language Models: Techniques and Applications",
+        "year": 2024,
+        "citationCount": 963
+      },
+      {
+        "paperId": "bde9fc752842a2a91c70933169fb8cee2b81f8b2",
+        "externalIds": {
+          "DBLP": "conf/acl/DattaKRA24",
+          "ArXiv": "2312.16720",
+          "DOI": "10.48550/arXiv.2312.16720",
+          "CorpusId": 266573609
+        },
+        "url": "https://www.semanticscholar.org/paper/bde9fc752842a2a91c70933169fb8cee2b81f8b2",
+        "title": "Prompt Expansion for Adaptive Text-to-Image Generation",
+        "year": 2023,
+        "citationCount": 34
+      },
+      {
+        "paperId": "44c3c0d08af2810324d081024e35d3bfe3a5ea1a",
+        "externalIds": {
+          "DBLP": "conf/eacl/RosenmanLH24",
+          "ACL": "2024.eacl-demo.17",
+          "ArXiv": "2311.12229",
+          "DOI": "10.48550/arXiv.2311.12229",
+          "CorpusId": 265308563
+        },
+        "url": "https://www.semanticscholar.org/paper/44c3c0d08af2810324d081024e35d3bfe3a5ea1a",
+        "title": "NeuroPrompts: An Adaptive Framework to Optimize Prompts for Text-to-Image Generation",
+        "year": 2023,
+        "citationCount": 12
+      },
+      {
+        "paperId": "c3b1174989748777173f25406627727073608c05",
+        "externalIds": {
+          "DBLP": "conf/iclr/0001HBGAKBP024",
+          "ArXiv": "2310.18235",
+          "DOI": "10.48550/arXiv.2310.18235",
+          "CorpusId": 264555374
+        },
+        "url": "https://www.semanticscholar.org/paper/c3b1174989748777173f25406627727073608c05",
+        "title": "Davidsonian Scene Graph: Improving Reliability in Fine-grained Evaluation for Text-to-Image Generation",
+        "year": 2023,
+        "citationCount": 166
+      },
+      {
+        "paperId": "afe4ee7ba225d8965cd96056b3e1e76a31451a75",
+        "externalIds": {
+          "ArXiv": "2307.09036",
+          "DBLP": "journals/tvcg/FengWWWLZWC24",
+          "DOI": "10.1109/TVCG.2023.3327168",
+          "CorpusId": 259950893,
+          "PubMed": "37878445"
+        },
+        "url": "https://www.semanticscholar.org/paper/afe4ee7ba225d8965cd96056b3e1e76a31451a75",
+        "title": "PromptMagician: Interactive Prompt Engineering for Text-to-Image Creation",
+        "year": 2023,
+        "citationCount": 165
+      },
+      {
+        "paperId": "d7890d1906d95c4ae4c430b350455156d6d8aed9",
+        "externalIds": {
+          "DBLP": "conf/iclr/PodellELBDMPR24",
+          "ArXiv": "2307.01952",
+          "CorpusId": 259341735
+        },
+        "url": "https://www.semanticscholar.org/paper/d7890d1906d95c4ae4c430b350455156d6d8aed9",
+        "title": "SDXL: Improving Latent Diffusion Models for High-Resolution Image Synthesis",
+        "year": 2023,
+        "citationCount": 5129
+      },
+      {
+        "paperId": "bd5deadc58ee45b5e004378ba1d54a96bc947b4a",
+        "externalIds": {
+          "ArXiv": "2305.14251",
+          "DBLP": "conf/emnlp/MinKLLYKIZH23",
+          "DOI": "10.48550/arXiv.2305.14251",
+          "CorpusId": 258841470
+        },
+        "url": "https://www.semanticscholar.org/paper/bd5deadc58ee45b5e004378ba1d54a96bc947b4a",
+        "title": "FActScore: Fine-grained Atomic Evaluation of Factual Precision in Long Form Text Generation",
+        "year": 2023,
+        "citationCount": 1504
+      },
+      {
+        "paperId": "b1ef91c5541f88297c7551e1adf15fcee7987197",
+        "externalIds": {
+          "DBLP": "conf/nips/YaromBCAHLOS23",
+          "ArXiv": "2305.10400",
+          "DOI": "10.48550/arXiv.2305.10400",
+          "CorpusId": 258740893
+        },
+        "url": "https://www.semanticscholar.org/paper/b1ef91c5541f88297c7551e1adf15fcee7987197",
+        "title": "What You See is What You Read? Improving Text-Image Alignment Evaluation",
+        "year": 2023,
+        "citationCount": 140
+      },
+      {
+        "paperId": "cf694df964caa156ec306b45d3a3127533cb458f",
+        "externalIds": {
+          "ArXiv": "2305.01569",
+          "DBLP": "journals/corr/abs-2305-01569",
+          "DOI": "10.48550/arXiv.2305.01569",
+          "CorpusId": 258437096
+        },
+        "url": "https://www.semanticscholar.org/paper/cf694df964caa156ec306b45d3a3127533cb458f",
+        "title": "Pick-a-Pic: An Open Dataset of User Preferences for Text-to-Image Generation",
+        "year": 2023,
+        "citationCount": 1071
+      },
+      {
+        "paperId": "421a3f9355c83e30f9b6fd0df2f295430fc1766d",
+        "externalIds": {
+          "DBLP": "conf/uist/BradeWSOG23",
+          "ArXiv": "2304.09337",
+          "DOI": "10.1145/3586183.3606725",
+          "CorpusId": 258212979
+        },
+        "url": "https://www.semanticscholar.org/paper/421a3f9355c83e30f9b6fd0df2f295430fc1766d",
+        "title": "Promptify: Text-to-Image Generation through Interactive Prompt Exploration with Large Language Models",
+        "year": 2023,
+        "citationCount": 205
+      },
+      {
+        "paperId": "9550076d9930dd3533ab9276126f1a9265fad7b4",
+        "externalIds": {
+          "ArXiv": "2303.14420",
+          "DBLP": "conf/iccv/WuSZZL23",
+          "DOI": "10.1109/ICCV51070.2023.00200",
+          "CorpusId": 257767281
+        },
+        "url": "https://www.semanticscholar.org/paper/9550076d9930dd3533ab9276126f1a9265fad7b4",
+        "title": "Human Preference Score: Better Aligning Text-to-image Models with Human Preference",
+        "year": 2023,
+        "citationCount": 353
+      },
+      {
+        "paperId": "1f02ba1c6fae779ec3d003340e72eaf82351cfb9",
+        "externalIds": {
+          "DBLP": "conf/iccv/HuLKWOKS23",
+          "ArXiv": "2303.11897",
+          "DOI": "10.1109/ICCV51070.2023.01866",
+          "CorpusId": 257636562
+        },
+        "url": "https://www.semanticscholar.org/paper/1f02ba1c6fae779ec3d003340e72eaf82351cfb9",
+        "title": "TIFA: Accurate and Interpretable Text-to-Image Faithfulness Evaluation with Question Answering",
+        "year": 2023,
+        "citationCount": 447
+      },
+      {
+        "paperId": "23f4c8d980d8288131f80cbdb4173f05a21e8724",
+        "externalIds": {
+          "DBLP": "conf/chi/0005SL23",
+          "ArXiv": "2302.09466",
+          "DOI": "10.1145/3544548.3581402",
+          "CorpusId": 257038210
+        },
+        "url": "https://www.semanticscholar.org/paper/23f4c8d980d8288131f80cbdb4173f05a21e8724",
+        "title": "RePrompt: Automatic Prompt Editing to Refine AI-Generative Art Towards Precise Expressions",
+        "year": 2023,
+        "citationCount": 153
+      },
+      {
+        "paperId": "4d81c33b295c092016ac236cfd32020a5bb70b97",
+        "externalIds": {
+          "ArXiv": "2212.09611",
+          "DBLP": "conf/nips/HaoC0W23",
+          "DOI": "10.48550/arXiv.2212.09611",
+          "CorpusId": 254853701
+        },
+        "url": "https://www.semanticscholar.org/paper/4d81c33b295c092016ac236cfd32020a5bb70b97",
+        "title": "Optimizing Prompts for Text-to-Image Generation",
+        "year": 2022,
+        "citationCount": 284
+      },
+      {
+        "paperId": "e5c8960eb2ec034ffbd353ef39fd1cb541d3c7c9",
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2210-08402",
+          "ArXiv": "2210.08402",
+          "DOI": "10.48550/arXiv.2210.08402",
+          "CorpusId": 252917726
+        },
+        "url": "https://www.semanticscholar.org/paper/e5c8960eb2ec034ffbd353ef39fd1cb541d3c7c9",
+        "title": "LAION-5B: An open large-scale dataset for training next generation image-text models",
+        "year": 2022,
+        "citationCount": 5410
+      },
+      {
+        "paperId": "61d728e2182d7334e7617ea078b112c175cc7dcd",
+        "externalIds": {
+          "DBLP": "conf/sigir/PavlichenkoU23",
+          "ArXiv": "2209.11711",
+          "DOI": "10.1145/3539618.3592000",
+          "CorpusId": 252519648
+        },
+        "url": "https://www.semanticscholar.org/paper/61d728e2182d7334e7617ea078b112c175cc7dcd",
+        "title": "Best Prompts for Text-to-Image Models and How to Find Them",
+        "year": 2022,
+        "citationCount": 84
+      },
+      {
+        "paperId": "af9f365ed86614c800f082bd8eb14be76072ad16",
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2207-12598",
+          "ArXiv": "2207.12598",
+          "DOI": "10.48550/arXiv.2207.12598",
+          "CorpusId": 249145348
+        },
+        "url": "https://www.semanticscholar.org/paper/af9f365ed86614c800f082bd8eb14be76072ad16",
+        "title": "Classifier-Free Diffusion Guidance",
+        "year": 2022,
+        "citationCount": 6812
+      },
+      {
+        "paperId": "e5d30a65cb267dc185770c40cce732f9770cbd27",
+        "externalIds": {
+          "ArXiv": "2204.13988",
+          "DBLP": "journals/behaviourIT/Oppenlaender24",
+          "DOI": "10.1080/0144929X.2023.2286532",
+          "CorpusId": 251224151
+        },
+        "url": "https://www.semanticscholar.org/paper/e5d30a65cb267dc185770c40cce732f9770cbd27",
+        "title": "A taxonomy of prompt modifiers for text-to-image generation",
+        "year": 2022,
+        "citationCount": 184
+      },
+      {
+        "paperId": "c10075b3746a9f3dd5811970e93c8ca3ad39b39d",
+        "externalIds": {
+          "ArXiv": "2112.10752",
+          "DBLP": "journals/corr/abs-2112-10752",
+          "DOI": "10.1109/CVPR52688.2022.01042",
+          "CorpusId": 245335280
+        },
+        "url": "https://www.semanticscholar.org/paper/c10075b3746a9f3dd5811970e93c8ca3ad39b39d",
+        "title": "High-Resolution Image Synthesis with Latent Diffusion Models",
+        "year": 2021,
+        "citationCount": 26418
+      },
+      {
+        "paperId": "0968f1592f9401d72bf0d97e740496818c1a3135",
+        "externalIds": {
+          "DBLP": "conf/chi/LiuC22a",
+          "ArXiv": "2109.06977",
+          "DOI": "10.1145/3491102.3501825",
+          "CorpusId": 237513697
+        },
+        "url": "https://www.semanticscholar.org/paper/0968f1592f9401d72bf0d97e740496818c1a3135",
+        "title": "Design Guidelines for Prompt Engineering Text-to-Image Generative Models",
+        "year": 2021,
+        "citationCount": 736
+      },
+      {
+        "paperId": "28692beece311a90f5fa1ca2ec9d0c2ce293d069",
+        "externalIds": {
+          "DBLP": "journals/csur/LiuYFJHN23",
+          "ArXiv": "2107.13586",
+          "DOI": "10.1145/3560815",
+          "CorpusId": 236493269
+        },
+        "url": "https://www.semanticscholar.org/paper/28692beece311a90f5fa1ca2ec9d0c2ce293d069",
+        "title": "Pre-train, Prompt, and Predict: A Systematic Survey of Prompting Methods in Natural Language Processing",
+        "year": 2021,
+        "citationCount": 5585
+      },
+      {
+        "paperId": "64ea8f180d0682e6c18d1eb688afdb2027c02794",
+        "externalIds": {
+          "ArXiv": "2105.05233",
+          "DBLP": "journals/corr/abs-2105-05233",
+          "CorpusId": 234357997
+        },
+        "url": "https://www.semanticscholar.org/paper/64ea8f180d0682e6c18d1eb688afdb2027c02794",
+        "title": "Diffusion Models Beat GANs on Image Synthesis",
+        "year": 2021,
+        "citationCount": 12558
+      },
+      {
+        "paperId": "38b0567e83386ddc294d6c81b541deacbd8e3c2a",
+        "externalIds": {
+          "DBLP": "conf/emnlp/HesselHFBC21",
+          "ACL": "2021.emnlp-main.595",
+          "ArXiv": "2104.08718",
+          "DOI": "10.18653/v1/2021.emnlp-main.595",
+          "CorpusId": 233296711
+        },
+        "url": "https://www.semanticscholar.org/paper/38b0567e83386ddc294d6c81b541deacbd8e3c2a",
+        "title": "CLIPScore: A Reference-free Evaluation Metric for Image Captioning",
+        "year": 2021,
+        "citationCount": 3033
+      },
+      {
+        "paperId": "6f870f7f02a8c59c3e23f407f3ef00dd1dcf8fc4",
+        "externalIds": {
+          "DBLP": "conf/icml/RadfordKHRGASAM21",
+          "ArXiv": "2103.00020",
+          "CorpusId": 231591445
+        },
+        "url": "https://www.semanticscholar.org/paper/6f870f7f02a8c59c3e23f407f3ef00dd1dcf8fc4",
+        "title": "Learning Transferable Visual Models From Natural Language Supervision",
+        "year": 2021,
+        "citationCount": 52982
+      },
+      {
+        "paperId": "633e2fbfc0b21e959a244100937c5853afca4853",
+        "externalIds": {
+          "ArXiv": "2011.13456",
+          "DBLP": "conf/iclr/0011SKKEP21",
+          "MAG": "3110257065",
+          "CorpusId": 227209335
+        },
+        "url": "https://www.semanticscholar.org/paper/633e2fbfc0b21e959a244100937c5853afca4853",
+        "title": "Score-Based Generative Modeling through Stochastic Differential Equations",
+        "year": 2020,
+        "citationCount": 11594
+      },
+      {
+        "paperId": "014576b866078524286802b1d0e18628520aa886",
+        "externalIds": {
+          "ArXiv": "2010.02502",
+          "DBLP": "journals/corr/abs-2010-02502",
+          "MAG": "3092442149",
+          "CorpusId": 222140788
+        },
+        "url": "https://www.semanticscholar.org/paper/014576b866078524286802b1d0e18628520aa886",
+        "title": "Denoising Diffusion Implicit Models",
+        "year": 2020,
+        "citationCount": 12928
+      },
+      {
+        "paperId": "53c283cc281deb515c4b4b539dbcd636c5842e62",
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2010-00490",
+          "MAG": "3091075079",
+          "ArXiv": "2010.00490",
+          "DOI": "10.1162/tacl_a_00397",
+          "CorpusId": 222090341
+        },
+        "url": "https://www.semanticscholar.org/paper/53c283cc281deb515c4b4b539dbcd636c5842e62",
+        "title": "Towards Question-Answering as an Automatic Metric for Evaluating the Content Quality of a Summary",
+        "year": 2020,
+        "citationCount": 147
+      },
+      {
+        "paperId": "5c126ae3421f05768d8edd97ecd44b1364e2c99a",
+        "externalIds": {
+          "DBLP": "journals/corr/abs-2006-11239",
+          "MAG": "3100572490",
+          "ArXiv": "2006.11239",
+          "CorpusId": 219955663
+        },
+        "url": "https://www.semanticscholar.org/paper/5c126ae3421f05768d8edd97ecd44b1364e2c99a",
+        "title": "Denoising Diffusion Probabilistic Models",
+        "year": 2020,
+        "citationCount": 33468
+      },
+      {
+        "paperId": "6c4b76232bb72897685d19b3d264c6ee3005bc2b",
+        "externalIds": {
+          "MAG": "2981852735",
+          "DBLP": "journals/corr/abs-1910-10683",
+          "ArXiv": "1910.10683",
+          "CorpusId": 204838007
+        },
+        "url": "https://www.semanticscholar.org/paper/6c4b76232bb72897685d19b3d264c6ee3005bc2b",
+        "title": "Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer",
+        "year": 2019,
+        "citationCount": 26712
+      },
+      {
+        "paperId": "231af7dc01a166cac3b5b01ca05778238f796e41",
+        "externalIds": {
+          "MAG": "2963981733",
+          "DBLP": "conf/nips/HeuselRUNH17",
+          "CorpusId": 326772
+        },
+        "url": "https://www.semanticscholar.org/paper/231af7dc01a166cac3b5b01ca05778238f796e41",
+        "title": "GANs Trained by a Two Time-Scale Update Rule Converge to a Local Nash Equilibrium",
+        "year": 2017,
+        "citationCount": 19093
+      },
+      {
+        "paperId": "1d62babc85835e7b1fc61e8a2ad4b9301e3e93ea",
+        "externalIds": {
+          "DBLP": "conf/nips/0001ZB23",
+          "CorpusId": 268030751
+        },
+        "url": "https://www.semanticscholar.org/paper/1d62babc85835e7b1fc61e8a2ad4b9301e3e93ea",
+        "title": "Visual Programming for Step-by-Step Text-to-Image Generation and Evaluation",
+        "year": 2023,
+        "citationCount": 60
+      },
+      {
+        "paperId": "ef4f5a50837a7c1b3e87b9300ffc7ba00d461a0f",
+        "externalIds": {
+          "CorpusId": 211146177
+        },
+        "url": "https://www.semanticscholar.org/paper/ef4f5a50837a7c1b3e87b9300ffc7ba00d461a0f",
+        "title": "AUTO-ENCODING VARIATIONAL BAYES",
+        "year": 2020,
+        "citationCount": 24614
+      },
+      {
+        "paperId": null,
+        "externalIds": null,
+        "url": null,
+        "title": "Black Forest Labs",
+        "year": null,
+        "citationCount": null
+      },
+      {
+        "paperId": null,
+        "externalIds": null,
+        "url": null,
+        "title": "Free-Text: Training-free text rendering via attention localization and spectral glyph injection",
+        "year": null,
+        "citationCount": null
+      }
+    ]
+  },
+  "rapopp": {
+    "arxiv": "2510.20206",
+    "error": "not found"
+  },
+  "pae": {
+    "arxiv": "2404.04095",
+    "error": "not found"
+  }
+}

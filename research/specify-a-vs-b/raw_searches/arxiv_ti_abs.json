@@ -1,0 +1,143 @@
+[
+  {
+    "query": "ti:\"prompt engineering\" AND abs:\"diffusion\"",
+    "papers": [
+      {
+        "title": "Investigating Prompt Engineering in Diffusion Models",
+        "id": null
+      },
+      {
+        "title": "From Prompt Engineering to Prompt Craft",
+        "id": null
+      },
+      {
+        "title": "BeautifulPrompt: Towards Automatic Prompt Engineering for Text-to-Image Synthesis",
+        "id": null
+      },
+      {
+        "title": "Seek for Incantations: Towards Accurate Text-to-Image Diffusion Synthesis through Prompt Engineering",
+        "id": null
+      },
+      {
+        "title": "Automated Black-box Prompt Engineering for Personalized Text-to-Image Generation",
+        "id": null
+      },
+      {
+        "title": "Imagine Before You Draw: Visual Prompt Engineering for Image Generation",
+        "id": null
+      }
+    ]
+  },
+  {
+    "query": "ti:\"structured captions\" AND abs:\"text-to-image\"",
+    "papers": [
+      {
+        "title": "Generating an Image From 1,000 Words: Enhancing Text-to-Image With Structured Captions",
+        "id": null
+      },
+      {
+        "title": "Structured Captions Improve Prompt Adherence in Text-to-Image Models (Re-LAION-Caption 19M)",
+        "id": null
+      }
+    ]
+  },
+  {
+    "query": "abs:\"field ablation\" AND abs:\"caption\" AND abs:\"diffusion\"",
+    "papers": []
+  },
+  {
+    "query": "ti:\"design guidelines\" AND abs:\"text-to-image\"",
+    "papers": [
+      {
+        "title": "Design Guidelines for Prompt Engineering Text-to-Image Generative Models",
+        "id": null
+      },
+      {
+        "title": "A Design Guideline to Overcome Web Accessibility Issues Challenged by Visually Impaired Community in Sri Lanka",
+        "id": null
+      }
+    ]
+  },
+  {
+    "query": "abs:\"leave-one-out\" AND abs:\"prompt\" AND abs:\"diffusion\"",
+    "papers": [
+      {
+        "title": "No MoCap Needed: Post-Training Motion Diffusion Models with Reinforcement Learning using Only Textual Prompts",
+        "id": null
+      },
+      {
+        "title": "A Simple and Effective Reinforcement Learning Method for Text-to-Image Diffusion Fine-tuning",
+        "id": null
+      }
+    ]
+  },
+  {
+    "query": "ti:\"What the DAAM\"",
+    "papers": [
+      {
+        "title": "What the DAAM: Interpreting Stable Diffusion Using Cross Attention",
+        "id": null
+      }
+    ]
+  },
+  {
+    "query": "ti:\"ConceptMix\"",
+    "papers": [
+      {
+        "title": "ConceptMix: A Compositional Image Generation Benchmark with Controllable Difficulty",
+        "id": null
+      },
+      {
+        "title": "ConceptMix++: Leveling the Playing Field in Text-to-Image Benchmarking via Iterative Prompt Optimization",
+        "id": null
+      }
+    ]
+  },
+  {
+    "query": "ti:\"T2I-CompBench\"",
+    "papers": [
+      {
+        "title": "T2I-CompBench++: An Enhanced and Comprehensive Benchmark for Compositional Text-to-image Generation",
+        "id": null
+      }
+    ]
+  },
+  {
+    "query": "abs:\"which words\" AND abs:\"prompt\" AND abs:\"stable diffusion\"",
+    "papers": [
+      {
+        "title": "Word-Level Explanations for Analyzing Bias in Text-to-Image Models",
+        "id": null
+      },
+      {
+        "title": "Rich Human Feedback for Text-to-Image Generation",
+        "id": null
+      }
+    ]
+  },
+  {
+    "query": "ti:\"Interpretable Diffusion\" AND abs:\"information\"",
+    "papers": [
+      {
+        "title": "Interpretable Diffusion via Information Decomposition",
+        "id": null
+      },
+      {
+        "title": "Interpretable Diffusion Models with B-cos Networks",
+        "id": null
+      },
+      {
+        "title": "Diffusion-TS: Interpretable Diffusion for General Time Series Generation",
+        "id": null
+      },
+      {
+        "title": "DiffusionPID: Interpreting Diffusion via Partial Information Decomposition",
+        "id": null
+      },
+      {
+        "title": "CASL: Concept-Aligned Sparse Latents for Interpreting Diffusion Models",
+        "id": null
+      }
+    ]
+  }
+]

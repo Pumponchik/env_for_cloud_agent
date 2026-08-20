@@ -1,0 +1,359 @@
+[
+  {
+    "hub": "DAAM",
+    "id": "arxiv:2210.04885",
+    "error": "HTTP Error 429: "
+  },
+  {
+    "hub": "Investigating Prompt Engineering",
+    "id": "arxiv:2211.15462",
+    "error": "HTTP Error 429: "
+  },
+  {
+    "hub": "Liu Chilton Design Guidelines",
+    "id": "arxiv:2109.06977",
+    "error": "HTTP Error 429: "
+  },
+  {
+    "hub": "Prompt-to-Prompt",
+    "id": "arxiv:2203.02053",
+    "error": "HTTP Error 429: "
+  },
+  {
+    "hub": "Prompt-to-Prompt",
+    "id": "arxiv:2208.01626",
+    "title": "Prompt-to-Prompt Image Editing with Cross Attention Control",
+    "year": 2022,
+    "citationCount": 2909,
+    "s2id": "04e541391e8dce14d099d00fb2c21dbbd8afe87f",
+    "url": "https://www.semanticscholar.org/paper/04e541391e8dce14d099d00fb2c21dbbd8afe87f",
+    "citing_n": 50,
+    "citing": [
+      {
+        "title": "FreeLayout: Free range multi-modal input to free form floorplan generation",
+        "year": 2026,
+        "citationCount": 0,
+        "arxiv": null
+      },
+      {
+        "title": "Noise-Aware Latent Verification for Step-Efficient Diffusion Sampling",
+        "year": 2026,
+        "citationCount": 0,
+        "arxiv": null
+      },
+      {
+        "title": "FreeInstance: Training-Free Instance-Level Customization",
+        "year": 2026,
+        "citationCount": 0,
+        "arxiv": null
+      },
+      {
+        "title": "Owner3D: Ownership-Guided Style Writing for Training-Free Localized 3D Stylization",
+        "year": 2026,
+        "citationCount": 0,
+        "arxiv": "2608.14078"
+      },
+      {
+        "title": "Concept Guidance: Precise, Training-Free Latent Control for Text-to-Image Generation",
+        "year": 2026,
+        "citationCount": 0,
+        "arxiv": "2608.14172"
+      },
+      {
+        "title": "ArCompose: Compositional Text to Image Synthesis for Modern Standard and Iraqi Arabic via Token Supervised Diffusion and NMT Driven Prompt Planning",
+        "year": 2026,
+        "citationCount": 0,
+        "arxiv": null
+      },
+      {
+        "title": "CRAFT: Constrained Reward via Attention Fine-Tuning for Subject Personalization without Composed Targets",
+        "year": 2026,
+        "citationCount": 0,
+        "arxiv": "2608.14403"
+      },
+      {
+        "title": "Making Every Step Count: Spatio-Temporal Information Allocation for Imaging Inverse Problems",
+        "year": 2026,
+        "citationCount": 0,
+        "arxiv": "2608.11747"
+      },
+      {
+        "title": "Beyond Trial-and-Error: Agentic Optimization for Image-to-Video Adherence",
+        "year": 2026,
+        "citationCount": 0,
+        "arxiv": "2608.12290"
+      },
+      {
+        "title": "HandEdit: A Unified Benchmark for Egocentric Human-to-Robot Dexterous Hand Image Editing",
+        "year": 2026,
+        "citationCount": 0,
+        "arxiv": "2608.12122"
+      },
+      {
+        "title": "NullEdit: Stealthy Image Protection via VLM Condition Redirection",
+        "year": 2026,
+        "citationCount": 0,
+        "arxiv": "2608.10870"
+      },
+      {
+        "title": "Diffusion Image Editing via Asynchronous Token Decoding",
+        "year": 2026,
+        "citationCount": 0,
+        "arxiv": "2608.09322"
+      },
+      {
+        "title": "GeoRoute: Geometry-Aware Hybrid Inference for Traffic Future-Frame Prediction",
+        "year": 2026,
+        "citationCount": 0,
+        "arxiv": "2608.09493"
+      },
+      {
+        "title": "UniScale: Arbitrary-Scale Industrial Anomaly Generation",
+        "year": 2026,
+        "citationCount": 0,
+        "arxiv": "2608.07864"
+      },
+      {
+        "title": "MaskFlow: Precise, Consistent and Seamless Regional Image Editing",
+        "year": 2026,
+        "citationCount": 0,
+        "arxiv": "2608.06929"
+      },
+      {
+        "title": "Beyond Starry Night: Shortcut-Aware Control-State Planning for Artist-Grounded Text to Image Generation",
+        "year": 2026,
+        "citationCount": 0,
+        "arxiv": "2608.06751"
+      },
+      {
+        "title": "InsertFuse: A Unified Framework for Multi-Category Reference-Guided Image Insertion",
+        "year": 2026,
+        "citationCount": 0,
+        "arxiv": "2608.06490"
+      },
+      {
+        "title": "OmniEdit-Bench: A Comprehensive Benchmark for Instruction-based Video Editing",
+        "year": 2026,
+        "citationCount": 0,
+        "arxiv": "2608.05049"
+      },
+      {
+        "title": "RIDGE: Re-Noising with Internal Dynamic Guidance for Image Editing",
+        "year": 2026,
+        "citationCount": 0,
+        "arxiv": "2608.03059"
+      },
+      {
+        "title": "Rectify Then Diffuse: Disentangling Concepts Before Denoising Trajectory Unfolds",
+        "year": 2026,
+        "citationCount": 0,
+        "arxiv": "2608.03135"
+      },
+      {
+        "title": "MultiCompose: Multi-Concept Personalized Composition with Per-Subject Attribute Binding",
+        "year": 2026,
+        "citationCount": 0,
+        "arxiv": "2608.03708"
+      },
+      {
+        "title": "Localize, Don't Beautify: Client-Side Control of Image-Editing APIs for Cosmetic Surgery Previews",
+        "year": 2026,
+        "citationCount": 0,
+        "arxiv": "2608.02841"
+      },
+      {
+        "title": "DAILStyler: localized image style transfer via diffusion with alternating injection of two styles",
+        "year": 2026,
+        "citationCount": 0,
+        "arxiv": null
+      },
+      {
+        "title": "AdaptoNet: Modular Foundation-Adaptive Neural Networks for Cyber-Physical Attack Detection in Power Grids",
+        "year": 2026,
+        "citationCount": 0,
+        "arxiv": "2608.01375"
+      },
+      {
+        "title": "Image-Space Rule Discovery",
+        "year": 2026,
+        "citationCount": 0,
+        "arxiv": "2608.00490"
+      },
+      {
+        "title": "HD-Custom: Efficient Hierarchical Disentanglement for Coarse-to-Fine Concept Customization in Subject Video Generation",
+        "year": 2026,
+        "citationCount": 0,
+        "arxiv": null
+      },
+      {
+        "title": "WordCon: Word-Level Typography Control in Visual Text Rendering",
+        "year": 2026,
+        "citationCount": 1,
+        "arxiv": null
+      },
+      {
+        "title": "Anchoring and Steering Diffusion: Enhancing the Faithfulness of Text-to-Image Generation at Inference Time",
+        "year": 2026,
+        "citationCount": 0,
+        "arxiv": "2607.26647"
+      },
+      {
+        "title": "Adaptive spatio-temporal reasoning for physically-consistent region-aware image editing",
+        "year": 2026,
+        "citationCount": 0,
+        "arxiv": null
+      },
+      {
+        "title": "Dual-path attention modulation for training-free text-guided image editing",
+        "year": 2026,
+        "citationCount": 0,
+        "arxiv": null
+      },
+      {
+        "title": "SlerpFlow: Spherical Trajectory Correction for Rectified Flow Inversion",
+        "year": 2026,
+        "citationCount": 0,
+        "arxiv": "2607.21326"
+      },
+      {
+        "title": "Diversifying Similar Subjects for Text-to-Image Synthesis with Self-Cross Diffusion Guidance and Reward",
+        "year": 2026,
+        "citationCount": 0,
+        "arxiv": null
+      },
+      {
+        "title": "WhereEdit: Mask-aware Local Latent Editing for One-Step Image Editing",
+        "year": 2026,
+        "citationCount": 0,
+        "arxiv": "2607.20883"
+      },
+      {
+        "title": "PC-Edit: Prompt-Contrastive Region Discovery and Region-Guided Editing",
+        "year": 2026,
+        "citationCount": 0,
+        "arxiv": "2607.21318"
+      },
+      {
+        "title": "OSVE: One Step Video Editing with One Step Diffusion Models",
+        "year": 2026,
+        "citationCount": 0,
+        "arxiv": "2607.19895"
+      },
+      {
+        "title": "Look Before You Edit: Attention-Guided Camera Placement and Multi-View Alignment for 3D Gaussian Splatting Editing",
+        "year": 2026,
+        "citationCount": 0,
+        "arxiv": "2607.19777"
+      },
+      {
+        "title": "WearWow: Native 2K Multi-Garment Virtual Try-On via Adaptive Token Packing and Preference Alignment",
+        "year": 2026,
+        "citationCount": 0,
+        "arxiv": "2607.19923"
+      },
+      {
+        "title": "Image Editing Models are Numerical Solvers",
+        "year": 2026,
+        "citationCount": 1,
+        "arxiv": "2607.18787"
+      },
+      {
+        "title": "FlowSonic: Stable Zero-Shot Music Editing via High-Order Trajectory Integration",
+        "year": 2026,
+        "citationCount": 0,
+        "arxiv": "2607.17526"
+      },
+      {
+        "title": "Denoising Models Develop Human-Like Perceptual Illusion Representations Across Architectures",
+        "year": 2026,
+        "citationCount": 0,
+        "arxiv": "2607.17138"
+      },
+      {
+        "title": "FabricTryOn: Taming Image Editing Models for Garment Re-Texturing",
+        "year": 2026,
+        "citationCount": 0,
+        "arxiv": null
+      },
+      {
+        "title": "CNS-Edit++: Category-Agnostic 3D Editing with Coupled Neural Shape Representation",
+        "year": 2026,
+        "citationCount": 1,
+        "arxiv": "2607.16577"
+      },
+      {
+        "title": "Think, Plan, Paint: Layout-Aware Reasoning for Controllable Image Generation in Unified Models",
+        "year": 2026,
+        "citationCount": 0,
+        "arxiv": "2607.16409"
+      },
+      {
+        "title": "Cyclone: Diffusion Model for Cycle-Consistent Weather Editing from Unpaired Driving Data",
+        "year": 2026,
+        "citationCount": 0,
+        "arxiv": "2607.13927"
+      },
+      {
+        "title": "DiTailed: Ensuring Visual Object Consistency in Text-Image-to-Image Flow Matching Models",
+        "year": 2026,
+        "citationCount": 0,
+        "arxiv": "2607.12539"
+      },
+      {
+        "title": "Hallo4D: Multi-Modal Hallucination Mitigation for Consistent Spatio-Temporal Generation",
+        "year": 2026,
+        "citationCount": 0,
+        "arxiv": "2607.12752"
+      },
+      {
+        "title": "Contrastive-Augmented Flow Matching for Style-Content Disentanglement",
+        "year": 2026,
+        "citationCount": 0,
+        "arxiv": "2607.12404"
+      },
+      {
+        "title": "Latent-Identity Tuning in Text-to-Image Personalization Models",
+        "year": 2026,
+        "citationCount": 0,
+        "arxiv": "2607.11885"
+      },
+      {
+        "title": "h-Flow: Flexible Flow-based Image Editing via Doob's h-Transform",
+        "year": 2026,
+        "citationCount": 0,
+        "arxiv": "2607.10800"
+      },
+      {
+        "title": "ChartSync: A Benchmark for Visuo-Logical Cascading Chart Editing",
+        "year": 2026,
+        "citationCount": 0,
+        "arxiv": "2607.10301"
+      }
+    ]
+  },
+  {
+    "hub": "T2I-CompBench",
+    "id": "arxiv:2307.06350",
+    "error": "HTTP Error 429: "
+  },
+  {
+    "hub": "Interpretable Diffusion CMI",
+    "id": "arxiv:2310.07972",
+    "error": "HTTP Error 429: "
+  },
+  {
+    "hub": "ELLA DPG",
+    "id": "arxiv:2403.05135",
+    "error": "HTTP Error 429: "
+  },
+  {
+    "hub": "Structured Captions",
+    "id": "arxiv:2507.05300",
+    "error": "HTTP Error 429: "
+  },
+  {
+    "hub": "Seed Context Scaling",
+    "id": "arxiv:2607.29679",
+    "error": "HTTP Error 429: "
+  }
+]

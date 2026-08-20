@@ -1,0 +1,400 @@
+[
+  {
+    "query": "ti:\"structured caption\" AND abs:\"text-to-image\"",
+    "papers": [
+      {
+        "title": "Generating an Image From 1,000 Words: Enhancing Text-to-Image With Structured Captions",
+        "id": null
+      },
+      {
+        "title": "Structured Captions Improve Prompt Adherence in Text-to-Image Models (Re-LAION-Caption 19M)",
+        "id": null
+      }
+    ]
+  },
+  {
+    "query": "ti:\"JSON\" AND abs:\"caption\" AND abs:\"diffusion\"",
+    "papers": []
+  },
+  {
+    "query": "ti:\"structured prompt\" AND abs:\"image\"",
+    "papers": [
+      {
+        "title": "Integrated Structural Prompt Learning for Vision-Language Models",
+        "id": null
+      },
+      {
+        "title": "USP-Mamba: Unmixing-Derived Spectral and Structural Prompting for Hyperspectral Image Super-Resolution",
+        "id": null
+      },
+      {
+        "title": "Using Large Text-to-Image Models with Structured Prompts for Skin Disease Identification: A Case Study",
+        "id": null
+      }
+    ]
+  },
+  {
+    "query": "abs:\"JSON caption\" AND abs:\"text-to-image\"",
+    "papers": []
+  },
+  {
+    "query": "abs:\"YAML\" AND abs:\"prompt\" AND abs:\"text-to-image\"",
+    "papers": []
+  },
+  {
+    "query": "ti:\"prompt template\" AND abs:\"text-to-image\"",
+    "papers": [
+      {
+        "title": "Reinforcement Learning-Based Prompt Template Stealing for Text-to-Image Models",
+        "id": null
+      }
+    ]
+  },
+  {
+    "query": "ti:\"Mastering Text-to-Image\"",
+    "papers": [
+      {
+        "title": "CogView: Mastering Text-to-Image Generation via Transformers",
+        "id": null
+      },
+      {
+        "title": "Mastering Text-to-Image Diffusion: Recaptioning, Planning, and Generating with Multimodal LLMs",
+        "id": null
+      }
+    ]
+  },
+  {
+    "query": "ti:\"RPG\" AND abs:\"regional\"",
+    "papers": [
+      {
+        "title": "RPG-SAM: Reliability-Weighted Prototypes and Geometric Adaptive Threshold Selection for Training-Free One-Shot Polyp Segmentation",
+        "id": null
+      },
+      {
+        "title": "Golden RPG: Confidence-Adaptive Region-Aware Noise for Compositional Text-to-Image Generation",
+        "id": null
+      },
+      {
+        "title": "Adaptive Visual Navigation Assistant in 3D RPGs",
+        "id": null
+      }
+    ]
+  },
+  {
+    "query": "ti:\"Mastering Text-to-Image Diffusion\"",
+    "papers": [
+      {
+        "title": "Mastering Text-to-Image Diffusion: Recaptioning, Planning, and Generating with Multimodal LLMs",
+        "id": null
+      }
+    ]
+  },
+  {
+    "query": "abs:\"chain-of-thought\" AND abs:\"prompt enhancer\" AND abs:\"image\"",
+    "papers": [
+      {
+        "title": "Are Image-to-Video Models Good Zero-Shot Image Editors?",
+        "id": null
+      },
+      {
+        "title": "Render-of-Thought: Rendering Textual Chain-of-Thought as Images for Visual Latent Reasoning",
+        "id": null
+      },
+      {
+        "title": "A Vision-Language-Action Model with Visual Prompt for OFF-Road Autonomous Driving",
+        "id": null
+      }
+    ]
+  },
+  {
+    "query": "ti:\"PromptEnhancer\"",
+    "papers": [
+      {
+        "title": "PromptEnhancer: A Simple Approach to Enhance Text-to-Image Models via Chain-of-Thought Prompt Rewriting",
+        "id": null
+      }
+    ]
+  },
+  {
+    "query": "ti:\"Ideogram\"",
+    "papers": [
+      {
+        "title": "Ideograms for Physics and Chemistry",
+        "id": null
+      },
+      {
+        "title": "Ideogram Based Chinese Sentiment Word Orientation Computation",
+        "id": null
+      },
+      {
+        "title": "Measurement of the top quark mass in the lepton+jets channel using the Ideogram Method",
+        "id": null
+      },
+      {
+        "title": "Realizing Native INT8 Compute for Diffusion Transformers on Consumer GPUs: A Fused INT8 GEMM Kernel for Ideogram 4.0",
+        "id": null
+      },
+      {
+        "title": "Holding the FP8 Quality Ceiling at 8-Bit Weights and Activations: INT8 and GGUF Post-Training Quantization of Ideogram 4.0 for Consumer GPUs",
+        "id": null
+      }
+    ]
+  },
+  {
+    "query": "ti:\"FIBO\"",
+    "papers": [
+      {
+        "title": "Q-analogues of the Fibo-Stirling numbers",
+        "id": null
+      }
+    ]
+  },
+  {
+    "query": "ti:\"Cosmos\" AND abs:\"structured\"",
+    "papers": [
+      {
+        "title": "Broad Brush Cosmos",
+        "id": null
+      },
+      {
+        "title": "Nuclei in the Cosmos",
+        "id": null
+      },
+      {
+        "title": "pop-cosmos: Galaxy size evolution across structural and star-formation classifications in COSMOS-Web",
+        "id": null
+      },
+      {
+        "title": "On the accelerated expansion of the cosmos",
+        "id": null
+      },
+      {
+        "title": "COSMO: A conic operator splitting method for convex conic problems",
+        "id": null
+      },
+      {
+        "title": "New light on Dark Cosmos",
+        "id": null
+      }
+    ]
+  },
+  {
+    "query": "abs:\"scene graph\" AND abs:\"text-to-image\" AND abs:\"prompt\"",
+    "papers": [
+      {
+        "title": "GraphDreamer: Compositional 3D Scene Synthesis from Scene Graphs",
+        "id": null
+      },
+      {
+        "title": "All-in-One Conditioning for Text-to-Image Synthesis",
+        "id": null
+      },
+      {
+        "title": "SceneGenie: Scene Graph Guided Diffusion Models for Image Synthesis",
+        "id": null
+      },
+      {
+        "title": "Dependency-Aware Discrete Diffusion for Scene Graph Generation",
+        "id": null
+      },
+      {
+        "title": "VENUS: Visual Editing with Noise Inversion Using Scene Graphs",
+        "id": null
+      },
+      {
+        "title": "SATURN: Autoregressive Image Generation Guided by Scene Graphs",
+        "id": null
+      }
+    ]
+  },
+  {
+    "query": "ti:\"LayoutGPT\"",
+    "papers": [
+      {
+        "title": "LayoutGPT: Compositional Visual Planning and Generation with Large Language Models",
+        "id": null
+      }
+    ]
+  },
+  {
+    "query": "ti:\"LLM-grounded Diffusion\"",
+    "papers": [
+      {
+        "title": "LLM-grounded Diffusion: Enhancing Prompt Understanding of Text-to-Image Diffusion Models with Large Language Models",
+        "id": null
+      }
+    ]
+  },
+  {
+    "query": "ti:\"SoftREPA\"",
+    "papers": []
+  },
+  {
+    "query": "ti:\"VisualPrompter\"",
+    "papers": [
+      {
+        "title": "VisualPrompter: Semantic-Aware Prompt Optimization with Visual Feedback for Text-to-Image Synthesis",
+        "id": null
+      }
+    ]
+  },
+  {
+    "query": "abs:\"markdown\" AND abs:\"structured\" AND abs:\"text-to-image\"",
+    "papers": [
+      {
+        "title": "KOSMOS-2.5: A Multimodal Literate Model",
+        "id": null
+      },
+      {
+        "title": "NovaLAD: A Fast, CPU-Optimized Document Extraction Pipeline for Generative AI and Data Intelligence",
+        "id": null
+      }
+    ]
+  },
+  {
+    "query": "ti:\"XML\" AND abs:\"prompt\" AND abs:\"image\"",
+    "papers": []
+  },
+  {
+    "query": "ti:\"Recaption\" AND abs:\"text-to-image\"",
+    "papers": [
+      {
+        "title": "Mastering Text-to-Image Diffusion: Recaptioning, Planning, and Generating with Multimodal LLMs",
+        "id": null
+      },
+      {
+        "title": "What If We Recaption Billions of Web Images with LLaMA-3?",
+        "id": null
+      },
+      {
+        "title": "A Picture is Worth a Thousand Words: Principled Recaptioning Improves Image Generation",
+        "id": null
+      },
+      {
+        "title": "RICO: Improving Accuracy and Completeness in Image Recaptioning via Visual Reconstruction",
+        "id": null
+      }
+    ]
+  },
+  {
+    "query": "ti:\"DALL-E 3\"",
+    "papers": [
+      {
+        "title": "DEsignBench: Exploring and Benchmarking DALL-E 3 for Imagining Visual Design",
+        "id": null
+      },
+      {
+        "title": "Broken Letters, Broken Narratives: A Case Study on Arabic Script in DALL-E 3",
+        "id": null
+      },
+      {
+        "title": "The Role of Text-to-Image Models in Advanced Style Transfer Applications: A Case Study with DALL-E 3",
+        "id": null
+      },
+      {
+        "title": "From ChatGPT, DALL-E 3 to Sora: How has Generative AI Changed Digital Humanities Research and Services?",
+        "id": null
+      },
+      {
+        "title": "Improved Emotional Alignment of AI and Humans: Human Ratings of Emotions Expressed by Stable Diffusion v1, DALL-E 2, and DALL-E 3",
+        "id": null
+      }
+    ]
+  },
+  {
+    "query": "ti:\"Reve\"",
+    "papers": [
+      {
+        "title": "REVE: Regularizing Deep Learning with Variational Entropy Bound",
+        "id": null
+      },
+      {
+        "title": "REVES: REvision and VErification--Augmented Training for Test-Time Scaling",
+        "id": null
+      },
+      {
+        "title": "REVE: A Foundation Model for EEG -- Adapting to Any Setup with Large-Scale Pretraining on 25,000 Subjects",
+        "id": null
+      }
+    ]
+  },
+  {
+    "query": "abs:\"typed schema\" AND abs:\"image generation\"",
+    "papers": []
+  },
+  {
+    "query": "ti:\"TIPO\"",
+    "papers": [
+      {
+        "title": "Spin-Peierls transition in TiPO$_4$",
+        "id": null
+      },
+      {
+        "title": "Alguns Teoremas do Tipo Valor Médio: de Lagrange a Malesevic",
+        "id": null
+      },
+      {
+        "title": "Inverse pressure-induced Mott transition in TiPO$_4$",
+        "id": null
+      },
+      {
+        "title": "TIPO: Text to Image with Text Presampling for Prompt Optimization",
+        "id": null
+      },
+      {
+        "title": "Agujeros negros cuánticos en la teoría de cuerdas tipo-IIA",
+        "id": null
+      },
+      {
+        "title": "D-TIPO: Deep time-inconsistent portfolio optimization with stocks and options",
+        "id": null
+      }
+    ]
+  },
+  {
+    "query": "ti:\"BeautifulPrompt\"",
+    "papers": [
+      {
+        "title": "BeautifulPrompt: Towards Automatic Prompt Engineering for Text-to-Image Synthesis",
+        "id": null
+      }
+    ]
+  },
+  {
+    "query": "ti:\"Promptist\"",
+    "papers": []
+  },
+  {
+    "query": "ti:\"ParaDiffusion\"",
+    "papers": []
+  },
+  {
+    "query": "ti:\"ELLA\"",
+    "papers": [
+      {
+        "title": "ELLA: Exploration through Learned Language Abstraction",
+        "id": null
+      },
+      {
+        "title": "Ella: Embodied Social Agents with Lifelong Memory",
+        "id": null
+      },
+      {
+        "title": "ELLA: Efficient Lifelong Learning for Adapters in Large Language Models",
+        "id": null
+      },
+      {
+        "title": "ELLA-V: Stable Neural Codec Language Modeling with Alignment-guided Sequence Reordering",
+        "id": null
+      },
+      {
+        "title": "ELLA: Equip Diffusion Models with LLM for Enhanced Semantic Alignment",
+        "id": null
+      },
+      {
+        "title": "ELLA: Empowering LLMs for Interpretable, Accurate and Informative Legal Advice",
+        "id": null
+      }
+    ]
+  }
+]

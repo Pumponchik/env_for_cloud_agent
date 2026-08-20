@@ -1,0 +1,1977 @@
+[
+  {
+    "base_id": "2503.20314",
+    "arxiv_id": "2503.20314",
+    "title": "Wan: Open and Advanced Large-Scale Video Generative Models",
+    "url": "https://arxiv.org/abs/2503.20314",
+    "published": "2025-01-01",
+    "abstract": "Wan technical reporting on video generation states the train/infer text alignment principle plainly: dense captions in training, LLM rewriting at inference to match that distribution. Even though the modality is video, the PE length logic is identical to modern T2I. Default-on prompt extend is recommended in released tooling. Cite it when arguing that PE length should track training caption law across modalities.",
+    "authors": [],
+    "score": 150,
+    "length_score": 5,
+    "desc_sents": [
+      "Wan technical reporting on video generation states the train/infer text alignment principle plainly: dense captions in training, LLM rewriting at inference to match that distribution.",
+      "Even though the modality is video, the PE length logic is identical to modern T2I.",
+      "Default-on prompt extend is recommended in released tooling.",
+      "Cite it when arguing that PE length should track training caption law across modalities."
+    ],
+    "length_tags": [
+      "hand-curated"
+    ]
+  },
+  {
+    "arxiv_id": "2510.12041v2",
+    "title": "Improving Text-to-Image Generation with Input-Side Inference-Time Scaling",
+    "abstract": "Recent advances in text-to-image (T2I) generation have achieved impressive results, yet existing models often struggle with simple or underspecified prompts, leading to suboptimal image-text alignment, aesthetics, and quality. We propose a prompt rewriting framework that leverages large language models (LLMs) to refine user inputs before feeding them into T2I backbones. Our approach introduces a carefully designed reward system and an iterative direct preference optimization (DPO) training pipeline, enabling the rewriter to enhance prompts without requiring supervised fine-tuning data. We evaluate our method across diverse T2I models and benchmarks. Results show that our prompt rewriter consistently improves image-text alignment, visual quality, and aesthetics, outperforming strong baselines. Furthermore, we demonstrate strong transferability by showing that a prompt rewriter trained on one T2I backbone generalizes effectively to others without needing to be retrained. We also systematically study scalability, evaluating how performance gains scale with the capacity of the large LLM used as the rewriter. These findings highlight that prompt rewriting is an effective, scalable, and practical model-agnostic strategy for improving T2I systems. We plan to release the code and trained prompt rewriters soon.",
+    "published": "2025-10-14",
+    "authors": [
+      "Ruibo Chen",
+      "Jiacheng Pan",
+      "Heng Huang",
+      "Zhenheng Yang"
+    ],
+    "url": "https://arxiv.org/abs/2510.12041",
+    "score": 145,
+    "base_id": "2510.12041",
+    "length_score": 1,
+    "desc_sents": [
+      "Input-side inference-time scaling trains iterative prompt rewriters (e.g., DPO) without requiring SFT on the T2I backbone.",
+      "Gains are attributed to closing the train/user text distribution gap, and rewriters can transfer across generators.",
+      "Rewrite length should therefore be judged by distribution matching, not by a universal token target.",
+      "This supports PE as a portable layer in front of a Qwen-VLM-conditioned generator."
+    ],
+    "length_tags": [
+      "re-prompt/recaption",
+      "LLM/VLM encoder"
+    ]
+  },
+  {
+    "arxiv_id": "2509.04545v5",
+    "title": "PromptEnhancer: A Simple Approach to Enhance Text-to-Image Models via Chain-of-Thought Prompt Rewriting",
+    "abstract": "Recent advancements in text-to-image (T2I) diffusion models have demonstrated remarkable capabilities in generating high-fidelity images. However, these models often struggle to faithfully render complex user prompts, particularly in aspects like attribute binding, negation, and compositional relationships. This leads to a significant mismatch between user intent and the generated output. To address this challenge, we introduce PromptEnhancer, a novel and universal prompt rewriting framework that enhances any pretrained T2I model without requiring modifications to its weights. Unlike prior methods that rely on model-specific fine-tuning or implicit reward signals like image-reward scores, our framework decouples the rewriter from the generator. We achieve this by training a Chain-of-Thought (CoT) rewriter through reinforcement learning, guided by a dedicated reward model we term the AlignEvaluator. The AlignEvaluator is trained to provide explicit and fine-grained feedback based on a systematic taxonomy of 24 key points, which are derived from a comprehensive analysis of common T2I failure modes. By optimizing the CoT rewriter to maximize the reward from our AlignEvaluator, our framework learns to generate prompts that are more precisely interpreted by T2I models. Extensive experiments on the HunyuanImage 2.1 model demonstrate that PromptEnhancer significantly improves image-text alignment across a wide range of semantic and compositional challenges. Furthermore, we introduce a new, high-quality human preference benchmark to facilitate future research in this direction.",
+    "published": "2025-09-04",
+    "authors": [
+      "Linqing Wang",
+      "Ximing Xing",
+      "Yiji Cheng",
+      "Zhiyuan Zhao",
+      "Donghao Li",
+      "Tiankai Hang",
+      "Jiale Tao",
+      "Qixun Wang"
+    ],
+    "url": "https://arxiv.org/abs/2509.04545",
+    "score": 143,
+    "base_id": "2509.04545",
+    "length_score": 1,
+    "desc_sents": [
+      "PromptEnhancer is a model-agnostic CoT prompt rewriter trained with fine-grained RL against an AlignEvaluator covering many T2I failure modes.",
+      "The authors argue rewriting should change content to fix failures, not merely add stylistic verbosity.",
+      "That distinction is central to \u201chow long should PE output be\u201d: length is a side-effect of needed content, not the objective.",
+      "Use it as the conceptual template for PE rewards when you do not want reward-hacked overlong prompts."
+    ],
+    "length_tags": [
+      "re-prompt/recaption"
+    ]
+  },
+  {
+    "title": "i1: A Simple and Fully Open Recipe for Strong Text-to-Image Models",
+    "url": "https://arxiv.org/abs/2606.11289",
+    "published": "2026-06-01",
+    "abstract": "Open T2I recipe using T5Gemma encoder truncated to 256 tokens. Shows training on long captions yields stronger models but hurts short prompts; LLM rewrite or prompt repetition recovers performance. Concludes train long and lengthen inference prompts to match training distribution.",
+    "authors": [
+      "i1 authors"
+    ],
+    "base_id": "2606.11289",
+    "score": 140,
+    "length_score": 5,
+    "arxiv_id": "2606.11289",
+    "desc_sents": [
+      "i1 is a fully open T2I recipe using a modern encoder (T5Gemma) with right truncation to 256 tokens and long synthetic captions.",
+      "Its decisive result is distributional: long-caption training scores 0.17 on short GenEval, 0.49 if the short prompt is repeated 12\u00d7, and 0.73 with LLM rewrite.",
+      "Authors recommend training long and lengthening inference prompts to match training, rather than training short to match users.",
+      "Even if you swap T5Gemma for Qwen-VLM, the length-alignment diagnostic remains the right experimental template."
+    ],
+    "length_tags": [
+      "long/dense preferred",
+      "discusses short prompts",
+      "re-prompt/recaption",
+      "numeric token budget",
+      "LLM/VLM encoder"
+    ]
+  },
+  {
+    "arxiv_id": "2512.09271v1",
+    "title": "LongT2IBench: A Benchmark for Evaluating Long Text-to-Image Generation with Graph-structured Annotations",
+    "abstract": "The increasing popularity of long Text-to-Image (T2I) generation has created an urgent need for automatic and interpretable models that can evaluate the image-text alignment in long prompt scenarios. However, the existing T2I alignment benchmarks predominantly focus on short prompt scenarios and only provide MOS or Likert scale annotations. This inherent limitation hinders the development of long T2I evaluators, particularly in terms of the interpretability of alignment. In this study, we contribute LongT2IBench, which comprises 14K long text-image pairs accompanied by graph-structured human annotations. Given the detail-intensive nature of long prompts, we first design a Generate-Refine-Qualify annotation protocol to convert them into textual graph structures that encompass entities, attributes, and relations. Through this transformation, fine-grained alignment annotations are achieved based on these granular elements. Finally, the graph-structed annotations are converted into alignment scores and interpretations to facilitate the design of T2I evaluation models. Based on LongT2IBench, we further propose LongT2IExpert, a LongT2I evaluator that enables multi-modal large language models (MLLMs) to provide both quantitative scores and structured interpretations through an instruction-tuning process with Hierarchical Alignment Chain-of-Thought (CoT). Extensive experiments and comparisons demonstrate the superiority of the proposed LongT2IExpert in alignment evaluation and interpretation. Data and code have been released in https://welldky.github.io/LongT2IBench-Homepage/.",
+    "published": "2025-12-10",
+    "authors": [
+      "Zhichao Yang",
+      "Tianjiao Gu",
+      "Jianjie Wang",
+      "Feiyu Lin",
+      "Xiangfei Sheng",
+      "Pengfei Chen",
+      "Leida Li"
+    ],
+    "url": "https://arxiv.org/abs/2512.09271",
+    "score": 136,
+    "base_id": "2512.09271",
+    "length_score": 3,
+    "desc_sents": [
+      "LongT2IBench provides large-scale long text\u2013image evaluation with graph-structured annotations and balanced word-count bins.",
+      "It deliberately spans multiple length bins so evaluators and generators can be compared as length grows.",
+      "This is how the field should measure whether a new LLM/VLM stack actually uses long text.",
+      "Pair it with DetailMaster when validating length policies."
+    ],
+    "length_tags": [
+      "long/dense preferred",
+      "discusses short prompts",
+      "LLM/VLM encoder"
+    ]
+  },
+  {
+    "arxiv_id": "2511.06876v1",
+    "title": "Generating an Image From 1,000 Words: Enhancing Text-to-Image With Structured Captions",
+    "abstract": "Text-to-image models have rapidly evolved from casual creative tools to professional-grade systems, achieving unprecedented levels of image quality and realism. Yet, most models are trained to map short prompts into detailed images, creating a gap between sparse textual input and rich visual outputs. This mismatch reduces controllability, as models often fill in missing details arbitrarily, biasing toward average user preferences and limiting precision for professional use. We address this limitation by training the first open-source text-to-image model on long structured captions, where every training sample is annotated with the same set of fine-grained attributes. This design maximizes expressive coverage and enables disentangled control over visual factors. To process long captions efficiently, we propose DimFusion, a fusion mechanism that integrates intermediate tokens from a lightweight LLM without increasing token length. We also introduce the Text-as-a-Bottleneck Reconstruction (TaBR) evaluation protocol. By assessing how well real images can be reconstructed through a captioning-generation loop, TaBR directly measures controllability and expressiveness, even for very long captions where existing evaluation methods fail. Finally, we demonstrate our contributions by training the large-scale model FIBO, achieving state-of-the-art prompt alignment among open-source models. Model weights are publicly available at https://huggingface.co/briaai/FIBO",
+    "published": "2025-11-10",
+    "authors": [
+      "Eyal Gutflaish",
+      "Eliran Kachlon",
+      "Hezi Zisman",
+      "Tal Hacham",
+      "Nimrod Sarid",
+      "Alexander Visheratin",
+      "Saar Huberman",
+      "Gal Davidi"
+    ],
+    "url": "https://arxiv.org/abs/2511.06876",
+    "score": 135,
+    "base_id": "2511.06876",
+    "length_score": 3,
+    "desc_sents": [
+      "FIBO trains an open T2I model on long structured (JSON-schema) captions at roughly thousand-token scale (reported mean around 1160 tokens).",
+      "DimFusion fuses intermediate LLM states without growing token count, addressing the compute cost of long text.",
+      "Ablations show long structured captions converge faster and improve controllability versus short captions under the same backbone.",
+      "This is the extreme \u201cfixed long + structure\u201d pole of the design space for VLM/LLM-conditioned generators."
+    ],
+    "length_tags": [
+      "long/dense preferred",
+      "discusses short prompts",
+      "LLM/VLM encoder"
+    ]
+  },
+  {
+    "arxiv_id": "2505.16915v3",
+    "title": "DetailMaster: Can Your Text-to-Image Model Handle Long Prompts?",
+    "abstract": "While recent Text-to-Image (T2I) models show impressive capabilities in synthesizing images from brief descriptions, they struggle with the long, detailed prompts required for professional applications. We present DetailMaster, a comprehensive benchmark for evaluating T2I capabilities on long prompts with complex compositional requirements, accompanied by an automated data construction pipeline and an evaluation workflow. Comprising expert-validated prompts averaging 284.89 tokens, our benchmark introduces four critical evaluation dimensions: Character Attributes, Structured Character Locations, Multi-Dimensional Scene Attributes, and Spatial/Interactive Relationships. Evaluations on various general-purpose and long-prompt-optimized models reveal critical performance limitations, showing that weak encoders struggle to preserve syntactic dependencies within prompts and diffusion models suffer from attribute leakage under detail-intensive conditions. Through a controlled ablation study under varying constraints, we further show that high-fidelity generation requires a synergistic combination of expanded prompt limits and long-prompt training. We open-source our dataset and code to foster progress in long-prompt-driven T2I generation.",
+    "published": "2025-05-22",
+    "authors": [
+      "Qirui Jiao",
+      "Daoyuan Chen",
+      "Yilun Huang",
+      "Xika Lin",
+      "Ying Shen",
+      "Yaliang Li"
+    ],
+    "url": "https://arxiv.org/abs/2505.16915",
+    "score": 135,
+    "base_id": "2505.16915",
+    "length_score": 1,
+    "desc_sents": [
+      "DetailMaster is a long-prompt benchmark with average length ~284.89 tokens and fine-grained attribute/relation metrics.",
+      "It shows SOTA models still degrade as prompt length grows, and that dense long training matters more than merely raising token capacity.",
+      "CLIP-era limits are a baseline failure mode; T5/LLM models do better but do not saturate the benchmark.",
+      "Use it to stress-test any new Qwen-VLM stack at professional long-prompt lengths, not only short GenEval-like sets."
+    ],
+    "length_tags": [
+      "long/dense preferred"
+    ]
+  },
+  {
+    "arxiv_id": "2406.08478v2",
+    "title": "What If We Recaption Billions of Web Images with LLaMA-3?",
+    "abstract": "Web-crawled image-text pairs are inherently noisy. Prior studies demonstrate that semantically aligning and enriching textual descriptions of these pairs can significantly enhance model training across various vision-language tasks, particularly text-to-image generation. However, large-scale investigations in this area remain predominantly closed-source. Our paper aims to bridge this community effort, leveraging the powerful and \\textit{open-sourced} LLaMA-3, a GPT-4 level LLM. Our recaptioning pipeline is simple: first, we fine-tune a LLaMA-3-8B powered LLaVA-1.5 and then employ it to recaption 1.3 billion images from the DataComp-1B dataset. Our empirical results confirm that this enhanced dataset, Recap-DataComp-1B, offers substantial benefits in training advanced vision-language models. For discriminative models like CLIP, we observe enhanced zero-shot performance in cross-modal retrieval tasks. For generative models like text-to-image Diffusion Transformers, the generated images exhibit a significant improvement in alignment with users' text instructions, especially in following complex queries. Our project page is https://www.haqtu.me/Recap-Datacomp-1B/",
+    "published": "2024-06-12",
+    "authors": [
+      "Xianhang Li",
+      "Haoqin Tu",
+      "Mude Hui",
+      "Zeyu Wang",
+      "Bingchen Zhao",
+      "Junfei Xiao",
+      "Sucheng Ren",
+      "Jieru Mei"
+    ],
+    "url": "https://arxiv.org/abs/2406.08478",
+    "score": 133,
+    "base_id": "2406.08478",
+    "length_score": 1,
+    "desc_sents": [
+      "Recap-DataComp-1B recaptions ~1B images with LLaVA-LLaMA3 using max_new_tokens=128, raising mean length from ~10 to ~49 tokens.",
+      "It is a concrete operating point for offline VLM recaption budgets at web scale.",
+      "Downstream T2I/representation models then train on mid-length dense text rather than raw alt-text.",
+      "Useful as a lower-bound modern recaption recipe before jumping to 512\u20131000 token regimes."
+    ],
+    "length_tags": [
+      "re-prompt/recaption",
+      "LLM/VLM encoder"
+    ]
+  },
+  {
+    "arxiv_id": "2605.10730v1",
+    "title": "Qwen-Image-2.0 Technical Report",
+    "abstract": "We present Qwen-Image-2.0, an omni-capable image generation foundation model that unifies high-fidelity generation and precise image editing within a single framework. Despite recent progress, existing models still struggle with ultra-long text rendering, multilingual typography, high-resolution photorealism, robust instruction following, and efficient deployment, especially in text-rich and compositionally complex scenarios. Qwen-Image-2.0 addresses these challenges by coupling Qwen3-VL as the condition encoder with a Multimodal Diffusion Transformer for joint condition-target modeling, supported by large-scale data curation and a customized multi-stage training pipeline. This enables strong multimodal understanding while preserving flexible generation and editing capabilities. The model supports instructions of up to 1K tokens for generating text-rich content such as slides, posters, infographics, and comics, while significantly improving multilingual text fidelity and typography. It also enhances photorealistic generation with richer details, more realistic textures, and coherent lighting, and follows complex prompts more reliably across diverse styles. Extensive human evaluations show that Qwen-Image-2.0 substantially outperforms previous Qwen-Image models in both generation and editing, marking a step toward more general, reliable, and practical image generation foundation models.",
+    "published": "2026-05-11",
+    "authors": [
+      "Bing Zhao",
+      "Chenfei Wu",
+      "Deqing Li",
+      "Hao Meng",
+      "Jiahao Li",
+      "Jie Zhang",
+      "Jingren Zhou",
+      "Junyang Lin"
+    ],
+    "url": "https://arxiv.org/abs/2605.10730",
+    "score": 132,
+    "base_id": "2605.10730",
+    "length_score": 1,
+    "desc_sents": [
+      "Qwen-Image-2.0 is a frontier open multimodal image generation system built around a Qwen-family VLM/LLM text pathway rather than CLIP or classic T5.",
+      "The report documents large effective prompt budgets (on the order of hundreds to ~1.3k tokens depending on API/version) with hard truncation past the limit.",
+      "Prompt extension is treated as a first-class component (default-on PE), so inference text is intentionally lengthened toward the training caption regime.",
+      "For a Qwen-VLM-class design, this is a primary reference for choosing encoder max length, PE max_new_tokens, and default rewrite policy."
+    ],
+    "length_tags": [
+      "LLM/VLM encoder"
+    ]
+  },
+  {
+    "arxiv_id": "2606.08492v2",
+    "title": "Seeing is Believing: Aligning Prompt Rewriting with Visual Anchors for Text-to-Image Generation",
+    "abstract": "Despite the impressive capabilities of text-to-image (T2I) models, an intent-generation gap often persists due to the brevity and ambiguity of user prompts. Existing approaches primarily polish the prompt for fluency and readability. However, the enhancement process still lacks visual grounding. As a result, the rewriter may over-infer missing details, causing an intent-generation gap. To address this limitation, we propose FaithRewriter, a novel prompt-enhancement framework for T2I generation. Specifically, FaithRewriter first leverages a multimodal MLLM to generate an image from the original prompt as an intermediate visual cue. This cue is then combined with the prompt and fed into a large-scale LLM to produce visually grounded augmentations that better reflect how the intended content should appear in images. Finally, these augmentations are distilled into a small-scale LLM for efficient deployment, enhancing its ability to generate effective T2I prompts. Experiments show that FaithRewriter yields prompts that are more faithful to the user intent and more visually plausible than strong baselines, helping narrow the intent-generation gap.",
+    "published": "2026-06-07",
+    "authors": [
+      "Xuanyi Liu",
+      "Deyi Ji",
+      "Junyu Lu",
+      "Jing Wang",
+      "Lanyun Zhu",
+      "Qianxiong Xu",
+      "Xuhang Chen",
+      "Tianrun Chen"
+    ],
+    "url": "https://arxiv.org/abs/2606.08492",
+    "score": 131,
+    "base_id": "2606.08492",
+    "length_score": 1,
+    "desc_sents": [
+      "FaithRewriter warns that text-only prompt rewriters can hallucinate visually impossible details.",
+      "It anchors rewriting with an intermediate image so expansions stay visually faithful.",
+      "This constrains PE length: extra tokens are harmful if they invent unsupported content.",
+      "Any long-rewrite policy for modern models needs a faithfulness objective, not only a length target."
+    ],
+    "length_tags": [
+      "re-prompt/recaption",
+      "LLM/VLM encoder"
+    ]
+  },
+  {
+    "arxiv_id": "2509.20427v3",
+    "title": "Seedream 4.0: Toward Next-generation Multimodal Image Generation",
+    "abstract": "We introduce Seedream 4.0, an efficient and high-performance multimodal image generation system that unifies text-to-image (T2I) synthesis, image editing, and multi-image composition within a single framework. We develop a highly efficient diffusion transformer with a powerful VAE which also can reduce the number of image tokens considerably. This allows for efficient training of our model, and enables it to fast generate native high-resolution images (e.g., 1K-4K). Seedream 4.0 is pretrained on billions of text-image pairs spanning diverse taxonomies and knowledge-centric concepts. Comprehensive data collection across hundreds of vertical scenarios, coupled with optimized strategies, ensures stable and large-scale training, with strong generalization. By incorporating a carefully fine-tuned VLM model, we perform multi-modal post-training for training both T2I and image editing tasks jointly. For inference acceleration, we integrate adversarial distillation, distribution matching, and quantization, as well as speculative decoding. It achieves an inference time of up to 1.8 seconds for generating a 2K image (without a LLM/VLM as PE model). Comprehensive evaluations reveal that Seedream 4.0 can achieve state-of-the-art results on both T2I and multimodal image editing. In particular, it demonstrates exceptional multimodal capabilities in complex tasks, including precise image editing and in-context reasoning, and also allows for multi-image reference, and can generate multiple output images. This extends traditional T2I systems into an more interactive and multidimensional creative tool, pushing the boundary of generative AI for both creativity and professional applications. We further scale our model and data as Seedream 4.5. Seedream 4.0 and Seedream 4.5 are accessible on Volcano Engine https://www.volcengine.com/experience/ark?launch=seedream.",
+    "published": "2025-09-24",
+    "authors": [
+      "Team Seedream",
+      " :",
+      "Yunpeng Chen",
+      "Yu Gao",
+      "Lixue Gong",
+      "Meng Guo",
+      "Qiushan Guo",
+      "Zhiyao Guo"
+    ],
+    "url": "https://arxiv.org/abs/2509.20427",
+    "score": 131,
+    "base_id": "2509.20427",
+    "length_score": 0,
+    "desc_sents": [
+      "Seedream 4.0 (ByteDance) is a next-generation multimodal image system whose prompt enhancement is a VLM with task routing and adaptive thinking budgets.",
+      "Re-prompt is not a shallow style expander: it can reason about the request and dynamically spend tokens (\u201cauto-thinking\u201d).",
+      "This matters because rewrite length becomes conditional on task difficulty rather than a single fixed expansion factor.",
+      "It generalizes the lesson that modern stacks couple a strong multimodal language model to the generator and control how much text that model emits before denoising."
+    ],
+    "length_tags": [
+      "LLM/VLM encoder"
+    ]
+  },
+  {
+    "arxiv_id": "2604.18258v1",
+    "title": "Long-Text-to-Image Generation via Compositional Prompt Decomposition",
+    "abstract": "While modern text-to-image (T2I) models excel at generating images from intricate prompts, they struggle to capture the key details when the inputs are descriptive paragraphs. This limitation stems from the prevalence of concise captions that shape their training distributions. Existing methods attempt to bridge this gap by either fine-tuning T2I models on long prompts, which generalizes poorly to longer lengths; or by projecting the oversize inputs into normal-prompt space and compromising fidelity. We propose Prompt Refraction for Intricate Scene Modeling (PRISM), a compositional approach that enables pre-trained T2I models to process long sequence inputs. PRISM uses a lightweight module to extract constituent representations from the long prompts. The T2I model makes independent noise predictions for each component, and their outputs are merged into a single denoising step using energy-based conjunction. We evaluate PRISM across a wide range of model architectures, showing comparable performances to models fine-tuned on the same training data. Furthermore, PRISM demonstrates superior generalization, outperforming baseline models by 7.4% on prompts over 500 tokens in a challenging public benchmark.",
+    "published": "2026-04-20",
+    "authors": [
+      "Jen-Yuan Huang",
+      "Tong Lin",
+      "Yilun Du"
+    ],
+    "url": "https://arxiv.org/abs/2604.18258",
+    "score": 130,
+    "base_id": "2604.18258",
+    "length_score": 2,
+    "desc_sents": [
+      "PRISM / compositional prompt decomposition studies long-text T2I and reports length-extrapolation failures of segment methods trained mostly under ~300 tokens when tested above ~500.",
+      "Compositional modeling holds up better at extreme lengths than naive long-context patches.",
+      "The fundamental point: train support in length must cover deployment support.",
+      "Critical caution against claiming arbitrary long-context ability without training mass at those lengths."
+    ],
+    "length_tags": [
+      "long/dense preferred"
+    ]
+  },
+  {
+    "arxiv_id": "2409.10695v2",
+    "title": "Playground v3: Improving Text-to-Image Alignment with Deep-Fusion Large Language Models",
+    "abstract": "We introduce Playground v3 (PGv3), our latest text-to-image model that achieves state-of-the-art (SoTA) performance across multiple testing benchmarks, excels in graphic design abilities and introduces new capabilities. Unlike traditional text-to-image generative models that rely on pre-trained language models like T5 or CLIP text encoders, our approach fully integrates Large Language Models (LLMs) with a novel structure that leverages text conditions exclusively from a decoder-only LLM. Additionally, to enhance image captioning quality-we developed an in-house captioner, capable of generating captions with varying levels of detail, enriching the diversity of text structures. We also introduce a new benchmark CapsBench to evaluate detailed image captioning performance. Experimental results demonstrate that PGv3 excels in text prompt adherence, complex reasoning, and accurate text rendering. User preference studies indicate the super-human graphic design ability of our model for common design applications, such as stickers, posters, and logo designs. Furthermore, PGv3 introduces new capabilities, including precise RGB color control and robust multilingual understanding.",
+    "published": "2024-09-16",
+    "authors": [
+      "Bingchen Liu",
+      "Ehsan Akhgari",
+      "Alexander Visheratin",
+      "Aleks Kamko",
+      "Linmiao Xu",
+      "Shivam Shrirao",
+      "Chase Lambert",
+      "Joao Souza"
+    ],
+    "url": "https://arxiv.org/abs/2409.10695",
+    "score": 125,
+    "base_id": "2409.10695",
+    "length_score": 0,
+    "desc_sents": [
+      "Playground v3 replaces CLIP/T5 with deep fusion from a Llama3-8B language model into the DiT, feeding every LLM layer.",
+      "Text conditioning is therefore native LLM hidden states, not a 77-token contrastive embedding.",
+      "The paper also emphasizes caption quality (CapsBench), tying generation quality to the text channel\u2019s richness.",
+      "It is an early clear break from CLIP/T5 dual towers toward LLM-centric conditioning."
+    ],
+    "length_tags": [
+      "LLM/VLM encoder"
+    ]
+  },
+  {
+    "arxiv_id": "2506.16679v1",
+    "title": "How to Train your Text-to-Image Model: Evaluating Design Choices for Synthetic Training Captions",
+    "abstract": "Training data is at the core of any successful text-to-image models. The quality and descriptiveness of image text are crucial to a model's performance. Given the noisiness and inconsistency in web-scraped datasets, recent works shifted towards synthetic training captions. While this setup is generally believed to produce more capable models, current literature does not provide any insights into its design choices. This study closes this gap by systematically investigating how different synthetic captioning strategies impact the downstream performance of text-to-image models. Our experiments demonstrate that dense, high-quality captions enhance text alignment but may introduce trade-offs in output aesthetics and diversity. Conversely, captions of randomized lengths yield balanced improvements across aesthetics and alignment without compromising sample diversity. We also demonstrate that varying caption distributions introduce significant shifts in the output bias of a trained model. Our findings underscore the importance of caption design in achieving optimal model performance and provide practical insights for more effective training data strategies in text-to-image generation.",
+    "published": "2025-06-20",
+    "authors": [
+      "Manuel Brack",
+      "Sudeep Katakol",
+      "Felix Friedrich",
+      "Patrick Schramowski",
+      "Hareesh Ravi",
+      "Kristian Kersting",
+      "Ajinkya Kale"
+    ],
+    "url": "https://arxiv.org/abs/2506.16679",
+    "score": 120,
+    "base_id": "2506.16679",
+    "length_score": 2,
+    "desc_sents": [
+      "How to Train your Text-to-Image Model studies synthetic caption design and finds fixed long captions trade aesthetics/diversity against alignment.",
+      "Randomizing caption length per image removes that trade-off and yields the best overall PickScores in their setup.",
+      "Although experiments are on SD/CLIP budgets, the mixture principle transfers: cover the length modes you will serve.",
+      "This is the main citation for choosing variable train length when you may not ship a rewriter."
+    ],
+    "length_tags": [
+      "variable/mixed length"
+    ]
+  },
+  {
+    "arxiv_id": "2509.23951v3",
+    "title": "HunyuanImage 3.0 Technical Report",
+    "abstract": "We present HunyuanImage 3.0, a native multimodal model that unifies multimodal understanding and generation within an autoregressive framework, with its image generation module publicly available. The achievement of HunyuanImage 3.0 relies on several key components, including meticulous data curation, advanced architecture design, a native Chain-of-Thoughts schema, progressive model pre-training, aggressive model post-training, and an efficient infrastructure that enables large-scale training and inference. With these advancements, we successfully trained a Mixture-of-Experts (MoE) model comprising over 80 billion parameters in total, with 13 billion parameters activated per token during inference, making it the largest and most powerful open-source image generative model to date. We conducted extensive experiments and the results of automatic and human evaluation of text-image alignment and visual quality demonstrate that HunyuanImage 3.0 rivals previous state-of-the-art models. By releasing the code and weights of HunyuanImage 3.0, we aim to enable the community to explore new ideas with a state-of-the-art foundation model, fostering a dynamic and vibrant multimodal ecosystem. All open source assets are publicly available at https://github.com/Tencent-Hunyuan/HunyuanImage-3.0",
+    "published": "2025-09-28",
+    "authors": [
+      " Tencent Hunyuan Foundation Model Team"
+    ],
+    "url": "https://arxiv.org/abs/2509.23951",
+    "score": 118,
+    "base_id": "2509.23951",
+    "length_score": 0,
+    "desc_sents": [
+      "HunyuanImage 3.0 trains with Compositional Caption Synthesis, sampling caption fields to produce bilingual captions from about 30 to 1,000 words.",
+      "Length and pattern are deliberately variable during training, which is one of the clearest published \u201cwide-band\u201d caption policies.",
+      "Inference can use CoT think_recaption / rewrite modes to map short user text into the trained band.",
+      "This is strong evidence that for LLM/VLM-era models, varying train length across a wide range is a viable alternative to fixed-long-only training."
+    ],
+    "length_tags": []
+  },
+  {
+    "title": "SANA: Efficient High-Resolution Image Synthesis with Linear Diffusion Transformers",
+    "url": "https://arxiv.org/abs/2410.10679",
+    "published": "2024-10-01",
+    "abstract": "NVIDIA Sana uses a decoder-only Gemma language model as text encoder with linear attention DiT for efficient high-res generation. Diffusers default max_sequence_length around 300; Complex Human Instruction templates consume part of the token budget.",
+    "authors": [
+      "NVIDIA"
+    ],
+    "base_id": "2410.10679",
+    "score": 100,
+    "length_score": 2,
+    "arxiv_id": "2410.10679",
+    "desc_sents": [
+      "SANA uses a decoder-only Gemma LM as text encoder with an efficient linear-attention diffusion transformer.",
+      "Practical pipelines often set max_sequence_length around 300, and instruction templates consume part of that budget.",
+      "This shows modern systems must budget tokens for system/instruction wrappers, not only user text.",
+      "Relevant when designing chat-templated Qwen/Gemma encoders where template overhead shrinks usable user length."
+    ],
+    "length_tags": [
+      "numeric token budget",
+      "LLM/VLM encoder"
+    ]
+  },
+  {
+    "arxiv_id": "2310.16656v1",
+    "title": "A Picture is Worth a Thousand Words: Principled Recaptioning Improves Image Generation",
+    "abstract": "Text-to-image diffusion models achieved a remarkable leap in capabilities over the last few years, enabling high-quality and diverse synthesis of images from a textual prompt. However, even the most advanced models often struggle to precisely follow all of the directions in their prompts. The vast majority of these models are trained on datasets consisting of (image, caption) pairs where the images often come from the web, and the captions are their HTML alternate text. A notable example is the LAION dataset, used by Stable Diffusion and other models. In this work we observe that these captions are often of low quality, and argue that this significantly affects the model's capability to understand nuanced semantics in the textual prompts. We show that by relabeling the corpus with a specialized automatic captioning model and training a text-to-image model on the recaptioned dataset, the model benefits substantially across the board. First, in overall image quality: e.g. FID 14.84 vs. the baseline of 17.87, and 64.3% improvement in faithful image generation according to human evaluation. Second, in semantic alignment, e.g. semantic object accuracy 84.34 vs. 78.90, counting alignment errors 1.32 vs. 1.44 and positional alignment 62.42 vs. 57.60. We analyze various ways to relabel the corpus and provide evidence that this technique, which we call RECAP, both reduces the train-inference discrepancy and provides the model with more information per example, increasing sample efficiency and allowing the model to better understand the relations between captions and images.",
+    "published": "2023-10-25",
+    "authors": [
+      "Eyal Segalis",
+      "Dani Valevski",
+      "Danny Lumen",
+      "Yossi Matias",
+      "Yaniv Leviathan"
+    ],
+    "url": "https://arxiv.org/abs/2310.16656v1",
+    "score": 128,
+    "base_id": "2310.16656",
+    "length_score": 1,
+    "desc_sents": [
+      "\"A Picture is Worth a Thousand Words: Principled Recaptioning Improves Image Generation\" (2023) focuses on captioning/recaptioning data that feeds text-to-image training.",
+      "Text-to-image diffusion models achieved a remarkable leap in capabilities over the last few years, enabling high-quality and diverse synthesis of images from a textual prompt.",
+      "However, even the most advanced models often struggle to precisely follow all of the directions in their prompts.",
+      "For our length question: extract its train/infer token policy, whether length is fixed or mixed, and any stated reason those choices work."
+    ],
+    "length_tags": [
+      "long/dense preferred",
+      "re-prompt/recaption"
+    ]
+  },
+  {
+    "arxiv_id": "2410.10034v2",
+    "title": "TULIP: Token-length Upgraded CLIP",
+    "abstract": "We address the challenge of representing long captions in vision-language models, such as CLIP. By design these models are limited by fixed, absolute positional encodings, restricting inputs to a maximum of 77 tokens and hindering performance on tasks requiring longer descriptions. Although recent work has attempted to overcome this limit, their proposed approaches struggle to model token relationships over longer distances and simply extend to a fixed new token length. Instead, we propose a generalizable method, named TULIP, able to upgrade the token length to any length for CLIP-like models. We do so by improving the architecture with relative position encodings, followed by a training procedure that (i) distills the original CLIP text encoder into an encoder with relative position encodings and (ii) enhances the model for aligning longer captions with images. By effectively encoding captions longer than the default 77 tokens, our model outperforms baselines on cross-modal tasks such as retrieval and text-to-image generation. The code repository is available at https://github.com/ivonajdenkoska/tulip.",
+    "published": "2024-10-13",
+    "authors": [
+      "Ivona Najdenkoska",
+      "Mohammad Mahdi Derakhshani",
+      "Yuki M. Asano",
+      "Nanne van Noord",
+      "Marcel Worring",
+      "Cees G. M. Snoek"
+    ],
+    "url": "https://arxiv.org/abs/2410.10034v2",
+    "score": 122,
+    "base_id": "2410.10034",
+    "length_score": 2,
+    "desc_sents": [
+      "\"TULIP: Token-length Upgraded CLIP\" (2024) contributes methods or analysis in contemporary text-to-image / multimodal generation.",
+      "We address the challenge of representing long captions in vision-language models, such as CLIP.",
+      "By design these models are limited by fixed, absolute positional encodings, restricting inputs to a maximum of 77 tokens and hindering performance on tasks requiring longer descriptions.",
+      "For our length question: extract its train/infer token policy, whether length is fixed or mixed, and any stated reason those choices work."
+    ],
+    "length_tags": [
+      "long/dense preferred",
+      "numeric token budget"
+    ]
+  },
+  {
+    "title": "Improving Long-Text Alignment for Text-to-Image Diffusion Models (LongAlign)",
+    "url": "https://arxiv.org/abs/2410.11817",
+    "published": "2024-10-01",
+    "abstract": "Segment-level encoding for long prompts with CLIP and decomposed preference optimization. Enables SD-class models to handle multi-sentence prompts beyond 77 tokens by splitting, encoding, and concatenating segments.",
+    "authors": [
+      "LongAlign authors"
+    ],
+    "base_id": "2410.11817",
+    "score": 110,
+    "length_score": 4,
+    "arxiv_id": "2410.11817",
+    "desc_sents": [
+      "\"Improving Long-Text Alignment for Text-to-Image Diffusion Models (LongAlign)\" (2024) contributes methods or analysis in contemporary text-to-image / multimodal generation.",
+      "Segment-level encoding for long prompts with CLIP and decomposed preference optimization.",
+      "Enables SD-class models to handle multi-sentence prompts beyond 77 tokens by splitting, encoding, and concatenating segments.",
+      "For our length question: extract its train/infer token policy, whether length is fixed or mixed, and any stated reason those choices work."
+    ],
+    "length_tags": [
+      "long/dense preferred",
+      "numeric token budget"
+    ]
+  },
+  {
+    "arxiv_id": "2601.10332v1",
+    "title": "Think-Then-Generate: Reasoning-Aware Text-to-Image Diffusion with LLM Encoders",
+    "abstract": "Recent progress in text-to-image (T2I) diffusion models (DMs) has enabled high-quality visual synthesis from diverse textual prompts. Yet, most existing T2I DMs, even those equipped with large language model (LLM)-based text encoders, remain text-pixel mappers -- they employ LLMs merely as text encoders, without leveraging their inherent reasoning capabilities to infer what should be visually depicted given the textual prompt. To move beyond such literal generation, we propose the think-then-generate (T2G) paradigm, where the LLM-based text encoder is encouraged to reason about and rewrite raw user prompts; the states of the rewritten prompts then serve as diffusion conditioning. To achieve this, we first activate the think-then-rewrite pattern of the LLM encoder with a lightweight supervised fine-tuning process. Subsequently, the LLM encoder and diffusion backbone are co-optimized to ensure faithful reasoning about the context and accurate rendering of the semantics via Dual-GRPO. In particular, the text encoder is reinforced using image-grounded rewards to infer and recall world knowledge, while the diffusion backbone is pushed to produce semantically consistent and visually coherent images. Experiments show substantial improvements in factual consistency, semantic alignment, and visual realism across reasoning-based image generation and editing benchmarks, achieving 0.79 on WISE score, nearly on par with GPT-4. Our results constitute a promising step toward next-generation unified models with reasoning, expression, and demonstration capacities.",
+    "published": "2026-01-15",
+    "authors": [
+      "Siqi Kou",
+      "Jiachun Jin",
+      "Zetong Zhou",
+      "Ye Ma",
+      "Yugang Wang",
+      "Quan Chen",
+      "Peng Jiang",
+      "Xiao Yang"
+    ],
+    "url": "https://arxiv.org/abs/2601.10332v1",
+    "score": 50,
+    "base_id": "2601.10332",
+    "length_score": 1,
+    "desc_sents": [
+      "\"Think-Then-Generate: Reasoning-Aware Text-to-Image Diffusion with LLM Encoders\" (2026) contributes methods or analysis in contemporary text-to-image / multimodal generation.",
+      "Recent progress in text-to-image (T2I) diffusion models (DMs) has enabled high-quality visual synthesis from diverse textual prompts.",
+      "Yet, most existing T2I DMs, even those equipped with large language model (LLM)-based text encoders, remain text-pixel mappers -- they employ LLMs merely as text encoders, without leveraging their inherent reasoning capabilities to infer what should be visually depicted given the textual prompt.",
+      "For our length question: extract its train/infer token policy, whether length is fixed or mixed, and any stated reason those choices work."
+    ],
+    "length_tags": [
+      "re-prompt/recaption",
+      "LLM/VLM encoder"
+    ]
+  },
+  {
+    "arxiv_id": "2604.12652v2",
+    "title": "PromptEcho: Annotation-Free Reward from Vision-Language Models for Text-to-Image Reinforcement Learning",
+    "abstract": "Reinforcement learning (RL) can improve the prompt following capability of text-to-image (T2I) models, yet obtaining high-quality reward signals remains challenging: CLIP Score is too coarse-grained, while VLM-based reward models (e.g., RewardDance) require costly human-annotated preference data and additional fine-tuning. We propose PromptEcho, a reward construction method that requires \\emph{no} annotation and \\emph{no} reward model training. Given a generated image and a guiding query, PromptEcho computes the token-level cross-entropy loss of a frozen VLM with the original prompt as the label, directly extracting the image-text alignment knowledge encoded during VLM pretraining. The reward is deterministic, computationally efficient, and improves automatically as stronger open-source VLMs become available. For evaluation, we develop DenseAlignBench, a benchmark of concept-rich dense captions for rigorously testing prompt following capability. Experimental results on two state-of-the-art T2I models (Z-Image and QwenImage-2512) demonstrate that PromptEcho achieves substantial improvements on DenseAlignBench (+26.8pp / +16.2pp net win rate), along with consistent gains on GenEval, DPG-Bench, and TIIFBench without any task-specific training. Ablation studies confirm that PromptEcho comprehensively outperforms inference-based scoring with the same VLM, and that reward quality scales with VLM size. We will open-source the trained models and the DenseAlignBench.",
+    "published": "2026-04-14",
+    "authors": [
+      "Jinlong Liu",
+      "Wanggui He",
+      "Peng Zhang",
+      "Mushui Liu",
+      "Hao Jiang",
+      "Pipei Huang"
+    ],
+    "url": "https://arxiv.org/abs/2604.12652v2",
+    "score": 46,
+    "base_id": "2604.12652",
+    "length_score": 1,
+    "desc_sents": [
+      "\"PromptEcho: Annotation-Free Reward from Vision-Language Models for Text-to-Image Reinforcement Learning\" (2026) studies prompt rewriting, optimization, or prompt-side control for image generators.",
+      "Reinforcement learning (RL) can improve the prompt following capability of text-to-image (T2I) models, yet obtaining high-quality reward signals remains challenging: CLIP Score is too coarse-grained, while VLM-based reward models (e.g., RewardDance) require costly human-annotated preference data and additional fine-tuning.",
+      "We propose PromptEcho, a reward construction method that requires \\emph{no} annotation and \\emph{no} reward model training.",
+      "For our length question: extract its train/infer token policy, whether length is fixed or mixed, and any stated reason those choices work."
+    ],
+    "length_tags": [
+      "long/dense preferred",
+      "numeric token budget",
+      "LLM/VLM encoder"
+    ]
+  },
+  {
+    "arxiv_id": "2512.20362v2",
+    "title": "CRAFT: Continuous Reasoning and Agentic Feedback Tuning for Multimodal Text-to-Image Generation",
+    "abstract": "Recent work has shown that inference-time reasoning and reflection can improve text-to-image generation without retraining. However, existing approaches often rely on implicit, holistic critiques or unconstrained prompt rewrites, making their behavior difficult to interpret, control, or stop reliably. In contrast, large language models have benefited from explicit, structured forms of **thinking** based on verification, targeted correction, and early stopping. We introduce CRAFT (Continuous Reasoning and Agentic Feedback Tuning), a training-free and model-agnostic framework for multimodal image generation. CRAFT transforms a user prompt into a set of explicit, dependency-structured visual constraints, verifies generated images using a vision-language model, and performs targeted prompt updates only when specific constraints are violated. This iterative process includes an explicit stopping criterion, resulting in an interpretable and controllable inference-time refinement loop. Across multiple model families and challenging benchmarks, CRAFT consistently improves compositional accuracy, text rendering, and preference-based evaluations, with particularly strong gains for lightweight generators. Importantly, these improvements incur only a negligible inference-time overhead, allowing smaller or cheaper models to approach the quality of substantially more expensive systems. Our results suggest that explicitly structured, constraint-driven inference-time reasoning is a key ingredient for improving the reliability of multimodal generative models.",
+    "published": "2025-12-23",
+    "authors": [
+      "V. Kovalev",
+      "A. Kuvshinov",
+      "A. Buzovkin",
+      "D. Pokidov",
+      "D. Timonin"
+    ],
+    "url": "https://arxiv.org/abs/2512.20362v2",
+    "score": 44,
+    "base_id": "2512.20362",
+    "length_score": 1,
+    "desc_sents": [
+      "\"CRAFT: Continuous Reasoning and Agentic Feedback Tuning for Multimodal Text-to-Image Generation\" (2025) contributes methods or analysis in contemporary text-to-image / multimodal generation.",
+      "Recent work has shown that inference-time reasoning and reflection can improve text-to-image generation without retraining.",
+      "However, existing approaches often rely on implicit, holistic critiques or unconstrained prompt rewrites, making their behavior difficult to interpret, control, or stop reliably.",
+      "For our length question: extract its train/infer token policy, whether length is fixed or mixed, and any stated reason those choices work."
+    ],
+    "length_tags": [
+      "re-prompt/recaption"
+    ]
+  },
+  {
+    "arxiv_id": "2511.20251v1",
+    "title": "PromptMoG: Enhancing Diversity in Long-Prompt Image Generation via Prompt Embedding Mixture-of-Gaussian Sampling",
+    "abstract": "Recent advances in text-to-image (T2I) generation have achieved remarkable visual outcomes through large-scale rectified flow models. However, how these models behave under long prompts remains underexplored. Long prompts encode rich content, spatial, and stylistic information that enhances fidelity but often suppresses diversity, leading to repetitive and less creative outputs. In this work, we systematically study this fidelity-diversity dilemma and reveal that state-of-the-art models exhibit a clear drop in diversity as prompt length increases. To enable consistent evaluation, we introduce LPD-Bench, a benchmark designed for assessing both fidelity and diversity in long-prompt generation. Building on our analysis, we develop a theoretical framework that increases sampling entropy through prompt reformulation and propose a training-free method, PromptMoG, which samples prompt embeddings from a Mixture-of-Gaussians in the embedding space to enhance diversity while preserving semantics. Extensive experiments on four state-of-the-art models, SD3.5-Large, Flux.1-Krea-Dev, CogView4, and Qwen-Image, demonstrate that PromptMoG consistently improves long-prompt generation diversity without semantic drifting.",
+    "published": "2025-11-25",
+    "authors": [
+      "Bo-Kai Ruan",
+      "Teng-Fang Hsiao",
+      "Ling Lo",
+      "Yi-Lun Wu",
+      "Hong-Han Shuai"
+    ],
+    "url": "https://arxiv.org/abs/2511.20251v1",
+    "score": 44,
+    "base_id": "2511.20251",
+    "length_score": 2,
+    "desc_sents": [
+      "\"PromptMoG: Enhancing Diversity in Long-Prompt Image Generation via Prompt Embedding Mixture-of-Gaussian Sampling\" (2025) studies prompt rewriting, optimization, or prompt-side control for image generators.",
+      "Recent advances in text-to-image (T2I) generation have achieved remarkable visual outcomes through large-scale rectified flow models.",
+      "However, how these models behave under long prompts remains underexplored.",
+      "For our length question: extract its train/infer token policy, whether length is fixed or mixed, and any stated reason those choices work."
+    ],
+    "length_tags": [
+      "long/dense preferred",
+      "LLM/VLM encoder"
+    ]
+  },
+  {
+    "arxiv_id": "2602.00616v3",
+    "title": "SPOT: Selective Prompt Projection via Total Variation for Inference-Only Safe Text-to-Image Generation",
+    "abstract": "Text-to-Image (T2I) diffusion models enable high quality open ended synthesis, but practical use requires suppressing unsafe generations while preserving behavior on benign prompts. We study this tension relative to the frozen generator, using its prompt conditioned distribution as the preservation reference. Since T2I safety is commonly evaluated by bounded risk scores on generated images, total variation (TV) bounds how much expected risk can change from this reference. We call this fixed reference constraint the Safety-Prompt Alignment Tradeoff (SPAT): reducing expected unsafety requires prompt conditioned distributional deviation. To make this deviation selective and adjustable, we define the tau safe set as prompts whose reference risk is at most tau, and cast intervention as projection toward nearby prompts in this set. We propose Selective Prompt prOjecTion (SPOT), an inference time framework that approximates this projection without retraining the generator or learning a category specific rewriter. SPOT uses an LLM to rank candidate rewrites and a safeguard VLM to accept generated images under the same tau. Across four datasets and three diffusion backbones, SPOT achieves relative inappropriate (IP) score reductions from 14.2% to 44.4% over strong safety alignment baselines while keeping benign prompt behavior close to the fixed reference.",
+    "published": "2026-01-31",
+    "authors": [
+      "Minhyuk Lee",
+      "Hyekyung Yoon",
+      "Myungjoo Kang"
+    ],
+    "url": "https://arxiv.org/abs/2602.00616v3",
+    "score": 41,
+    "base_id": "2602.00616",
+    "length_score": 1,
+    "desc_sents": [
+      "\"SPOT: Selective Prompt Projection via Total Variation for Inference-Only Safe Text-to-Image Generation\" (2026) studies prompt rewriting, optimization, or prompt-side control for image generators.",
+      "Text-to-Image (T2I) diffusion models enable high quality open ended synthesis, but practical use requires suppressing unsafe generations while preserving behavior on benign prompts.",
+      "We study this tension relative to the frozen generator, using its prompt conditioned distribution as the preservation reference.",
+      "For our length question: extract its train/infer token policy, whether length is fixed or mixed, and any stated reason those choices work."
+    ],
+    "length_tags": [
+      "re-prompt/recaption",
+      "LLM/VLM encoder"
+    ]
+  },
+  {
+    "arxiv_id": "2607.01642v1",
+    "title": "Multi-Resolution Flow Matching: Training-Free Diffusion Acceleration via Staged Sampling",
+    "abstract": "Hardware-agnostic strategies for accelerating text-to-image diffusion, such as timestep distillation and feature caching, can reduce inference time without custom kernels or system-level optimization. Among them, multi-resolution generation strategies have recently received broad attention, attaining more than 5x speedup without any training. However, the design of performing upsampling in the latent space, together with the selective modification of partial regions, causes these methods to exhibit noticeable blurring or artifacts. To this end, we propose MrFlow, a training-free multi-resolution acceleration strategy for pretrained flow-matching models built upon a staged low-to-high-resolution pipeline. MrFlow first rapidly generates the main structure at low resolution, then performs super-resolution in the pixel space using a lightweight pretrained GAN-based model, subsequently injects low-strength noise to enable high-frequency resampling, and finally refines the details at high resolution. Quantitative and qualitative results on FLUX.1-dev and Qwen-Image show that MrFlow exploits the quadratic token reduction and reduced step requirement of low-resolution sampling to achieve 10x end-to-end acceleration while keeping OneIG within a 1% gap relative to that before acceleration, significantly surpassing other training-free acceleration strategies, and requiring no training or runtime dynamic identification whatsoever. MrFlow can further be directly combined orthogonally with pre-trained timestep distillation strategies, achieving even higher generation acceleration of up to 25x.",
+    "published": "2026-07-02",
+    "authors": [
+      "Xingyu Zheng",
+      "Xianglong Liu",
+      "Yifu Ding",
+      "Weilun Feng",
+      "Junqing Lin",
+      "Jinyang Guo",
+      "Haotong Qin"
+    ],
+    "url": "https://arxiv.org/abs/2607.01642v1",
+    "score": 39,
+    "base_id": "2607.01642",
+    "length_score": 1,
+    "desc_sents": [
+      "\"Multi-Resolution Flow Matching: Training-Free Diffusion Acceleration via Staged Sampling\" (2026) contributes methods or analysis in contemporary text-to-image / multimodal generation.",
+      "Hardware-agnostic strategies for accelerating text-to-image diffusion, such as timestep distillation and feature caching, can reduce inference time without custom kernels or system-level optimization.",
+      "Among them, multi-resolution generation strategies have recently received broad attention, attaining more than 5x speedup without any training.",
+      "For our length question: extract its train/infer token policy, whether length is fixed or mixed, and any stated reason those choices work."
+    ],
+    "length_tags": [
+      "re-prompt/recaption",
+      "LLM/VLM encoder"
+    ]
+  },
+  {
+    "arxiv_id": "2604.03765v2",
+    "title": "ITIScore: An Image-to-Text-to-Image Rating Framework for the Image Captioning Ability of MLLMs",
+    "abstract": "Recent advances in multimodal large language models (MLLMs) have greatly improved image understanding and captioning capabilities. However, existing image captioning benchmarks typically suffer from limited diversity in caption length, the absence of recent advanced MLLMs, and insufficient human annotations, which potentially introduces bias and limits the ability to comprehensively assess the performance of modern MLLMs. To address these limitations, we present a new large-scale image captioning benchmark, termed, ICBench, which covers 12 content categories and consists of both short and long captions generated by 10 advanced MLLMs on 2K images, resulting in 40K captions in total. We conduct extensive human subjective studies to obtain mean opinion scores (MOSs) across fine-grained evaluation dimensions, where short captions are assessed in terms of fluency, relevance, and conciseness, while long captions are evaluated based on fluency, relevance, and completeness. Furthermore, we propose an automated evaluation metric, \\textbf{ITIScore}, based on an image-to-text-to-image framework, which measures caption quality through reconstruction consistency. Experimental results demonstrate strong alignment between our automatic metric and human judgments, as well as robust zero-shot generalization ability on other public captioning datasets. Both the dataset and model will be released upon publication.",
+    "published": "2026-04-04",
+    "authors": [
+      "Zitong Xu",
+      "Huiyu Duan",
+      "Shengyao Qin",
+      "Guangyu Yang",
+      "Guangji Ma",
+      "Xiongkuo Min",
+      "Ke Gu",
+      "Guangtao Zhai"
+    ],
+    "url": "https://arxiv.org/abs/2604.03765v2",
+    "score": 38,
+    "base_id": "2604.03765",
+    "length_score": 2,
+    "desc_sents": [
+      "\"ITIScore: An Image-to-Text-to-Image Rating Framework for the Image Captioning Ability of MLLMs\" (2026) focuses on captioning/recaptioning data that feeds text-to-image training.",
+      "Recent advances in multimodal large language models (MLLMs) have greatly improved image understanding and captioning capabilities.",
+      "However, existing image captioning benchmarks typically suffer from limited diversity in caption length, the absence of recent advanced MLLMs, and insufficient human annotations, which potentially introduces bias and limits the ability to comprehensively assess the performance of modern MLLMs.",
+      "For our length question: extract its train/infer token policy, whether length is fixed or mixed, and any stated reason those choices work."
+    ],
+    "length_tags": [
+      "long/dense preferred",
+      "discusses short prompts",
+      "LLM/VLM encoder"
+    ]
+  },
+  {
+    "arxiv_id": "2505.17540v1",
+    "title": "RePrompt: Reasoning-Augmented Reprompting for Text-to-Image Generation via Reinforcement Learning",
+    "abstract": "Despite recent progress in text-to-image (T2I) generation, existing models often struggle to faithfully capture user intentions from short and under-specified prompts. While prior work has attempted to enhance prompts using large language models (LLMs), these methods frequently generate stylistic or unrealistic content due to insufficient grounding in visual semantics and real-world composition. Inspired by recent advances in reasoning for language model, we propose RePrompt, a novel reprompting framework that introduces explicit reasoning into the prompt enhancement process via reinforcement learning. Instead of relying on handcrafted rules or stylistic rewrites, our method trains a language model to generate structured, self-reflective prompts by optimizing for image-level outcomes. The tailored reward models assesse the generated images in terms of human preference, semantic alignment, and visual composition, providing indirect supervision to refine prompt generation. Our approach enables end-to-end training without human-annotated data. Experiments on GenEval and T2I-Compbench show that RePrompt significantly boosts spatial layout fidelity and compositional generalization across diverse T2I backbones, establishing new state-of-the-art results.",
+    "published": "2025-05-23",
+    "authors": [
+      "Mingrui Wu",
+      "Lu Wang",
+      "Pu Zhao",
+      "Fangkai Yang",
+      "Jianjin Zhang",
+      "Jianfeng Liu",
+      "Yuefeng Zhan",
+      "Weihao Han"
+    ],
+    "url": "https://arxiv.org/abs/2505.17540v1",
+    "score": 36,
+    "base_id": "2505.17540",
+    "length_score": 2,
+    "desc_sents": [
+      "\"RePrompt: Reasoning-Augmented Reprompting for Text-to-Image Generation via Reinforcement Learning\" (2025) studies prompt rewriting, optimization, or prompt-side control for image generators.",
+      "Despite recent progress in text-to-image (T2I) generation, existing models often struggle to faithfully capture user intentions from short and under-specified prompts.",
+      "While prior work has attempted to enhance prompts using large language models (LLMs), these methods frequently generate stylistic or unrealistic content due to insufficient grounding in visual semantics and real-world composition.",
+      "For our length question: extract its train/infer token policy, whether length is fixed or mixed, and any stated reason those choices work."
+    ],
+    "length_tags": [
+      "re-prompt/recaption",
+      "LLM/VLM encoder"
+    ]
+  },
+  {
+    "arxiv_id": "2505.22613v1",
+    "title": "RICO: Improving Accuracy and Completeness in Image Recaptioning via Visual Reconstruction",
+    "abstract": "Image recaptioning is widely used to generate training datasets with enhanced quality for various multimodal tasks. Existing recaptioning methods typically rely on powerful multimodal large language models (MLLMs) to enhance textual descriptions, but often suffer from inaccuracies due to hallucinations and incompleteness caused by missing fine-grained details. To address these limitations, we propose RICO, a novel framework that refines captions through visual reconstruction. Specifically, we leverage a text-to-image model to reconstruct a caption into a reference image, and prompt an MLLM to identify discrepancies between the original and reconstructed images to refine the caption. This process is performed iteratively, further progressively promoting the generation of more faithful and comprehensive descriptions. To mitigate the additional computational cost induced by the iterative process, we introduce RICO-Flash, which learns to generate captions like RICO using DPO. Extensive experiments demonstrate that our approach significantly improves caption accuracy and completeness, outperforms most baselines by approximately 10% on both CapsBench and CompreCap. Code released at https://github.com/wangyuchi369/RICO.",
+    "published": "2025-05-28",
+    "authors": [
+      "Yuchi Wang",
+      "Yishuo Cai",
+      "Shuhuai Ren",
+      "Sihan Yang",
+      "Linli Yao",
+      "Yuanxin Liu",
+      "Yuanxing Zhang",
+      "Pengfei Wan"
+    ],
+    "url": "https://arxiv.org/abs/2505.22613v1",
+    "score": 36,
+    "base_id": "2505.22613",
+    "length_score": 1,
+    "desc_sents": [
+      "\"RICO: Improving Accuracy and Completeness in Image Recaptioning via Visual Reconstruction\" (2025) focuses on captioning/recaptioning data that feeds text-to-image training.",
+      "Image recaptioning is widely used to generate training datasets with enhanced quality for various multimodal tasks.",
+      "Existing recaptioning methods typically rely on powerful multimodal large language models (MLLMs) to enhance textual descriptions, but often suffer from inaccuracies due to hallucinations and incompleteness caused by missing fine-grained details.",
+      "For our length question: extract its train/infer token policy, whether length is fixed or mixed, and any stated reason those choices work."
+    ],
+    "length_tags": [
+      "re-prompt/recaption",
+      "LLM/VLM encoder"
+    ]
+  },
+  {
+    "arxiv_id": "2510.18701v2",
+    "title": "UniGenBench++: A Unified Semantic Evaluation Benchmark for Text-to-Image Generation",
+    "abstract": "Recent progress in text-to-image (T2I) generation underscores the importance of reliable benchmarks in evaluating how accurately generated images reflect the semantics of their textual prompt. However, (1) existing benchmarks lack the diversity of prompt scenarios and multilingual support, both essential for real-world applicability; (2) they offer only coarse evaluations across primary dimensions, covering a narrow range of sub-dimensions, and fall short in fine-grained sub-dimension assessment. To address these limitations, we introduce UniGenBench++, a unified semantic assessment benchmark for T2I generation. Specifically, it comprises 600 prompts organized hierarchically to ensure both coverage and efficiency: (1) spans across diverse real-world scenarios, i.e., 5 main prompt themes and 20 subthemes; (2) comprehensively probes T2I models' semantic consistency over 10 primary and 27 sub evaluation criteria, with each prompt assessing multiple testpoints. To rigorously assess model robustness to variations in language and prompt length, we provide both English and Chinese versions of each prompt in short and long forms. Leveraging the general world knowledge and fine-grained image understanding capabilities of a closed-source Multi-modal Large Language Model (MLLM), i.e., Gemini-2.5-Pro, an effective pipeline is developed for reliable benchmark construction and streamlined model assessment. Moreover, to further facilitate community use, we train a robust evaluation model that enables offline assessment of T2I model outputs. Through comprehensive benchmarking of both open- and closed-sourced T2I models, we systematically reveal their strengths and weaknesses across various aspects.",
+    "published": "2025-10-21",
+    "authors": [
+      "Yibin Wang",
+      "Zhimin Li",
+      "Yuhang Zang",
+      "Jiazi Bu",
+      "Yujie Zhou",
+      "Yi Xin",
+      "Junjun He",
+      "Chunyu Wang"
+    ],
+    "url": "https://arxiv.org/abs/2510.18701v2",
+    "score": 36,
+    "base_id": "2510.18701",
+    "length_score": 1,
+    "desc_sents": [
+      "\"UniGenBench++: A Unified Semantic Evaluation Benchmark for Text-to-Image Generation\" (2025) introduces or expands evaluation for text-conditioned image generation, often under long or compositional prompts.",
+      "Recent progress in text-to-image (T2I) generation underscores the importance of reliable benchmarks in evaluating how accurately generated images reflect the semantics of their textual prompt.",
+      "However, (1) existing benchmarks lack the diversity of prompt scenarios and multilingual support, both essential for real-world applicability; (2) they offer only coarse evaluations across primary dimensions, covering a narrow range of sub-dimensions, and fall short in fine-grained sub-dimension assessment.",
+      "For our length question: extract its train/infer token policy, whether length is fixed or mixed, and any stated reason those choices work."
+    ],
+    "length_tags": [
+      "variable/mixed length",
+      "LLM/VLM encoder"
+    ]
+  },
+  {
+    "arxiv_id": "2504.09948v3",
+    "title": "Omni-Dish: Photorealistic and Faithful Image Generation and Editing for Arbitrary Chinese Dishes",
+    "abstract": "Dish images play a crucial role in the digital era, with the demand for culturally distinctive dish images continuously increasing due to the digitization of the food industry and e-commerce. In general cases, existing text-to-image generation models excel in producing high-quality images; however, they struggle to capture diverse characteristics and faithful details of specific domains, particularly Chinese dishes. To address this limitation, we propose Omni-Dish, the first text-to-image generation model specifically tailored for Chinese dishes. We develop a comprehensive dish curation pipeline, building the largest dish dataset to date. Additionally, we introduce a recaption strategy and employ a coarse-to-fine training scheme to help the model better learn fine-grained culinary nuances. During inference, we enhance the user's textual input using a pre-constructed high-quality caption library and a large language model, enabling more photorealistic and faithful image generation. Furthermore, to extend our model's capability for dish editing tasks, we propose Concept-Enhanced P2P. Based on this approach, we build a dish editing dataset and train a specialized editing model. Extensive experiments demonstrate the superiority of our methods.",
+    "published": "2025-04-14",
+    "authors": [
+      "Huijie Liu",
+      "Bingcan Wang",
+      "Jie Hu",
+      "Xiaoming Wei",
+      "Guoliang Kang"
+    ],
+    "url": "https://arxiv.org/abs/2504.09948v3",
+    "score": 36,
+    "base_id": "2504.09948",
+    "length_score": 1,
+    "desc_sents": [
+      "\"Omni-Dish: Photorealistic and Faithful Image Generation and Editing for Arbitrary Chinese Dishes\" (2025) contributes methods or analysis in contemporary text-to-image / multimodal generation.",
+      "Dish images play a crucial role in the digital era, with the demand for culturally distinctive dish images continuously increasing due to the digitization of the food industry and e-commerce.",
+      "In general cases, existing text-to-image generation models excel in producing high-quality images; however, they struggle to capture diverse characteristics and faithful details of specific domains, particularly Chinese dishes.",
+      "For our length question: extract its train/infer token policy, whether length is fixed or mixed, and any stated reason those choices work."
+    ],
+    "length_tags": [
+      "re-prompt/recaption"
+    ]
+  },
+  {
+    "arxiv_id": "2512.15603v1",
+    "title": "Qwen-Image-Layered: Towards Inherent Editability via Layer Decomposition",
+    "abstract": "Recent visual generative models often struggle with consistency during image editing due to the entangled nature of raster images, where all visual content is fused into a single canvas. In contrast, professional design tools employ layered representations, allowing isolated edits while preserving consistency. Motivated by this, we propose \\textbf{Qwen-Image-Layered}, an end-to-end diffusion model that decomposes a single RGB image into multiple semantically disentangled RGBA layers, enabling \\textbf{inherent editability}, where each RGBA layer can be independently manipulated without affecting other content. To support variable-length decomposition, we introduce three key components: (1) an RGBA-VAE to unify the latent representations of RGB and RGBA images; (2) a VLD-MMDiT (Variable Layers Decomposition MMDiT) architecture capable of decomposing a variable number of image layers; and (3) a Multi-stage Training strategy to adapt a pretrained image generation model into a multilayer image decomposer. Furthermore, to address the scarcity of high-quality multilayer training images, we build a pipeline to extract and annotate multilayer images from Photoshop documents (PSD). Experiments demonstrate that our method significantly surpasses existing approaches in decomposition quality and establishes a new paradigm for consistent image editing. Our code and models are released on \\href{https://github.com/QwenLM/Qwen-Image-Layered}{https://github.com/QwenLM/Qwen-Image-Layered}",
+    "published": "2025-12-17",
+    "authors": [
+      "Shengming Yin",
+      "Zekai Zhang",
+      "Zecheng Tang",
+      "Kaiyuan Gao",
+      "Xiao Xu",
+      "Kun Yan",
+      "Jiahao Li",
+      "Yilei Chen"
+    ],
+    "url": "https://arxiv.org/abs/2512.15603v1",
+    "score": 36,
+    "base_id": "2512.15603",
+    "length_score": 1,
+    "desc_sents": [
+      "\"Qwen-Image-Layered: Towards Inherent Editability via Layer Decomposition\" (2025) is a modern system/report in the LLM/VLM-conditioned image generation line.",
+      "Recent visual generative models often struggle with consistency during image editing due to the entangled nature of raster images, where all visual content is fused into a single canvas.",
+      "In contrast, professional design tools employ layered representations, allowing isolated edits while preserving consistency.",
+      "For our length question: extract its train/infer token policy, whether length is fixed or mixed, and any stated reason those choices work."
+    ],
+    "length_tags": [
+      "LLM/VLM encoder"
+    ]
+  },
+  {
+    "arxiv_id": "2503.17987v3",
+    "title": "Reason2Attack: Jailbreaking Text-to-Image Models via LLM Reasoning",
+    "abstract": "Text-to-Image(T2I) models typically deploy safety filters to prevent the generation of sensitive images. Unfortunately, recent jailbreaking attack methods manually design instructions for the LLM to generate adversarial prompts, which effectively bypass safety filters while producing sensitive images, exposing safety vulnerabilities of T2I models. However, due to the LLM's limited understanding of the T2I model and its safety filters, existing methods require numerous queries to achieve a successful attack, limiting their practical applicability. To address this issue, we propose Reason2Attack(R2A), which aims to enhance the LLM's reasoning capabilities in generating adversarial prompts by incorporating the jailbreaking attack into the post-training process of the LLM. Specifically, we first propose a CoT example synthesis pipeline based on Frame Semantics, which generates adversarial prompts by identifying related terms and corresponding context illustrations. Using CoT examples generated by the pipeline, we fine-tune the LLM to understand the reasoning path and format the output structure. Subsequently, we incorporate the jailbreaking attack task into the reinforcement learning process of the LLM and design an attack process reward that considers prompt length, prompt stealthiness, and prompt effectiveness, aiming to further enhance reasoning accuracy. Extensive experiments on various T2I models show that R2A achieves a better attack success ratio while requiring fewer queries than baselines. Moreover, our adversarial prompts demonstrate strong attack transferability across both open-source and commercial T2I models.",
+    "published": "2025-03-23",
+    "authors": [
+      "Chenyu Zhang",
+      "Lanjun Wang",
+      "Yiwen Ma",
+      "Wenhui Li",
+      "An-An Liu"
+    ],
+    "url": "https://arxiv.org/abs/2503.17987v3",
+    "score": 35,
+    "base_id": "2503.17987",
+    "length_score": 1,
+    "desc_sents": [
+      "\"Reason2Attack: Jailbreaking Text-to-Image Models via LLM Reasoning\" (2025) contributes methods or analysis in contemporary text-to-image / multimodal generation.",
+      "Text-to-Image(T2I) models typically deploy safety filters to prevent the generation of sensitive images.",
+      "Unfortunately, recent jailbreaking attack methods manually design instructions for the LLM to generate adversarial prompts, which effectively bypass safety filters while producing sensitive images, exposing safety vulnerabilities of T2I models.",
+      "For our length question: extract its train/infer token policy, whether length is fixed or mixed, and any stated reason those choices work."
+    ],
+    "length_tags": [
+      "LLM/VLM encoder"
+    ]
+  },
+  {
+    "arxiv_id": "2505.15172v1",
+    "title": "Harnessing Caption Detailness for Data-Efficient Text-to-Image Generation",
+    "abstract": "Training text-to-image (T2I) models with detailed captions can significantly improve their generation quality. Existing methods often rely on simplistic metrics like caption length to represent the detailness of the caption in the T2I training set. In this paper, we propose a new metric to estimate caption detailness based on two aspects: image coverage rate (ICR), which evaluates whether the caption covers all regions/objects in the image, and average object detailness (AOD), which quantifies the detailness of each object's description. Through experiments on the COCO dataset using ShareGPT4V captions, we demonstrate that T2I models trained on high-ICR and -AOD captions achieve superior performance on DPG and other benchmarks. Notably, our metric enables more effective data selection-training on only 20% of full data surpasses both full-dataset training and length-based selection method, improving alignment and reconstruction ability. These findings highlight the critical role of detail-aware metrics over length-based heuristics in caption selection for T2I tasks.",
+    "published": "2025-05-21",
+    "authors": [
+      "Xinran Wang",
+      "Muxi Diao",
+      "Yuanzhi Liu",
+      "Chunyu Wang",
+      "Kongming Liang",
+      "Zhanyu Ma",
+      "Jun Guo"
+    ],
+    "url": "https://arxiv.org/abs/2505.15172v1",
+    "score": 35,
+    "base_id": "2505.15172",
+    "length_score": 1,
+    "desc_sents": [
+      "\"Harnessing Caption Detailness for Data-Efficient Text-to-Image Generation\" (2025) focuses on captioning/recaptioning data that feeds text-to-image training.",
+      "Training text-to-image (T2I) models with detailed captions can significantly improve their generation quality.",
+      "Existing methods often rely on simplistic metrics like caption length to represent the detailness of the caption in the T2I training set.",
+      "For our length question: extract its train/infer token policy, whether length is fixed or mixed, and any stated reason those choices work."
+    ],
+    "length_tags": [
+      "long/dense preferred"
+    ]
+  },
+  {
+    "arxiv_id": "2507.09071v3",
+    "title": "BlindSight: Harnessing Sparsity for Efficient Vision-Language Models",
+    "abstract": "Large vision-language models (VLMs) enable joint processing of text and images. However, incorporating vision data significantly increases the prompt length, resulting in a longer time to first token (TTFT). This bottleneck can be alleviated by leveraging the inherent sparsity in the attention computation. Analyzing these attention patterns in VLMs when processing a series of images, we observe the absence of inter-image attention in a substantial portion of layers. Based on this, we propose BlindSight: an approach to optimize multi-image VLM inference using an input-template-aware attention sparsity mask with no runtime overhead. We utilize a dataset to derive a prompt-agnostic categorization for attention heads: Dense, Sink, Intra-Image, and Intra-Image+Sink. We develop a Triton-based GPU kernel to leverage this sparsity. BlindSight achieves a 1.8-3.2x speedup in the attention computation (prompt length 36K-300K). BlindSight generalizes across VLMs (Qwen2-VL, Qwen2.5-VL, Gemma 3), with only a 0.78% absolute accuracy degradation on average on multi-image comprehension benchmarks. Finally, we advocate for the design of efficient VLMs that combine BlindSight-inspired sparse and dense layers.",
+    "published": "2025-07-11",
+    "authors": [
+      "Tharun Adithya Srikrishnan",
+      "Deval Shah",
+      "Timothy Hein",
+      "Ahmed Hasssan",
+      "Stephen Youn",
+      "Steven K. Reinhardt"
+    ],
+    "url": "https://arxiv.org/abs/2507.09071v3",
+    "score": 35,
+    "base_id": "2507.09071",
+    "length_score": 1,
+    "desc_sents": [
+      "\"BlindSight: Harnessing Sparsity for Efficient Vision-Language Models\" (2025) contributes methods or analysis in contemporary text-to-image / multimodal generation.",
+      "Large vision-language models (VLMs) enable joint processing of text and images.",
+      "However, incorporating vision data significantly increases the prompt length, resulting in a longer time to first token (TTFT).",
+      "For our length question: extract its train/infer token policy, whether length is fixed or mixed, and any stated reason those choices work."
+    ],
+    "length_tags": [
+      "numeric token budget",
+      "LLM/VLM encoder"
+    ]
+  },
+  {
+    "arxiv_id": "2509.18639v3",
+    "title": "Understanding-in-Generation: Reinforcing Generative Capability of Unified Model via Infusing Understanding into Generation",
+    "abstract": "Recent works have made notable advancements in enhancing unified models for text-to-image generation through the Chain-of-Thought (CoT). However, these reasoning methods separate the processes of understanding and generation, which limits their ability to guide the reasoning of unified models in addressing the deficiencies of their generative capabilities. To this end, we propose a novel reasoning framework for unified models, Understanding-in-Generation (UiG), which harnesses the robust understanding capabilities of unified models to reinforce their performance in image generation. The core insight of our UiG is to integrate generative guidance by the strong understanding capabilities during the reasoning process, thereby mitigating the limitations of generative abilities. To achieve this, we introduce \"Image Editing\" as a bridge to infuse understanding into the generation process. Initially, we verify the generated image and incorporate the understanding of unified models into the editing instructions. Subsequently, we enhance the generated image step by step, gradually infusing the understanding into the generation process. Our UiG framework demonstrates a significant performance improvement in text-to-image generation over existing text-to-image reasoning methods, e.g., a 3.92% gain on the long prompt setting of the TIIF benchmark. The project code: https://github.com/QC-LY/UiG",
+    "published": "2025-09-23",
+    "authors": [
+      "Yuanhuiyi Lyu",
+      "Chi Kit Wong",
+      "Chenfei Liao",
+      "Lutao Jiang",
+      "Xu Zheng",
+      "Zexin Lu",
+      "Linfeng Zhang",
+      "Xuming Hu"
+    ],
+    "url": "https://arxiv.org/abs/2509.18639v3",
+    "score": 35,
+    "base_id": "2509.18639",
+    "length_score": 1,
+    "desc_sents": [
+      "\"Understanding-in-Generation: Reinforcing Generative Capability of Unified Model via Infusing Understanding into Generation\" (2025) contributes methods or analysis in contemporary text-to-image / multimodal generation.",
+      "Recent works have made notable advancements in enhancing unified models for text-to-image generation through the Chain-of-Thought (CoT).",
+      "However, these reasoning methods separate the processes of understanding and generation, which limits their ability to guide the reasoning of unified models in addressing the deficiencies of their generative capabilities.",
+      "For our length question: extract its train/infer token policy, whether length is fixed or mixed, and any stated reason those choices work."
+    ],
+    "length_tags": [
+      "long/dense preferred"
+    ]
+  },
+  {
+    "arxiv_id": "2403.07750v2",
+    "title": "Synth$^2$: Boosting Visual-Language Models with Synthetic Captions and Image Embeddings",
+    "abstract": "The creation of high-quality human-labeled image-caption datasets presents a significant bottleneck in the development of Visual-Language Models (VLMs). In this work, we investigate an approach that leverages the strengths of Large Language Models (LLMs) and image generation models to create synthetic image-text pairs for efficient and effective VLM training. Our method employs a pretrained text-to-image model to synthesize image embeddings from captions generated by an LLM. Despite the text-to-image model and VLM initially being trained on the same data, our approach leverages the image generator's ability to create novel compositions, resulting in synthetic image embeddings that expand beyond the limitations of the original dataset. Extensive experiments demonstrate that our VLM, finetuned on synthetic data achieves comparable performance to models trained solely on human-annotated data, while requiring significantly less data. Furthermore, we perform a set of analyses on captions which reveals that semantic diversity and balance are key aspects for better downstream performance. Finally, we show that synthesizing images in the image embedding space is 25\\% faster than in the pixel space. We believe our work not only addresses a significant challenge in VLM training but also opens up promising avenues for the development of self-improving multi-modal models.",
+    "published": "2024-03-12",
+    "authors": [
+      "Sahand Sharifzadeh",
+      "Christos Kaplanis",
+      "Shreya Pathak",
+      "Dharshan Kumaran",
+      "Anastasija Ilic",
+      "Jovana Mitrovic",
+      "Charles Blundell",
+      "Andrea Banino"
+    ],
+    "url": "https://arxiv.org/abs/2403.07750v2",
+    "score": 35,
+    "base_id": "2403.07750",
+    "length_score": 1,
+    "desc_sents": [
+      "\"Synth$^2$: Boosting Visual-Language Models with Synthetic Captions and Image Embeddings\" (2024) focuses on captioning/recaptioning data that feeds text-to-image training.",
+      "The creation of high-quality human-labeled image-caption datasets presents a significant bottleneck in the development of Visual-Language Models (VLMs).",
+      "In this work, we investigate an approach that leverages the strengths of Large Language Models (LLMs) and image generation models to create synthetic image-text pairs for efficient and effective VLM training.",
+      "For our length question: extract its train/infer token policy, whether length is fixed or mixed, and any stated reason those choices work."
+    ],
+    "length_tags": [
+      "LLM/VLM encoder"
+    ]
+  },
+  {
+    "arxiv_id": "2506.02161v3",
+    "title": "TIIF-Bench: How Does Your T2I Model Follow Your Instructions?",
+    "abstract": "The rapid advancements of Text-to-Image (T2I) models have ushered in a new phase of AI-generated content, marked by their growing ability to interpret and follow user instructions. However, existing T2I model evaluation benchmarks fall short in limited prompt diversity and complexity, as well as coarse evaluation metrics, making it difficult to evaluate the fine-grained alignment performance between textual instructions and generated images. In this paper, we present TIIF-Bench Text-to-Image Instruction Following Benchmark), aiming to systematically assess T2I models' ability in interpreting and following intricate textual instructions. TIIF-Bench comprises 5,000 prompts organized along multiple dimensions and categorized into three levels of difficulty and complexity. To rigorously evaluate robustness to prompt length, each prompt is provided in both short and long versions with identical core semantics. We further propose a novel Global Normalized Edit Distance (GNED) metric for text rendering and provide aspect-ratio-diverse reference images for each prompt to assess style control. In addition, we collect 100 high-quality designer-level prompts covering diverse scenarios for comprehensive evaluation. To enable scalable and fine-grained evaluation, we explore the best paradigm for leveraging the world knowledge encoded in large Vision-Language Models (VLMs) as automated binary evaluators. Through extensive ablations, we develop a fully reproducible evaluator that provides interpretable reasoning and reliable verification, enabling our benchmark to discern subtle variations in T2I model outputs. Through comprehensive benchmarking of mainstream T2I models on TIIF-Bench, we analyze the strengths and weaknesses of current T2I systems and reveal the limitations of existing evaluation benchmarks. Project Page: https://a113n-w3i.github.io/TIIF_Bench/.",
+    "published": "2025-06-02",
+    "authors": [
+      "Xinyu Wei",
+      "Jinrui Zhang",
+      "Zeqing Wang",
+      "Hongyang Wei",
+      "Zhen Guo",
+      "Bairui Li",
+      "Lei Zhang"
+    ],
+    "url": "https://arxiv.org/abs/2506.02161v3",
+    "score": 34,
+    "base_id": "2506.02161",
+    "length_score": 1,
+    "desc_sents": [
+      "\"TIIF-Bench: How Does Your T2I Model Follow Your Instructions?\" (2025) introduces or expands evaluation for text-conditioned image generation, often under long or compositional prompts.",
+      "The rapid advancements of Text-to-Image (T2I) models have ushered in a new phase of AI-generated content, marked by their growing ability to interpret and follow user instructions.",
+      "However, existing T2I model evaluation benchmarks fall short in limited prompt diversity and complexity, as well as coarse evaluation metrics, making it difficult to evaluate the fine-grained alignment performance between textual instructions and generated images.",
+      "For our length question: extract its train/infer token policy, whether length is fixed or mixed, and any stated reason those choices work."
+    ],
+    "length_tags": [
+      "LLM/VLM encoder"
+    ]
+  },
+  {
+    "arxiv_id": "2412.12391v1",
+    "title": "Efficient Scaling of Diffusion Transformers for Text-to-Image Generation",
+    "abstract": "We empirically study the scaling properties of various Diffusion Transformers (DiTs) for text-to-image generation by performing extensive and rigorous ablations, including training scaled DiTs ranging from 0.3B upto 8B parameters on datasets up to 600M images. We find that U-ViT, a pure self-attention based DiT model provides a simpler design and scales more effectively in comparison with cross-attention based DiT variants, which allows straightforward expansion for extra conditions and other modalities. We identify a 2.3B U-ViT model can get better performance than SDXL UNet and other DiT variants in controlled setting. On the data scaling side, we investigate how increasing dataset size and enhanced long caption improve the text-image alignment performance and the learning efficiency.",
+    "published": "2024-12-16",
+    "authors": [
+      "Hao Li",
+      "Shamit Lal",
+      "Zhiheng Li",
+      "Yusheng Xie",
+      "Ying Wang",
+      "Yang Zou",
+      "Orchid Majumder",
+      "R. Manmatha"
+    ],
+    "url": "https://arxiv.org/abs/2412.12391v1",
+    "score": 34,
+    "base_id": "2412.12391",
+    "length_score": 1,
+    "desc_sents": [
+      "\"Efficient Scaling of Diffusion Transformers for Text-to-Image Generation\" (2024) contributes methods or analysis in contemporary text-to-image / multimodal generation.",
+      "We empirically study the scaling properties of various Diffusion Transformers (DiTs) for text-to-image generation by performing extensive and rigorous ablations, including training scaled DiTs ranging from 0.3B upto 8B parameters on datasets up to 600M images.",
+      "We find that U-ViT, a pure self-attention based DiT model provides a simpler design and scales more effectively in comparison with cross-attention based DiT variants, which allows straightforward expansion for extra conditions and other modalities.",
+      "For our length question: extract its train/infer token policy, whether length is fixed or mixed, and any stated reason those choices work."
+    ],
+    "length_tags": [
+      "long/dense preferred"
+    ]
+  },
+  {
+    "arxiv_id": "2605.04128v2",
+    "title": "JoyAI-Image: Awaking Spatial Intelligence in Unified Multimodal Understanding and Generation",
+    "abstract": "We present JoyAI-Image, a unified multimodal foundation model for visual understanding, text-to-image generation, and instruction-guided image editing. JoyAI-Image couples a spatially enhanced Multimodal Large Language Model (MLLM) with a Multimodal Diffusion Transformer (MMDiT), allowing perception and generation to interact through a shared multimodal interface. Around this architecture, we build a scalable training recipe that combines unified instruction tuning, long-text rendering supervision, spatially grounded data, and both general and spatial editing signals. This design gives the model broad multimodal capability while strengthening geometry-aware reasoning and controllable visual synthesis. Experiments across understanding, generation, long-text rendering, and editing benchmarks show that JoyAI-Image achieves state-of-the-art or highly competitive performance. More importantly, the bidirectional loop between enhanced understanding, controllable spatial editing, and novel-view-assisted reasoning enables the model to move beyond general visual competence toward stronger spatial intelligence. These results suggest a promising path for unified visual models in downstream applications such as vision-language-action systems and world models.",
+    "published": "2026-05-05",
+    "authors": [
+      "Lin Song",
+      "Wenbo Li",
+      "Guoqing Ma",
+      "Wei Tang",
+      "Bo Wang",
+      "Yuan Zhang",
+      "Yijun Yang",
+      "Yicheng Xiao"
+    ],
+    "url": "https://arxiv.org/abs/2605.04128v2",
+    "score": 33,
+    "base_id": "2605.04128",
+    "length_score": 1,
+    "desc_sents": [
+      "\"JoyAI-Image: Awaking Spatial Intelligence in Unified Multimodal Understanding and Generation\" (2026) contributes methods or analysis in contemporary text-to-image / multimodal generation.",
+      "We present JoyAI-Image, a unified multimodal foundation model for visual understanding, text-to-image generation, and instruction-guided image editing.",
+      "JoyAI-Image couples a spatially enhanced Multimodal Large Language Model (MLLM) with a Multimodal Diffusion Transformer (MMDiT), allowing perception and generation to interact through a shared multimodal interface.",
+      "For our length question: extract its train/infer token policy, whether length is fixed or mixed, and any stated reason those choices work."
+    ],
+    "length_tags": [
+      "LLM/VLM encoder"
+    ]
+  },
+  {
+    "arxiv_id": "2401.11708v3",
+    "title": "Mastering Text-to-Image Diffusion: Recaptioning, Planning, and Generating with Multimodal LLMs",
+    "abstract": "Diffusion models have exhibit exceptional performance in text-to-image generation and editing. However, existing methods often face challenges when handling complex text prompts that involve multiple objects with multiple attributes and relationships. In this paper, we propose a brand new training-free text-to-image generation/editing framework, namely Recaption, Plan and Generate (RPG), harnessing the powerful chain-of-thought reasoning ability of multimodal LLMs to enhance the compositionality of text-to-image diffusion models. Our approach employs the MLLM as a global planner to decompose the process of generating complex images into multiple simpler generation tasks within subregions. We propose complementary regional diffusion to enable region-wise compositional generation. Furthermore, we integrate text-guided image generation and editing within the proposed RPG in a closed-loop fashion, thereby enhancing generalization ability. Extensive experiments demonstrate our RPG outperforms state-of-the-art text-to-image diffusion models, including DALL-E 3 and SDXL, particularly in multi-category object composition and text-image semantic alignment. Notably, our RPG framework exhibits wide compatibility with various MLLM architectures (e.g., MiniGPT-4) and diffusion backbones (e.g., ControlNet). Our code is available at: https://github.com/YangLing0818/RPG-DiffusionMaster",
+    "published": "2024-01-22",
+    "authors": [
+      "Ling Yang",
+      "Zhaochen Yu",
+      "Chenlin Meng",
+      "Minkai Xu",
+      "Stefano Ermon",
+      "Bin Cui"
+    ],
+    "url": "https://arxiv.org/abs/2401.11708v3",
+    "score": 31,
+    "base_id": "2401.11708",
+    "length_score": 1,
+    "desc_sents": [
+      "\"Mastering Text-to-Image Diffusion: Recaptioning, Planning, and Generating with Multimodal LLMs\" (2024) focuses on captioning/recaptioning data that feeds text-to-image training.",
+      "Diffusion models have exhibit exceptional performance in text-to-image generation and editing.",
+      "However, existing methods often face challenges when handling complex text prompts that involve multiple objects with multiple attributes and relationships.",
+      "For our length question: extract its train/infer token policy, whether length is fixed or mixed, and any stated reason those choices work."
+    ],
+    "length_tags": [
+      "re-prompt/recaption",
+      "LLM/VLM encoder"
+    ]
+  },
+  {
+    "arxiv_id": "2606.20709v1",
+    "title": "TeleStyle V2: Beyond Content-Preserving Style Transfer with Self-Distillation and Distribution-Matching-Distillation",
+    "abstract": "Given a content reference and a style reference, content-preserving style transfer requires the model to generate stylized outputs with content and style consistency. We introduced TeleStyle V1 to tackle this problem. However, TeleStyle V1 is trained with photorealistic content reference and artistic style reference, which makes it incapable to cope with artistic content reference and realistic style reference in most cases. In this paper, we designed a Self-Distillation data synthesis strategy to construct such triplets from TeleStyle V1. Trained with such self-distilled triplets, our TeleStyle V2 supports Content-Style references in the forms of Realistic-and-Realistic (RnR), Realistic-and-Stylized (RnS), Stylized-and-Realistic (SnR), Stylized-and-Stylized (SnS). In addition, we found Distribution Matching Distillation could preserve the general text-guided image editing capability of the foundation model and fix the content consistency degradation caused by SFT process. Through quantitative evaluations, our TeleStyleV2-QIE-2509-DMD performs at least on par with Qwen-Image-Edit-2509-DMD, demonstrating strong general image editing skills beyond content-preserving style transfer. We observed the content/style reference order confusion problem in TeleStyle V1 and further introduced prompt enhancer to solve it. TeleStyle V2 uses Qwen-Image-Edit's VLM encoder, Qwen2.5-VL-7B, to generate content prompt and style prompt for free. TeleStyle V2 could achieve comparable style transfer performance with state-of-the-art commercial model, gemini-3-pro-image-preview.",
+    "published": "2026-06-16",
+    "authors": [
+      "Shiwen Zhang",
+      "Yifan Xu",
+      "Haibin Huang",
+      "Chi Zhang",
+      "Xuelong Li"
+    ],
+    "url": "https://arxiv.org/abs/2606.20709v1",
+    "score": 31,
+    "base_id": "2606.20709",
+    "length_score": 1,
+    "desc_sents": [
+      "\"TeleStyle V2: Beyond Content-Preserving Style Transfer with Self-Distillation and Distribution-Matching-Distillation\" (2026) contributes methods or analysis in contemporary text-to-image / multimodal generation.",
+      "Given a content reference and a style reference, content-preserving style transfer requires the model to generate stylized outputs with content and style consistency.",
+      "We introduced TeleStyle V1 to tackle this problem.",
+      "For our length question: extract its train/infer token policy, whether length is fixed or mixed, and any stated reason those choices work."
+    ],
+    "length_tags": [
+      "re-prompt/recaption",
+      "LLM/VLM encoder"
+    ]
+  },
+  {
+    "arxiv_id": "2408.03946v1",
+    "title": "Prompting for products: Investigating design space exploration strategies for text-to-image generative models",
+    "abstract": "Text-to-image models are enabling efficient design space exploration, rapidly generating images from text prompts. However, many generative AI tools are imperfect for product design applications as they are not built for the goals and requirements of product design. The unclear link between text input and image output further complicates their application. This work empirically investigates design space exploration strategies that can successfully yield product images that are feasible, novel, and aesthetic, which are three common goals in product design. Specifically, user actions within the global and local editing modes, including their time spent, prompt length, mono vs. multi-criteria prompts, and goal orientation of prompts, are analyzed. Key findings reveal the pivotal role of mono vs. multi-criteria and goal orientation of prompts in achieving specific design goals over time and prompt length. The study recommends prioritizing the use of multi-criteria prompts for feasibility and novelty during global editing, while favoring mono-criteria prompts for aesthetics during local editing. Overall, this paper underscores the nuanced relationship between the AI-driven text-to-image models and their effectiveness in product design, urging designers to carefully structure prompts during different editing modes to better meet the unique demands of product design.",
+    "published": "2024-07-22",
+    "authors": [
+      "Leah Chong",
+      "I-Ping Lo",
+      "Jude Rayan",
+      "Steven Dow",
+      "Faez Ahmed",
+      "Ioanna Lykourentzou"
+    ],
+    "url": "https://arxiv.org/abs/2408.03946v1",
+    "score": 30,
+    "base_id": "2408.03946",
+    "length_score": 1,
+    "desc_sents": [
+      "\"Prompting for products: Investigating design space exploration strategies for text-to-image generative models\" (2024) studies prompt rewriting, optimization, or prompt-side control for image generators.",
+      "Text-to-image models are enabling efficient design space exploration, rapidly generating images from text prompts.",
+      "However, many generative AI tools are imperfect for product design applications as they are not built for the goals and requirements of product design.",
+      "For our length question: extract its train/infer token policy, whether length is fixed or mixed, and any stated reason those choices work."
+    ],
+    "length_tags": []
+  },
+  {
+    "arxiv_id": "2605.23902v1",
+    "title": "PiD: Fast and High-Resolution Latent Decoding with Pixel Diffusion",
+    "abstract": "Most practical high-resolution text-to-image systems, including latent diffusion and autoregressive models, perform generation in a compact latent space, and a decoder maps the generated latents back to pixels. Yet the latent-to-pixel decoder is reconstruction-oriented, optimized to invert the encoder rather than synthesize more details, and becomes increasingly costly at megapixel scale. This drawback calls for a more expressive and efficient decoding paradigm. Motivated by recent progress in scalable pixel-space diffusion, we introduce PiD, a Pixel diffusion Decoder that reformulates latent decoding as conditional pixel diffusion, unifying decoding and upsampling into one generative module. By denoising directly in high-resolution pixel space, PiD synthesizes $4\\times$ and even $8\\times$ upscaled images with low latency. For latent conditioning, a lightweight sigma-aware adapter injects noise-corrupted latents into the pixel diffusion backbone, enabling PiD to decode partially denoised latents and terminate the latent diffusion process early. To further improve efficiency, we distill the model using DMD2, reducing inference to just 4 steps. PiD applies to both conventional VAE latents and semantic latents (e.g., SigLIP, DINOv2) used in recent RAE-based models. PiD decodes latents of $512 \\times 512$ images into $2048 \\times 2048$ pixels in under 1 second with 13 GB peak memory on a consumer RTX 5090, and as fast as 210 ms on a GB200 GPU, about $6\\times$ faster than cascaded diffusion-based super-resolution pipelines with better visual fidelity.",
+    "published": "2026-05-22",
+    "authors": [
+      "Yifan Lu",
+      "Qi Wu",
+      "Jay Zhangjie Wu",
+      "Zian Wang",
+      "Huan Ling",
+      "Sanja Fidler",
+      "Xuanchi Ren"
+    ],
+    "url": "https://arxiv.org/abs/2605.23902v1",
+    "score": 30,
+    "base_id": "2605.23902",
+    "length_score": 1,
+    "desc_sents": [
+      "\"PiD: Fast and High-Resolution Latent Decoding with Pixel Diffusion\" (2026) contributes methods or analysis in contemporary text-to-image / multimodal generation.",
+      "Most practical high-resolution text-to-image systems, including latent diffusion and autoregressive models, perform generation in a compact latent space, and a decoder maps the generated latents back to pixels.",
+      "Yet the latent-to-pixel decoder is reconstruction-oriented, optimized to invert the encoder rather than synthesize more details, and becomes increasingly costly at megapixel scale.",
+      "For our length question: extract its train/infer token policy, whether length is fixed or mixed, and any stated reason those choices work."
+    ],
+    "length_tags": [
+      "re-prompt/recaption",
+      "numeric token budget"
+    ]
+  },
+  {
+    "arxiv_id": "2503.12271v1",
+    "title": "Reflect-DiT: Inference-Time Scaling for Text-to-Image Diffusion Transformers via In-Context Reflection",
+    "abstract": "The predominant approach to advancing text-to-image generation has been training-time scaling, where larger models are trained on more data using greater computational resources. While effective, this approach is computationally expensive, leading to growing interest in inference-time scaling to improve performance. Currently, inference-time scaling for text-to-image diffusion models is largely limited to best-of-N sampling, where multiple images are generated per prompt and a selection model chooses the best output. Inspired by the recent success of reasoning models like DeepSeek-R1 in the language domain, we introduce an alternative to naive best-of-N sampling by equipping text-to-image Diffusion Transformers with in-context reflection capabilities. We propose Reflect-DiT, a method that enables Diffusion Transformers to refine their generations using in-context examples of previously generated images alongside textual feedback describing necessary improvements. Instead of passively relying on random sampling and hoping for a better result in a future generation, Reflect-DiT explicitly tailors its generations to address specific aspects requiring enhancement. Experimental results demonstrate that Reflect-DiT improves performance on the GenEval benchmark (+0.19) using SANA-1.0-1.6B as a base model. Additionally, it achieves a new state-of-the-art score of 0.81 on GenEval while generating only 20 samples per prompt, surpassing the previous best score of 0.80, which was obtained using a significantly larger model (SANA-1.5-4.8B) with 2048 samples under the best-of-N approach.",
+    "published": "2025-03-15",
+    "authors": [
+      "Shufan Li",
+      "Konstantinos Kallidromitis",
+      "Akash Gokul",
+      "Arsh Koneru",
+      "Yusuke Kato",
+      "Kazuki Kozuka",
+      "Aditya Grover"
+    ],
+    "url": "https://arxiv.org/abs/2503.12271v1",
+    "score": 30,
+    "base_id": "2503.12271",
+    "length_score": 1,
+    "desc_sents": [
+      "\"Reflect-DiT: Inference-Time Scaling for Text-to-Image Diffusion Transformers via In-Context Reflection\" (2025) contributes methods or analysis in contemporary text-to-image / multimodal generation.",
+      "The predominant approach to advancing text-to-image generation has been training-time scaling, where larger models are trained on more data using greater computational resources.",
+      "While effective, this approach is computationally expensive, leading to growing interest in inference-time scaling to improve performance.",
+      "For our length question: extract its train/infer token policy, whether length is fixed or mixed, and any stated reason those choices work."
+    ],
+    "length_tags": []
+  },
+  {
+    "arxiv_id": "2601.06202v1",
+    "title": "QwenStyle: Content-Preserving Style Transfer with Qwen-Image-Edit",
+    "abstract": "Content-Preserving Style transfer, given content and style references, remains challenging for Diffusion Transformers (DiTs) due to its internal entangled content and style features. In this technical report, we propose the first content-preserving style transfer model trained on Qwen-Image-Edit, which activates Qwen-Image-Edit's strong content preservation and style customization capability. We collected and filtered high quality data of limited specific styles and synthesized triplets with thousands categories of style images in-the-wild. We introduce the Curriculum Continual Learning framework to train QwenStyle with such mixture of clean and noisy triplets, which enables QwenStyle to generalize to unseen styles without degradation of the precise content preservation capability. Our QwenStyle V1 achieves state-of-the-art performance in three core metrics: style similarity, content consistency, and aesthetic quality.",
+    "published": "2026-01-08",
+    "authors": [
+      "Shiwen Zhang",
+      "Haibin Huang",
+      "Chi Zhang",
+      "Xuelong Li"
+    ],
+    "url": "https://arxiv.org/abs/2601.06202v1",
+    "score": 30,
+    "base_id": "2601.06202",
+    "length_score": 0,
+    "desc_sents": [
+      "\"QwenStyle: Content-Preserving Style Transfer with Qwen-Image-Edit\" (2026) is a modern system/report in the LLM/VLM-conditioned image generation line.",
+      "Content-Preserving Style transfer, given content and style references, remains challenging for Diffusion Transformers (DiTs) due to its internal entangled content and style features.",
+      "In this technical report, we propose the first content-preserving style transfer model trained on Qwen-Image-Edit, which activates Qwen-Image-Edit's strong content preservation and style customization capability.",
+      "For our length question: extract its train/infer token policy, whether length is fixed or mixed, and any stated reason those choices work."
+    ],
+    "length_tags": [
+      "long/dense preferred",
+      "LLM/VLM encoder"
+    ]
+  },
+  {
+    "arxiv_id": "2508.04732v1",
+    "title": "LumiGen: An LVLM-Enhanced Iterative Framework for Fine-Grained Text-to-Image Generation",
+    "abstract": "Text-to-Image (T2I) generation has made significant advancements with diffusion models, yet challenges persist in handling complex instructions, ensuring fine-grained content control, and maintaining deep semantic consistency. Existing T2I models often struggle with tasks like accurate text rendering, precise pose generation, or intricate compositional coherence. Concurrently, Vision-Language Models (LVLMs) have demonstrated powerful capabilities in cross-modal understanding and instruction following. We propose LumiGen, a novel LVLM-enhanced iterative framework designed to elevate T2I model performance, particularly in areas requiring fine-grained control, through a closed-loop, LVLM-driven feedback mechanism. LumiGen comprises an Intelligent Prompt Parsing & Augmentation (IPPA) module for proactive prompt enhancement and an Iterative Visual Feedback & Refinement (IVFR) module, which acts as a \"visual critic\" to iteratively correct and optimize generated images. Evaluated on the challenging LongBench-T2I Benchmark, LumiGen achieves a superior average score of 3.08, outperforming state-of-the-art baselines. Notably, our framework demonstrates significant improvements in critical dimensions such as text rendering and pose expression, validating the effectiveness of LVLM integration for more controllable and higher-quality image generation.",
+    "published": "2025-08-05",
+    "authors": [
+      "Xiaoqi Dong",
+      "Xiangyu Zhou",
+      "Nicholas Evans",
+      "Yujia Lin"
+    ],
+    "url": "https://arxiv.org/abs/2508.04732v1",
+    "score": 29,
+    "base_id": "2508.04732",
+    "length_score": 1,
+    "desc_sents": [
+      "\"LumiGen: An LVLM-Enhanced Iterative Framework for Fine-Grained Text-to-Image Generation\" (2025) contributes methods or analysis in contemporary text-to-image / multimodal generation.",
+      "Text-to-Image (T2I) generation has made significant advancements with diffusion models, yet challenges persist in handling complex instructions, ensuring fine-grained content control, and maintaining deep semantic consistency.",
+      "Existing T2I models often struggle with tasks like accurate text rendering, precise pose generation, or intricate compositional coherence.",
+      "For our length question: extract its train/infer token policy, whether length is fixed or mixed, and any stated reason those choices work."
+    ],
+    "length_tags": [
+      "re-prompt/recaption",
+      "LLM/VLM encoder"
+    ]
+  },
+  {
+    "arxiv_id": "2507.16154v1",
+    "title": "LSSGen: Leveraging Latent Space Scaling in Flow and Diffusion for Efficient Text to Image Generation",
+    "abstract": "Flow matching and diffusion models have shown impressive results in text-to-image generation, producing photorealistic images through an iterative denoising process. A common strategy to speed up synthesis is to perform early denoising at lower resolutions. However, traditional methods that downscale and upscale in pixel space often introduce artifacts and distortions. These issues arise when the upscaled images are re-encoded into the latent space, leading to degraded final image quality. To address this, we propose {\\bf Latent Space Scaling Generation (LSSGen)}, a framework that performs resolution scaling directly in the latent space using a lightweight latent upsampler. Without altering the Transformer or U-Net architecture, LSSGen improves both efficiency and visual quality while supporting flexible multi-resolution generation. Our comprehensive evaluation covering text-image alignment and perceptual quality shows that LSSGen significantly outperforms conventional scaling approaches. When generating $1024^2$ images at similar speeds, it achieves up to 246\\% TOPIQ score improvement.",
+    "published": "2025-07-22",
+    "authors": [
+      "Jyun-Ze Tang",
+      "Chih-Fan Hsu",
+      "Jeng-Lin Li",
+      "Ming-Ching Chang",
+      "Wei-Chao Chen"
+    ],
+    "url": "https://arxiv.org/abs/2507.16154v1",
+    "score": 29,
+    "base_id": "2507.16154",
+    "length_score": 1,
+    "desc_sents": [
+      "\"LSSGen: Leveraging Latent Space Scaling in Flow and Diffusion for Efficient Text to Image Generation\" (2025) contributes methods or analysis in contemporary text-to-image / multimodal generation.",
+      "Flow matching and diffusion models have shown impressive results in text-to-image generation, producing photorealistic images through an iterative denoising process.",
+      "A common strategy to speed up synthesis is to perform early denoising at lower resolutions.",
+      "For our length question: extract its train/infer token policy, whether length is fixed or mixed, and any stated reason those choices work."
+    ],
+    "length_tags": [
+      "re-prompt/recaption"
+    ]
+  },
+  {
+    "arxiv_id": "2603.21045v5",
+    "title": "LPNSR: Optimal Noise-Guided Diffusion Image Super-Resolution Via Learnable Noise Prediction",
+    "abstract": "Diffusion-based image super-resolution (SR) aims to reconstruct high-resolution (HR) images from low-resolution (LR) observations. However, the inherent randomness injected during the reverse diffusion process causes the performance of diffusion-based SR models to vary significantly across different sampling runs, particularly when the sampling trajectory is compressed into a limited number of steps. A critical yet underexplored question is: what is the optimal noise to inject at each intermediate diffusion step? In this paper, we establish a theoretical framework that derives the closed-form analytical solution for optimal intermediate noise in diffusion models from a maximum likelihood estimation perspective, revealing a consistent conditional dependence structure that generalizes across diffusion paradigms. We instantiate this framework under the residual-shifting diffusion paradigm and accordingly design an LR-guided multi-input-aware noise predictor to replace random Gaussian noise. We further mitigate initialization bias with a high-quality pre-upsampling network. The compact 4-step trajectory uniquely enables end-to-end optimization of the entire reverse chain, which is computationally prohibitive for conventional long-trajectory diffusion models. Extensive experiments demonstrate that LPNSR achieves state-of-the-art perceptual performance on both synthetic and real-world datasets, without relying on any large-scale text-to-image priors. The source code of our method can be found at https://github.com/Faze-Hsw/LPNSR.",
+    "published": "2026-03-22",
+    "authors": [
+      "Shuwei Huang",
+      "Shizhuo Liu",
+      "Zijun Wei"
+    ],
+    "url": "https://arxiv.org/abs/2603.21045v5",
+    "score": 29,
+    "base_id": "2603.21045",
+    "length_score": 2,
+    "desc_sents": [
+      "\"LPNSR: Optimal Noise-Guided Diffusion Image Super-Resolution Via Learnable Noise Prediction\" (2026) contributes methods or analysis in contemporary text-to-image / multimodal generation.",
+      "Diffusion-based image super-resolution (SR) aims to reconstruct high-resolution (HR) images from low-resolution (LR) observations.",
+      "However, the inherent randomness injected during the reverse diffusion process causes the performance of diffusion-based SR models to vary significantly across different sampling runs, particularly when the sampling trajectory is compressed into a limited number of steps.",
+      "For our length question: extract its train/infer token policy, whether length is fixed or mixed, and any stated reason those choices work."
+    ],
+    "length_tags": [
+      "re-prompt/recaption"
+    ]
+  },
+  {
+    "arxiv_id": "2408.10119v1",
+    "title": "Factorized-Dreamer: Training A High-Quality Video Generator with Limited and Low-Quality Data",
+    "abstract": "Text-to-video (T2V) generation has gained significant attention due to its wide applications to video generation, editing, enhancement and translation, \\etc. However, high-quality (HQ) video synthesis is extremely challenging because of the diverse and complex motions existed in real world. Most existing works struggle to address this problem by collecting large-scale HQ videos, which are inaccessible to the community. In this work, we show that publicly available limited and low-quality (LQ) data are sufficient to train a HQ video generator without recaptioning or finetuning. We factorize the whole T2V generation process into two steps: generating an image conditioned on a highly descriptive caption, and synthesizing the video conditioned on the generated image and a concise caption of motion details. Specifically, we present \\emph{Factorized-Dreamer}, a factorized spatiotemporal framework with several critical designs for T2V generation, including an adapter to combine text and image embeddings, a pixel-aware cross attention module to capture pixel-level image information, a T5 text encoder to better understand motion description, and a PredictNet to supervise optical flows. We further present a noise schedule, which plays a key role in ensuring the quality and stability of video generation. Our model lowers the requirements in detailed captions and HQ videos, and can be directly trained on limited LQ datasets with noisy and brief captions such as WebVid-10M, largely alleviating the cost to collect large-scale HQ video-text pairs. Extensive experiments in a variety of T2V and image-to-video generation tasks demonstrate the effectiveness of our proposed Factorized-Dreamer. Our source codes are available at \\url{https://github.com/yangxy/Factorized-Dreamer/}.",
+    "published": "2024-08-19",
+    "authors": [
+      "Tao Yang",
+      "Yangming Shi",
+      "Yunwen Huang",
+      "Feng Chen",
+      "Yin Zheng",
+      "Lei Zhang"
+    ],
+    "url": "https://arxiv.org/abs/2408.10119v1",
+    "score": 29,
+    "base_id": "2408.10119",
+    "length_score": 1,
+    "desc_sents": [
+      "\"Factorized-Dreamer: Training A High-Quality Video Generator with Limited and Low-Quality Data\" (2024) contributes methods or analysis in contemporary text-to-image / multimodal generation.",
+      "Text-to-video (T2V) generation has gained significant attention due to its wide applications to video generation, editing, enhancement and translation, \\etc.",
+      "However, high-quality (HQ) video synthesis is extremely challenging because of the diverse and complex motions existed in real world.",
+      "For our length question: extract its train/infer token policy, whether length is fixed or mixed, and any stated reason those choices work."
+    ],
+    "length_tags": [
+      "long/dense preferred",
+      "re-prompt/recaption"
+    ]
+  },
+  {
+    "arxiv_id": "2607.18724v1",
+    "title": "One Rewrite to Fix Them All? Type-Aware Repair Allocation for Text-to-Image Prompt Optimization",
+    "abstract": "Text-to-image (T2I) generators often fail to follow their prompts faithfully, producing wrong counts, swapped attributes, ambiguous relations, and illegible text. Prompt optimization repairs such failures by rewriting the user prompt, requiring no generator retraining, and has yielded promising results. However, existing optimizers absorb heterogeneous failures into one uniform prompt expansion, even though each calls for different repair language. We formulate semantic prompt optimization as atomic repair allocation: each failed proposition is routed to a type-conditioned repair operator before the resulting local constraints are compiled into one executable prompt. We instantiate this formulation in the training-free Type-Aware Repair Allocation (TARA) framework, which separates diagnosis, allocation, compilation, and a semantic repair gate, an accept-or-revert controller over exactly one prescribed repair that prevents semantic regressions. Extensive experiments on DSG and TIFA across four frozen generators demonstrate that TARA achieves the best semantic accuracy in all eight benchmark-generator cells, improving over VisualPrompter by 5.6 and 2.6 points on DSG and TIFA, respectively, while maintaining image quality and running fastest in our matched local setting at 16.0 seconds versus 20.0 seconds per prompt.",
+    "published": "2026-07-21",
+    "authors": [
+      "Haoyue Liu",
+      "Xiaoyu Ma",
+      "Ye Chen",
+      "Shuguang Cui",
+      "Xiaoying Tang"
+    ],
+    "url": "https://arxiv.org/abs/2607.18724v1",
+    "score": 29,
+    "base_id": "2607.18724",
+    "length_score": 1,
+    "desc_sents": [
+      "\"One Rewrite to Fix Them All? Type-Aware Repair Allocation for Text-to-Image Prompt Optimization\" (2026) studies prompt rewriting, optimization, or prompt-side control for image generators.",
+      "Text-to-image (T2I) generators often fail to follow their prompts faithfully, producing wrong counts, swapped attributes, ambiguous relations, and illegible text.",
+      "Prompt optimization repairs such failures by rewriting the user prompt, requiring no generator retraining, and has yielded promising results.",
+      "For our length question: extract its train/infer token policy, whether length is fixed or mixed, and any stated reason those choices work."
+    ],
+    "length_tags": [
+      "re-prompt/recaption"
+    ]
+  },
+  {
+    "arxiv_id": "2506.21874v1",
+    "title": "On the Feasibility of Poisoning Text-to-Image AI Models via Adversarial Mislabeling",
+    "abstract": "Today's text-to-image generative models are trained on millions of images sourced from the Internet, each paired with a detailed caption produced by Vision-Language Models (VLMs). This part of the training pipeline is critical for supplying the models with large volumes of high-quality image-caption pairs during training. However, recent work suggests that VLMs are vulnerable to stealthy adversarial attacks, where adversarial perturbations are added to images to mislead the VLMs into producing incorrect captions. In this paper, we explore the feasibility of adversarial mislabeling attacks on VLMs as a mechanism to poisoning training pipelines for text-to-image models. Our experiments demonstrate that VLMs are highly vulnerable to adversarial perturbations, allowing attackers to produce benign-looking images that are consistently miscaptioned by the VLM models. This has the effect of injecting strong \"dirty-label\" poison samples into the training pipeline for text-to-image models, successfully altering their behavior with a small number of poisoned samples. We find that while potential defenses can be effective, they can be targeted and circumvented by adaptive attackers. This suggests a cat-and-mouse game that is likely to reduce the quality of training data and increase the cost of text-to-image model development. Finally, we demonstrate the real-world effectiveness of these attacks, achieving high attack success (over 73%) even in black-box scenarios against commercial VLMs (Google Vertex AI and Microsoft Azure).",
+    "published": "2025-06-27",
+    "authors": [
+      "Stanley Wu",
+      "Ronik Bhaskar",
+      "Anna Yoo Jeong Ha",
+      "Shawn Shan",
+      "Haitao Zheng",
+      "Ben Y. Zhao"
+    ],
+    "url": "https://arxiv.org/abs/2506.21874v1",
+    "score": 28,
+    "base_id": "2506.21874",
+    "length_score": 0,
+    "desc_sents": [
+      "\"On the Feasibility of Poisoning Text-to-Image AI Models via Adversarial Mislabeling\" (2025) contributes methods or analysis in contemporary text-to-image / multimodal generation.",
+      "Today's text-to-image generative models are trained on millions of images sourced from the Internet, each paired with a detailed caption produced by Vision-Language Models (VLMs).",
+      "This part of the training pipeline is critical for supplying the models with large volumes of high-quality image-caption pairs during training.",
+      "For our length question: extract its train/infer token policy, whether length is fixed or mixed, and any stated reason those choices work."
+    ],
+    "length_tags": [
+      "long/dense preferred",
+      "LLM/VLM encoder"
+    ]
+  },
+  {
+    "arxiv_id": "2510.02987v1",
+    "title": "TIT-Score: Evaluating Long-Prompt Based Text-to-Image Alignment via Text-to-Image-to-Text Consistency",
+    "abstract": "With the rapid advancement of large multimodal models (LMMs), recent text-to-image (T2I) models can generate high-quality images and demonstrate great alignment to short prompts. However, they still struggle to effectively understand and follow long and detailed prompts, displaying inconsistent generation. To address this challenge, we introduce LPG-Bench, a comprehensive benchmark for evaluating long-prompt-based text-to-image generation. LPG-Bench features 200 meticulously crafted prompts with an average length of over 250 words, approaching the input capacity of several leading commercial models. Using these prompts, we generate 2,600 images from 13 state-of-the-art models and further perform comprehensive human-ranked annotations. Based on LPG-Bench, we observe that state-of-the-art T2I alignment evaluation metrics exhibit poor consistency with human preferences on long-prompt-based image generation. To address the gap, we introduce a novel zero-shot metric based on text-to-image-to-text consistency, termed TIT, for evaluating long-prompt-generated images. The core concept of TIT is to quantify T2I alignment by directly comparing the consistency between the raw prompt and the LMM-produced description on the generated image, which includes an efficient score-based instantiation TIT-Score and a large-language-model (LLM) based instantiation TIT-Score-LLM. Extensive experiments demonstrate that our framework achieves superior alignment with human judgment compared to CLIP-score, LMM-score, etc., with TIT-Score-LLM attaining a 7.31% absolute improvement in pairwise accuracy over the strongest baseline. LPG-Bench and TIT methods together offer a deeper perspective to benchmark and foster the development of T2I models. All resources will be made publicly available.",
+    "published": "2025-10-03",
+    "authors": [
+      "Juntong Wang",
+      "Huiyu Duan",
+      "Jiarui Wang",
+      "Ziheng Jia",
+      "Guangtao Zhai",
+      "Xiongkuo Min"
+    ],
+    "url": "https://arxiv.org/abs/2510.02987v1",
+    "score": 28,
+    "base_id": "2510.02987",
+    "length_score": 1,
+    "desc_sents": [
+      "\"TIT-Score: Evaluating Long-Prompt Based Text-to-Image Alignment via Text-to-Image-to-Text Consistency\" (2025) studies prompt rewriting, optimization, or prompt-side control for image generators.",
+      "With the rapid advancement of large multimodal models (LMMs), recent text-to-image (T2I) models can generate high-quality images and demonstrate great alignment to short prompts.",
+      "However, they still struggle to effectively understand and follow long and detailed prompts, displaying inconsistent generation.",
+      "For our length question: extract its train/infer token policy, whether length is fixed or mixed, and any stated reason those choices work."
+    ],
+    "length_tags": [
+      "discusses short prompts",
+      "LLM/VLM encoder"
+    ]
+  },
+  {
+    "arxiv_id": "2509.21360v1",
+    "title": "Multimodal Prompt Decoupling Attack on the Safety Filters in Text-to-Image Models",
+    "abstract": "Text-to-image (T2I) models have been widely applied in generating high-fidelity images across various domains. However, these models may also be abused to produce Not-Safe-for-Work (NSFW) content via jailbreak attacks. Existing jailbreak methods primarily manipulate the textual prompt, leaving potential vulnerabilities in image-based inputs largely unexplored. Moreover, text-based methods face challenges in bypassing the model's safety filters. In response to these limitations, we propose the Multimodal Prompt Decoupling Attack (MPDA), which utilizes image modality to separate the harmful semantic components of the original unsafe prompt. MPDA follows three core steps: firstly, a large language model (LLM) decouples unsafe prompts into pseudo-safe prompts and harmful prompts. The former are seemingly harmless sub-prompts that can bypass filters, while the latter are sub-prompts with unsafe semantics that trigger filters. Subsequently, the LLM rewrites the harmful prompts into natural adversarial prompts to bypass safety filters, which guide the T2I model to modify the base image into an NSFW output. Finally, to ensure semantic consistency between the generated NSFW images and the original unsafe prompts, the visual language model generates image captions, providing a new pathway to guide the LLM in iterative rewriting and refining the generated content.",
+    "published": "2025-09-21",
+    "authors": [
+      "Xingkai Peng",
+      "Jun Jiang",
+      "Meng Tong",
+      "Shuai Li",
+      "Weiming Zhang",
+      "Nenghai Yu",
+      "Kejiang Chen"
+    ],
+    "url": "https://arxiv.org/abs/2509.21360v1",
+    "score": 28,
+    "base_id": "2509.21360",
+    "length_score": 1,
+    "desc_sents": [
+      "\"Multimodal Prompt Decoupling Attack on the Safety Filters in Text-to-Image Models\" (2025) studies prompt rewriting, optimization, or prompt-side control for image generators.",
+      "Text-to-image (T2I) models have been widely applied in generating high-fidelity images across various domains.",
+      "However, these models may also be abused to produce Not-Safe-for-Work (NSFW) content via jailbreak attacks.",
+      "For our length question: extract its train/infer token policy, whether length is fixed or mixed, and any stated reason those choices work."
+    ],
+    "length_tags": [
+      "re-prompt/recaption",
+      "LLM/VLM encoder"
+    ]
+  },
+  {
+    "arxiv_id": "2501.18096v1",
+    "title": "LLMs can see and hear without any training",
+    "abstract": "We present MILS: Multimodal Iterative LLM Solver, a surprisingly simple, training-free approach, to imbue multimodal capabilities into your favorite LLM. Leveraging their innate ability to perform multi-step reasoning, MILS prompts the LLM to generate candidate outputs, each of which are scored and fed back iteratively, eventually generating a solution to the task. This enables various applications that typically require training specialized models on task-specific data. In particular, we establish a new state-of-the-art on emergent zero-shot image, video and audio captioning. MILS seamlessly applies to media generation as well, discovering prompt rewrites to improve text-to-image generation, and even edit prompts for style transfer! Finally, being a gradient-free optimization approach, MILS can invert multimodal embeddings into text, enabling applications like cross-modal arithmetic.",
+    "published": "2025-01-30",
+    "authors": [
+      "Kumar Ashutosh",
+      "Yossi Gandelsman",
+      "Xinlei Chen",
+      "Ishan Misra",
+      "Rohit Girdhar"
+    ],
+    "url": "https://arxiv.org/abs/2501.18096v1",
+    "score": 28,
+    "base_id": "2501.18096",
+    "length_score": 1,
+    "desc_sents": [
+      "\"LLMs can see and hear without any training\" (2025) contributes methods or analysis in contemporary text-to-image / multimodal generation.",
+      "We present MILS: Multimodal Iterative LLM Solver, a surprisingly simple, training-free approach, to imbue multimodal capabilities into your favorite LLM.",
+      "Leveraging their innate ability to perform multi-step reasoning, MILS prompts the LLM to generate candidate outputs, each of which are scored and fed back iteratively, eventually generating a solution to the task.",
+      "For our length question: extract its train/infer token policy, whether length is fixed or mixed, and any stated reason those choices work."
+    ],
+    "length_tags": [
+      "re-prompt/recaption",
+      "LLM/VLM encoder"
+    ]
+  },
+  {
+    "arxiv_id": "2504.13123v2",
+    "title": "Low-hallucination Synthetic Captions for Large-Scale Vision-Language Model Pre-training",
+    "abstract": "In recent years, the field of vision-language model pre-training has experienced rapid advancements, driven primarily by the continuous enhancement of textual capabilities in large language models. However, existing training paradigms for multimodal large language models heavily rely on high-quality image-text pairs. As models and data scales grow exponentially, the availability of such meticulously curated data has become increasingly scarce and saturated, thereby severely limiting further advancements in this domain. This study investigates scalable caption generation techniques for vision-language model pre-training and demonstrates that large-scale low-hallucination synthetic captions can serve dual purposes: 1) acting as a viable alternative to real-world data for pre-training paradigms and 2) achieving superior performance enhancement when integrated into vision-language models through empirical validation. This paper presents following key contributions: 1) a novel pipeline for generating high-quality, low-hallucination, and knowledge-rich synthetic captions. Our continuous DPO methodology yields remarkable results in reducing hallucinations. Specifically, the non-hallucination caption rate on a held-out test set increases from 48.3% to 77.9% for a 7B-size model. 2) Comprehensive empirical validation reveals that our synthetic captions confer superior pre-training advantages over their counterparts. Across 15 vision language tasks, the model trained with our data achieves a significant performance gain of at least 6.2% compared to identical images with alt-text. In 20 common cognitive domains, the model trained with our data outperforms the alt-text data by at least 7.5%. Meanwhile, it also offers considerable support in the text-to-image domain. With our dataset, the FID score is reduced by 17.1 on a real-world validation benchmark and 13.3 on the MSCOCO validation benchmark.",
+    "published": "2025-04-17",
+    "authors": [
+      "Xinsong Zhang",
+      "Yarong Zeng",
+      "Xinting Huang",
+      "Hu Hu",
+      "Runquan Xie",
+      "Han Hu",
+      "Zhanhui Kang"
+    ],
+    "url": "https://arxiv.org/abs/2504.13123v2",
+    "score": 28,
+    "base_id": "2504.13123",
+    "length_score": 1,
+    "desc_sents": [
+      "\"Low-hallucination Synthetic Captions for Large-Scale Vision-Language Model Pre-training\" (2025) focuses on captioning/recaptioning data that feeds text-to-image training.",
+      "In recent years, the field of vision-language model pre-training has experienced rapid advancements, driven primarily by the continuous enhancement of textual capabilities in large language models.",
+      "However, existing training paradigms for multimodal large language models heavily rely on high-quality image-text pairs.",
+      "For our length question: extract its train/infer token policy, whether length is fixed or mixed, and any stated reason those choices work."
+    ],
+    "length_tags": [
+      "numeric token budget"
+    ]
+  },
+  {
+    "arxiv_id": "2403.05135v1",
+    "title": "ELLA: Equip Diffusion Models with LLM for Enhanced Semantic Alignment",
+    "abstract": "Diffusion models have demonstrated remarkable performance in the domain of text-to-image generation. However, most widely used models still employ CLIP as their text encoder, which constrains their ability to comprehend dense prompts, encompassing multiple objects, detailed attributes, complex relationships, long-text alignment, etc. In this paper, we introduce an Efficient Large Language Model Adapter, termed ELLA, which equips text-to-image diffusion models with powerful Large Language Models (LLM) to enhance text alignment without training of either U-Net or LLM. To seamlessly bridge two pre-trained models, we investigate a range of semantic alignment connector designs and propose a novel module, the Timestep-Aware Semantic Connector (TSC), which dynamically extracts timestep-dependent conditions from LLM. Our approach adapts semantic features at different stages of the denoising process, assisting diffusion models in interpreting lengthy and intricate prompts over sampling timesteps. Additionally, ELLA can be readily incorporated with community models and tools to improve their prompt-following capabilities. To assess text-to-image models in dense prompt following, we introduce Dense Prompt Graph Benchmark (DPG-Bench), a challenging benchmark consisting of 1K dense prompts. Extensive experiments demonstrate the superiority of ELLA in dense prompt following compared to state-of-the-art methods, particularly in multiple object compositions involving diverse attributes and relationships.",
+    "published": "2024-03-08",
+    "authors": [
+      "Xiwei Hu",
+      "Rui Wang",
+      "Yixiao Fang",
+      "Bin Fu",
+      "Pei Cheng",
+      "Gang Yu"
+    ],
+    "url": "https://arxiv.org/abs/2403.05135v1",
+    "score": 27,
+    "base_id": "2403.05135",
+    "length_score": 1,
+    "desc_sents": [
+      "\"ELLA: Equip Diffusion Models with LLM for Enhanced Semantic Alignment\" (2024) contributes methods or analysis in contemporary text-to-image / multimodal generation.",
+      "Diffusion models have demonstrated remarkable performance in the domain of text-to-image generation.",
+      "However, most widely used models still employ CLIP as their text encoder, which constrains their ability to comprehend dense prompts, encompassing multiple objects, detailed attributes, complex relationships, long-text alignment, etc.",
+      "For our length question: extract its train/infer token policy, whether length is fixed or mixed, and any stated reason those choices work."
+    ],
+    "length_tags": [
+      "LLM/VLM encoder"
+    ]
+  },
+  {
+    "arxiv_id": "2509.21375v1",
+    "title": "Automated Prompt Generation for Creative and Counterfactual Text-to-image Synthesis",
+    "abstract": "Text-to-image generation has advanced rapidly with large-scale multimodal training, yet fine-grained controllability remains a critical challenge. Counterfactual controllability, defined as the capacity to deliberately generate images that contradict common-sense patterns, remains a major challenge but plays a crucial role in enabling creativity and exploratory applications. In this work, we address this gap with a focus on counterfactual size (e.g., generating a tiny walrus beside a giant button) and propose an automatic prompt engineering framework that adapts base prompts into revised prompts for counterfactual images. The framework comprises three components: an image evaluator that guides dataset construction by identifying successful image generations, a supervised prompt rewriter that produces revised prompts, and a DPO-trained ranker that selects the optimal revised prompt. We construct the first counterfactual size text-image dataset and enhance the image evaluator by extending Grounded SAM with refinements, achieving a 114 percent improvement over its backbone. Experiments demonstrate that our method outperforms state-of-the-art baselines and ChatGPT-4o, establishing a foundation for future research on counterfactual controllability.",
+    "published": "2025-09-23",
+    "authors": [
+      "Aleksa Jelaca",
+      "Ying Jiao",
+      "Chang Tian",
+      "Marie-Francine Moens"
+    ],
+    "url": "https://arxiv.org/abs/2509.21375v1",
+    "score": 27,
+    "base_id": "2509.21375",
+    "length_score": 1,
+    "desc_sents": [
+      "\"Automated Prompt Generation for Creative and Counterfactual Text-to-image Synthesis\" (2025) studies prompt rewriting, optimization, or prompt-side control for image generators.",
+      "Text-to-image generation has advanced rapidly with large-scale multimodal training, yet fine-grained controllability remains a critical challenge.",
+      "Counterfactual controllability, defined as the capacity to deliberately generate images that contradict common-sense patterns, remains a major challenge but plays a crucial role in enabling creativity and exploratory applications.",
+      "For our length question: extract its train/infer token policy, whether length is fixed or mixed, and any stated reason those choices work."
+    ],
+    "length_tags": [
+      "re-prompt/recaption"
+    ]
+  },
+  {
+    "arxiv_id": "2503.12526v1",
+    "title": "EditID: Training-Free Editable ID Customization for Text-to-Image Generation",
+    "abstract": "We propose EditID, a training-free approach based on the DiT architecture, which achieves highly editable customized IDs for text to image generation. Existing text-to-image models for customized IDs typically focus more on ID consistency while neglecting editability. It is challenging to alter facial orientation, character attributes, and other features through prompts. EditID addresses this by deconstructing the text-to-image model for customized IDs into an image generation branch and a character feature branch. The character feature branch is further decoupled into three modules: feature extraction, feature fusion, and feature integration. By introducing a combination of mapping features and shift features, along with controlling the intensity of ID feature integration, EditID achieves semantic compression of local features across network depths, forming an editable feature space. This enables the successful generation of high-quality images with editable IDs while maintaining ID consistency, achieving excellent results in the IBench evaluation, which is an editability evaluation framework for the field of customized ID text-to-image generation that quantitatively demonstrates the superior performance of EditID. EditID is the first text-to-image solution to propose customizable ID editability on the DiT architecture, meeting the demands of long prompts and high quality image generation.",
+    "published": "2025-03-16",
+    "authors": [
+      "Guandong Li",
+      "Zhaobin Chu"
+    ],
+    "url": "https://arxiv.org/abs/2503.12526v1",
+    "score": 27,
+    "base_id": "2503.12526",
+    "length_score": 1,
+    "desc_sents": [
+      "\"EditID: Training-Free Editable ID Customization for Text-to-Image Generation\" (2025) contributes methods or analysis in contemporary text-to-image / multimodal generation.",
+      "We propose EditID, a training-free approach based on the DiT architecture, which achieves highly editable customized IDs for text to image generation.",
+      "Existing text-to-image models for customized IDs typically focus more on ID consistency while neglecting editability.",
+      "For our length question: extract its train/infer token policy, whether length is fixed or mixed, and any stated reason those choices work."
+    ],
+    "length_tags": [
+      "long/dense preferred"
+    ]
+  },
+  {
+    "arxiv_id": "2503.17794v4",
+    "title": "Progressive Prompt Detailing for Improved Alignment in Text-to-Image Generative Models",
+    "abstract": "Text-to-image generative models often struggle with long prompts detailing complex scenes, diverse objects with distinct visual characteristics and spatial relationships. In this work, we propose SCoPE (Scheduled interpolation of Coarse-to-fine Prompt Embeddings), a training-free method to improve text-to-image alignment by progressively refining the input prompt in a coarse-to-fine-grained manner. Given a detailed input prompt, we first decompose it into multiple sub-prompts which evolve from describing broad scene layout to highly intricate details. During inference, we interpolate between these sub-prompts and thus progressively introduce finer-grained details into the generated image. Our training-free plug-and-play approach significantly enhances prompt alignment, achieves an average improvement of more than +8 in Visual Question Answering (VQA) scores over the Stable Diffusion baselines on 83% of the prompts from the GenAI-Bench dataset.",
+    "published": "2025-03-22",
+    "authors": [
+      "Ketan Suhaas Saichandran",
+      "Xavier Thomas",
+      "Prakhar Kaushik",
+      "Deepti Ghadiyaram"
+    ],
+    "url": "https://arxiv.org/abs/2503.17794v4",
+    "score": 27,
+    "base_id": "2503.17794",
+    "length_score": 1,
+    "desc_sents": [
+      "\"Progressive Prompt Detailing for Improved Alignment in Text-to-Image Generative Models\" (2025) studies prompt rewriting, optimization, or prompt-side control for image generators.",
+      "Text-to-image generative models often struggle with long prompts detailing complex scenes, diverse objects with distinct visual characteristics and spatial relationships.",
+      "In this work, we propose SCoPE (Scheduled interpolation of Coarse-to-fine Prompt Embeddings), a training-free method to improve text-to-image alignment by progressively refining the input prompt in a coarse-to-fine-grained manner.",
+      "For our length question: extract its train/infer token policy, whether length is fixed or mixed, and any stated reason those choices work."
+    ],
+    "length_tags": [
+      "long/dense preferred"
+    ]
+  },
+  {
+    "arxiv_id": "2509.05659v1",
+    "title": "EditIDv2: Editable ID Customization with Data-Lubricated ID Feature Integration for Text-to-Image Generation",
+    "abstract": "We propose EditIDv2, a tuning-free solution specifically designed for high-complexity narrative scenes and long text inputs. Existing character editing methods perform well under simple prompts, but often suffer from degraded editing capabilities, semantic understanding biases, and identity consistency breakdowns when faced with long text narratives containing multiple semantic layers, temporal logic, and complex contextual relationships. In EditID, we analyzed the impact of the ID integration module on editability. In EditIDv2, we further explore and address the influence of the ID feature integration module. The core of EditIDv2 is to discuss the issue of editability injection under minimal data lubrication. Through a sophisticated decomposition of PerceiverAttention, the introduction of ID loss and joint dynamic training with the diffusion model, as well as an offline fusion strategy for the integration module, we achieve deep, multi-level semantic editing while maintaining identity consistency in complex narrative environments using only a small amount of data lubrication. This meets the demands of long prompts and high-quality image generation, and achieves excellent results in the IBench evaluation.",
+    "published": "2025-09-06",
+    "authors": [
+      "Guandong Li",
+      "Zhaobin Chu"
+    ],
+    "url": "https://arxiv.org/abs/2509.05659v1",
+    "score": 27,
+    "base_id": "2509.05659",
+    "length_score": 2,
+    "desc_sents": [
+      "\"EditIDv2: Editable ID Customization with Data-Lubricated ID Feature Integration for Text-to-Image Generation\" (2025) contributes methods or analysis in contemporary text-to-image / multimodal generation.",
+      "We propose EditIDv2, a tuning-free solution specifically designed for high-complexity narrative scenes and long text inputs.",
+      "Existing character editing methods perform well under simple prompts, but often suffer from degraded editing capabilities, semantic understanding biases, and identity consistency breakdowns when faced with long text narratives containing multiple semantic layers, temporal logic, and complex contextual relationships.",
+      "For our length question: extract its train/infer token policy, whether length is fixed or mixed, and any stated reason those choices work."
+    ],
+    "length_tags": [
+      "long/dense preferred"
+    ]
+  },
+  {
+    "arxiv_id": "2511.21180v1",
+    "title": "CAHS-Attack: CLIP-Aware Heuristic Search Attack Method for Stable Diffusion",
+    "abstract": "Diffusion models exhibit notable fragility when faced with adversarial prompts, and strengthening attack capabilities is crucial for uncovering such vulnerabilities and building more robust generative systems. Existing works often rely on white-box access to model gradients or hand-crafted prompt engineering, which is infeasible in real-world deployments due to restricted access or poor attack effect. In this paper, we propose CAHS-Attack , a CLIP-Aware Heuristic Search attack method. CAHS-Attack integrates Monte Carlo Tree Search (MCTS) to perform fine-grained suffix optimization, leveraging a constrained genetic algorithm to preselect high-potential adversarial prompts as root nodes, and retaining the most semantically disruptive outcome at each simulation rollout for efficient local search. Extensive experiments demonstrate that our method achieves state-of-the-art attack performance across both short and long prompts of varying semantics. Furthermore, we find that the fragility of SD models can be attributed to the inherent vulnerability of their CLIP-based text encoders, suggesting a fundamental security risk in current text-to-image pipelines.",
+    "published": "2025-11-26",
+    "authors": [
+      "Shuhan Xia",
+      "Jing Dai",
+      "Hui Ouyang",
+      "Yadong Shang",
+      "Dongxiao Zhao",
+      "Peipei Li"
+    ],
+    "url": "https://arxiv.org/abs/2511.21180v1",
+    "score": 27,
+    "base_id": "2511.21180",
+    "length_score": 1,
+    "desc_sents": [
+      "\"CAHS-Attack: CLIP-Aware Heuristic Search Attack Method for Stable Diffusion\" (2025) contributes methods or analysis in contemporary text-to-image / multimodal generation.",
+      "Diffusion models exhibit notable fragility when faced with adversarial prompts, and strengthening attack capabilities is crucial for uncovering such vulnerabilities and building more robust generative systems.",
+      "Existing works often rely on white-box access to model gradients or hand-crafted prompt engineering, which is infeasible in real-world deployments due to restricted access or poor attack effect.",
+      "For our length question: extract its train/infer token policy, whether length is fixed or mixed, and any stated reason those choices work."
+    ],
+    "length_tags": [
+      "long/dense preferred"
+    ]
+  },
+  {
+    "arxiv_id": "2511.17255v1",
+    "title": "A Little More Like This: Text-to-Image Retrieval with Vision-Language Models Using Relevance Feedback",
+    "abstract": "Large vision-language models (VLMs) enable intuitive visual search using natural language queries. However, improving their performance often requires fine-tuning and scaling to larger model variants. In this work, we propose a mechanism inspired by traditional text-based search to improve retrieval performance at inference time: relevance feedback. While relevance feedback can serve as an alternative to fine-tuning, its model-agnostic design also enables use with fine-tuned VLMs. Specifically, we introduce and evaluate four feedback strategies for VLM-based retrieval. First, we revise classical pseudo-relevance feedback (PRF), which refines query embeddings based on top-ranked results. To address its limitations, we propose generative relevance feedback (GRF), which uses synthetic captions for query refinement. Furthermore, we introduce an attentive feedback summarizer (AFS), a custom transformer-based model that integrates multimodal fine-grained features from relevant items. Finally, we simulate explicit feedback using ground-truth captions as an upper-bound baseline. Experiments on Flickr30k and COCO with the VLM backbones show that GRF, AFS, and explicit feedback improve retrieval performance by 3-5% in MRR@5 for smaller VLMs, and 1-3% for larger ones, compared to retrieval with no feedback. Moreover, AFS, similarly to explicit feedback, mitigates query drift and is more robust than GRF in iterative, multi-turn retrieval settings. Our findings demonstrate that relevance feedback can consistently enhance retrieval across VLMs and open up opportunities for interactive and adaptive visual search.",
+    "published": "2025-11-21",
+    "authors": [
+      "Bulat Khaertdinov",
+      "Mirela Popa",
+      "Nava Tintarev"
+    ],
+    "url": "https://arxiv.org/abs/2511.17255v1",
+    "score": 27,
+    "base_id": "2511.17255",
+    "length_score": 1,
+    "desc_sents": [
+      "\"A Little More Like This: Text-to-Image Retrieval with Vision-Language Models Using Relevance Feedback\" (2025) contributes methods or analysis in contemporary text-to-image / multimodal generation.",
+      "Large vision-language models (VLMs) enable intuitive visual search using natural language queries.",
+      "However, improving their performance often requires fine-tuning and scaling to larger model variants.",
+      "For our length question: extract its train/infer token policy, whether length is fixed or mixed, and any stated reason those choices work."
+    ],
+    "length_tags": [
+      "LLM/VLM encoder"
+    ]
+  },
+  {
+    "arxiv_id": "2505.16763v2",
+    "title": "Self-Rewarding Large Vision-Language Models for Optimizing Prompts in Text-to-Image Generation",
+    "abstract": "Text-to-image models are powerful for producing high-quality images based on given text prompts, but crafting these prompts often requires specialized vocabulary. To address this, existing methods train rewriting models with supervision from large amounts of manually annotated data and trained aesthetic assessment models. To alleviate the dependence on data scale for model training and the biases introduced by trained models, we propose a novel prompt optimization framework, designed to rephrase a simple user prompt into a sophisticated prompt to a text-to-image model. Specifically, we employ the large vision language models (LVLMs) as the solver to rewrite the user prompt, and concurrently, employ LVLMs as a reward model to score the aesthetics and alignment of the images generated by the optimized prompt. Instead of laborious human feedback, we exploit the prior knowledge of the LVLM to provide rewards, i.e., AI feedback. Simultaneously, the solver and the reward model are unified into one model and iterated in reinforcement learning to achieve self-improvement by giving a solution and judging itself. Results on two popular datasets demonstrate that our method outperforms other strong competitors.",
+    "published": "2025-05-22",
+    "authors": [
+      "Hongji Yang",
+      "Yucheng Zhou",
+      "Wencheng Han",
+      "Jianbing Shen"
+    ],
+    "url": "https://arxiv.org/abs/2505.16763v2",
+    "score": 27,
+    "base_id": "2505.16763",
+    "length_score": 1,
+    "desc_sents": [
+      "\"Self-Rewarding Large Vision-Language Models for Optimizing Prompts in Text-to-Image Generation\" (2025) studies prompt rewriting, optimization, or prompt-side control for image generators.",
+      "Text-to-image models are powerful for producing high-quality images based on given text prompts, but crafting these prompts often requires specialized vocabulary.",
+      "To address this, existing methods train rewriting models with supervision from large amounts of manually annotated data and trained aesthetic assessment models.",
+      "For our length question: extract its train/infer token policy, whether length is fixed or mixed, and any stated reason those choices work."
+    ],
+    "length_tags": [
+      "re-prompt/recaption",
+      "LLM/VLM encoder"
+    ]
+  },
+  {
+    "arxiv_id": "2505.18979v2",
+    "title": "Dynamic Optimization and Safety Indicator Injection for Jailbreaking Text-to-Image Models with Multimodal Safety Filters",
+    "abstract": "Text-to-image (T2I) models can generate not-safe-for-work (NSFW) content, motivating multi-stage safety pipelines with both text and image filters. Newer LLM-based filters detect latent intent beyond keywords, making token-level perturbation attacks unreliable. Our evaluation further shows that existing jailbreak methods exhibit a sharp trade-off between filter evasion and semantic fidelity, while also requiring excessive queries to succeed. We introduce \\textbf{OptJail}, an automated jailbreak framework that combines dynamic prompt optimization with multimodal feedback. It consists of two key components: (i) \\textit{Dynamic Optimization}, an iterative process that leverages text-filter feedback and semantic consistency to rewrite prompts into adversarial variants; and (ii) \\textit{Adaptive Safety Indicator Injection}, which formulates the injection of benign visual cues as a reinforcement learning problem to bypass image-level filters. OptJail achieves state-of-the-art performance, increasing the ShieldLM-7B bypass rate from 8.9\\% (Sneakyprompt) to 99.0\\%, improving CLIP score from 0.2637 to 0.2762. Moreover, it generalizes to unseen filters and successfully jailbreaks DALL E 3 in our evaluation. Mechanistic analysis reveals why these defenses fail: optimized prompts are projected into the ``safe'' region of the filter's representation space yet remain nearly stationary in the generative model's semantic space, and injected safety indicators redirect image detectors' attention away from NSFW content toward benign visual cues. This study reveals systemic vulnerabilities in current multimodal defenses and motivates stronger adaptive defenses.",
+    "published": "2025-05-25",
+    "authors": [
+      "Zixuan Chen",
+      "Hao Lin",
+      "Ke Xu",
+      "Xinghao Jiang",
+      "Tanfeng Sun"
+    ],
+    "url": "https://arxiv.org/abs/2505.18979v2",
+    "score": 27,
+    "base_id": "2505.18979",
+    "length_score": 1,
+    "desc_sents": [
+      "\"Dynamic Optimization and Safety Indicator Injection for Jailbreaking Text-to-Image Models with Multimodal Safety Filters\" (2025) contributes methods or analysis in contemporary text-to-image / multimodal generation.",
+      "Text-to-image (T2I) models can generate not-safe-for-work (NSFW) content, motivating multi-stage safety pipelines with both text and image filters.",
+      "Newer LLM-based filters detect latent intent beyond keywords, making token-level perturbation attacks unreliable.",
+      "For our length question: extract its train/infer token policy, whether length is fixed or mixed, and any stated reason those choices work."
+    ],
+    "length_tags": [
+      "re-prompt/recaption",
+      "LLM/VLM encoder"
+    ]
+  },
+  {
+    "arxiv_id": "2512.22653v1",
+    "title": "Visual Autoregressive Modelling for Monocular Depth Estimation",
+    "abstract": "We propose a monocular depth estimation method based on visual autoregressive (VAR) priors, offering an alternative to diffusion-based approaches. Our method adapts a large-scale text-to-image VAR model and introduces a scale-wise conditional upsampling mechanism with classifier-free guidance. Our approach performs inference in ten fixed autoregressive stages, requiring only 74K synthetic samples for fine-tuning, and achieves competitive results. We report state-of-the-art performance in indoor benchmarks under constrained training conditions, and strong performance when applied to outdoor datasets. This work establishes autoregressive priors as a complementary family of geometry-aware generative models for depth estimation, highlighting advantages in data scalability, and adaptability to 3D vision tasks. Code available at \"https://github.com/AmirMaEl/VAR-Depth\".",
+    "published": "2025-12-27",
+    "authors": [
+      "Amir El-Ghoussani",
+      "Andr\u00e9 Kaup",
+      "Nassir Navab",
+      "Gustavo Carneiro",
+      "Vasileios Belagiannis"
+    ],
+    "url": "https://arxiv.org/abs/2512.22653v1",
+    "score": 26,
+    "base_id": "2512.22653",
+    "length_score": 1,
+    "desc_sents": [
+      "\"Visual Autoregressive Modelling for Monocular Depth Estimation\" (2025) contributes methods or analysis in contemporary text-to-image / multimodal generation.",
+      "We propose a monocular depth estimation method based on visual autoregressive (VAR) priors, offering an alternative to diffusion-based approaches.",
+      "Our method adapts a large-scale text-to-image VAR model and introduces a scale-wise conditional upsampling mechanism with classifier-free guidance.",
+      "For our length question: extract its train/infer token policy, whether length is fixed or mixed, and any stated reason those choices work."
+    ],
+    "length_tags": [
+      "re-prompt/recaption"
+    ]
+  },
+  {
+    "arxiv_id": "2508.01650v1",
+    "title": "StrandDesigner: Towards Practical Strand Generation with Sketch Guidance",
+    "abstract": "Realistic hair strand generation is crucial for applications like computer graphics and virtual reality. While diffusion models can generate hairstyles from text or images, these inputs lack precision and user-friendliness. Instead, we propose the first sketch-based strand generation model, which offers finer control while remaining user-friendly. Our framework tackles key challenges, such as modeling complex strand interactions and diverse sketch patterns, through two main innovations: a learnable strand upsampling strategy that encodes 3D strands into multi-scale latent spaces, and a multi-scale adaptive conditioning mechanism using a transformer with diffusion heads to ensure consistency across granularity levels. Experiments on several benchmark datasets show our method outperforms existing approaches in realism and precision. Qualitative results further confirm its effectiveness. Code will be released at [GitHub](https://github.com/fighting-Zhang/StrandDesigner).",
+    "published": "2025-08-03",
+    "authors": [
+      "Na Zhang",
+      "Moran Li",
+      "Chengming Xu",
+      "Han Feng",
+      "Xiaobin Hu",
+      "Jiangning Zhang",
+      "Weijian Cao",
+      "Chengjie Wang"
+    ],
+    "url": "https://arxiv.org/abs/2508.01650v1",
+    "score": 26,
+    "base_id": "2508.01650",
+    "length_score": 1,
+    "desc_sents": [
+      "\"StrandDesigner: Towards Practical Strand Generation with Sketch Guidance\" (2025) contributes methods or analysis in contemporary text-to-image / multimodal generation.",
+      "Realistic hair strand generation is crucial for applications like computer graphics and virtual reality.",
+      "While diffusion models can generate hairstyles from text or images, these inputs lack precision and user-friendliness.",
+      "For our length question: extract its train/infer token policy, whether length is fixed or mixed, and any stated reason those choices work."
+    ],
+    "length_tags": [
+      "re-prompt/recaption"
+    ]
+  },
+  {
+    "arxiv_id": "2605.25347v1",
+    "title": "ERNIE-Image Technical Report",
+    "abstract": "We introduce ERNIE-Image, an open-source text-to-image generation model built upon an 8B single-stream DiT architecture. ERNIE-Image aims to bridge the gap between current open-source models and leading closed-source systems through more effective mining of large-scale pre-training data and improved supervision quality throughout training. During pre-training, we adopt a bottom-up data construction pipeline that combines fine-grained image categorization, rich caption annotation, aesthetic assessment, and hierarchical sampling. This strategy reduces data noise while preserving long-tail concepts and detailed real-world knowledge, providing a stronger foundation for complex generation tasks. In the post-training stage, we use a top-down data construction pipeline for high-demand scenarios, diversify prompt annotations to better match real user inputs, and apply a stabilized DPO strategy to align the model with human aesthetic preferences. We further train ERNIE-Image-Turbo for efficient 8-NFE generation and propose MT-DMD to mitigate capability drift during distillation. To make the model easier to use in practical scenarios, we equip it with a lightweight Prompt Enhancer that expands concise user intents into structured visual descriptions. In addition, we develop ERNIE-Image-Aes, an industrial-grade aesthetic model, together with ERNIE-Image-Aes-1K, a human-annotated benchmark for realistic aesthetic evaluation. Extensive qualitative and quantitative experiments show that ERNIE-Image achieves leading performance among open-source models and approaches top-tier commercial models in instruction following, text rendering, and aesthetic quality. We release the trained models and aesthetic resources to facilitate further academic research and technical progress in the AIGC community.",
+    "published": "2026-05-25",
+    "authors": [
+      "Jiaxiang Liu",
+      "Zhida Feng",
+      "Pengyu Zou",
+      "Zhenyu Qian",
+      "Tianrui Zhu",
+      "Jun Xia",
+      "Yuehu Dong",
+      "Yanzheng Lin"
+    ],
+    "url": "https://arxiv.org/abs/2605.25347v1",
+    "score": 25,
+    "base_id": "2605.25347",
+    "length_score": 1,
+    "desc_sents": [
+      "\"ERNIE-Image Technical Report\" (2026) contributes methods or analysis in contemporary text-to-image / multimodal generation.",
+      "We introduce ERNIE-Image, an open-source text-to-image generation model built upon an 8B single-stream DiT architecture.",
+      "ERNIE-Image aims to bridge the gap between current open-source models and leading closed-source systems through more effective mining of large-scale pre-training data and improved supervision quality throughout training.",
+      "For our length question: extract its train/infer token policy, whether length is fixed or mixed, and any stated reason those choices work."
+    ],
+    "length_tags": [
+      "re-prompt/recaption"
+    ]
+  },
+  {
+    "arxiv_id": "2606.22958v1",
+    "title": "PG-MAP: Joint MAP Optimization for Inference-Time Alignment of Diffusion and Flow-Matching Models",
+    "abstract": "Inference-time alignment of pretrained text-to-image models is typically performed along a single control axis, such as classifier-free guidance, attention editing, or reward-based latent perturbations. This limitation prevents modeling joint dependencies between conditioning and latent variables and hinders transfer across generative transports. We propose PG-MAP, a training-free framework that formulates inference-time alignment as a trajectory-level Gibbs-MAP / proximal energy optimization over the conditioning $c$ and latent state $z_t$ via a forward-consistency coupling, optionally guided by a frozen preference reward. This joint formulation enables coordinated updates across modalities while remaining compatible with both diffusion and flow-matching models through transport-specific adaptations. Across diffusion backbones (SD~1.5, SDXL), PG-MAP consistently improves alignment metrics such as PickScore and Aesthetic, and can be effectively combined with tuned classifier-free guidance to achieve the strongest overall performance. On flow-matching models (SD3.5-medium), the framework reduces to a latent-only variant, achieving $\\mathbf{91.9\\%}$ PickScore and $75.7\\%$ HPS win rates against a static baseline, with controlled experiments ruling out noise-related artifacts. Human evaluations further confirm consistent preference over strong baselines, including tuned CFG and compute-matched universal guidance. Finally, an oracle-routing analysis shows that the relative importance of conditioning and latent optimization depends on prompt types, surfacing further headroom that a per-prompt selector could exploit.",
+    "published": "2026-06-22",
+    "authors": [
+      "Ruolan Sun",
+      "Pawel Polak"
+    ],
+    "url": "https://arxiv.org/abs/2606.22958v1",
+    "score": 24,
+    "base_id": "2606.22958",
+    "length_score": 1,
+    "desc_sents": [
+      "\"PG-MAP: Joint MAP Optimization for Inference-Time Alignment of Diffusion and Flow-Matching Models\" (2026) contributes methods or analysis in contemporary text-to-image / multimodal generation.",
+      "Inference-time alignment of pretrained text-to-image models is typically performed along a single control axis, such as classifier-free guidance, attention editing, or reward-based latent perturbations.",
+      "This limitation prevents modeling joint dependencies between conditioning and latent variables and hinders transfer across generative transports.",
+      "For our length question: extract its train/infer token policy, whether length is fixed or mixed, and any stated reason those choices work."
+    ],
+    "length_tags": []
+  },
+  {
+    "arxiv_id": "2405.12914v2",
+    "title": "An Empirical Study and Analysis of Text-to-Image Generation Using Large Language Model-Powered Textual Representation",
+    "abstract": "One critical prerequisite for faithful text-to-image generation is the accurate understanding of text inputs. Existing methods leverage the text encoder of the CLIP model to represent input prompts. However, the pre-trained CLIP model can merely encode English with a maximum token length of 77. Moreover, the model capacity of the text encoder from CLIP is relatively limited compared to Large Language Models (LLMs), which offer multilingual input, accommodate longer context, and achieve superior text representation. In this paper, we investigate LLMs as the text encoder to improve the language understanding in text-to-image generation. Unfortunately, training text-to-image generative model with LLMs from scratch demands significant computational resources and data. To this end, we introduce a three-stage training pipeline that effectively and efficiently integrates the existing text-to-image model with LLMs. Specifically, we propose a lightweight adapter that enables fast training of the text-to-image model using the textual representations from LLMs. Extensive experiments demonstrate that our model supports not only multilingual but also longer input context with superior image generation quality.",
+    "published": "2024-05-21",
+    "authors": [
+      "Zhiyu Tan",
+      "Mengping Yang",
+      "Luozheng Qin",
+      "Hao Yang",
+      "Ye Qian",
+      "Qiang Zhou",
+      "Cheng Zhang",
+      "Hao Li"
+    ],
+    "url": "https://arxiv.org/abs/2405.12914v2",
+    "score": 23,
+    "base_id": "2405.12914",
+    "length_score": 1,
+    "desc_sents": [
+      "\"An Empirical Study and Analysis of Text-to-Image Generation Using Large Language Model-Powered Textual Representation\" (2024) contributes methods or analysis in contemporary text-to-image / multimodal generation.",
+      "One critical prerequisite for faithful text-to-image generation is the accurate understanding of text inputs.",
+      "Existing methods leverage the text encoder of the CLIP model to represent input prompts.",
+      "For our length question: extract its train/infer token policy, whether length is fixed or mixed, and any stated reason those choices work."
+    ],
+    "length_tags": [
+      "numeric token budget",
+      "LLM/VLM encoder"
+    ]
+  },
+  {
+    "arxiv_id": "2411.16769v3",
+    "title": "Red-Teaming Text-to-Image Models via In-Context Experience Replay and Semantic-Preserving Prompt Rewriting",
+    "abstract": "Understanding the capabilities of text-to-image (T2I) models in harmful content generation is essential to safety and compliance. However, human red-teaming is costly and inconsistent, driving the need for automatic tools that simulate realistic misuse attempts. Existing methods either require white-box access, fail to generalize across defenses, or produce uninterpretable adversarial tokens, while generating fluent prompts that preserve the original harmful intent remains underexplored despite its practical relevance. We propose ICER, a black-box framework that addresses this gap through two components: an LLM-based rewriter that produces fluent, natural-language adversarial prompts, and in-context experience replay that accumulates successful jailbreaking patterns into a reusable prior. These components are integrated via bandit optimization, enabling ICER to efficiently balance exploiting proven attack strategies with exploring new ones. Experiments across six safety mechanisms show that ICER outperforms seven baselines under both standard and semantics-preserving evaluation, with over 30% of generated prompts transferring to commercial systems like DALL-E 3 and Midjourney.",
+    "published": "2024-11-25",
+    "authors": [
+      "Zhi-Yi Chin",
+      "Pin-Yu Chen",
+      "Wei-Chen Chiu",
+      "Mario Fritz"
+    ],
+    "url": "https://arxiv.org/abs/2411.16769v3",
+    "score": 23,
+    "base_id": "2411.16769",
+    "length_score": 1,
+    "desc_sents": [
+      "\"Red-Teaming Text-to-Image Models via In-Context Experience Replay and Semantic-Preserving Prompt Rewriting\" (2024) studies prompt rewriting, optimization, or prompt-side control for image generators.",
+      "Understanding the capabilities of text-to-image (T2I) models in harmful content generation is essential to safety and compliance.",
+      "However, human red-teaming is costly and inconsistent, driving the need for automatic tools that simulate realistic misuse attempts.",
+      "For our length question: extract its train/infer token policy, whether length is fixed or mixed, and any stated reason those choices work."
+    ],
+    "length_tags": [
+      "re-prompt/recaption",
+      "LLM/VLM encoder"
+    ]
+  },
+  {
+    "arxiv_id": "2411.07126v1",
+    "title": "Edify Image: High-Quality Image Generation with Pixel Space Laplacian Diffusion Models",
+    "abstract": "We introduce Edify Image, a family of diffusion models capable of generating photorealistic image content with pixel-perfect accuracy. Edify Image utilizes cascaded pixel-space diffusion models trained using a novel Laplacian diffusion process, in which image signals at different frequency bands are attenuated at varying rates. Edify Image supports a wide range of applications, including text-to-image synthesis, 4K upsampling, ControlNets, 360 HDR panorama generation, and finetuning for image customization.",
+    "published": "2024-11-11",
+    "authors": [
+      " NVIDIA",
+      " :",
+      "Yuval Atzmon",
+      "Maciej Bala",
+      "Yogesh Balaji",
+      "Tiffany Cai",
+      "Yin Cui",
+      "Jiaojiao Fan"
+    ],
+    "url": "https://arxiv.org/abs/2411.07126v1",
+    "score": 23,
+    "base_id": "2411.07126",
+    "length_score": 1,
+    "desc_sents": [
+      "\"Edify Image: High-Quality Image Generation with Pixel Space Laplacian Diffusion Models\" (2024) contributes methods or analysis in contemporary text-to-image / multimodal generation.",
+      "We introduce Edify Image, a family of diffusion models capable of generating photorealistic image content with pixel-perfect accuracy.",
+      "Edify Image utilizes cascaded pixel-space diffusion models trained using a novel Laplacian diffusion process, in which image signals at different frequency bands are attenuated at varying rates.",
+      "For our length question: extract its train/infer token policy, whether length is fixed or mixed, and any stated reason those choices work."
+    ],
+    "length_tags": [
+      "re-prompt/recaption"
+    ]
+  },
+  {
+    "arxiv_id": "2412.09607v2",
+    "title": "Spectral Image Tokenizer",
+    "abstract": "Image tokenizers map images to sequences of discrete tokens, and are a crucial component of autoregressive transformer-based image generation. The tokens are typically associated with spatial locations in the input image, arranged in raster scan order, which is not ideal for autoregressive modeling. In this paper, we propose to tokenize the image spectrum instead, obtained from a discrete wavelet transform (DWT), such that the sequence of tokens represents the image in a coarse-to-fine fashion. Our tokenizer brings several advantages: 1) it leverages that natural images are more compressible at high frequencies, 2) it can take and reconstruct images of different resolutions without retraining, 3) it improves the conditioning for next-token prediction -- instead of conditioning on a partial line-by-line reconstruction of the image, it takes a coarse reconstruction of the full image, 4) it enables partial decoding where the first few generated tokens can reconstruct a coarse version of the image, 5) it enables autoregressive models to be used for image upsampling. We evaluate the tokenizer reconstruction metrics as well as multiscale image generation, text-guided image upsampling and editing.",
+    "published": "2024-12-12",
+    "authors": [
+      "Carlos Esteves",
+      "Mohammed Suhail",
+      "Ameesh Makadia"
+    ],
+    "url": "https://arxiv.org/abs/2412.09607v2",
+    "score": 23,
+    "base_id": "2412.09607",
+    "length_score": 1,
+    "desc_sents": [
+      "\"Spectral Image Tokenizer\" (2024) contributes methods or analysis in contemporary text-to-image / multimodal generation.",
+      "Image tokenizers map images to sequences of discrete tokens, and are a crucial component of autoregressive transformer-based image generation.",
+      "The tokens are typically associated with spatial locations in the input image, arranged in raster scan order, which is not ideal for autoregressive modeling.",
+      "For our length question: extract its train/infer token policy, whether length is fixed or mixed, and any stated reason those choices work."
+    ],
+    "length_tags": [
+      "re-prompt/recaption"
+    ]
+  },
+  {
+    "arxiv_id": "2603.09160v1",
+    "title": "RubiCap: Rubric-Guided Reinforcement Learning for Dense Image Captioning",
+    "abstract": "Dense image captioning is critical for cross-modal alignment in vision-language pretraining and text-to-image generation, but scaling expert-quality annotations is prohibitively expensive. While synthetic captioning via strong vision-language models (VLMs) is a practical alternative, supervised distillation often yields limited output diversity and weak generalization. Reinforcement learning (RL) could overcome these limitations, but its successes have so far been concentrated in verifiable domains that rely on deterministic checkers -- a luxury not available in open-ended captioning. We address this bottleneck with RubiCap, a novel RL framework that derives fine-grained, sample-specific reward signals from LLM-written rubrics. RubiCap first assembles a diverse committee of candidate captions, then employs an LLM rubric writer to extract consensus strengths and diagnose deficiencies in the current policy. These insights are converted into explicit evaluation criteria, enabling an LLM judge to decompose holistic quality assessment and replace coarse scalar rewards with structured, multi-faceted evaluations. Across extensive benchmarks, RubiCap achieves the highest win rates on CapArena, outperforming supervised distillation, prior RL methods, human-expert annotations, and GPT-4V-augmented outputs. On CaptionQA, it demonstrates superior word efficiency: our 7B model matches Qwen2.5-VL-32B-Instruct, and our 3B model surpasses its 7B counterpart. Remarkably, using the compact RubiCap-3B as a captioner produces stronger pretrained VLMs than those trained on captions from proprietary models.",
+    "published": "2026-03-10",
+    "authors": [
+      "Tzu-Heng Huang",
+      "Sirajul Salekin",
+      "Javier Movellan",
+      "Frederic Sala",
+      "Manjot Bilkhu"
+    ],
+    "url": "https://arxiv.org/abs/2603.09160v1",
+    "score": 23,
+    "base_id": "2603.09160",
+    "length_score": 1,
+    "desc_sents": [
+      "\"RubiCap: Rubric-Guided Reinforcement Learning for Dense Image Captioning\" (2026) focuses on captioning/recaptioning data that feeds text-to-image training.",
+      "Dense image captioning is critical for cross-modal alignment in vision-language pretraining and text-to-image generation, but scaling expert-quality annotations is prohibitively expensive.",
+      "While synthetic captioning via strong vision-language models (VLMs) is a practical alternative, supervised distillation often yields limited output diversity and weak generalization.",
+      "For our length question: extract its train/infer token policy, whether length is fixed or mixed, and any stated reason those choices work."
+    ],
+    "length_tags": [
+      "LLM/VLM encoder"
+    ]
+  }
+]

@@ -1,0 +1,179 @@
+{
+  "ELLA_2403.05135": {
+    "family": "F2/F3_embedding_adapter",
+    "cites_approx": 428,
+    "ancestors": [
+      "2112.10752",
+      "2205.11487",
+      "2204.06125",
+      "2301.13826",
+      "2305.13655",
+      "2401.11708"
+    ],
+    "descendants": [
+      "2508.02324",
+      "2410.10629",
+      "2409.10695",
+      "2503.21758",
+      "2601.10332",
+      "2602.03510"
+    ]
+  },
+  "LMD_2305.13655": {
+    "family": "F3_layout",
+    "cites_approx": 269,
+    "ancestors": [
+      "2301.07093",
+      "2201.11903",
+      "2302.05543"
+    ],
+    "descendants": [
+      "2401.11708",
+      "2403.05135",
+      "2503.10639",
+      "2311.16090",
+      "2407.05600",
+      "2311.17002"
+    ]
+  },
+  "RPG_2401.11708": {
+    "family": "F3_layout_hybrid",
+    "cites_approx": 257,
+    "ancestors": [
+      "2301.13826",
+      "2305.13655",
+      "2212.05032",
+      "2208.01626"
+    ],
+    "descendants": [
+      "2505.00703",
+      "2503.10639",
+      "2407.05600",
+      "2405.08748"
+    ]
+  },
+  "FIBO_2511.06876": {
+    "family": "F4_schema",
+    "cites_approx": 11,
+    "ancestors": [
+      "2112.10752",
+      "2403.03206",
+      "2503.20314"
+    ],
+    "descendants": [
+      "2606.00204",
+      "2602.20672",
+      "2606.23679"
+    ]
+  },
+  "T2I-R1_2505.00703": {
+    "family": "F5_endogenous",
+    "cites_approx": 159,
+    "ancestors": [
+      "2501.13926",
+      "2401.11708",
+      "2301.13826",
+      "2402.03300"
+    ],
+    "descendants": [
+      "2505.17022",
+      "2505.17540",
+      "2601.18543"
+    ]
+  },
+  "SEER_2601.20305": {
+    "family": "F5_endogenous",
+    "cites_approx": 4,
+    "ancestors": [
+      "2509.04545",
+      "2403.05135",
+      "2505.05470"
+    ],
+    "descendants": [
+      "2606.27376",
+      "2603.06623"
+    ]
+  },
+  "GLIGEN_2301.07093": {
+    "family": "layout_executor",
+    "cites_approx": 969,
+    "ancestors": [
+      "2112.10752",
+      "2103.00020"
+    ],
+    "descendants": [
+      "2302.05543",
+      "2305.13655",
+      "2402.03290",
+      "2402.05408"
+    ]
+  },
+  "AttendExcite_2301.13826": {
+    "family": "F6_action_attention",
+    "cites_approx": 871,
+    "ancestors": [
+      "2112.10752",
+      "2208.01626",
+      "2212.05032"
+    ],
+    "descendants": [
+      "2403.05135",
+      "2401.11708",
+      "2307.10816",
+      "2306.05427"
+    ]
+  },
+  "PAE_2404.04095": {
+    "family": "F6_action_weights",
+    "cites_approx": 54,
+    "ancestors": [
+      "2212.09611"
+    ],
+    "descendants": [
+      "2505.17540",
+      "2504.11739",
+      "2510.20206",
+      "2602.01382"
+    ]
+  },
+  "PromptEnhancer_2509.04545": {
+    "family": "F1_textual",
+    "cites_approx": 32,
+    "ancestors": [
+      "2401.11708",
+      "2402.03300"
+    ],
+    "descendants": [
+      "2601.20305",
+      "2606.00204",
+      "2602.11980"
+    ]
+  },
+  "cross_family_hubs": [
+    {
+      "id": "2512.07702",
+      "title": "NPC",
+      "cites_n_seeds": 8
+    },
+    {
+      "id": "2407.05600",
+      "title": "GenArtist",
+      "role": "agent unifies planning+tools"
+    },
+    {
+      "id": "2604.12617",
+      "title": "SOAR",
+      "role": "joins PAE+PromptEnhancer+RPG+T2I-R1"
+    },
+    {
+      "id": "2606.05031",
+      "title": "MetaPoint",
+      "role": "joins ELLA+GLIGEN+PE+RPG+T2I-R1"
+    },
+    {
+      "id": "2602.11980",
+      "title": "SCoT",
+      "role": "bridge-type ablation text vs boxes"
+    }
+  ]
+}

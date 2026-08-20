@@ -1,0 +1,306 @@
+[
+  {
+    "query": "prompt engineering diffusion descriptors nouns artists lighting LPIPS",
+    "n": 8,
+    "papers": [
+      {
+        "title": "TDD Governance for Multi-Agent Code Generation via Prompt Engineering",
+        "id": null
+      },
+      {
+        "title": "Prompt Engineering Strategies for LLM-based Qualitative Coding of Psychological Safety in Software Engineering Communities: A Controlled Empirical Study",
+        "id": null
+      },
+      {
+        "title": "Prompt-Free Diffusion: Taking \"Text\" out of Text-to-Image Diffusion Models",
+        "id": null
+      },
+      {
+        "title": "Towards Goal-oriented Prompt Engineering for Large Language Models: A Survey",
+        "id": null
+      },
+      {
+        "title": "MirrorDiffusion: Stabilizing Diffusion Process in Zero-shot Image Translation by Prompts Redescription and Beyond",
+        "id": null
+      },
+      {
+        "title": "Promptware Engineering: Software Engineering for Prompt-Enabled Systems",
+        "id": null
+      },
+      {
+        "title": "Prompt Engineering Guidelines for Using Large Language Models in Requirements Engineering",
+        "id": null
+      },
+      {
+        "title": "Morescient GAI for Software Engineering (Extended Version)",
+        "id": null
+      }
+    ]
+  },
+  {
+    "query": "which prompt components matter text-to-image ablation field",
+    "n": 8,
+    "papers": [
+      {
+        "title": "Automated Prompt Generation for Creative and Counterfactual Text-to-image Synthesis",
+        "id": null
+      },
+      {
+        "title": "Ablating Concepts in Text-to-Image Diffusion Models",
+        "id": null
+      },
+      {
+        "title": "EPIG: Emotion-Based Prompting for Personalised Image Generation",
+        "id": null
+      },
+      {
+        "title": "PALP: Prompt Aligned Personalization of Text-to-Image Models",
+        "id": null
+      },
+      {
+        "title": "Dimension-Level Intent Fidelity Evaluation for Large Language Models: Evidence from Structured Prompt Ablation",
+        "id": null
+      },
+      {
+        "title": "MirrorDiffusion: Stabilizing Diffusion Process in Zero-shot Image Translation by Prompts Redescription and Beyond",
+        "id": null
+      },
+      {
+        "title": "Fast evaluation of far-field signals for time-domain wave propagation",
+        "id": null
+      },
+      {
+        "title": "Prompt-Free Diffusion: Taking \"Text\" out of Text-to-Image Diffusion Models",
+        "id": null
+      }
+    ]
+  },
+  {
+    "query": "structured captions order shuffle text-to-image",
+    "n": 8,
+    "papers": [
+      {
+        "title": "Structured Information for Improving Spatial Relationships in Text-to-Image Generation",
+        "id": null
+      },
+      {
+        "title": "Double shuffle Lie algebra and special derivations",
+        "id": null
+      },
+      {
+        "title": "Structured Captions Improve Prompt Adherence in Text-to-Image Models (Re-LAION-Caption 19M)",
+        "id": null
+      },
+      {
+        "title": "Contextual Emotion Estimation from Image Captions",
+        "id": null
+      },
+      {
+        "title": "A generalization of carries process and riffle shuffles",
+        "id": null
+      },
+      {
+        "title": "Generating an Image From 1,000 Words: Enhancing Text-to-Image With Structured Captions",
+        "id": null
+      },
+      {
+        "title": "Token-Shuffle: Towards High-Resolution Image Generation with Autoregressive Models",
+        "id": null
+      },
+      {
+        "title": "Precision or Recall? An Analysis of Image Captions for Training Text-to-Image Generation Model",
+        "id": null
+      }
+    ]
+  },
+  {
+    "query": "part of speech prompt importance diffusion nouns adjectives",
+    "n": 8,
+    "papers": [
+      {
+        "title": "SpeechPrompt: Prompting Speech Language Models for Speech Processing Tasks",
+        "id": null
+      },
+      {
+        "title": "NaturalSpeech 2: Latent Diffusion Models are Natural and Zero-Shot Speech and Singing Synthesizers",
+        "id": null
+      },
+      {
+        "title": "Advancing automatic speech recognition using feature fusion with self-supervised learning features: A case study on Fearless Steps Apollo corpus",
+        "id": null
+      },
+      {
+        "title": "End-to-end Audiovisual Speech Activity Detection with Bimodal Recurrent Neural Models",
+        "id": null
+      },
+      {
+        "title": "The Effect of Silence Feature in Dimensional Speech Emotion Recognition",
+        "id": null
+      },
+      {
+        "title": "A Dual-Branch Parallel Network for Speech Enhancement and Restoration",
+        "id": null
+      },
+      {
+        "title": "Curriculum Learning for Speech Emotion Recognition from Crowdsourced Labels",
+        "id": null
+      },
+      {
+        "title": "An Empirical Analysis of Discrete Unit Representations in Speech Language Modeling Pre-training",
+        "id": null
+      }
+    ]
+  },
+  {
+    "query": "token budget packing prompt fields text-to-image",
+    "n": 8,
+    "papers": [
+      {
+        "title": "Automated Prompt Generation for Creative and Counterfactual Text-to-image Synthesis",
+        "id": null
+      },
+      {
+        "title": "PALP: Prompt Aligned Personalization of Text-to-Image Models",
+        "id": null
+      },
+      {
+        "title": "MirrorDiffusion: Stabilizing Diffusion Process in Zero-shot Image Translation by Prompts Redescription and Beyond",
+        "id": null
+      },
+      {
+        "title": "Magnetic field dynamics in isolated neutron stars with an external dipole field",
+        "id": null
+      },
+      {
+        "title": "EPIG: Emotion-Based Prompting for Personalised Image Generation",
+        "id": null
+      },
+      {
+        "title": "Simultaneous Latent Budget Trees for Stratified Classification",
+        "id": null
+      },
+      {
+        "title": "Prompt-Free Diffusion: Taking \"Text\" out of Text-to-Image Diffusion Models",
+        "id": null
+      },
+      {
+        "title": "A hybrid helical structure of hard sphere packing from sequential deposition",
+        "id": null
+      }
+    ]
+  },
+  {
+    "query": "leave-one-out caption field ablation diffusion training",
+    "n": 8,
+    "papers": [
+      {
+        "title": "Fast evaluation of far-field signals for time-domain wave propagation",
+        "id": null
+      },
+      {
+        "title": "Space-time transformation properties of inter-charge forces and dipole radiation: Breakdown of the classical field concept in relativistic electrodynamics",
+        "id": null
+      },
+      {
+        "title": "Retarded electric and magnetic fields of a moving charge: Feynman's derivation of Liénard-Wiechert potentials revisited",
+        "id": null
+      },
+      {
+        "title": "Comment on \"Measuring propagation speed of Coulomb fields\" [R. de Sangro {\\it et al.} Eur. Phys. J.C (2015) 75:137]",
+        "id": null
+      },
+      {
+        "title": "Derivation of the Lorentz Force Law, the Magnetic Field Concept and the Faraday-Lenz Law using an Invariant Formulation of the Lorentz Transformation",
+        "id": null
+      },
+      {
+        "title": "Accelerating Diffusion Model Training under Minimal Budgets: A Condensation-Based Perspective",
+        "id": null
+      },
+      {
+        "title": "Towards Diverse and Efficient Audio Captioning via Diffusion Models",
+        "id": null
+      },
+      {
+        "title": "Derivation of the Lorentz Force Law and the Magnetic Field Concept using an Invariant Formulation of the Lorentz Transformation",
+        "id": null
+      }
+    ]
+  },
+  {
+    "query": "conditional mutual information prompt words diffusion",
+    "n": 8,
+    "papers": [
+      {
+        "title": "CCMI : Classifier based Conditional Mutual Information Estimation",
+        "id": null
+      },
+      {
+        "title": "Regressor-Segmenter Mutual Prompt Learning for Crowd Counting",
+        "id": null
+      },
+      {
+        "title": "Markov Chain Order estimation with Conditional Mutual Information",
+        "id": null
+      },
+      {
+        "title": "Ensemble Estimation of Generalized Mutual Information with Applications to Genomics",
+        "id": null
+      },
+      {
+        "title": "On Finite-Time Mutual Information",
+        "id": null
+      },
+      {
+        "title": "Prompt-Free Diffusion: Taking \"Text\" out of Text-to-Image Diffusion Models",
+        "id": null
+      },
+      {
+        "title": "Mutual Information for Electromagnetic Information Theory Based on Random Fields",
+        "id": null
+      },
+      {
+        "title": "Mutual Information-guided Knowledge Transfer for Novel Class Discovery",
+        "id": null
+      }
+    ]
+  },
+  {
+    "query": "prompt component importance scene vs style text-to-image",
+    "n": 8,
+    "papers": [
+      {
+        "title": "Automated Prompt Generation for Creative and Counterfactual Text-to-image Synthesis",
+        "id": null
+      },
+      {
+        "title": "PALP: Prompt Aligned Personalization of Text-to-Image Models",
+        "id": null
+      },
+      {
+        "title": "Prompt-Free Diffusion: Taking \"Text\" out of Text-to-Image Diffusion Models",
+        "id": null
+      },
+      {
+        "title": "Selective Scene Text Removal",
+        "id": null
+      },
+      {
+        "title": "MirrorDiffusion: Stabilizing Diffusion Process in Zero-shot Image Translation by Prompts Redescription and Beyond",
+        "id": null
+      },
+      {
+        "title": "Prompt-and-Rerank: A Method for Zero-Shot and Few-Shot Arbitrary Textual Style Transfer with Small Language Models",
+        "id": null
+      },
+      {
+        "title": "EPIG: Emotion-Based Prompting for Personalised Image Generation",
+        "id": null
+      },
+      {
+        "title": "Sem-CS: Semantic CLIPStyler for Text-Based Image Style Transfer",
+        "id": null
+      }
+    ]
+  }
+]

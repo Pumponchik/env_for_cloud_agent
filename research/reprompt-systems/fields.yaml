@@ -1,0 +1,92 @@
+categories:
+  - name: Basic Info
+    fields:
+      - name: name
+        description: Canonical name of the paper, system, or research object
+        detail_level: brief
+      - name: aliases
+        description: Alternative names, arXiv ids, product names
+        detail_level: brief
+      - name: year
+        description: First public year (paper or product)
+        detail_level: brief
+      - name: venue_or_source
+        description: Venue, arXiv, blog, tech report, or code release
+        detail_level: brief
+      - name: urls
+        description: Primary URLs (arXiv, PDF, code, blog)
+        detail_level: moderate
+      - name: orgs
+        description: Affiliated labs / companies
+        detail_level: brief
+
+  - name: Problem Framing
+    fields:
+      - name: problem_solved
+        description: What user/system problem this object addresses
+        detail_level: detailed
+      - name: assumed_gap
+        description: Assumed mismatch (train vs user, aesthetic vs faithfulness, length, language, etc.)
+        detail_level: detailed
+      - name: why_system_looks_like_this
+        description: Academic/engineering rationale for the chosen PE shape
+        detail_level: detailed
+
+  - name: Method
+    fields:
+      - name: method_family
+        description: Family tag (SFT rewrite, RL preference, zero-shot LLM, upsampler, bandit, schema, etc.)
+        detail_level: brief
+      - name: architecture
+        description: Model stack (base LLM/VLM, frozen vs trainable, inputs/outputs)
+        detail_level: detailed
+      - name: training_data
+        description: Data used to train or prompt the rewriter
+        detail_level: detailed
+      - name: objective_or_reward
+        description: Loss, reward, preference model, or heuristic objective
+        detail_level: detailed
+      - name: length_policy
+        description: Target length, max tokens, variability, truncation rules
+        detail_level: detailed
+      - name: faithfulness_mechanism
+        description: How intent preservation / anti-hallucination is handled
+        detail_level: detailed
+      - name: inference_pipeline
+        description: When PE runs (always/default/gated), inputs, outputs into T2I
+        detail_level: detailed
+
+  - name: Evidence
+    fields:
+      - name: key_results
+        description: Main empirical claims with numbers when available
+        detail_level: detailed
+      - name: ablations
+        description: Critical ablations relevant to PE design
+        detail_level: detailed
+      - name: failure_modes
+        description: Documented failure modes of the approach
+        detail_level: moderate
+      - name: evaluation_protocol
+        description: Benchmarks and human/auto metrics used
+        detail_level: moderate
+
+  - name: Design Relevance
+    fields:
+      - name: relevance_to_reprompt_design
+        description: Why this object matters for building a correct PE system
+        detail_level: detailed
+      - name: must_read
+        description: true/false — whether this is a must-read for the field
+        detail_level: brief
+      - name: reading_priority
+        description: 1 (must) / 2 (strong) / 3 (context) / 4 (peripheral)
+        detail_level: brief
+      - name: takeaways_for_builders
+        description: Concrete normative takeaways for PE system design
+        detail_level: detailed
+      - name: related_papers
+        description: Closely related papers/systems (ancestors, siblings, descendants)
+        detail_level: moderate
+
+uncertain: []
